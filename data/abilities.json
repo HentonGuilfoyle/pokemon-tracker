@@ -1,0 +1,406 @@
+{
+  "adaptability": {
+    "name": "Adaptability",
+    "debut": 4,
+    "gens": {}
+  },
+  "aftermath": {
+    "name": "Aftermath",
+    "debut": 4,
+    "gens": {}
+  },
+  "analytic": {
+    "name": "Analytic",
+    "debut": 4,
+    "gens": {}
+  },
+  "anger-point": {
+    "debut": 3,
+    "gens": {},
+    "name": "Anger Point"
+  },
+  "anticipation": {
+    "name": "Anticipation",
+    "debut": 3,
+    "gens": {}
+  },
+  "battle-armor": {
+    "name": "Battle Armor",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "flavor": "The Pokémon is protected from critical hits",
+        "effect": "None of the attacks on the user will be critical hits. The user always takes the lowest possible damage roll from attacks."
+      }
+    }
+  },
+  "blaze": {
+    "name": "Blaze",
+    "debut": 3,
+    "gens": {}
+  },
+  "calming-scent": {
+    "debut": 3,
+    "gens": {},
+    "name": "Calming Scent"
+  },
+  "chlorophyll": {
+    "name": "Chlorophyll",
+    "debut": 3,
+    "gens": {}
+  },
+  "clear-body": {
+    "name": "Clear Body",
+    "debut": 3,
+    "gens": {}
+  },
+  "clunky-pincer": {
+    "name": "Clunky Pincer",
+    "debut": 4,
+    "gens": {}
+  },
+  "competitive": {
+    "name": "Competitive",
+    "debut": 3,
+    "gens": {}
+  },
+  "compound-eyes": {
+    "name": "Compound Eyes",
+    "debut": 3,
+    "gens": {}
+  },
+  "cute-charm": {
+    "name": "Cute Charm",
+    "debut": 3,
+    "gens": {}
+  },
+  "damp": {
+    "debut": 3,
+    "gens": {
+      "3": {
+        "flavor": "Halves the damage taken from moves that make direct contact, but doubles that of Electric-type moves",
+        "effect": "Damp reduces damage from contact moves by 50%, but Electric-type moves do double damage. Electric-type moves that make contact also do double damage."
+      }
+    },
+    "name": "Damp"
+  },
+  "drizzle": {
+    "name": "Drizzle",
+    "debut": 3,
+    "gens": {}
+  },
+  "dry-skin": {
+    "name": "Dry Skin",
+    "debut": 4,
+    "gens": {}
+  },
+  "effect-spore": {
+    "name": "Effect Spore",
+    "debut": 3,
+    "gens": {}
+  },
+  "flock": {
+    "name": "Flock",
+    "debut": 4,
+    "gens": {}
+  },
+  "flower-guard": {
+    "name": "Flower Guard",
+    "debut": 3,
+    "gens": {}
+  },
+  "guts": {
+    "name": "Guts",
+    "debut": 3,
+    "gens": {}
+  },
+  "headache": {
+    "name": "Headache",
+    "debut": 3,
+    "gens": {}
+  },
+  "honey-gather": {
+    "name": "Honey Gather",
+    "debut": 4,
+    "gens": {}
+  },
+  "huge-power": {
+    "name": "Huge Power",
+    "debut": 3,
+    "gens": {}
+  },
+  "hustle": {
+    "name": "Hustle",
+    "debut": 3,
+    "gens": {}
+  },
+  "hyper-cutter": {
+    "name": "Hyper Cutter",
+    "debut": 3,
+    "gens": {}
+  },
+  "hypnotic": {
+    "debut": 3,
+    "gens": {},
+    "name": "Hypnotic"
+  },
+  "immunity": {
+    "name": "Immunity",
+    "debut": 3,
+    "gens": {}
+  },
+  "infiltrator": {
+    "name": "Infiltrator",
+    "debut": 4,
+    "gens": {}
+  },
+  "inflatable": {
+    "name": "Inflatable",
+    "debut": 4,
+    "gens": {}
+  },
+  "inner-focus": {
+    "name": "Inner Focus",
+    "debut": 3,
+    "gens": {}
+  },
+  "intimidate": {
+    "name": "Intimidate",
+    "debut": 3,
+    "gens": {}
+  },
+  "iron-fists": {
+    "name": "Iron Fists",
+    "debut": 3,
+    "gens": {}
+  },
+  "keen-eye": {
+    "name": "Keen Eye",
+    "debut": 3,
+    "gens": {}
+  },
+  "levitate": {
+    "name": "Levitate",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "immuneTo": "Ground"
+      }
+    }
+  },
+  "lightning-rod": {
+    "name": "Lightning Rod",
+    "debut": 3,
+    "gens": {}
+  },
+  "limber": {
+    "name": "Limber",
+    "debut": 3,
+    "gens": {}
+  },
+  "liquid-ooze": {
+    "name": "Liquid Ooze",
+    "debut": 3,
+    "gens": {}
+  },
+  "magic-guard": {
+    "name": "Magic Guard",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "flavor": "The Pokémon only takes damage from attacks.",
+        "effect": "Magic Guard protects the Pokémon from indirect damage."
+      }
+    }
+  },
+  "overcharge": {
+    "name": "Overcharge",
+    "debut": 3,
+    "gens": {}
+  },
+  "overgrow": {
+    "debut": 3,
+    "gens": {},
+    "name": "Overgrow"
+  },
+  "pickup": {
+    "name": "Pickup",
+    "debut": 3,
+    "gens": {}
+  },
+  "poison-point": {
+    "name": "Poison Point",
+    "debut": 3,
+    "gens": {}
+  },
+  "quick-feet": {
+    "name": "Quick Feet",
+    "debut": 4,
+    "gens": {}
+  },
+  "rivalry": {
+    "name": "Rivalry",
+    "debut": 4,
+    "gens": {}
+  },
+  "rock-head": {
+    "name": "Rock Head",
+    "debut": 3,
+    "gens": {}
+  },
+  "rough-skin": {
+    "name": "Rough Skin",
+    "debut": 3,
+    "gens": {}
+  },
+  "royal-privilege": {
+    "name": "Royal Privilege",
+    "debut": 4,
+    "gens": {}
+  },
+  "run-away": {
+    "name": "Run Away",
+    "debut": 3,
+    "gens": {}
+  },
+  "sand-rush": {
+    "name": "Sand Rush",
+    "debut": 3,
+    "gens": {}
+  },
+  "sand-veil": {
+    "name": "Sand Veil",
+    "debut": 3,
+    "gens": {}
+  },
+  "sharpshooter": {
+    "name": "Sharpshooter",
+    "debut": 3,
+    "gens": {}
+  },
+  "shed-skin": {
+    "name": "Shed Skin",
+    "debut": 3,
+    "gens": {}
+  },
+  "sheer-force": {
+    "name": "Sheer Force",
+    "debut": 4,
+    "gens": {}
+  },
+  "shell-armor": {
+    "name": "Shell Armor",
+    "debut": 3,
+    "gens": {}
+  },
+  "short-circuit": {
+    "name": "Short Circuit",
+    "debut": 4,
+    "gens": {}
+  },
+  "sniper": {
+    "name": "Sniper",
+    "debut": 3,
+    "gens": {}
+  },
+  "solar-power": {
+    "name": "Solar Power",
+    "debut": 3,
+    "gens": {}
+  },
+  "static": {
+    "name": "Static",
+    "debut": 3,
+    "gens": {}
+  },
+  "steady-wings": {
+    "name": "Steady Wings",
+    "debut": 3,
+    "gens": {}
+  },
+  "stench": {
+    "name": "Stench",
+    "debut": 3,
+    "gens": {}
+  },
+  "strong-jaw": {
+    "name": "Strong Jaw",
+    "debut": 3,
+    "gens": {}
+  },
+  "sturdy": {
+    "name": "Sturdy",
+    "debut": 3,
+    "gens": {}
+  },
+  "sunbathe": {
+    "debut": 3,
+    "gens": {},
+    "name": "Sunbathe"
+  },
+  "supreme-wit": {
+    "name": "Supreme Wit",
+    "debut": 3,
+    "gens": {}
+  },
+  "swarm": {
+    "name": "Swarm",
+    "debut": 3,
+    "gens": {}
+  },
+  "swift-swim": {
+    "debut": 3,
+    "gens": {},
+    "name": "Swift Swim"
+  },
+  "symbiosis": {
+    "name": "Symbiosis",
+    "debut": 4,
+    "gens": {}
+  },
+  "technician": {
+    "name": "Technician",
+    "debut": 4,
+    "gens": {}
+  },
+  "tinted-lens": {
+    "name": "Tinted Lens",
+    "debut": 4,
+    "gens": {}
+  },
+  "torrent": {
+    "name": "Torrent",
+    "debut": 3,
+    "gens": {}
+  },
+  "tough-claws": {
+    "name": "Tough Claws",
+    "debut": 4,
+    "gens": {}
+  },
+  "unaware": {
+    "name": "Unaware",
+    "debut": 4,
+    "gens": {}
+  },
+  "unnerve": {
+    "name": "Unnerve",
+    "debut": 3,
+    "gens": {}
+  },
+  "vital-spirit": {
+    "debut": 3,
+    "gens": {},
+    "name": "Vital Spirit"
+  },
+  "water-absorb": {
+    "name": "Water Absorb",
+    "debut": 3,
+    "gens": {}
+  },
+  "wind-rider": {
+    "name": "Wind Rider",
+    "debut": 3,
+    "gens": {}
+  }
+}

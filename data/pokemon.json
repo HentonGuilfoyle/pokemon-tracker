@@ -1,0 +1,3860 @@
+{
+  "abra": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 25,
+          "atk": 20,
+          "def": 15,
+          "spc": 105,
+          "spe": 80
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 25,
+          "atk": 20,
+          "def": 15,
+          "spa": 105,
+          "spd": 55,
+          "spe": 80
+        },
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 62.5
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ]
+        ]
+      }
+    },
+    "name": "Abra",
+    "dex": 50,
+    "debut": 1,
+    "art": 63
+  },
+  "alakazam": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 50,
+          "def": 45,
+          "spc": 140,
+          "spe": 110
+        },
+        "evoMethod": "Trade",
+        "evolvesFrom": "kadabra"
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 50,
+          "def": 45,
+          "spa": 140,
+          "spd": 120,
+          "spe": 110
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Abra",
+        "genderM": 62.5
+      },
+      "3": {
+        "evoMethod": "High Friendship & Max Special Attack EV",
+        "abilitySlots": [
+          [
+            "supreme-wit"
+          ],
+          [
+            "inner-focus"
+          ],
+          [
+            "magic-guard"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "supreme-wit"
+          ],
+          [
+            "inner-focus",
+            "analytic"
+          ],
+          [
+            "magic-guard"
+          ]
+        ]
+      }
+    },
+    "name": "Alakazam",
+    "dex": 52,
+    "debut": 1,
+    "art": 65
+  },
+  "beedrill": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 95,
+          "def": 60,
+          "spc": 45,
+          "spe": 85
+        },
+        "evoMethod": "Level 10",
+        "evolvesFrom": "kakuna"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 95,
+          "def": 60,
+          "spa": 45,
+          "spd": 55,
+          "spe": 85
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Weedle",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "poison-point"
+          ],
+          [
+            "swarm"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "poison-point"
+          ],
+          [
+            "swarm",
+            "anger-point"
+          ]
+        ]
+      }
+    },
+    "name": "Beedrill",
+    "dex": 22,
+    "debut": 1,
+    "art": 15
+  },
+  "bellossom": {
+    "gens": {
+      "2": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 65,
+          "def": 62,
+          "spa": 110,
+          "spd": 115,
+          "spe": 83
+        },
+        "evoMethod": "Sun Stone",
+        "evolvesFrom": "oddish",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Oddish",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "chlorophyll"
+          ],
+          [
+            "flower-guard"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Grass",
+          "Fairy"
+        ]
+      }
+    },
+    "name": "Bellossom",
+    "dex": 231,
+    "debut": 2,
+    "art": 182
+  },
+  "blastoise": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 79,
+          "atk": 92,
+          "def": 105,
+          "spc": 114,
+          "spe": 42
+        },
+        "evoMethod": "Level 36",
+        "evolvesFrom": "wartortle"
+      },
+      "2": {
+        "stats": {
+          "hp": 79,
+          "atk": 92,
+          "def": 105,
+          "spa": 114,
+          "spd": 100,
+          "spe": 42
+        },
+        "eggGroups": [
+          "Reptile",
+          "Beast"
+        ],
+        "hatchesAs": "Squirtle",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "shell-armor"
+          ],
+          [
+            "sharpshooter"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "shell-armor",
+            "swift-swim"
+          ],
+          [
+            "sharpshooter",
+            "sniper"
+          ]
+        ]
+      }
+    },
+    "name": "Blastoise",
+    "dex": 9,
+    "debut": 1,
+    "art": 9
+  },
+  "bul": {
+    "name": "Arbok",
+    "debut": 1,
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 90,
+          "def": 74,
+          "spc": 70,
+          "spe": 85
+        },
+        "evoMethod": "Level 24",
+        "evolvesFrom": "ekans"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 90,
+          "def": 74,
+          "spa": 70,
+          "spd": 84,
+          "spe": 85
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Ekans",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "intimidate"
+          ],
+          [
+            "unnerve"
+          ]
+        ]
+      }
+    },
+    "dex": 16,
+    "art": 24
+  },
+  "bulbasaur": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 49,
+          "def": 54,
+          "spc": 65,
+          "spe": 45
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 45,
+          "atk": 49,
+          "def": 54,
+          "spa": 60,
+          "spd": 65,
+          "spe": 45
+        },
+        "eggGroups": [
+          "Plant",
+          "Creature"
+        ],
+        "hatchesAs": "Bulbasaur",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "overgrow"
+          ]
+        ]
+      }
+    },
+    "name": "Bulbasaur",
+    "dex": 1,
+    "debut": 1,
+    "art": 1
+  },
+  "butterfree": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 45,
+          "def": 50,
+          "spc": 95,
+          "spe": 70
+        },
+        "evoMethod": "Level 10",
+        "evolvesFrom": "metapod"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 45,
+          "def": 50,
+          "spa": 95,
+          "spd": 80,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Caterpie",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "compound-eyes"
+          ],
+          [
+            "swarm"
+          ],
+          [
+            "honey-gather"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "compound-eyes",
+            "tinted-lens"
+          ],
+          [
+            "swarm"
+          ],
+          [
+            "honey-gather"
+          ]
+        ]
+      }
+    },
+    "name": "Butterfree",
+    "dex": 19,
+    "debut": 1,
+    "art": 12
+  },
+  "caterpie": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 30,
+          "def": 35,
+          "spc": 20,
+          "spe": 40
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 45,
+          "atk": 30,
+          "def": 35,
+          "spa": 25,
+          "spd": 20,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Caterpie",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "stench"
+          ]
+        ]
+      }
+    },
+    "name": "Caterpie",
+    "dex": 17,
+    "debut": 1,
+    "art": 10
+  },
+  "charizard": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 78,
+          "atk": 84,
+          "def": 78,
+          "spc": 107,
+          "spe": 107
+        },
+        "evoMethod": "Level 36",
+        "evolvesFrom": "charmeleon"
+      },
+      "2": {
+        "stats": {
+          "hp": 78,
+          "atk": 84,
+          "def": 78,
+          "spa": 107,
+          "spd": 80,
+          "spe": 107
+        },
+        "eggGroups": [
+          "Reptile",
+          "Beast"
+        ],
+        "hatchesAs": "Charmander",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "blaze"
+          ],
+          [
+            "competitive"
+          ],
+          [
+            "solar-power"
+          ]
+        ]
+      }
+    },
+    "name": "Charizard",
+    "dex": 6,
+    "debut": 1,
+    "art": 6
+  },
+  "charmander": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 44,
+          "atk": 52,
+          "def": 46,
+          "spc": 60,
+          "spe": 60
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 44,
+          "atk": 52,
+          "def": 46,
+          "spa": 60,
+          "spd": 50,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Reptile",
+          "Creature"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "blaze"
+          ]
+        ]
+      }
+    },
+    "name": "Charmander",
+    "dex": 4,
+    "debut": 1,
+    "art": 4
+  },
+  "charmeleon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 58,
+          "atk": 69,
+          "def": 58,
+          "spc": 80,
+          "spe": 75
+        },
+        "evoMethod": "Level 18",
+        "evolvesFrom": "charmander"
+      },
+      "2": {
+        "stats": {
+          "hp": 58,
+          "atk": 69,
+          "def": 58,
+          "spa": 80,
+          "spd": 65,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Reptile",
+          "Creature"
+        ],
+        "hatchesAs": "Charmander",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "blaze"
+          ],
+          [
+            "competitive"
+          ]
+        ]
+      }
+    },
+    "name": "Charmeleon",
+    "dex": 5,
+    "debut": 1,
+    "art": 5
+  },
+  "clefable": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 70,
+          "def": 73,
+          "spc": 100,
+          "spe": 60
+        },
+        "evoMethod": "Moon Stone",
+        "evolvesFrom": "clefairy"
+      },
+      "2": {
+        "stats": {
+          "hp": 95,
+          "atk": 70,
+          "def": 73,
+          "spa": 95,
+          "spd": 100,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Fairy"
+        ],
+        "hatchesAs": "Clefairy",
+        "genderM": 12.5
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "magic-guard"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Fairy"
+        ],
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "magic-guard",
+            "unaware"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      }
+    },
+    "name": "Clefable",
+    "dex": 42,
+    "debut": 1,
+    "art": 36
+  },
+  "clefairy": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 45,
+          "def": 48,
+          "spc": 65,
+          "spe": 35
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 45,
+          "def": 48,
+          "spa": 60,
+          "spd": 65,
+          "spe": 35
+        },
+        "eggGroups": [
+          "Fairy"
+        ],
+        "hatchesAs": "Clefairy",
+        "genderM": 12.5
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "magic-guard"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Fairy"
+        ],
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "magic-guard",
+            "unaware"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      }
+    },
+    "name": "Clefairy",
+    "dex": 41,
+    "debut": 1,
+    "art": 35
+  },
+  "ekans": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 35,
+          "atk": 60,
+          "def": 44,
+          "spc": 40,
+          "spe": 55
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 35,
+          "atk": 60,
+          "def": 44,
+          "spa": 40,
+          "spd": 54,
+          "spe": 55
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Ekans",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "intimidate"
+          ],
+          [
+            "unnerve"
+          ]
+        ]
+      }
+    },
+    "name": "Ekans",
+    "dex": 15,
+    "debut": 1,
+    "art": 23
+  },
+  "fearow": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 107,
+          "def": 70,
+          "spc": 61,
+          "spe": 100
+        },
+        "evoMethod": "Level 24",
+        "evolvesFrom": "spearow"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 107,
+          "def": 70,
+          "spa": 61,
+          "spd": 61,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Spearow",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "sniper"
+          ],
+          [
+            "steady-wings"
+          ]
+        ]
+      }
+    },
+    "name": "Fearow",
+    "dex": 26,
+    "debut": 1,
+    "art": 22
+  },
+  "geodude": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 80,
+          "def": 100,
+          "spc": 30,
+          "spe": 40
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 80,
+          "def": 100,
+          "spa": 30,
+          "spd": 30,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Geodude",
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "sturdy"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "sturdy",
+            "aftermath"
+          ]
+        ]
+      }
+    },
+    "name": "Geodude",
+    "dex": 36,
+    "debut": 1,
+    "art": 74
+  },
+  "gloom": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 60,
+          "def": 70,
+          "spc": 90,
+          "spe": 40
+        },
+        "evoMethod": "Level 21",
+        "evolvesFrom": "oddish"
+      },
+      "2": {
+        "stats": {
+          "hp": 75,
+          "atk": 60,
+          "def": 70,
+          "spa": 80,
+          "spd": 90,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Oddish",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "stench"
+          ]
+        ]
+      }
+    },
+    "name": "Gloom",
+    "dex": 48,
+    "debut": 1,
+    "art": 44
+  },
+  "golbat": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 80,
+          "def": 70,
+          "spc": 55,
+          "spe": 90
+        },
+        "evoMethod": "Level 22",
+        "evolvesFrom": "zubat"
+      },
+      "2": {
+        "stats": {
+          "hp": 75,
+          "atk": 80,
+          "def": 70,
+          "spa": 55,
+          "spd": 75,
+          "spe": 90
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Zubat",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "strong-jaw"
+          ]
+        ]
+      }
+    },
+    "name": "Golbat",
+    "dex": 35,
+    "debut": 1,
+    "art": 42
+  },
+  "goldeen": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 67,
+          "def": 60,
+          "spc": 35,
+          "spe": 42
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 45,
+          "atk": 67,
+          "def": 60,
+          "spa": 35,
+          "spd": 50,
+          "spe": 42
+        },
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Goldeen",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "lightning-rod"
+          ]
+        ]
+      }
+    },
+    "name": "Goldeen",
+    "dex": 60,
+    "debut": 1,
+    "art": 118
+  },
+  "golduck": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 46,
+          "def": 48,
+          "spc": 70,
+          "spe": 49
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 46,
+          "def": 48,
+          "spa": 70,
+          "spd": 54,
+          "spe": 49
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Golduck",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "headache"
+          ]
+        ]
+      }
+    },
+    "name": "Golduck",
+    "dex": 53,
+    "debut": 1,
+    "art": 54
+  },
+  "golem": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 120,
+          "def": 130,
+          "spc": 55,
+          "spe": 60
+        },
+        "evoMethod": "Trade",
+        "evolvesFrom": "graveler"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 120,
+          "def": 130,
+          "spa": 55,
+          "spd": 60,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Geodude",
+        "genderM": 100
+      },
+      "3": {
+        "evoMethod": "Level 42",
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "sturdy"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "sturdy",
+            "aftermath"
+          ]
+        ]
+      }
+    },
+    "name": "Golem",
+    "dex": 38,
+    "debut": 1,
+    "art": 76
+  },
+  "graveler": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 95,
+          "def": 115,
+          "spc": 45,
+          "spe": 55
+        },
+        "evoMethod": "Level 24",
+        "evolvesFrom": "geodude"
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 95,
+          "def": 115,
+          "spa": 45,
+          "spd": 45,
+          "spe": 55
+        },
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Geodude",
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "sturdy"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "sturdy",
+            "aftermath"
+          ]
+        ]
+      }
+    },
+    "name": "Graveler",
+    "dex": 37,
+    "debut": 1,
+    "art": 75
+  },
+  "gyarados": {
+    "gens": {
+      "1": {
+        "types": [
+          "Dragon",
+          "Water"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 132,
+          "def": 100,
+          "spc": 92,
+          "spe": 71
+        },
+        "evoMethod": "Level 50",
+        "evolvesFrom": "magikarp"
+      },
+      "2": {
+        "stats": {
+          "hp": 95,
+          "atk": 132,
+          "def": 100,
+          "spa": 80,
+          "spd": 92,
+          "spe": 71
+        },
+        "eggGroups": [
+          "Fish",
+          "Reptile"
+        ],
+        "hatchesAs": "Magikarp",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "sheer-force"
+          ],
+          [
+            "anger-point"
+          ]
+        ]
+      }
+    },
+    "name": "Gyarados",
+    "dex": 67,
+    "debut": 1,
+    "art": 130
+  },
+  "ivysaur": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "evolvesFrom": "bulbasaur",
+        "stats": {
+          "hp": 60,
+          "atk": 62,
+          "def": 68,
+          "spc": 80,
+          "spe": 60
+        },
+        "evoMethod": "Level 18"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 62,
+          "def": 68,
+          "spa": 75,
+          "spd": 80,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Plant",
+          "Creature"
+        ],
+        "hatchesAs": "Bulbasaur",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "sunbathe"
+          ]
+        ]
+      }
+    },
+    "name": "Ivysaur",
+    "dex": 2,
+    "debut": 1,
+    "art": 2
+  },
+  "jigglypuff": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 115,
+          "atk": 45,
+          "def": 20,
+          "spc": 45,
+          "spe": 20
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 115,
+          "atk": 45,
+          "def": 20,
+          "spa": 45,
+          "spd": 25,
+          "spe": 20
+        },
+        "eggGroups": [
+          "Fairy"
+        ],
+        "hatchesAs": "Jigglypuff",
+        "genderM": 25
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "wind-rider"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Normal",
+          "Fairy"
+        ],
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "inflatable",
+            "wind-rider"
+          ]
+        ]
+      }
+    },
+    "name": "Jigglypuff",
+    "dex": 27,
+    "debut": 1,
+    "art": 39
+  },
+  "kadabra": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 35,
+          "def": 30,
+          "spc": 120,
+          "spe": 95
+        },
+        "evoMethod": "Level 22",
+        "evolvesFrom": "abra"
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 35,
+          "def": 30,
+          "spa": 120,
+          "spd": 85,
+          "spe": 95
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Abra",
+        "genderM": 62.5
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "supreme-wit"
+          ],
+          [
+            "inner-focus"
+          ],
+          [
+            "magic-guard"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "supreme-wit"
+          ],
+          [
+            "inner-focus",
+            "analytic"
+          ],
+          [
+            "magic-guard"
+          ]
+        ]
+      }
+    },
+    "name": "Kadabra",
+    "dex": 51,
+    "debut": 1,
+    "art": 64
+  },
+  "kakuna": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 25,
+          "def": 70,
+          "spc": 25,
+          "spe": 30
+        },
+        "evoMethod": "Level 6",
+        "evolvesFrom": "weedle"
+      },
+      "2": {
+        "stats": {
+          "hp": 45,
+          "atk": 25,
+          "def": 70,
+          "spa": 25,
+          "spd": 25,
+          "spe": 30
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Weedle",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ]
+        ]
+      }
+    },
+    "name": "Kakuna",
+    "dex": 21,
+    "debut": 1,
+    "art": 14
+  },
+  "kingler": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 125,
+          "def": 115,
+          "spc": 50,
+          "spe": 50
+        },
+        "evoMethod": "Level 28",
+        "evolvesFrom": "krabby"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 125,
+          "def": 115,
+          "spa": 50,
+          "spd": 50,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Krabby",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "hustle"
+          ],
+          [
+            "shell-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "clunky-pincer"
+          ],
+          [
+            "shell-armor"
+          ],
+          [
+            "adaptability",
+            "royal-privilege"
+          ]
+        ]
+      }
+    },
+    "name": "Kingler",
+    "dex": 69,
+    "debut": 1,
+    "art": 99
+  },
+  "krabby": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 100,
+          "def": 90,
+          "spc": 25,
+          "spe": 50
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 100,
+          "def": 90,
+          "spa": 25,
+          "spd": 25,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Krabby",
+        "genderM": 75
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "hyper-cutter"
+          ],
+          [
+            "shell-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "hyper-cutter"
+          ],
+          [
+            "shell-armor"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Krabby",
+    "dex": 68,
+    "debut": 1,
+    "art": 98
+  },
+  "magikarp": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Water"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 10,
+          "def": 55,
+          "spc": 15,
+          "spe": 50
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 10,
+          "def": 55,
+          "spa": 15,
+          "spd": 20,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Magikarp",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ]
+        ]
+      }
+    },
+    "name": "Magikarp",
+    "dex": 66,
+    "debut": 1,
+    "art": 129
+  },
+  "mankey": {
+    "name": "Mankey",
+    "debut": 1,
+    "gens": {
+      "1": {
+        "types": [
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 80,
+          "def": 45,
+          "spc": 35,
+          "spe": 70
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 80,
+          "def": 45,
+          "spa": 35,
+          "spd": 35,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Mankey",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "anger-point"
+          ],
+          [
+            "vital-spirit"
+          ]
+        ]
+      }
+    },
+    "dex": 62,
+    "art": 56
+  },
+  "meowth": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 55,
+          "def": 35,
+          "spc": 35,
+          "spe": 80
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 55,
+          "def": 35,
+          "spa": 35,
+          "spd": 40,
+          "spe": 80
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Meowth",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "pickup"
+          ],
+          [
+            "unnerve"
+          ]
+        ]
+      }
+    },
+    "name": "Meowth",
+    "dex": 64,
+    "debut": 1,
+    "art": 52
+  },
+  "metapod": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 20,
+          "def": 75,
+          "spc": 25,
+          "spe": 25
+        },
+        "evoMethod": "Level 6",
+        "evolvesFrom": "caterpie"
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 20,
+          "def": 75,
+          "spa": 25,
+          "spd": 25,
+          "spe": 25
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Caterpie",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ]
+        ]
+      }
+    },
+    "name": "Metapod",
+    "dex": 18,
+    "debut": 1,
+    "art": 11
+  },
+  "nidoking": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 86,
+          "atk": 122,
+          "def": 89,
+          "spc": 73,
+          "spe": 76
+        },
+        "evoMethod": "Moon Stone",
+        "evolvesFrom": "nidorino"
+      },
+      "2": {
+        "stats": {
+          "hp": 86,
+          "atk": 122,
+          "def": 89,
+          "spa": 75,
+          "spd": 73,
+          "spe": 76
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Nidoran",
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry"
+          ],
+          [
+            "sheer-force"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry",
+            "royal-privilege"
+          ],
+          [
+            "sheer-force"
+          ]
+        ]
+      }
+    },
+    "name": "Nidoking",
+    "dex": 33,
+    "debut": 1,
+    "art": 34
+  },
+  "nidoqueen": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 97,
+          "atk": 95,
+          "def": 98,
+          "spc": 70,
+          "spe": 76
+        },
+        "evoMethod": "Moon Stone",
+        "evolvesFrom": "nidorina"
+      },
+      "2": {
+        "stats": {
+          "hp": 97,
+          "atk": 95,
+          "def": 98,
+          "spa": 70,
+          "spd": 85,
+          "spe": 76
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Nidoran",
+        "genderM": 0
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry"
+          ],
+          [
+            "battle-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry",
+            "royal-privilege"
+          ],
+          [
+            "battle-armor"
+          ]
+        ]
+      }
+    },
+    "name": "Nidoqueen",
+    "dex": 31,
+    "debut": 1,
+    "art": 31
+  },
+  "nidoran": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 47,
+          "def": 52,
+          "spc": 40,
+          "spe": 46
+        }
+      }
+    },
+    "name": "Nidoran",
+    "dex": 29,
+    "debut": 1,
+    "art": 29
+  },
+  "nidorina": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 62,
+          "def": 67,
+          "spc": 55,
+          "spe": 61
+        },
+        "evoMethod": "Level 16",
+        "evolvesFrom": "nidoran"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 62,
+          "def": 67,
+          "spa": 55,
+          "spd": 55,
+          "spe": 61
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Nidoran",
+        "genderM": 0
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry"
+          ],
+          [
+            "anticipation"
+          ]
+        ]
+      }
+    },
+    "name": "Nidorina",
+    "dex": 30,
+    "debut": 1,
+    "art": 30
+  },
+  "nidorino": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 61,
+          "atk": 77,
+          "def": 59,
+          "spc": 53,
+          "spe": 65
+        },
+        "evoMethod": "Level 16",
+        "evolvesFrom": "nidoran"
+      },
+      "2": {
+        "stats": {
+          "hp": 61,
+          "atk": 77,
+          "def": 59,
+          "spa": 55,
+          "spd": 53,
+          "spe": 65
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Nidoran",
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry"
+          ],
+          [
+            "hyper-cutter"
+          ]
+        ]
+      }
+    },
+    "name": "Nidorino",
+    "dex": 32,
+    "debut": 1,
+    "art": 33
+  },
+  "oddish": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 40,
+          "def": 45,
+          "spc": 60,
+          "spe": 45
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 40,
+          "def": 45,
+          "spa": 65,
+          "spd": 60,
+          "spe": 45
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Oddish",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ]
+        ]
+      }
+    },
+    "name": "Oddish",
+    "dex": 47,
+    "debut": 1,
+    "art": 43
+  },
+  "paras": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Grass"
+        ],
+        "stats": {
+          "hp": 35,
+          "atk": 70,
+          "def": 55,
+          "spc": 55,
+          "spe": 40
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 35,
+          "atk": 70,
+          "def": 55,
+          "spa": 55,
+          "spd": 55,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Bug",
+          "Plant"
+        ],
+        "hatchesAs": "Paras",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "effect-spore"
+          ],
+          [
+            "damp"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "effect-spore",
+            "aftermath"
+          ],
+          [
+            "damp",
+            "dry-skin"
+          ]
+        ]
+      }
+    },
+    "name": "Paras",
+    "dex": 39,
+    "debut": 1,
+    "art": 46
+  },
+  "parasect": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 100,
+          "def": 85,
+          "spc": 85,
+          "spe": 20
+        },
+        "evoMethod": "Level 22",
+        "evolvesFrom": "paras"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 100,
+          "def": 85,
+          "spa": 85,
+          "spd": 85,
+          "spe": 20
+        },
+        "eggGroups": [
+          "Bug",
+          "Plant"
+        ],
+        "hatchesAs": "Paras",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "effect-spore"
+          ],
+          [
+            "damp"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "effect-spore",
+            "aftermath"
+          ],
+          [
+            "damp",
+            "dry-skin"
+          ],
+          [
+            "symbiosis"
+          ]
+        ]
+      }
+    },
+    "name": "Parasect",
+    "dex": 40,
+    "debut": 1,
+    "art": 47
+  },
+  "persian": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 80,
+          "def": 60,
+          "spc": 60,
+          "spe": 115
+        },
+        "evoMethod": "30",
+        "evolvesFrom": "meowth"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 80,
+          "def": 60,
+          "spa": 60,
+          "spd": 65,
+          "spe": 115
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Meowth",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "limber"
+          ],
+          [
+            "unnerve"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "limber"
+          ],
+          [
+            "unnerve"
+          ],
+          [
+            "technician"
+          ]
+        ]
+      }
+    },
+    "name": "Persian",
+    "dex": 65,
+    "debut": 1,
+    "art": 53
+  },
+  "pichu": {
+    "name": "Pichu",
+    "debut": 2,
+    "gens": {
+      "2": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 20,
+          "atk": 35,
+          "def": 20,
+          "spa": 35,
+          "spd": 20,
+          "spe": 60
+        },
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50
+      }
+    },
+    "dex": 223,
+    "art": 172
+  },
+  "pidgeot": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 70,
+          "def": 75,
+          "spc": 85,
+          "spe": 121
+        },
+        "evoMethod": "Level 30",
+        "evolvesFrom": "pidgeotto"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 70,
+          "def": 75,
+          "spa": 85,
+          "spd": 70,
+          "spe": 121
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Pidgey",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "keen-eye"
+          ],
+          [
+            "steady-wings"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away",
+            "flock"
+          ],
+          [
+            "keen-eye"
+          ],
+          [
+            "steady-wings"
+          ]
+        ]
+      }
+    },
+    "name": "Pidgeot",
+    "dex": 12,
+    "debut": 1,
+    "art": 18
+  },
+  "pidgeotto": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 60,
+          "def": 55,
+          "spc": 50,
+          "spe": 86
+        },
+        "evoMethod": "Level 16",
+        "evolvesFrom": "pidgey"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 60,
+          "def": 55,
+          "spa": 50,
+          "spd": 50,
+          "spe": 86
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Pidgey",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "keen-eye"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away",
+            "flock"
+          ],
+          [
+            "keen-eye"
+          ]
+        ]
+      }
+    },
+    "name": "Pidgeotto",
+    "dex": 11,
+    "debut": 1,
+    "art": 17
+  },
+  "pidgey": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 40,
+          "spc": 35,
+          "spe": 56
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 40,
+          "spa": 35,
+          "spd": 35,
+          "spe": 56
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Pidgey",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "keen-eye"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away",
+            "flock"
+          ],
+          [
+            "keen-eye"
+          ]
+        ]
+      }
+    },
+    "name": "Pidgey",
+    "dex": 10,
+    "debut": 1,
+    "art": 16
+  },
+  "pikachu": {
+    "gens": {
+      "1": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 60,
+          "def": 50,
+          "spc": 60,
+          "spe": 90
+        },
+        "evoMethod": "High Friendship",
+        "evolvesFrom": "pichu"
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 60,
+          "def": 50,
+          "spa": 60,
+          "spd": 50,
+          "spe": 90
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Pikachu",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "lightning-rod"
+          ],
+          [
+            "overcharge"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "lightning-rod"
+          ],
+          [
+            "overcharge",
+            "short-circuit"
+          ]
+        ]
+      }
+    },
+    "name": "Pikachu",
+    "dex": 23,
+    "debut": 1,
+    "art": 25
+  },
+  "poliwhirl": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 70,
+          "def": 65,
+          "spc": 55,
+          "spe": 70
+        },
+        "evoMethod": "Level 17",
+        "evolvesFrom": "poliwrath"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 70,
+          "def": 65,
+          "spa": 55,
+          "spd": 55,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Amphibian"
+        ],
+        "hatchesAs": "Poliwag",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "hypnotic"
+          ],
+          [
+            "damp"
+          ]
+        ]
+      }
+    },
+    "name": "Poliwhirl",
+    "dex": 58,
+    "debut": 1,
+    "art": 61
+  },
+  "poliwrath": {
+    "debut": 1,
+    "dex": 57,
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 50,
+          "def": 40,
+          "spc": 40,
+          "spe": 45
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 50,
+          "def": 40,
+          "spa": 40,
+          "spd": 40,
+          "spe": 45
+        },
+        "eggGroups": [
+          "None"
+        ]
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "hypnotic"
+          ],
+          [
+            "damp"
+          ]
+        ]
+      }
+    },
+    "name": "Poliwag",
+    "art": 60
+  },
+  "poliwrath-2": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 100,
+          "def": 85,
+          "spc": 75,
+          "spe": 70
+        },
+        "evoMethod": "Level 34",
+        "evolvesFrom": "poliwhirl"
+      },
+      "2": {
+        "stats": {
+          "hp": 95,
+          "atk": 100,
+          "def": 85,
+          "spa": 75,
+          "spd": 75,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Amphibian",
+          "Human-Like"
+        ],
+        "hatchesAs": "Poliwag",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "hypnotic"
+          ],
+          [
+            "damp"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "swift-swim",
+            "iron-fists"
+          ],
+          [
+            "hypnotic"
+          ],
+          [
+            "damp"
+          ]
+        ]
+      }
+    },
+    "name": "Poliwrath",
+    "dex": 59,
+    "debut": 1,
+    "art": 62
+  },
+  "primeape": {
+    "debut": 1,
+    "dex": 63,
+    "gens": {
+      "1": {
+        "types": [
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 75,
+          "spc": 65,
+          "spe": 100
+        },
+        "evolvesFrom": "mankey",
+        "evoMethod": "Level 30"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 75,
+          "spa": 65,
+          "spd": 65,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Mankey",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "anger-point"
+          ],
+          [
+            "vital-spirit"
+          ]
+        ]
+      }
+    },
+    "name": "Primeape",
+    "art": 57
+  },
+  "psyduck": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 76,
+          "def": 78,
+          "spc": 100,
+          "spe": 79
+        },
+        "evoMethod": "Level 30",
+        "evolvesFrom": "golduck"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 76,
+          "def": 78,
+          "spa": 100,
+          "spd": 84,
+          "spe": 79
+        },
+        "eggGroups": [
+          "Bird",
+          "Human-Like"
+        ],
+        "hatchesAs": "Golduck",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "drizzle"
+          ]
+        ]
+      }
+    },
+    "name": "Psyduck",
+    "dex": 54,
+    "debut": 1,
+    "art": 55
+  },
+  "raichu": {
+    "gens": {
+      "1": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 100,
+          "def": 75,
+          "spc": 100,
+          "spe": 110
+        },
+        "evoMethod": "Thunder Stone",
+        "evolvesFrom": "pikachu"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 100,
+          "def": 75,
+          "spa": 100,
+          "spd": 75,
+          "spe": 110
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Pikachu",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "lightning-rod"
+          ],
+          [
+            "overcharge"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "lightning-rod"
+          ],
+          [
+            "overcharge",
+            "short-circuit"
+          ]
+        ]
+      }
+    },
+    "name": "Raichu",
+    "dex": 24,
+    "debut": 1,
+    "art": 26
+  },
+  "raticate": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 76,
+          "def": 60,
+          "spc": 50,
+          "spe": 97
+        },
+        "evoMethod": "Level 17",
+        "evolvesFrom": "rattata"
+      },
+      "2": {
+        "stats": {
+          "hp": 85,
+          "atk": 76,
+          "def": 60,
+          "spa": 50,
+          "spd": 60,
+          "spe": 97
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Rattata",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "immunity"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away",
+            "guts"
+          ],
+          [
+            "immunity",
+            "adaptability"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ]
+      }
+    },
+    "name": "Raticate",
+    "dex": 14,
+    "debut": 1,
+    "art": 20
+  },
+  "rattata": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 51,
+          "def": 35,
+          "spc": 25,
+          "spe": 72
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 51,
+          "def": 35,
+          "spa": 25,
+          "spd": 35,
+          "spe": 72
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Rattata",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "immunity"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away",
+            "guts"
+          ],
+          [
+            "immunity",
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Rattata",
+    "dex": 13,
+    "debut": 1,
+    "art": 19
+  },
+  "sandshrew": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 75,
+          "def": 80,
+          "spc": 20,
+          "spe": 50
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 75,
+          "def": 80,
+          "spa": 20,
+          "spd": 30,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Sandshrew",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "sand-rush"
+          ],
+          [
+            "sand-veil"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "sand-rush",
+            "sand-veil"
+          ]
+        ]
+      }
+    },
+    "name": "Sandshrew",
+    "dex": 43,
+    "debut": 1,
+    "art": 27
+  },
+  "sandslash": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 105,
+          "def": 110,
+          "spc": 45,
+          "spe": 80
+        },
+        "evoMethod": "Level 24",
+        "evolvesFrom": "sandshrew"
+      },
+      "2": {
+        "stats": {
+          "hp": 75,
+          "atk": 105,
+          "def": 110,
+          "spa": 45,
+          "spd": 55,
+          "spe": 80
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Sandshrew",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "sand-rush"
+          ],
+          [
+            "sand-veil"
+          ],
+          [
+            "rough-skin"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "sand-rush",
+            "sand-veil"
+          ],
+          [
+            "rough-skin"
+          ],
+          [
+            "tough-claws"
+          ]
+        ]
+      }
+    },
+    "name": "Sandslash",
+    "dex": 44,
+    "debut": 1,
+    "art": 28
+  },
+  "seaking": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 97,
+          "def": 80,
+          "spc": 65,
+          "spe": 83
+        },
+        "evoMethod": "Level 30",
+        "evolvesFrom": "goldeen"
+      },
+      "2": {
+        "stats": {
+          "hp": 85,
+          "atk": 97,
+          "def": 80,
+          "spa": 65,
+          "spd": 80,
+          "spe": 83
+        },
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Goldeen",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "lightning-rod"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "lightning-rod"
+          ],
+          [
+            "royal-privilege"
+          ]
+        ]
+      }
+    },
+    "name": "Seaking",
+    "dex": 61,
+    "debut": 1,
+    "art": 119
+  },
+  "spearow": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 57,
+          "def": 40,
+          "spc": 31,
+          "spe": 70
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 57,
+          "def": 40,
+          "spa": 41,
+          "spd": 31,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Spearow",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "hustle"
+          ]
+        ]
+      }
+    },
+    "name": "Spearow",
+    "dex": 25,
+    "debut": 1,
+    "art": 21
+  },
+  "squirtle": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 44,
+          "atk": 50,
+          "def": 65,
+          "spc": 48,
+          "spe": 42
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 44,
+          "atk": 50,
+          "def": 65,
+          "spa": 48,
+          "spd": 65,
+          "spe": 42
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Squirtle",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "torrent"
+          ]
+        ]
+      }
+    },
+    "name": "Squirtle",
+    "dex": 7,
+    "debut": 1,
+    "art": 7
+  },
+  "teddiursa": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 65,
+          "def": 54,
+          "spc": 50,
+          "spe": 45
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 65,
+          "def": 54,
+          "spa": 50,
+          "spd": 50,
+          "spe": 45
+        },
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "pickup"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "pickup",
+            "honey-gather"
+          ],
+          [
+            "quick-feet"
+          ]
+        ]
+      }
+    },
+    "name": "Teddiursa",
+    "dex": 45,
+    "debut": 1,
+    "art": 216
+  },
+  "tentacool": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 35,
+          "spc": 80,
+          "spe": 60
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 35,
+          "spa": 50,
+          "spd": 80,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Invertebrate"
+        ],
+        "hatchesAs": "Tentacool",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "clear-body"
+          ],
+          [
+            "water-absorb"
+          ],
+          [
+            "liquid-ooze"
+          ]
+        ]
+      }
+    },
+    "name": "Tentacool",
+    "dex": 70,
+    "debut": 1,
+    "art": 72
+  },
+  "tentacruel": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 75,
+          "spc": 120,
+          "spe": 70
+        },
+        "evoMethod": "33",
+        "evolvesFrom": "tentacool"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 75,
+          "spa": 90,
+          "spd": 120,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Invertebrate"
+        ],
+        "hatchesAs": "Tent",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "clear-body"
+          ],
+          [
+            "water-absorb"
+          ],
+          [
+            "liquid-ooze"
+          ]
+        ]
+      }
+    },
+    "name": "Tentacruel",
+    "dex": 71,
+    "debut": 1,
+    "art": 73
+  },
+  "ursaring": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 125,
+          "def": 79,
+          "spc": 65,
+          "spe": 75
+        },
+        "evoMethod": "Level 32",
+        "evolvesFrom": "teddiursa"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 125,
+          "def": 79,
+          "spa": 65,
+          "spd": 80,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Teddiursa",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "pickup"
+          ],
+          [
+            "guts"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "pickup",
+            "honey-gather"
+          ],
+          [
+            "quick-feet",
+            "guts"
+          ],
+          [
+            "tough-claws"
+          ]
+        ]
+      }
+    },
+    "name": "Ursaring",
+    "dex": 46,
+    "debut": 1,
+    "art": 217
+  },
+  "venomoth": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 55,
+          "def": 60,
+          "spc": 95,
+          "spe": 90
+        },
+        "evoMethod": "Level 20",
+        "evolvesFrom": "venonat"
+      },
+      "2": {
+        "stats": {
+          "hp": 75,
+          "atk": 55,
+          "def": 60,
+          "spa": 95,
+          "spd": 90,
+          "spe": 90
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Venonat",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "effect-spore"
+          ]
+        ]
+      }
+    },
+    "name": "Venomoth",
+    "dex": 56,
+    "debut": 1,
+    "art": 49
+  },
+  "venonat": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 45,
+          "def": 50,
+          "spc": 55,
+          "spe": 45
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 45,
+          "def": 50,
+          "spa": 40,
+          "spd": 55,
+          "spe": 45
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Venonat",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "compound-eyes"
+          ]
+        ]
+      }
+    },
+    "name": "Venonat",
+    "dex": 55,
+    "debut": 1,
+    "art": 48
+  },
+  "venusaur": {
+    "debut": 1,
+    "dex": 3,
+    "gens": {
+      "1": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 82,
+          "def": 83,
+          "spc": 100,
+          "spe": 75
+        },
+        "evoMethod": "Level 36",
+        "evolvesFrom": "ivysaur"
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "sunbathe"
+          ],
+          [
+            "calming-scent"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "evolvesFrom": "ivysaur",
+        "stats": {
+          "hp": 90,
+          "atk": 82,
+          "def": 83,
+          "spa": 100,
+          "spd": 100,
+          "spe": 75
+        },
+        "evoMethod": "Level 36",
+        "eggGroups": [
+          "Plant",
+          "Beast"
+        ],
+        "hatchesAs": "Bulbasaur",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "sunbathe",
+            "flower-guard"
+          ],
+          [
+            "calming-scent"
+          ]
+        ]
+      }
+    },
+    "name": "Venusaur",
+    "art": 3
+  },
+  "vileplume": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 70,
+          "def": 85,
+          "spc": 120,
+          "spe": 50
+        },
+        "evoMethod": "Leaf Stone",
+        "evolvesFrom": "gloom"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 70,
+          "def": 85,
+          "spa": 95,
+          "spd": 120,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Oddish",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "stench"
+          ],
+          [
+            "effect-spore"
+          ]
+        ]
+      }
+    },
+    "name": "Vileplume",
+    "dex": 49,
+    "debut": 1,
+    "art": 45
+  },
+  "wartortle": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 59,
+          "atk": 68,
+          "def": 80,
+          "spc": 66,
+          "spe": 52
+        },
+        "evoMethod": "Level 18",
+        "evolvesFrom": "squirtle"
+      },
+      "2": {
+        "stats": {
+          "hp": 59,
+          "atk": 68,
+          "def": 80,
+          "spa": 66,
+          "spd": 80,
+          "spe": 52
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Squirtle",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "shell-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "shell-armor",
+            "swift-swim"
+          ]
+        ]
+      }
+    },
+    "name": "Wartortle",
+    "dex": 8,
+    "debut": 1,
+    "art": 8
+  },
+  "weedle": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 30,
+          "spc": 20,
+          "spe": 40
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 30,
+          "spa": 20,
+          "spd": 20,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Weedle",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "poison-point"
+          ]
+        ]
+      }
+    },
+    "name": "Weedle",
+    "dex": 20,
+    "debut": 1,
+    "art": 13
+  },
+  "wigglytuff": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 140,
+          "atk": 70,
+          "def": 50,
+          "spc": 75,
+          "spe": 45
+        },
+        "evoMethod": "Moon Stone",
+        "evolvesFrom": "jigglypuff"
+      },
+      "2": {
+        "stats": {
+          "hp": 140,
+          "atk": 70,
+          "def": 50,
+          "spa": 75,
+          "spd": 55,
+          "spe": 45
+        },
+        "eggGroups": [
+          "Fairy"
+        ],
+        "hatchesAs": "Jigglypuff",
+        "genderM": 25
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "wind-rider"
+          ],
+          [
+            "huge-power"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Normal",
+          "Fairy"
+        ],
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "inflatable",
+            "wind-rider"
+          ],
+          [
+            "huge-power"
+          ]
+        ]
+      }
+    },
+    "name": "Wigglytuff",
+    "dex": 28,
+    "debut": 1,
+    "art": 40
+  },
+  "zubat": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 35,
+          "spc": 25,
+          "spe": 55
+        }
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 35,
+          "spa": 25,
+          "spd": 40,
+          "spe": 55
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Zubat",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "inner-focus"
+          ]
+        ]
+      }
+    },
+    "name": "Zubat",
+    "dex": 34,
+    "debut": 1,
+    "art": 41
+  }
+}

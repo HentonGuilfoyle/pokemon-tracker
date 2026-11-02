@@ -1,0 +1,17 @@
+{
+  "flamethrower": {
+    "gens": {
+      "1": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "pp": 10,
+        "effect": "The target is scorched with intense flames. The target may suffer a burn.",
+        "flavor": "Flamethrower deals damage and has a 10% chance of burning the target"
+      }
+    },
+    "name": "Flamethrower",
+    "debut": 1
+  }
+}

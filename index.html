@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pokémon Tracker</title>
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="band"><div class="band-in">
+  <a class="logo" href="#dex">Pokémon Tracker</a>
+  <nav class="nav" id="nav" aria-label="Main"></nav>
+  <div class="genpick" id="genpick"></div>
+  <button type="button" class="btn themebtn" id="theme" data-act="theme">Dark mode</button>
+</div></div>
+<main class="wrap" id="app"></main>
+<footer class="foot">Sprites from <a href="https://github.com/PokeAPI/sprites">PokéAPI</a>, trainer art from <a href="https://play.pokemonshowdown.com">Pokémon Showdown</a>. Fan project. Pokémon belongs to Nintendo, Game Freak and Creatures.</footer>
+<div id="modal-root"></div>
+<div id="toast" role="status" hidden></div>
+<datalist id="dl-pokemon"></datalist><datalist id="dl-abilities"></datalist><datalist id="dl-items"></datalist><datalist id="dl-moves"></datalist><datalist id="dl-eggs"></datalist><datalist id="dl-itemcats"></datalist><datalist id="dl-groups"></datalist>
+
+<script src="app.js"></script>
+</body>
+</html>
