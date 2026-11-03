@@ -158,10 +158,11 @@ td.mid{vertical-align:middle}
 fieldset{margin:0;padding:12px 14px;border:1px solid var(--line);border-radius:3px;display:flex;flex-direction:column;gap:10px;min-width:0}
 legend{padding:0 6px;font-weight:700}
 .slotrow{display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:8px;align-items:center}
+.msrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;align-items:end}
 .slotopts{display:flex;flex-wrap:wrap;gap:6px;min-width:0}
 .slotopts input{flex:1 1 150px;min-width:0;min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
 .hint{margin:0;color:var(--muted);font-size:13px}
 .error{margin:0;color:var(--accent);font-weight:600}
 #toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:40;max-width:min(90vw,520px);padding:10px 16px;border-radius:3px;background:var(--ink);color:var(--surface);font-weight:600}
-@media (max-width:640px){.slotrow{grid-template-columns:minmax(0,1fr)}.moves{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.slotrow,.msrow{grid-template-columns:minmax(0,1fr)}.moves{grid-template-columns:minmax(0,1fr)}}
 @media (prefers-reduced-motion:no-preference){.btn,.evotile,.tcard{transition:border-color .12s}}

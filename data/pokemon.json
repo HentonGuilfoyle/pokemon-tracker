@@ -40,6 +40,60 @@
     "debut": 1,
     "art": 63
   },
+  "aerodactyl": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 110,
+          "def": 75,
+          "spc": 60,
+          "spe": 115
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 110,
+          "def": 75,
+          "spa": 60,
+          "spd": 75,
+          "spe": 115
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Aerodactyl",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "strong-jaw"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "strong-jaw"
+          ],
+          [
+            "merciless"
+          ]
+        ]
+      }
+    },
+    "name": "Aerodactyl",
+    "dex": 143,
+    "debut": 1,
+    "art": 142
+  },
   "alakazam": {
     "gens": {
       "1": {
@@ -164,6 +218,56 @@
     "dex": 87,
     "debut": 1,
     "art": 59
+  },
+  "articuno": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ice",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 90,
+          "def": 100,
+          "spc": 135,
+          "spe": 105
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 90,
+          "def": 100,
+          "spa": 105,
+          "spd": 135,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "growthRate": "Fluctuating",
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "snow-warning"
+          ],
+          [
+            "snow-cloak"
+          ]
+        ]
+      }
+    },
+    "name": "Articuno",
+    "dex": 147,
+    "debut": 1,
+    "art": 144
   },
   "beedrill": {
     "gens": {
@@ -543,6 +647,65 @@
     "debut": 1,
     "art": 10
   },
+  "chansey": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 250,
+          "atk": 5,
+          "def": 5,
+          "spc": 105,
+          "spe": 75
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 250,
+          "atk": 5,
+          "def": 5,
+          "spa": 35,
+          "spd": 105,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Fairy"
+        ],
+        "hatchesAs": "Chansey",
+        "genderM": 12.5
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "healer"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "healer"
+          ],
+          [
+            "run-away"
+          ],
+          [
+            "super-luck"
+          ]
+        ]
+      }
+    },
+    "name": "Chansey",
+    "dex": 121,
+    "debut": 1,
+    "art": 113
+  },
   "charizard": {
     "gens": {
       "1": {
@@ -817,6 +980,71 @@
     "debut": 1,
     "art": 35
   },
+  "cloyster": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 90,
+          "def": 180,
+          "spc": 85,
+          "spe": 40
+        },
+        "evoMethod": "Water Stone",
+        "evolvesFrom": "shellder",
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 90,
+          "def": 180,
+          "spa": 45,
+          "spd": 85,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Shellder",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "overcoat"
+          ],
+          [
+            "skill-link"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "overcoat",
+            "bulletproof"
+          ],
+          [
+            "skill-link"
+          ]
+        ]
+      }
+    },
+    "name": "Cloyster",
+    "dex": 91,
+    "debut": 1,
+    "art": 91
+  },
   "cubone": {
     "gens": {
       "1": {
@@ -861,6 +1089,72 @@
     "dex": 83,
     "debut": 1,
     "art": 104
+  },
+  "dewgong": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Ice"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 90,
+          "def": 80,
+          "spc": 95,
+          "spe": 70
+        },
+        "evoMethod": "Level 31",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "seel"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 90,
+          "def": 80,
+          "spa": 70,
+          "spd": 95,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Seel",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body",
+            "snow-cloak"
+          ]
+        ]
+      }
+    },
+    "name": "Dewgong",
+    "dex": 108,
+    "debut": 1,
+    "art": 87
   },
   "diglett": {
     "gens": {
@@ -913,6 +1207,320 @@
     "dex": 72,
     "debut": 1,
     "art": 50
+  },
+  "ditto": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 50,
+          "def": 50,
+          "spc": 50,
+          "spe": 50
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 50,
+          "def": 50,
+          "spa": 50,
+          "spd": 50,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Ditto"
+        ],
+        "hatchesAs": "Ditto"
+      },
+      "3": {
+        "growthRate": "Erratic",
+        "abilitySlots": [
+          [
+            "limber"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "limber"
+          ],
+          [
+            "imposter"
+          ]
+        ]
+      }
+    },
+    "name": "Ditto",
+    "dex": 137,
+    "debut": 1,
+    "art": 132
+  },
+  "dodrio": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 113,
+          "def": 75,
+          "spc": 65,
+          "spe": 110
+        },
+        "evoMethod": "Level 31",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "doduo"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 113,
+          "def": 75,
+          "spa": 65,
+          "spd": 65,
+          "spe": 110
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Doduo",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "triple-threat"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "triple-threat"
+          ],
+          [
+            "run-away"
+          ],
+          [
+            "quick-feet",
+            "tangled-feet"
+          ]
+        ]
+      }
+    },
+    "name": "Dodrio",
+    "dex": 96,
+    "debut": 1,
+    "art": 85
+  },
+  "doduo": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 35,
+          "atk": 83,
+          "def": 45,
+          "spc": 35,
+          "spe": 80
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 35,
+          "atk": 83,
+          "def": 45,
+          "spa": 35,
+          "spd": 35,
+          "spe": 80
+        },
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Doduo",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "twin-beat"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "twin-beat"
+          ],
+          [
+            "run-away"
+          ],
+          [
+            "quick-feet",
+            "tangled-feet"
+          ]
+        ]
+      }
+    },
+    "name": "Doduo",
+    "dex": 95,
+    "debut": 1,
+    "art": 84
+  },
+  "dragonair": {
+    "gens": {
+      "1": {
+        "types": [
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 61,
+          "atk": 84,
+          "def": 65,
+          "spc": 70,
+          "spe": 70
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Slow",
+        "evolvesFrom": "dratini"
+      },
+      "2": {
+        "stats": {
+          "hp": 61,
+          "atk": 84,
+          "def": 65,
+          "spa": 70,
+          "spd": 70,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Dratini",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "cloud-nine"
+          ]
+        ]
+      }
+    },
+    "name": "Dragonair",
+    "dex": 145,
+    "debut": 1,
+    "art": 148
+  },
+  "dragonite": {
+    "gens": {
+      "1": {
+        "types": [
+          "Dragon",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 101,
+          "atk": 134,
+          "def": 95,
+          "spa": 80,
+          "spd": 100,
+          "spe": 90
+        },
+        "evoMethod": "Level 60",
+        "growthRate": "Slow",
+        "evolvesFrom": "dragonair"
+      },
+      "2": {
+        "eggGroups": [
+          "Reptile",
+          "Beast"
+        ],
+        "hatchesAs": "Dratini",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "steady-wings"
+          ],
+          [
+            "multiscale"
+          ]
+        ]
+      }
+    },
+    "name": "Dragonite",
+    "dex": 146,
+    "debut": 1,
+    "art": 149
+  },
+  "dratini": {
+    "gens": {
+      "1": {
+        "types": [
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 41,
+          "atk": 64,
+          "def": 45,
+          "spc": 50,
+          "spe": 50
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 41,
+          "atk": 64,
+          "def": 45,
+          "spa": 50,
+          "spd": 50,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Dratini",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ]
+        ]
+      }
+    },
+    "name": "Dratini",
+    "dex": 144,
+    "debut": 1,
+    "art": 147
   },
   "drowzee": {
     "gens": {
@@ -1032,6 +1640,62 @@
     "debut": 1,
     "art": 51
   },
+  "eevee": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 50,
+          "def": 50,
+          "spc": 50,
+          "spe": 70
+        },
+        "growthRate": "Medium Fast",
+        "species": "Evolution Pokémon"
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 50,
+          "def": 50,
+          "spa": 50,
+          "spd": 50,
+          "spe": 70
+        },
+        "species": "Evolution Pokémon",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Eevee",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ]
+        ],
+        "growthRate": "Erratic"
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "adaptability"
+          ],
+          [
+            "run-away"
+          ]
+        ]
+      }
+    },
+    "name": "Eevee",
+    "dex": 132,
+    "debut": 1,
+    "art": 133
+  },
   "ekans": {
     "gens": {
       "1": {
@@ -1079,6 +1743,68 @@
     "dex": 15,
     "debut": 1,
     "art": 23
+  },
+  "electabuzz": {
+    "gens": {
+      "1": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 100,
+          "def": 85,
+          "spc": 95,
+          "spe": 78
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 100,
+          "def": 85,
+          "spa": 95,
+          "spd": 67,
+          "spe": 78
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "genderM": 75
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "volt-absorb"
+          ],
+          [
+            "electric-surge"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "volt-absorb",
+            "motor-drive"
+          ],
+          [
+            "electric-surge"
+          ]
+        ]
+      }
+    },
+    "name": "Electabuzz",
+    "dex": 115,
+    "debut": 1,
+    "art": 125
   },
   "electrode": {
     "gens": {
@@ -1139,6 +1865,126 @@
     "debut": 1,
     "art": 101
   },
+  "exeggcute": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 40,
+          "def": 80,
+          "spc": 60,
+          "spe": 40
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 40,
+          "def": 80,
+          "spa": 60,
+          "spd": 45,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Exeggcute",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "solar-power"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "solar-power",
+            "sunbathe"
+          ]
+        ]
+      }
+    },
+    "name": "Exeggcute",
+    "dex": 119,
+    "debut": 1,
+    "art": 102
+  },
+  "exeggutor": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 70,
+          "def": 90,
+          "spc": 125,
+          "spe": 55
+        },
+        "evoMethod": "Leaf Stone",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "exeggcute"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 70,
+          "def": 90,
+          "spa": 125,
+          "spd": 75,
+          "spe": 55
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Exeggcute",
+        "genderM": 50
+      },
+      "3": {
+        "evoMethod": "Level 20 & Leaf Stone",
+        "abilitySlots": [
+          [
+            "solar-power"
+          ],
+          [
+            "telepathy"
+          ],
+          [
+            "harvest"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "solar-power",
+            "sunbathe"
+          ],
+          [
+            "telepathy"
+          ],
+          [
+            "harvest",
+            "seed-sower"
+          ]
+        ]
+      }
+    },
+    "name": "Exeggutor",
+    "dex": 120,
+    "debut": 1,
+    "art": 103
+  },
   "fearow": {
     "gens": {
       "1": {
@@ -1189,6 +2035,187 @@
     "dex": 26,
     "debut": 1,
     "art": 22
+  },
+  "flareon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 110,
+          "def": 65,
+          "spc": 130,
+          "spe": 75
+        },
+        "evoMethod": "Fire Stone",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "eevee"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 110,
+          "def": 65,
+          "spa": 130,
+          "spd": 95,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Eevee",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "flash-fire"
+          ],
+          [
+            "flame-body"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "adaptability",
+            "conflagrate"
+          ],
+          [
+            "flash-fire"
+          ],
+          [
+            "flame-body"
+          ]
+        ]
+      }
+    },
+    "name": "Flareon",
+    "dex": 134,
+    "debut": 1,
+    "art": 136
+  },
+  "gastly": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ghost",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 35,
+          "def": 30,
+          "spc": 95,
+          "spe": 80
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 30,
+          "atk": 35,
+          "def": 30,
+          "spa": 95,
+          "spd": 50,
+          "spe": 80
+        },
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Gastly",
+        "genderM": 50
+      },
+      "3": {
+        "growthRate": "Erratic",
+        "abilitySlots": [
+          [
+            "levitate"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "infiltrator"
+          ]
+        ]
+      }
+    },
+    "name": "Gastly",
+    "dex": 92,
+    "debut": 1,
+    "art": 92
+  },
+  "gengar": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ghost",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 65,
+          "def": 60,
+          "spc": 125,
+          "spe": 110
+        },
+        "evoMethod": "Trade",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "haunter"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 65,
+          "def": 60,
+          "spa": 125,
+          "spd": 85,
+          "spe": 110
+        },
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Gastly",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "shadow-tag"
+          ]
+        ],
+        "evoMethod": "Level 41",
+        "growthRate": "Erratic"
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "infiltrator"
+          ],
+          [
+            "shadow-tag"
+          ]
+        ]
+      }
+    },
+    "name": "Gengar",
+    "dex": 94,
+    "debut": 1,
+    "art": 94
   },
   "geodude": {
     "gens": {
@@ -1550,6 +2577,65 @@
     "debut": 1,
     "art": 75
   },
+  "grimer": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 50,
+          "spc": 75,
+          "spe": 20
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 50,
+          "spa": 40,
+          "spd": 75,
+          "spe": 20
+        },
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Grimer"
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "stench"
+          ],
+          [
+            "poison-touch"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "stench"
+          ],
+          [
+            "poison-touch",
+            "sticky-hold"
+          ],
+          [
+            "poison-eater"
+          ]
+        ]
+      }
+    },
+    "name": "Grimer",
+    "dex": 99,
+    "debut": 1,
+    "art": 88
+  },
   "growlithe": {
     "gens": {
       "1": {
@@ -1642,6 +2728,205 @@
     "dex": 67,
     "debut": 1,
     "art": 130
+  },
+  "haunter": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ghost",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 50,
+          "def": 45,
+          "spc": 110,
+          "spe": 95
+        },
+        "evoMethod": "Level 23",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "gastly"
+      },
+      "2": {
+        "stats": {
+          "hp": 45,
+          "atk": 50,
+          "def": 45,
+          "spa": 110,
+          "spd": 65,
+          "spe": 95
+        },
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Gastly",
+        "genderM": 50
+      },
+      "3": {
+        "growthRate": "Erratic",
+        "abilitySlots": [
+          [
+            "levitate"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "infiltrator"
+          ]
+        ]
+      }
+    },
+    "name": "Haunter",
+    "dex": 93,
+    "debut": 1,
+    "art": 93
+  },
+  "hitmonchan": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 110,
+          "spc": 74,
+          "spe": 76
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 110,
+          "spa": 35,
+          "spd": 74,
+          "spe": 76
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "guts"
+          ],
+          [
+            "iron-fists"
+          ],
+          [
+            "keen-eye"
+          ]
+        ]
+      }
+    },
+    "name": "Hitmonchan",
+    "dex": 131,
+    "debut": 1,
+    "art": 107
+  },
+  "hitmonlee": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 87,
+          "spc": 63,
+          "spe": 110
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 87,
+          "spa": 35,
+          "spd": 63,
+          "spe": 110
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "guts"
+          ],
+          [
+            "iron-legs"
+          ],
+          [
+            "limber"
+          ]
+        ]
+      }
+    },
+    "name": "Hitmonlee",
+    "dex": 130,
+    "debut": 1,
+    "art": 106
+  },
+  "horsea": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 40,
+          "def": 70,
+          "spc": 70,
+          "spe": 60
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 30,
+          "atk": 40,
+          "def": 70,
+          "spa": 70,
+          "spd": 35,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Horsea",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "sharpshooter"
+          ],
+          [
+            "sniper"
+          ]
+        ]
+      }
+    },
+    "name": "Horsea",
+    "dex": 103,
+    "debut": 1,
+    "art": 116
   },
   "hypno": {
     "gens": {
@@ -1812,6 +3097,230 @@
     "debut": 1,
     "art": 39
   },
+  "jolteon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 75,
+          "def": 60,
+          "spc": 110,
+          "spe": 130
+        },
+        "evoMethod": "Thunder Stone",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "eevee"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 75,
+          "def": 60,
+          "spa": 110,
+          "spd": 95,
+          "spe": 130
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Eevee",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "volt-absorb"
+          ],
+          [
+            "static"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "adaptability",
+            "galvanize"
+          ],
+          [
+            "volt-absorb"
+          ],
+          [
+            "static"
+          ]
+        ]
+      }
+    },
+    "name": "Jolteon",
+    "dex": 136,
+    "debut": 1,
+    "art": 135
+  },
+  "jynx": {
+    "gens": {
+      "1": {
+        "types": [
+          "Ice",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 50,
+          "def": 55,
+          "spc": 120,
+          "spe": 95
+        },
+        "growthRate": "Medium Fast"
+      },
+      "3": {
+        "stats": {
+          "hp": 70,
+          "atk": 50,
+          "def": 55,
+          "spa": 120,
+          "spd": 105,
+          "spe": 95
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "genderM": 0,
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "oblivious"
+          ]
+        ]
+      }
+    },
+    "name": "Jynx",
+    "dex": 113,
+    "debut": 1,
+    "art": 124
+  },
+  "kabuto": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Water"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 70,
+          "def": 90,
+          "spc": 50,
+          "spe": 55
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 30,
+          "atk": 70,
+          "def": 90,
+          "spa": 55,
+          "spd": 50,
+          "spe": 55
+        },
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Kabuto",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "shell-armor",
+            "weak-armor"
+          ]
+        ]
+      }
+    },
+    "name": "Kabuto",
+    "dex": 141,
+    "debut": 1,
+    "art": 140
+  },
+  "kabutops": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Water"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 115,
+          "def": 105,
+          "spc": 75,
+          "spe": 80
+        },
+        "evoMethod": "Level 35",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "kabuto"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 115,
+          "def": 105,
+          "spa": 65,
+          "spd": 75,
+          "spe": 80
+        },
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Kabuto",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "sharpness"
+          ],
+          [
+            "swift-swim"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "shell-armor",
+            "weak-armor"
+          ],
+          [
+            "sharpness"
+          ],
+          [
+            "swift-swim"
+          ]
+        ]
+      }
+    },
+    "name": "Kabutops",
+    "dex": 142,
+    "debut": 1,
+    "art": 141
+  },
   "kadabra": {
     "gens": {
       "1": {
@@ -1921,6 +3430,64 @@
     "debut": 1,
     "art": 14
   },
+  "kangaskhan": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 120,
+          "atk": 100,
+          "def": 80,
+          "spc": 100,
+          "spe": 90
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 120,
+          "atk": 100,
+          "def": 80,
+          "spa": 40,
+          "spd": 100,
+          "spe": 90
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "genderM": 0
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "inner-focus"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "inner-focus"
+          ],
+          [
+            "scrappy"
+          ]
+        ]
+      }
+    },
+    "name": "Kangaskhan",
+    "dex": 118,
+    "debut": 1,
+    "art": 115
+  },
   "kingler": {
     "gens": {
       "1": {
@@ -1982,6 +3549,65 @@
     "debut": 1,
     "art": 99
   },
+  "koffing": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 65,
+          "def": 95,
+          "spc": 60,
+          "spe": 35
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 65,
+          "def": 95,
+          "spa": 60,
+          "spd": 45,
+          "spe": 35
+        },
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Koffing",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "stench"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "stench"
+          ],
+          [
+            "smog-stream"
+          ]
+        ]
+      }
+    },
+    "name": "Koffing",
+    "dex": 111,
+    "debut": 1,
+    "art": 109
+  },
   "krabby": {
     "gens": {
       "1": {
@@ -2039,6 +3665,134 @@
     "dex": 68,
     "debut": 1,
     "art": 98
+  },
+  "lapras": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Ice"
+        ],
+        "stats": {
+          "hp": 130,
+          "atk": 75,
+          "def": 105,
+          "spc": 130,
+          "spe": 25
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 130,
+          "atk": 75,
+          "def": 105,
+          "spa": 95,
+          "spd": 130,
+          "spe": 25
+        },
+        "eggGroups": [
+          "Reptile",
+          "Beast"
+        ],
+        "hatchesAs": "Lapras",
+        "genderM": 25
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "ferry"
+          ],
+          [
+            "hydration"
+          ]
+        ]
+      },
+      "4": {
+        "hatchesAs": "",
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "ferry"
+          ],
+          [
+            "hydration",
+            "telepathy"
+          ]
+        ]
+      }
+    },
+    "name": "Lapras",
+    "dex": 128,
+    "debut": 1,
+    "art": 131
+  },
+  "leafeon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 110,
+          "def": 60,
+          "spc": 130,
+          "spe": 75
+        },
+        "evoMethod": "Leaf Stone",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "eevee"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 110,
+          "def": 60,
+          "spa": 95,
+          "spd": 130,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Eevee",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "sap-sipper"
+          ],
+          [
+            "sunbathe"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "adaptability",
+            "florate"
+          ],
+          [
+            "sap-sipper"
+          ],
+          [
+            "sunbathe"
+          ]
+        ]
+      }
+    },
+    "name": "Leafeon",
+    "dex": 133,
+    "debut": 1,
+    "art": 470
   },
   "machamp": {
     "gens": {
@@ -2197,6 +3951,72 @@
     "debut": 1,
     "art": 66
   },
+  "magcargo": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire",
+          "Rock"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 60,
+          "def": 120,
+          "spc": 110,
+          "spe": 20
+        },
+        "evoMethod": "Level 38",
+        "growthRate": "Slow",
+        "evolvesFrom": "slugma"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 60,
+          "def": 120,
+          "spa": 110,
+          "spd": 80,
+          "spe": 20
+        },
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Slugma",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "magma-armor"
+          ],
+          [
+            "flame-body"
+          ],
+          [
+            "weak-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "magma-armor"
+          ],
+          [
+            "flame-body"
+          ],
+          [
+            "weak-armor",
+            "drought"
+          ]
+        ]
+      }
+    },
+    "name": "Magcargo",
+    "dex": 110,
+    "debut": 1,
+    "art": 219
+  },
   "magikarp": {
     "gens": {
       "1": {
@@ -2239,6 +4059,54 @@
     "dex": 66,
     "debut": 1,
     "art": 129
+  },
+  "magmar": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 95,
+          "def": 85,
+          "spc": 100,
+          "spe": 78
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 95,
+          "def": 85,
+          "spa": 100,
+          "spd": 67,
+          "spe": 78
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "genderM": 75
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "flame-body"
+          ],
+          [
+            "flash-fire"
+          ],
+          [
+            "fiery-surge"
+          ]
+        ]
+      }
+    },
+    "name": "Magmar",
+    "dex": 114,
+    "debut": 1,
+    "art": 126
   },
   "magnemite": {
     "gens": {
@@ -2567,6 +4435,265 @@
     "dex": 18,
     "debut": 1,
     "art": 11
+  },
+  "mew": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 100,
+          "def": 100,
+          "spc": 100,
+          "spe": 100
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 100,
+          "atk": 100,
+          "def": 100,
+          "spa": 100,
+          "spd": 100,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "growthRate": "Fluctuating",
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "run-away"
+          ],
+          [
+            "primogenesis"
+          ]
+        ]
+      }
+    },
+    "name": "Mew",
+    "dex": 151,
+    "debut": 1,
+    "art": 151
+  },
+  "mewtwo": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 106,
+          "atk": 110,
+          "def": 100,
+          "spc": 154,
+          "spe": 130
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 106,
+          "atk": 110,
+          "def": 100,
+          "spa": 154,
+          "spd": 100,
+          "spe": 130
+        },
+        "eggGroups": [
+          "Undiscovered"
+        ]
+      },
+      "3": {
+        "growthRate": "Fluctuating",
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "neuroforce"
+          ]
+        ]
+      }
+    },
+    "name": "Mewtwo",
+    "dex": 150,
+    "debut": 1,
+    "art": 150
+  },
+  "mimen": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 100,
+          "def": 65,
+          "spc": 120,
+          "spe": 40
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 100,
+          "def": 65,
+          "spa": 60,
+          "spd": 120,
+          "spe": 40
+        },
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Mimen",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "soundproof"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "soundproof"
+          ],
+          [
+            "technician"
+          ],
+          [
+            "screen-cleaner"
+          ]
+        ]
+      }
+    },
+    "name": "Mimen",
+    "dex": 124,
+    "debut": 1,
+    "art": 122
+  },
+  "moltres": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 105,
+          "def": 90,
+          "spc": 135,
+          "spe": 100
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 100,
+          "def": 90,
+          "spa": 135,
+          "spd": 105,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "growthRate": "Fluctuating",
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "drought"
+          ],
+          [
+            "flame-body"
+          ]
+        ]
+      }
+    },
+    "name": "Moltres",
+    "dex": 149,
+    "debut": 1,
+    "art": 146
+  },
+  "muk": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 115,
+          "atk": 105,
+          "def": 75,
+          "spc": 100,
+          "spe": 25
+        },
+        "evoMethod": "Level 38",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "grimer"
+      },
+      "3": {
+        "stats": {
+          "hp": 115,
+          "atk": 105,
+          "def": 75,
+          "spa": 65,
+          "spd": 100,
+          "spe": 25
+        },
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Grimer",
+        "abilitySlots": [
+          [
+            "stench"
+          ],
+          [
+            "poison-touch"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "stench"
+          ],
+          [
+            "poison-touch",
+            "sticky-hold"
+          ],
+          [
+            "poison-eater"
+          ]
+        ]
+      }
+    },
+    "name": "Muk",
+    "dex": 100,
+    "debut": 1,
+    "art": 89
   },
   "nidoking": {
     "gens": {
@@ -2921,6 +5048,118 @@
     "dex": 47,
     "debut": 1,
     "art": 43
+  },
+  "omanyte": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Water"
+        ],
+        "stats": {
+          "hp": 35,
+          "atk": 55,
+          "def": 100,
+          "spc": 70,
+          "spe": 35
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 35,
+          "atk": 55,
+          "def": 100,
+          "spa": 55,
+          "spd": 70,
+          "spe": 35
+        },
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Omanyte",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "shell-armor",
+            "weak-armor"
+          ]
+        ]
+      }
+    },
+    "name": "Omanyte",
+    "dex": 139,
+    "debut": 1,
+    "art": 138
+  },
+  "omastar": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Water"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 95,
+          "def": 125,
+          "spc": 100,
+          "spe": 45
+        },
+        "evoMethod": "Level 35",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "omanyte"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 95,
+          "def": 125,
+          "spa": 65,
+          "spd": 100,
+          "spe": 45
+        },
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Omanyte",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "shell-armor",
+            "weak-armor"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ]
+      }
+    },
+    "name": "Omastar",
+    "dex": 140,
+    "debut": 1,
+    "art": 139
   },
   "onix": {
     "gens": {
@@ -3439,6 +5678,59 @@
     "debut": 1,
     "art": 25
   },
+  "pinsir": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 125,
+          "def": 100,
+          "spc": 55,
+          "spe": 70
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 125,
+          "def": 100,
+          "spa": 55,
+          "spd": 70,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Pinsir",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "hyper-cutter"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "hyper-cutter"
+          ],
+          [
+            "crushing-grip"
+          ]
+        ]
+      }
+    },
+    "name": "Pinsir",
+    "dex": 126,
+    "debut": 1,
+    "art": 127
+  },
   "poliwhirl": {
     "gens": {
       "1": {
@@ -3601,6 +5893,111 @@
     "debut": 1,
     "art": 62
   },
+  "ponyta": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 75,
+          "def": 55,
+          "spc": 65,
+          "spe": 90
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 50,
+          "atk": 75,
+          "def": 55,
+          "spa": 65,
+          "spd": 65,
+          "spe": 90
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Ponyta",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "flame-body"
+          ],
+          [
+            "iron-legs"
+          ],
+          [
+            "speed-boost"
+          ]
+        ]
+      }
+    },
+    "name": "Ponyta",
+    "dex": 97,
+    "debut": 1,
+    "art": 77
+  },
+  "porygon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 60,
+          "def": 70,
+          "spc": 85,
+          "spe": 45
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 60,
+          "def": 70,
+          "spa": 85,
+          "spd": 75,
+          "spe": 45
+        },
+        "eggGroups": [
+          "None"
+        ]
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ]
+        ],
+        "growthRate": "Erratic"
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "adaptability"
+          ],
+          [
+            "download",
+            "analytic"
+          ]
+        ]
+      }
+    },
+    "name": "Porygon",
+    "dex": 138,
+    "debut": 1,
+    "art": 137
+  },
   "primeape": {
     "debut": 1,
     "dex": 63,
@@ -3760,6 +6157,57 @@
     "debut": 1,
     "art": 26
   },
+  "rapidash": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 100,
+          "def": 70,
+          "spc": 80,
+          "spe": 115
+        },
+        "evoMethod": "Level 34",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "ponyta"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 100,
+          "def": 70,
+          "spa": 80,
+          "spd": 80,
+          "spe": 115
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Ponyta",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "flame-body"
+          ],
+          [
+            "iron-legs"
+          ],
+          [
+            "speed-boost"
+          ]
+        ]
+      }
+    },
+    "name": "Rapidash",
+    "dex": 98,
+    "debut": 1,
+    "art": 78
+  },
   "raticate": {
     "gens": {
       "1": {
@@ -3879,6 +6327,121 @@
     "debut": 1,
     "art": 19
   },
+  "rhydon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 110,
+          "atk": 130,
+          "def": 130,
+          "spc": 45,
+          "spe": 50
+        },
+        "evoMethod": "Level 42",
+        "growthRate": "Slow",
+        "evolvesFrom": "rhyhorn"
+      },
+      "2": {
+        "stats": {
+          "hp": 110,
+          "atk": 130,
+          "def": 130,
+          "spa": 45,
+          "spd": 45,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Rhyhorn",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "oblivious"
+          ],
+          [
+            "reckless"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "piercing-drill"
+          ],
+          [
+            "reckless"
+          ]
+        ]
+      }
+    },
+    "name": "Rhydon",
+    "dex": 117,
+    "debut": 1,
+    "art": 112
+  },
+  "rhyhorn": {
+    "gens": {
+      "1": {
+        "types": [
+          "Rock",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 100,
+          "def": 100,
+          "spc": 30,
+          "spe": 50
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 80,
+          "atk": 100,
+          "def": 100,
+          "spa": 30,
+          "spd": 30,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Rhyhorn",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "oblivious"
+          ],
+          [
+            "reckless"
+          ]
+        ]
+      }
+    },
+    "name": "Rhyhorn",
+    "dex": 116,
+    "debut": 1,
+    "art": 111
+  },
   "sandshrew": {
     "gens": {
       "1": {
@@ -3996,6 +6559,111 @@
     "debut": 1,
     "art": 28
   },
+  "scyther": {
+    "gens": {
+      "1": {
+        "types": [
+          "Bug",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 80,
+          "spc": 55,
+          "spe": 115
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 70,
+          "atk": 110,
+          "def": 80,
+          "spa": 55,
+          "spd": 70,
+          "spe": 115
+        },
+        "eggGroups": [
+          "Bug"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "sharpness"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "sharpness"
+          ],
+          [
+            "vanguard",
+            "unburden"
+          ]
+        ]
+      }
+    },
+    "name": "Scyther",
+    "dex": 125,
+    "debut": 1,
+    "art": 123
+  },
+  "seadra": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 65,
+          "def": 95,
+          "spc": 95,
+          "spe": 85
+        },
+        "evoMethod": "Level 24",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "horsea"
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 65,
+          "def": 95,
+          "spa": 95,
+          "spd": 60,
+          "spe": 85
+        },
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Horsea",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "sharpshooter"
+          ],
+          [
+            "sniper"
+          ],
+          [
+            "poison-point"
+          ]
+        ]
+      }
+    },
+    "name": "Seadra",
+    "dex": 104,
+    "debut": 1,
+    "art": 117
+  },
   "seaking": {
     "gens": {
       "1": {
@@ -4055,6 +6723,348 @@
     "dex": 61,
     "debut": 1,
     "art": 119
+  },
+  "seel": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Ice"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 65,
+          "def": 55,
+          "spc": 70,
+          "spe": 45
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 65,
+          "def": 55,
+          "spa": 45,
+          "spd": 70,
+          "spe": 45
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Seel",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body",
+            "snow-cloak"
+          ]
+        ]
+      }
+    },
+    "name": "Seel",
+    "dex": 107,
+    "debut": 1,
+    "art": 86
+  },
+  "shellder": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 60,
+          "def": 100,
+          "spc": 25,
+          "spe": 30
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 30,
+          "atk": 60,
+          "def": 100,
+          "spa": 45,
+          "spd": 25,
+          "spe": 30
+        },
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Shellder",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "overcoat"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "overcoat",
+            "bulletproof"
+          ]
+        ]
+      }
+    },
+    "name": "Shellder",
+    "dex": 90,
+    "debut": 1,
+    "art": 90
+  },
+  "slowbro": {
+    "gens": {
+      "1": {
+        "stats": {
+          "hp": 95,
+          "atk": 75,
+          "def": 110,
+          "spc": 100,
+          "spe": 30
+        },
+        "evoMethod": "Level 37",
+        "growthRate": "Slow",
+        "evolvesFrom": "slowpoke",
+        "types": [
+          "Psychic",
+          "Water"
+        ]
+      },
+      "2": {
+        "stats": {
+          "hp": 95,
+          "atk": 75,
+          "def": 110,
+          "spa": 100,
+          "spd": 80,
+          "spe": 30
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Slowpoke",
+        "genderM": 75
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "delay"
+          ],
+          [
+            "oblivious"
+          ],
+          [
+            "immunity"
+          ]
+        ],
+        "evoMethod": "Shellder Behind Slowpoke in Party"
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "delay"
+          ],
+          [
+            "oblivious",
+            "simple"
+          ],
+          [
+            "immunity"
+          ]
+        ]
+      }
+    },
+    "name": "Slowbro",
+    "dex": 102,
+    "debut": 1,
+    "art": 80
+  },
+  "slowpoke": {
+    "gens": {
+      "1": {
+        "types": [
+          "Psychic",
+          "Water"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 65,
+          "def": 65,
+          "spc": 40,
+          "spe": 15
+        },
+        "growthRate": "Slow"
+      },
+      "3": {
+        "stats": {
+          "hp": 90,
+          "atk": 65,
+          "def": 65,
+          "spa": 40,
+          "spd": 40,
+          "spe": 15
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Slowpoke",
+        "genderM": 75,
+        "abilitySlots": [
+          [
+            "delay"
+          ],
+          [
+            "oblivious"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "delay"
+          ],
+          [
+            "oblivious",
+            "simple"
+          ]
+        ]
+      }
+    },
+    "name": "Slowpoke",
+    "dex": 101,
+    "debut": 1,
+    "art": 79
+  },
+  "slugma": {
+    "gens": {
+      "1": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 40,
+          "spc": 70,
+          "spe": 20
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 40,
+          "spa": 70,
+          "spd": 40,
+          "spe": 20
+        },
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Slugma",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "magma-armor"
+          ],
+          [
+            "flame-body"
+          ]
+        ]
+      }
+    },
+    "name": "Slugma",
+    "dex": 109,
+    "debut": 1,
+    "art": 218
+  },
+  "snorlax": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 160,
+          "atk": 110,
+          "def": 80,
+          "spc": 110,
+          "spe": 30
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 160,
+          "atk": 110,
+          "def": 85,
+          "spa": 65,
+          "spd": 110,
+          "spe": 30
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Snorlax",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "gluttony"
+          ],
+          [
+            "immunity"
+          ]
+        ]
+      },
+      "4": {
+        "hatchesAs": ""
+      }
+    },
+    "name": "Snorlax",
+    "dex": 129,
+    "debut": 1,
+    "art": 143
   },
   "spearow": {
     "gens": {
@@ -4140,6 +7150,291 @@
     "dex": 7,
     "debut": 1,
     "art": 7
+  },
+  "starmie": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 75,
+          "def": 85,
+          "spc": 110,
+          "spe": 100
+        },
+        "evoMethod": "Water Stone",
+        "growthRate": "Slow",
+        "evolvesFrom": "staryu"
+      },
+      "2": {
+        "stats": {
+          "hp": 60,
+          "atk": 75,
+          "def": 85,
+          "spa": 110,
+          "spd": 85,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Invertebrate"
+        ],
+        "hatchesAs": "Staryu"
+      },
+      "3": {
+        "evoMethod": "Level 30 & Water Stone",
+        "abilitySlots": [
+          [
+            "natural-cure"
+          ],
+          [
+            "illuminate"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "natural-cure",
+            "regenerator"
+          ],
+          [
+            "illuminate"
+          ],
+          [
+            "analytic"
+          ]
+        ]
+      }
+    },
+    "name": "Starmie",
+    "dex": 106,
+    "debut": 1,
+    "art": 121
+  },
+  "staryu": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 45,
+          "def": 55,
+          "spc": 80,
+          "spe": 70
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 30,
+          "atk": 45,
+          "def": 55,
+          "spa": 80,
+          "spd": 55,
+          "spe": 70
+        },
+        "eggGroups": [
+          "Invertebrate"
+        ],
+        "hatchesAs": "Staryu"
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "natural-cure"
+          ],
+          [
+            "illuminate"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "natural-cure",
+            "regenerator"
+          ],
+          [
+            "illuminate"
+          ]
+        ]
+      }
+    },
+    "name": "Staryu",
+    "dex": 105,
+    "debut": 1,
+    "art": 120
+  },
+  "tangela": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 75,
+          "def": 100,
+          "spc": 55,
+          "spe": 60
+        },
+        "growthRate": "Medium Fast"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 75,
+          "def": 100,
+          "spa": 55,
+          "spd": 40,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Tangela",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "sunbathe"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "sunbathe",
+            "regenerator"
+          ]
+        ]
+      }
+    },
+    "name": "Tangela",
+    "dex": 122,
+    "debut": 1,
+    "art": 114
+  },
+  "tangrowth": {
+    "gens": {
+      "1": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 105,
+          "def": 130,
+          "spc": 85,
+          "spe": 50
+        },
+        "evoMethod": "Leaf Stone",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "tangela"
+      },
+      "2": {
+        "stats": {
+          "hp": 95,
+          "atk": 105,
+          "def": 130,
+          "spa": 85,
+          "spd": 70,
+          "spe": 50
+        },
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Tangela",
+        "genderM": 50
+      },
+      "3": {
+        "evoMethod": "Level 20 & Leaf Stone",
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "sunbathe"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "sunbathe",
+            "regenerator"
+          ]
+        ]
+      }
+    },
+    "name": "Tangrowth",
+    "dex": 123,
+    "debut": 1,
+    "art": 465
+  },
+  "tauros": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 100,
+          "def": 95,
+          "spc": 40,
+          "spe": 110
+        },
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 85,
+          "atk": 100,
+          "def": 95,
+          "spa": 40,
+          "spd": 70,
+          "spe": 110
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "anger-point"
+          ],
+          [
+            "sheer-force"
+          ]
+        ]
+      }
+    },
+    "name": "Tauros",
+    "dex": 127,
+    "debut": 1,
+    "art": 128
   },
   "teddiursa": {
     "gens": {
@@ -4354,6 +7649,69 @@
     "dex": 46,
     "debut": 1,
     "art": 217
+  },
+  "vaporeon": {
+    "gens": {
+      "1": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 130,
+          "atk": 65,
+          "def": 60,
+          "spc": 110,
+          "spe": 75
+        },
+        "evoMethod": "Water Stone",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "eevee"
+      },
+      "2": {
+        "stats": {
+          "hp": 130,
+          "atk": 65,
+          "def": 60,
+          "spa": 110,
+          "spd": 95,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Eevee",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "water-absorb"
+          ],
+          [
+            "water-veil"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "adaptability",
+            "hydration"
+          ],
+          [
+            "water-absorb"
+          ],
+          [
+            "water-veil",
+            "hydration"
+          ]
+        ]
+      }
+    },
+    "name": "Vaporeon",
+    "dex": 135,
+    "debut": 1,
+    "art": 134
   },
   "venomoth": {
     "gens": {
@@ -4766,6 +8124,67 @@
     "debut": 1,
     "art": 13
   },
+  "weezing": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 90,
+          "def": 120,
+          "spc": 85,
+          "spe": 60
+        },
+        "evoMethod": "Level 40",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "koffing"
+      },
+      "2": {
+        "stats": {
+          "hp": 65,
+          "atk": 90,
+          "def": 120,
+          "spa": 85,
+          "spd": 70,
+          "spe": 60
+        },
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Koffing",
+        "genderM": 50
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "stench"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "stench"
+          ],
+          [
+            "smog-stream"
+          ]
+        ]
+      }
+    },
+    "name": "Weezing",
+    "dex": 112,
+    "debut": 1,
+    "art": 110
+  },
   "wigglytuff": {
     "gens": {
       "1": {
@@ -4833,6 +8252,56 @@
     "dex": 28,
     "debut": 1,
     "art": 40
+  },
+  "zapdos": {
+    "gens": {
+      "1": {
+        "types": [
+          "Electric",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 90,
+          "def": 105,
+          "spc": 135,
+          "spe": 100
+        },
+        "growthRate": "Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 90,
+          "def": 105,
+          "spa": 135,
+          "spd": 100,
+          "spe": 100
+        },
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 50
+      },
+      "3": {
+        "growthRate": "Fluctuating",
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "thunder-warning"
+          ],
+          [
+            "lightning-rod"
+          ]
+        ]
+      }
+    },
+    "name": "Zapdos",
+    "dex": 148,
+    "debut": 1,
+    "art": 145
   },
   "zubat": {
     "gens": {

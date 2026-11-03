@@ -1,4 +1,186 @@
 {
+  "acid": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of lowering the target's Defense by one stage."
+      }
+    },
+    "name": "Acid",
+    "debut": 1
+  },
+  "agility": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "pp": 5,
+        "effect": "Raises the user's Speed by two stages",
+        "flavor": "The user relaxes its body to sharply boost its Speed stat.",
+        "target": "user"
+      }
+    },
+    "name": "Agility",
+    "debut": 1
+  },
+  "bind": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 30,
+        "accuracy": 90,
+        "pp": 10,
+        "target": "single",
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/16 of their maximum HP after each turn, for 3-5 turns."
+      }
+    },
+    "name": "Bind",
+    "debut": 1
+  },
+  "bite": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 65,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+      }
+    },
+    "name": "Bite",
+    "debut": 1
+  },
+  "blizzard": {
+    "gens": {
+      "1": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 70,
+        "effect": "Deals damage and has a 10% chance of freezing the target."
+      }
+    },
+    "name": "Blizzard",
+    "debut": 1
+  },
+  "body-slam": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of paralyzing the target."
+      }
+    },
+    "name": "Body Slam",
+    "debut": 1
+  },
+  "cut": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Cut",
+    "debut": 1
+  },
+  "disable": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": 80,
+        "effect": "Causes the previous move the target used to be \"disabled\" for 3-5 turns, which prevents the move's use."
+      }
+    },
+    "name": "Disable",
+    "debut": 1
+  },
+  "double-edge": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 100,
+        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil."
+      }
+    },
+    "name": "Double-Edge",
+    "debut": 1
+  },
+  "double-kick": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage and will strike twice (with 40 base power each time)."
+      }
+    },
+    "name": "Double Kick",
+    "debut": 1
+  },
+  "double-team": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "pp": 15,
+        "effect": "Raises the user's Evasion by one stage.",
+        "flavor": "The user creates illusory copies of itself to raise its Evasion stat."
+      }
+    },
+    "name": "Double Team",
+    "debut": 1
+  },
+  "ember": {
+    "gens": {
+      "1": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of burning the target."
+      }
+    },
+    "name": "Ember",
+    "debut": 1
+  },
+  "fire-punch": {
+    "gens": {
+      "1": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 75,
+        "accuracy": 100,
+        "pp": 15,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of burning the target."
+      },
+      "4": {
+        "category": "Physical"
+      }
+    },
+    "name": "Fire Punch",
+    "debut": 1
+  },
   "flamethrower": {
     "gens": {
       "1": {
@@ -7,11 +189,701 @@
         "power": 90,
         "accuracy": 100,
         "pp": 10,
-        "effect": "The target is scorched with intense flames. The target may suffer a burn.",
-        "flavor": "Flamethrower deals damage and has a 10% chance of burning the target"
+        "effect": "Deals damage and has a 10% chance of burning the target.",
+        "flavor": "The target is scorched with intense flames. The target may suffer a burn."
       }
     },
     "name": "Flamethrower",
+    "debut": 1
+  },
+  "fly": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "The user flies up on the first turn, disappearing from view and becoming invulnerable to most attacks. On the second turn, Fly deals damage."
+      }
+    },
+    "name": "Fly",
+    "debut": 1
+  },
+  "focus-energy": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "pp": 20,
+        "effect": "Increases the user's critical hit ratio by one stage",
+        "flavor": "The user takes a deep breath and focuses to raise its critical-hit ratio"
+      }
+    },
+    "name": "Focus Energy",
+    "debut": 1
+  },
+  "fury-attack": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "effect": "Hits 3-5 times per turn used."
+      }
+    },
+    "name": "Fury Attack",
+    "debut": 1
+  },
+  "growl": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "pp": 100,
+        "effect": "Lowers the target's Attack by one stage.",
+        "flavor": "The user growls in a cute way, making the target lower its Attack stat."
+      }
+    },
+    "name": "Growl",
+    "debut": 1
+  },
+  "guillotine": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": 30,
+        "pp": 5,
+        "target": "single",
+        "effect": "Always makes the target faint."
+      }
+    },
+    "name": "Guillotine",
+    "debut": 1
+  },
+  "gust": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "Deals damage with no additional effect.",
+        "category": "Physical",
+        "target": "single"
+      }
+    },
+    "name": "Gust",
+    "debut": 1
+  },
+  "harden": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "pp": 30,
+        "effect": "Raises the user's Defense by one stage.",
+        "flavor": "The user stiffens its body to raise its Defense stat."
+      }
+    },
+    "name": "Harden",
+    "debut": 1
+  },
+  "headbutt": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+      }
+    },
+    "name": "Headbutt",
+    "debut": 1
+  },
+  "horn-attack": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Horn Attack",
+    "debut": 1
+  },
+  "horn-drill": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": 30,
+        "pp": 5,
+        "effect": "Always makes the target faint.",
+        "flavor": "The horn is rotated like a drill to ram. The target faints instantly if this attack hits."
+      }
+    },
+    "name": "Horn Drill",
+    "debut": 1
+  },
+  "hydro-pump": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 110,
+        "accuracy": 85,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Hydro Pump",
+    "debut": 1
+  },
+  "ice-beam": {
+    "gens": {
+      "1": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of freezing the target."
+      }
+    },
+    "name": "Ice Beam",
+    "debut": 1
+  },
+  "ice-punch": {
+    "gens": {
+      "1": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 75,
+        "accuracy": 100,
+        "pp": 15,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of freezing the target."
+      }
+    },
+    "name": "Ice Punch",
+    "debut": 1
+  },
+  "jump-kick": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 100,
+        "accuracy": 95,
+        "target": "single",
+        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/3 of its maximum HP."
+      }
+    },
+    "name": "Jump Kick",
+    "debut": 1
+  },
+  "karate-chop": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 100,
+        "target": "user",
+        "effect": "Deals damage and has an increased critical hit ratio."
+      }
+    },
+    "name": "Karate Chop",
+    "debut": 1
+  },
+  "leer": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Lowers the target's Special by one stage."
+      }
+    },
+    "name": "Leer",
+    "debut": 1
+  },
+  "mega-kick": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 95,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Mega Kick",
+    "debut": 1
+  },
+  "mega-punch": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 75,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect"
+      }
+    },
+    "name": "Mega Punch",
+    "debut": 1
+  },
+  "mist": {
+    "gens": {
+      "1": {
+        "type": "Ice",
+        "category": "Status",
+        "accuracy": 100,
+        "effect": "User's stats cannot be changed until they switch out or the battle ends."
+      }
+    },
+    "name": "Mist",
+    "debut": 1
+  },
+  "pay-day": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 20,
+        "target": "single",
+        "effect": "Money is earned after the battle."
+      }
+    },
+    "name": "Pay Day",
+    "debut": 1
+  },
+  "pin-missile": {
+    "gens": {
+      "1": {
+        "type": "Bug",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "effect": "Hits 3-5 times per turn used."
+      }
+    },
+    "name": "Pin Missile",
+    "debut": 1
+  },
+  "poison-sting": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "effect": "Deals damage and has a 30% chance of poisoning the target."
+      }
+    },
+    "name": "Poison Sting",
+    "debut": 1
+  },
+  "pound": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single"
+      }
+    },
+    "name": "Pound",
+    "debut": 1
+  },
+  "protect": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "pp": 10,
+        "effect": "Prevents most attacks targeted at the user from striking for the duration of the turn.",
+        "flavor": "Enables the user to protect itself from all attacks. It may fail is used in succession.",
+        "target": "user",
+        "priority": 3,
+        "category": "Status"
+      }
+    },
+    "name": "Protect",
+    "debut": 1
+  },
+  "rapid-punch": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 15,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Hits 6-10 times per turn used."
+      }
+    },
+    "name": "Rapid Punch",
+    "debut": 1
+  },
+  "razor-wing": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 100,
+        "pp": 15,
+        "target": "single",
+        "effect": "Deals damage and has an increased critical hit ratio."
+      }
+    },
+    "name": "Razor Wind",
+    "debut": 1
+  },
+  "recover": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "pp": 5,
+        "effect": "Restores 50% of the user's max HP.",
+        "flavor": "A self-healing move that restores HP by up to half of the user's maximum HP.",
+        "category": "Status"
+      }
+    },
+    "name": "Recover",
+    "debut": 1
+  },
+  "rest": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "pp": 5,
+        "effect": "Sleeps for 2 turns but is healed completely",
+        "flavor": "The user sleeps for two turns to fully restore HP and heal any status problems",
+        "category": "Status"
+      }
+    },
+    "name": "Rest",
+    "debut": 1
+  },
+  "sand-attack": {
+    "gens": {
+      "1": {
+        "type": "Ground",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Lowers the target's Accuracy by one stage."
+      }
+    },
+    "name": "Sand Attack",
+    "debut": 1
+  },
+  "scracth": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "pp": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Scratch",
+    "debut": 1
+  },
+  "sing": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 55,
+        "target": "single",
+        "effect": "Puts the target to sleep."
+      }
+    },
+    "name": "Sing",
+    "debut": 1
+  },
+  "slam": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 90,
+        "pp": 20,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Slam",
+    "debut": 1
+  },
+  "sonic-boom": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The damage of Sonic Boom is equal to the user's level."
+      }
+    },
+    "name": "Sonic Boom",
+    "debut": 1
+  },
+  "spring-kick": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 95,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+      }
+    },
+    "name": "Spring Kick",
+    "debut": 1
+  },
+  "stomp": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 65,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+      }
+    },
+    "name": "Stomp",
+    "debut": 1
+  },
+  "supersonic": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 55,
+        "effect": "Causes the target to become confused."
+      }
+    },
+    "name": "Supersonic",
+    "debut": 1
+  },
+  "surf": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 100,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Surf",
+    "debut": 1
+  },
+  "swords-dance": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "pp": 5,
+        "target": "user",
+        "effect": "Raises the user's Attack by two stages."
+      }
+    },
+    "name": "Swords Dance",
+    "debut": 1
+  },
+  "tackle": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Tackle",
+    "debut": 1
+  },
+  "tail-whip": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Lowers the target's Defense by one stage."
+      }
+    },
+    "name": "Tail Whip",
+    "debut": 1
+  },
+  "take-down": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 100,
+        "effect": "Deals damage, but the user receives 1/4 of their max HP in recoil."
+      }
+    },
+    "name": "Take Down",
+    "debut": 1
+  },
+  "thrash": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused."
+      }
+    },
+    "name": "Thrash",
+    "debut": 1
+  },
+  "thunder-punch": {
+    "gens": {
+      "1": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 75,
+        "accuracy": 100,
+        "pp": 15,
+        "effect": "Deals damage and has a 10% chance of burning the target."
+      }
+    },
+    "name": "Thunder Punch",
+    "debut": 1
+  },
+  "transform": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "pp": 10,
+        "effect": "User takes on the form and attacks of the target.",
+        "flavor": "The user transforms into a copy of the target with even the same moveset.",
+        "category": "Status"
+      },
+      "3": {
+        "effect": "User takes on the form and attacks of the target. Can target any Pokémon on the field."
+      }
+    },
+    "name": "Transform",
+    "debut": 1
+  },
+  "twineedle": {
+    "gens": {
+      "1": {
+        "type": "Bug",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "effect": "Deals damage and will strike twice (with 40 base power each time). It has a 30% chance of poisoning the target on each hit."
+      }
+    },
+    "name": "Twineedle",
+    "debut": 1
+  },
+  "vice-grip": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "pp": 15,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Vice Grip",
+    "debut": 1
+  },
+  "vine-whip": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Vine Whip",
+    "debut": 1
+  },
+  "water-gun": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Water Gun",
+    "debut": 1
+  },
+  "wing-attack": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "pp": 20,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Wing Attack",
+    "debut": 1
+  },
+  "wrap": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/8 of their maximum HP after each turn, for 3-5 turns."
+      }
+    },
+    "name": "Wrap",
     "debut": 1
   }
 }

@@ -8,7 +8,6 @@
           "Bug|Flying": 0.5,
           "Bug|Ghost": 0.5,
           "Bug|Grass": 2,
-          "Bug|Poison": 2,
           "Bug|Psychic": 2,
           "Dragon|Dragon": 2,
           "Electric|Dragon": 0.5,
@@ -64,7 +63,6 @@
           "Ice|Water": 0.5,
           "Normal|Ghost": 0,
           "Normal|Rock": 0.5,
-          "Poison|Bug": 2,
           "Poison|Ghost": 0.5,
           "Poison|Grass": 2,
           "Poison|Ground": 0.5,
@@ -86,13 +84,18 @@
           "Water|Ice": 0.5,
           "Water|Rock": 2,
           "Water|Water": 0.5,
-          "Psychic|Normal": 2
+          "Psychic|Normal": 2,
+          "Poison|Water": 2,
+          "Electric|Rock": 0.5,
+          "Ice|Fire": 0.5,
+          "Poison|Bug": 2,
+          "Bug|Rock": 0.5,
+          "Rock|Rock": 0.5
         }
       },
       "2": {
         "cells": {
           "Bug|Dark": 2,
-          "Bug|Poison": 0.5,
           "Bug|Steel": 0.5,
           "Dark|Dark": 0.5,
           "Dark|Fighting": 0.5,
@@ -108,10 +111,8 @@
           "Ghost|Psychic": 2,
           "Grass|Steel": 0.5,
           "Ground|Steel": 2,
-          "Ice|Fire": 0.5,
           "Ice|Steel": 0.5,
           "Normal|Steel": 0.5,
-          "Poison|Bug": 1,
           "Poison|Steel": 0,
           "Psychic|Dark": 0,
           "Psychic|Steel": 0.5,
@@ -121,15 +122,13 @@
           "Steel|Rock": 2,
           "Steel|Steel": 0.5,
           "Steel|Water": 0.5,
-          "Poison|Water": 2,
           "Steel|Electric": 0.5,
           "Psychic|Bug": 0.5,
-          "Ghost|Bug": 0.5,
           "Dark|Bug": 0.5,
-          "Electric|Rock": 0.5,
-          "Bug|Rock": 0.5,
-          "Rock|Rock": 0.5,
-          "Electric|Steel": 2
+          "Electric|Steel": 2,
+          "Poison|Bug": 1,
+          "Bug|Poison": 0.5,
+          "Ghost|Bug": 0.5
         }
       },
       "4": {

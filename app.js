@@ -5,6 +5,19 @@ const SLOT_NAMES=['Ability I','Ability II','Ability III'];
 const STAT_MAX=255;
 const NAV=[['dex','National Dex'],['types','Type Chart'],['abilities','Abilities'],['items','Items'],['moves','Moves'],['effects','Battle Effects'],['status','Status Effects'],['trainers','Trainers']];
 const CAT={Physical:'var(--hot)',Special:'var(--cool)',Status:'var(--stat)'};
+// Before Gen IV there is no per-move physical/special split: a damaging move's type decides it.
+const SPLIT_FROM=4;
+const PHYSICAL_TYPES=['Normal','Fighting','Flying','Poison','Ground','Rock','Bug','Ghost','Steel'];
+const SPECIAL_TYPES=['Fire','Water','Grass','Electric','Psychic','Ice','Dragon','Dark'];
+const typeCat=t=>PHYSICAL_TYPES.includes(t)?'Physical':SPECIAL_TYPES.includes(t)?'Special':'';
+// A move's data as it applies in gen g, with the category worked out from the type before the split.
+function effMove(m,g){const e=eff(m,g);if(g<SPLIT_FROM&&e.category&&e.category!=='Status')e.category=typeCat(e.type)||e.category;return e}
+// Move targets. The double-battle ones only exist from Gen III.
+const TARGETS={user:'The user',single:'One target',foes:'The opposing side',field:'The entire field'};
+const DOUBLES_TARGETS=['foes','field'],CONTACT_FROM=3;
+const targetsAt=g=>Object.keys(TARGETS).filter(k=>g>=3||!DOUBLES_TARGETS.includes(k));
+const prioText=p=>p==null||p===''?'':p>0?'+'+p:String(p);
+const contactText=c=>c===true?'Yes':c===false?'No':'';
 const S={pokemon:{},abilities:{},items:{},moves:{},effects:{},trainers:{},chart:null};
 const UI={gen:4,route:'dex',arg:null,q:'',type:'All',cat:'All',group:'All',view:'all',newOnly:false,sort:'dex',dir:1,sel:null,editChart:false,chartFuture:true,perPage:'all',page:0};
 const PER_PAGE=[['25','25'],['50','50'],['100','100'],['all','Endless']];
@@ -208,11 +221,11 @@ function moveBody(){
   const g=UI.gen;
   let list=rows('moves').filter(m=>(m.debut||1)<=g).filter(matchQ);
   if(UI.type!=='All')list=list.filter(m=>eff(m,g).type===UI.type);
-  if(UI.cat!=='All')list=list.filter(m=>eff(m,g).category===UI.cat);
+  if(UI.cat!=='All')list=list.filter(m=>effMove(m,g).category===UI.cat);
   list.sort((a,b)=>a.name.localeCompare(b.name));
   if(!rows('moves').length)return emptyMsg('No moves yet. Add your first one.','new-moves','Add move');
   if(!list.length)return emptyMsg('No moves match these filters.');
-  const table=r=>`<div class="box"><table style="min-width:900px"><thead><tr><th>Name</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Accuracy</th><th class="num">PP</th><th>Effect</th><th>Gen</th></tr></thead><tbody>${r.map(m=>{const e=eff(m,g);
+  const table=r=>`<div class="box"><table style="min-width:900px"><thead><tr><th>Name</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Accuracy</th><th class="num">PP</th><th>Effect</th><th>Gen</th></tr></thead><tbody>${r.map(m=>{const e=effMove(m,g);
     return `<tr><td class="name mid"><a href="#m-${esc(m.id)}">${esc(m.name)}</a>${changedTag(m)}</td><td class="mid">${e.type?chip(e.type):'—'}</td><td class="mid">${e.category?`<span class="cat" style="background:${CAT[e.category]||'var(--soft)'}">${esc(e.category)}</span>`:'—'}</td><td class="num mono mid">${dash(e.power)}</td><td class="num mono mid">${dash(e.accuracy)}</td><td class="num mono mid">${dash(e.pp)}</td><td class="mid">${dash(e.effect)}</td><td class="mono mid">${ROMAN[m.debut||1]}</td></tr>`}).join('')}</tbody></table></div>`;
   return grouped(list,table);
 }
@@ -277,6 +290,18 @@ const GROWTH=['Erratic','Fast','Medium Fast','Medium Slow','Slow','Fluctuating']
 function heightText(m){if(m==null)return '';const inches=Math.round(m/0.0254);return `${m} m (${Math.floor(inches/12)}′${String(inches%12).padStart(2,'0')}″)`}
 function weightText(kg){if(kg==null)return '';return `${kg} kg (${(kg*2.20462).toFixed(1)} lbs)`}
 const hasVitals=e=>!!(e.species||e.height!=null||e.weight!=null||e.growthRate);
+// A Pokémon's moveset is stored on each move's "Pokémon that learn it" list, so the two pages always agree.
+function learnOrder(a,b){
+  const lv=h=>{const m=String(h||'').match(/^\s*(?:level|lv\.?)\s*(\d+)/i);return m?+m[1]:null};
+  const x=lv(a),y=lv(b);
+  if(x!=null||y!=null)return x==null?1:y==null?-1:x-y;
+  return String(a||'').localeCompare(String(b||''),undefined,{numeric:true});
+}
+function movesetOf(pid,g){
+  const out=[];
+  for(const [mid,m] of Object.entries(S.moves)){if((m.debut||1)>g)continue;for(const l of eff(m,g).learners||[])if(l.p===pid)out.push({m:mid,how:l.how||''})}
+  return out.sort((a,b)=>learnOrder(a.how,b.how)||label('moves',a.m).localeCompare(label('moves',b.m)));
+}
 function pokemonPage(id){
   const raw=S.pokemon[id];
   if(!raw)return loaded?emptyMsg('This Pokémon is not in your Dex.'):loading();
@@ -306,23 +331,29 @@ function pokemonPage(id){
     <section class="card"><h2>Abilities</h2>${g<3?'<p class="muted" style="margin:0">Abilities arrive in Gen III.</p>':slots.length?slots.map((o,i)=>`<div class="slot"><span class="muted">${SLOT_NAMES[i]}</span><span style="font-weight:600">${o.map(a=>`<a href="#abilities">${esc(label('abilities',a))}</a>`).join(' / ')}</span></div>`).join('')+(hasAlt?'<p class="hint" style="margin-top:8px">Abilities sharing a slot are switched outside battle.</p>':''):'<p class="muted" style="margin:0">Not set.</p>'}</section>
     <section class="card"><h2>Weaknesses and resistances</h2>${(e.types||[]).length?(match||'<p class="muted" style="margin:0">Neutral against every type.</p>'):'<p class="muted" style="margin:0">Set a type to see matchups.</p>'}${immune}</section>
     <section class="card"><h2>Breeding</h2>${breeding}</section>
-  </div></div>`;
+  </div></div>
+  ${movesetCard(id,g)}`;
 }
 
+function movesetCard(id,g){
+  const set=movesetOf(id,g),btn=canEdit?`<button type="button" class="btn small" data-act="edit-moveset" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} moveset</button>`:'';
+  const row=x=>{const e=effMove(S.moves[x.m],g);return `<tr><td class="name mid"><a href="#m-${esc(x.m)}">${esc(label('moves',x.m))}</a></td><td class="mid">${e.type?chip(e.type):'—'}</td><td class="mid">${e.category?`<span class="cat" style="background:${CAT[e.category]||'var(--soft)'}">${esc(e.category)}</span>`:'—'}</td><td class="num mono mid">${dash(e.power)}</td><td class="num mono mid">${dash(e.accuracy)}</td><td class="num mono mid">${dash(e.pp)}</td><td class="mid">${dash(x.how)}</td></tr>`};
+  return `<section class="card"><div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;margin-bottom:10px"><h2 style="margin:0">Moveset</h2>${btn}</div>${set.length?`<div class="box" style="border:0"><table style="min-width:640px"><thead><tr><th>Move</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Acc.</th><th class="num">PP</th><th>How it learns it</th></tr></thead><tbody>${set.map(row).join('')}</tbody></table></div>`:'<p class="muted" style="margin:0">No moves added yet.</p>'}</section>`;
+}
 function movePage(id){
   const raw=S.moves[id];
   if(!raw)return loaded?emptyMsg('This move is not in your list.'):loading();
   const m={id,...raw},g=UI.gen;
   if((m.debut||1)>g)return notThere(m.name,m.debut,'#moves');
-  const e=eff(m,g);
-  const hist=[];GENS.filter(x=>x>=(m.debut||1)).forEach(x=>{const f=eff(m,x),k=JSON.stringify([f.type,f.category,f.power,f.accuracy,f.pp]);const last=hist[hist.length-1];if(last&&last.k===k)last.to=x;else hist.push({k,from:x,to:x,f})});
-  const learn=(e.learners||[]).slice().sort((a,b)=>label('pokemon',a.p).localeCompare(label('pokemon',b.p)));
+  const e=effMove(m,g);
+  const hist=[];GENS.filter(x=>x>=(m.debut||1)).forEach(x=>{const f=effMove(m,x),k=JSON.stringify([f.type,f.category,f.power,f.accuracy,f.pp,f.target,f.priority,x>=CONTACT_FROM?f.contact:null]);const last=hist[hist.length-1];if(last&&last.k===k)last.to=x;else hist.push({k,from:x,to:x,f})});
+  const learn=(e.learners||[]).slice().sort((a,b)=>(S.pokemon[a.p]?.dex??1e9)-(S.pokemon[b.p]?.dex??1e9)||label('pokemon',a.p).localeCompare(label('pokemon',b.p))||learnOrder(a.how,b.how));
   return `<a href="#moves" style="align-self:flex-start;display:flex;align-items:center;min-height:44px;font-weight:600">Back to Moves</a>
   <section class="hero"><div class="grow"><h1>${esc(m.name)}</h1><div class="chips">${e.type?chip(e.type):''}${e.category?`<span class="cat" style="background:${CAT[e.category]||'var(--soft)'}">${esc(e.category)}</span>`:''}</div></div>
-  <dl class="bigstats"><div><dt>Power</dt><dd>${dash(e.power)}</dd></div><div><dt>Accuracy</dt><dd>${dash(e.accuracy)}</dd></div><div><dt>PP</dt><dd>${dash(e.pp)}</dd></div><div><dt>Debut</dt><dd>Gen ${ROMAN[m.debut||1]}</dd></div></dl>${canEdit?`<button type="button" class="btn" data-act="edit-moves" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</section>
-  <div class="cols"><section class="card"><h2>Effect</h2><p style="margin:0">${dash(e.effect)}</p>${e.flavor?`<p class="flavor" style="margin:10px 0 0">${esc(e.flavor)}</p>`:''}</section>
-  <section class="card"><h2>By generation</h2><div class="box" style="border:0"><table><thead><tr><th>Gens</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Acc.</th><th class="num">PP</th></tr></thead><tbody>${hist.map(h=>`<tr><td class="name">${h.from===h.to?ROMAN[h.from]:ROMAN[h.from]+' to '+ROMAN[h.to]}</td><td>${dash(h.f.type)}</td><td>${dash(h.f.category)}</td><td class="num mono">${dash(h.f.power)}</td><td class="num mono">${dash(h.f.accuracy)}</td><td class="num mono">${dash(h.f.pp)}</td></tr>`).join('')}</tbody></table></div></section></div>
-  <section class="card"><h2>Pokémon that learn it in Gen ${ROMAN[g]}</h2>${learn.length?`<div class="box" style="border:0"><table><thead><tr><th>Pokémon</th><th>How</th></tr></thead><tbody>${learn.map(l=>`<tr><td class="name">${pokeLink(l.p)}</td><td>${dash(l.how)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="muted" style="margin:0">No learners added yet.</p>'}</section>`;
+  <dl class="bigstats"><div><dt>Power</dt><dd>${dash(e.power)}</dd></div><div><dt>Accuracy</dt><dd>${dash(e.accuracy)}</dd></div><div><dt>PP</dt><dd>${dash(e.pp)}</dd></div><div><dt>Priority</dt><dd>${dash(prioText(e.priority))}</dd></div><div><dt>Debut</dt><dd>Gen ${ROMAN[m.debut||1]}</dd></div></dl>${canEdit?`<button type="button" class="btn" data-act="edit-moves" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</section>
+  <section class="card"><h2>Effect</h2><dl class="defs" style="margin-bottom:14px"><div><dt>Target</dt><dd>${dash(TARGETS[e.target])}</dd></div>${g>=CONTACT_FROM?`<div><dt>Makes contact</dt><dd>${dash(contactText(e.contact))}</dd></div>`:''}</dl><p style="margin:0">${dash(e.effect)}</p>${e.flavor?`<p class="flavor" style="margin:10px 0 0">${esc(e.flavor)}</p>`:''}</section>
+  <section class="card"><h2>By generation</h2><div class="box" style="border:0"><table><thead><tr><th>Gens</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Acc.</th><th class="num">PP</th><th class="num">Priority</th><th>Target</th><th>Contact</th></tr></thead><tbody>${hist.map(h=>`<tr><td class="name">${h.from===h.to?ROMAN[h.from]:ROMAN[h.from]+' to '+ROMAN[h.to]}</td><td>${dash(h.f.type)}</td><td>${dash(h.f.category)}</td><td class="num mono">${dash(h.f.power)}</td><td class="num mono">${dash(h.f.accuracy)}</td><td class="num mono">${dash(h.f.pp)}</td><td class="num mono">${dash(prioText(h.f.priority))}</td><td>${dash(TARGETS[h.f.target])}</td><td>${h.to<CONTACT_FROM?'<span class="muted">—</span>':dash(contactText(h.f.contact))}</td></tr>`).join('')}</tbody></table></div></section>
+  <section class="card"><h2>Pokémon that learn it in Gen ${ROMAN[g]}</h2>${learn.length?`<div class="box" style="border:0"><table><thead><tr><th>No.</th><th>Pokémon</th><th>How</th></tr></thead><tbody>${learn.map(l=>`<tr><td class="mono muted">${pad(S.pokemon[l.p]?.dex)}</td><td class="name">${pokeLink(l.p)}</td><td>${dash(l.how)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="muted" style="margin:0">No learners added yet.</p>'}</section>`;
 }
 
 function trainerList(){
@@ -432,8 +463,10 @@ const allTypes=()=>(S.chart?.types||[]).map(t=>t.name);
 const SPEC={
   abilities:{title:'ability',debut:3,fields:(d)=>area('flavor','Flavor text',d.flavor)+area('effect','Actual effect',d.effect)+select('immuneTo','Grants immunity to',d.immuneTo,allTypes(),'None'),read:()=>({flavor:v('flavor'),effect:v('effect'),immuneTo:v('immuneTo')})},
   items:{title:'item',debut:1,fields:(d)=>input('category','Category',d.category,{list:'dl-itemcats',ph:'Hold items'})+area('flavor','Flavor text',d.flavor)+area('effect','Actual effect',d.effect),read:()=>({category:v('category'),flavor:v('flavor'),effect:v('effect')})},
-  moves:{title:'move',debut:1,del:'del-moves',fields:(d)=>`<div class="fgrid">${select('type','Type',d.type,allTypes(),'Choose')}${select('category','Category',d.category,Object.keys(CAT),'Choose')}${input('power','Power',d.power,{type:'number',min:0})}${input('accuracy','Accuracy',d.accuracy,{type:'number',min:0})}${input('pp','PP',d.pp,{type:'number',min:0})}</div>`+area('effect','Effect',d.effect)+area('flavor','Flavor text',d.flavor)+area('learners','Pokémon that learn it',(d.learners||[]).map(l=>label('pokemon',l.p)+(l.how?': '+l.how:'')).join('\n'),'One per line, like\nGengar: Level 33\nHaunter: TM30'),
-    read:()=>({type:v('type'),category:v('category'),power:n('power'),accuracy:n('accuracy'),pp:n('pp'),effect:v('effect'),flavor:v('flavor'),learners:v('learners').split('\n').map(x=>x.trim()).filter(Boolean).map(x=>{const i=x.indexOf(':');return {p:ref('pokemon',i<0?x:x.slice(0,i)),how:i<0?'':x.slice(i+1).trim()}})})},
+  moves:{title:'move',debut:1,del:'del-moves',fields:(d)=>`<div class="fgrid">${select('type','Type',d.type,allTypes(),'Choose')}${UI.gen<SPLIT_FROM?select('category','Category',d.category&&d.category!=='Status'?'Damaging':d.category,['Damaging','Status'],'Choose'):select('category','Category',d.category,Object.keys(CAT),'Choose')}${input('power','Power',d.power,{type:'number',min:0})}${input('accuracy','Accuracy',d.accuracy,{type:'number',min:0})}${input('pp','PP',d.pp,{type:'number',min:0})}</div>${UI.gen<SPLIT_FROM?`<p class="hint">Before Gen ${ROMAN[SPLIT_FROM]}, a damaging move is physical or special by its type: ${PHYSICAL_TYPES.join(', ')} are physical; ${SPECIAL_TYPES.join(', ')} are special.</p>`:''}<div class="fgrid"><label class="ctl">Target<select id="f-target"><option value="">Choose</option>${targetsAt(UI.gen).map(k=>`<option value="${k}"${d.target===k?' selected':''}>${TARGETS[k]}</option>`).join('')}</select></label>${input('priority','Priority',d.priority,{type:'number',ph:'0'})}${UI.gen>=CONTACT_FROM?`<label class="ctl">Makes contact<select id="f-contact"><option value="">Not set</option><option value="yes"${d.contact===true?' selected':''}>Yes</option><option value="no"${d.contact===false?' selected':''}>No</option></select></label>`:''}</div><p class="hint">${UI.gen<3?'The opposing side and the entire field are double-battle targets, so they start in Gen III. Contact also starts in Gen III.':'Priority is a whole number. Higher goes first, and blank counts as 0.'}</p>`+area('effect','Effect',d.effect)+area('flavor','Flavor text',d.flavor)+area('learners','Pokémon that learn it',(d.learners||[]).map(l=>label('pokemon',l.p)+(l.how?': '+l.how:'')).join('\n'),'One per line, like\nGengar: Level 33\nHaunter: TM30'),
+    from3:['contact'],
+    check:(p,from)=>p.category==='Damaging'?`Before Gen ${ROMAN[SPLIT_FROM]}, a damaging move is physical or special by its type. Choose a type first.`:DOUBLES_TARGETS.includes(p.target)&&from<3?`${TARGETS[p.target]} is a double-battle target, which starts in Gen III. Save starting from Gen III, or choose another target.`:p.priority!=null&&!Number.isInteger(p.priority)?'Priority must be a whole number, like 1, 0 or -3.':'',
+    read:()=>({type:v('type'),category:v('category')==='Damaging'?typeCat(v('type'))||'Damaging':v('category'),power:n('power'),accuracy:n('accuracy'),pp:n('pp'),target:v('target'),priority:n('priority'),...($('f-contact')?{contact:v('contact')==='yes'?true:v('contact')==='no'?false:null}:{}),effect:v('effect'),flavor:v('flavor'),learners:v('learners').split('\n').map(x=>x.trim()).filter(Boolean).map(x=>{const i=x.indexOf(':');return {p:ref('pokemon',i<0?x:x.slice(0,i)),how:i<0?'':x.slice(i+1).trim()}})})},
   effects:{title:'effect',debut:1,fields:(d)=>input('group','Group',d.group,{list:'dl-groups',ph:'Weather'})+area('flavor','Flavor text',d.flavor)+area('effect','Actual effect',d.effect),read:()=>({group:v('group'),flavor:v('flavor'),effect:v('effect')})}
 };
 function openForm(col,id,kind){
@@ -447,7 +480,12 @@ async function saveForm(){
   const dup=byName(col,name);if(dup&&dup!==id)return fail(`${name} already exists.`);
   const doc=id?clone(S[col][id]):{gens:{}};
   doc.name=name;doc.debut=debut;if(kind)doc.kind=kind;
-  if(id)applyFrom(doc,+v('from')||UI.gen,SPEC[col].read());else applyGen(doc,debut,SPEC[col].read());
+  const sp=SPEC[col],patch=sp.read(),from=id?(+v('from')||UI.gen):debut;
+  if(sp.check){const bad=sp.check(patch,from);if(bad)return fail(bad)}
+  // Fields that only exist from Gen III (like contact) are saved from Gen III at the earliest.
+  const late={};for(const k of sp.from3||[])if(k in patch){late[k]=patch[k];delete patch[k]}
+  if(id)applyFrom(doc,from,patch);else applyGen(doc,debut,patch);
+  if(Object.keys(late).length){if(id)applyFrom(doc,Math.max(from,3),late);else applyGen(doc,Math.max(debut,3),late)}
   const key=id||newId(col,name);
   S[col][key]=doc;
   const ok=await put(col+'/'+key,doc);if(!ok)return;
@@ -507,6 +545,36 @@ async function savePokemon(){
   closeModal();
   if(!id){if(debut>UI.gen)UI.gen=debut;location.hash='p-'+key}
   render();toast('Saved');
+}
+
+/* Moveset editor */
+function openMoveset(pid){
+  const g=UI.gen;
+  F={col:'moveset',pid,g,ms:movesetOf(pid,g).map(x=>({m:label('moves',x.m),how:x.how}))};
+  if(!F.ms.length)F.ms.push({m:'',how:''});
+  modal(`${S.pokemon[pid].name}: Gen ${ROMAN[g]} moveset`,`<div class="formbody"><p class="hint">Each move here is also listed on that move's page under "Pokémon that learn it" for Gen ${ROMAN[g]}. New move names are added to Moves.</p><div id="ms" style="display:flex;flex-direction:column;gap:8px"></div></div>${foot(null)}`,saveMoveset);
+  drawMoveset();
+}
+function drawMoveset(){
+  $('ms').innerHTML=F.ms.map((x,i)=>`<div class="msrow">${input(`ms${i}-m`,'Move',x.m,{list:'dl-moves'})}${input(`ms${i}-how`,'How it learns it',x.how,{ph:'Level 12, TM30, Egg move'})}<button type="button" class="btn small" data-act="ms-del" data-v="${i}" aria-label="Remove move ${i+1}">Remove</button></div>`).join('')+'<div><button type="button" class="btn small" data-act="ms-add">Add move</button></div>';
+}
+function readMoveset(){F.ms=F.ms.map((_,i)=>({m:v(`ms${i}-m`),how:v(`ms${i}-how`)}))}
+async function saveMoveset(){
+  readMoveset();
+  const {pid,g}=F,list=F.ms.filter(x=>x.m);
+  for(const x of list){const id=byName('moves',x.m);if(id&&(S.moves[id].debut||1)>g)return fail(`${S.moves[id].name} debuts in Gen ${ROMAN[S.moves[id].debut]}, so it can't be in a Gen ${ROMAN[g]} moveset.`)}
+  const want={};
+  for(const x of list){const id=await ensure('moves',x.m,g);(want[id]=want[id]||[]).push(x.how)}
+  const touched=new Set([...Object.keys(want),...movesetOf(pid,g).map(x=>x.m)]);
+  for(const mid of touched){
+    const cur=eff(S.moves[mid],g).learners||[],mine=cur.filter(l=>l.p===pid).map(l=>l.how||'');
+    if(eq(mine,want[mid]||[]))continue;
+    const doc=clone(S.moves[mid]);
+    applyGen(doc,g,{learners:cur.filter(l=>l.p!==pid).concat((want[mid]||[]).map(how=>({p:pid,how})))});
+    S.moves[mid]=doc;
+    if(!await put('moves/'+mid,doc))return;
+  }
+  closeModal();render();toast('Saved');
 }
 
 /* Trainer editors */
@@ -650,7 +718,10 @@ const ACT={
   'slot-alt':(d)=>{readSlots();F.slots[+d.v].push('');drawSlots()},
   'slot-unalt':(d)=>{readSlots();F.slots[+d.v].length=1;drawSlots()},
   'mon-add':()=>{readTeam();F.team.push({p:''});drawTeam();const i=F.team.length-1;$(`f-m${i}-p`)?.focus()},
-  'mon-del':(d)=>{readTeam();F.team.splice(+d.v,1);drawTeam()}
+  'mon-del':(d)=>{readTeam();F.team.splice(+d.v,1);drawTeam()},
+  'edit-moveset':(d)=>openMoveset(d.id),
+  'ms-add':()=>{readMoveset();F.ms.push({m:'',how:''});drawMoveset();$(`f-ms${F.ms.length-1}-m`)?.focus()},
+  'ms-del':(d)=>{readMoveset();F.ms.splice(+d.v,1);drawMoveset()}
 };
 document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const f=ACT[b.dataset.act];if(f){e.preventDefault();f(b.dataset)}});
 document.addEventListener('input',e=>{
