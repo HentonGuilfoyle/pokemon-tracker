@@ -24,6 +24,11 @@
     "debut": 3,
     "gens": {}
   },
+  "arena-trap": {
+    "name": "Arena Trap",
+    "debut": 3,
+    "gens": {}
+  },
   "battle-armor": {
     "name": "Battle Armor",
     "debut": 3,
@@ -69,6 +74,16 @@
     "debut": 3,
     "gens": {}
   },
+  "conniving": {
+    "name": "Conniving",
+    "debut": 3,
+    "gens": {}
+  },
+  "cursed-body": {
+    "name": "Cursed Body",
+    "debut": 4,
+    "gens": {}
+  },
   "cute-charm": {
     "name": "Cute Charm",
     "debut": 3,
@@ -84,6 +99,21 @@
     },
     "name": "Damp"
   },
+  "defiant": {
+    "name": "Defiant",
+    "debut": 3,
+    "gens": {}
+  },
+  "down-to-earth": {
+    "name": "Down to Earth",
+    "debut": 3,
+    "gens": {}
+  },
+  "dream-catcher": {
+    "name": "Dream Catcher",
+    "debut": 4,
+    "gens": {}
+  },
   "drizzle": {
     "name": "Drizzle",
     "debut": 3,
@@ -94,8 +124,22 @@
     "debut": 4,
     "gens": {}
   },
+  "earth-eater": {
+    "name": "Earth Eater",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "immuneTo": "Ground"
+      }
+    }
+  },
   "effect-spore": {
     "name": "Effect Spore",
+    "debut": 3,
+    "gens": {}
+  },
+  "flash-fire": {
+    "name": "Flash Fire",
     "debut": 3,
     "gens": {}
   },
@@ -107,6 +151,11 @@
   "flower-guard": {
     "name": "Flower Guard",
     "debut": 3,
+    "gens": {}
+  },
+  "guard-dog": {
+    "name": "Guard Dog",
+    "debut": 4,
     "gens": {}
   },
   "guts": {
@@ -157,10 +206,19 @@
   "inflatable": {
     "name": "Inflatable",
     "debut": 4,
-    "gens": {}
+    "gens": {
+      "4": {
+        "immuneTo": "Flying"
+      }
+    }
   },
   "inner-focus": {
     "name": "Inner Focus",
+    "debut": 3,
+    "gens": {}
+  },
+  "insomnia": {
+    "name": "Insomnia",
     "debut": 3,
     "gens": {}
   },
@@ -213,6 +271,34 @@
       }
     }
   },
+  "magnet-pull": {
+    "name": "Magnet Pull",
+    "debut": 4,
+    "gens": {}
+  },
+  "magnet-rise": {
+    "name": "Magnet Rise",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "immuneTo": "Ground"
+      }
+    }
+  },
+  "minus": {
+    "name": "Minus",
+    "debut": 4,
+    "gens": {}
+  },
+  "musclebound": {
+    "name": "Musclebound",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Musclebound turns all of the Pokémon's attacks into physical attacks."
+      }
+    }
+  },
   "overcharge": {
     "name": "Overcharge",
     "debut": 3,
@@ -228,6 +314,11 @@
     "debut": 3,
     "gens": {}
   },
+  "plus": {
+    "name": "Plus",
+    "debut": 3,
+    "gens": {}
+  },
   "poison-point": {
     "name": "Poison Point",
     "debut": 3,
@@ -235,6 +326,11 @@
   },
   "quick-feet": {
     "name": "Quick Feet",
+    "debut": 4,
+    "gens": {}
+  },
+  "quick-fists": {
+    "name": "Quick Fists",
     "debut": 4,
     "gens": {}
   },
@@ -246,6 +342,11 @@
   "rock-head": {
     "name": "Rock Head",
     "debut": 3,
+    "gens": {}
+  },
+  "rototiller": {
+    "name": "Rototiller",
+    "debut": 4,
     "gens": {}
   },
   "rough-skin": {
@@ -270,6 +371,11 @@
   },
   "sand-veil": {
     "name": "Sand Veil",
+    "debut": 3,
+    "gens": {}
+  },
+  "serene-grace": {
+    "name": "Serene Grace",
     "debut": 3,
     "gens": {}
   },
@@ -305,6 +411,16 @@
   },
   "solar-power": {
     "name": "Solar Power",
+    "debut": 3,
+    "gens": {}
+  },
+  "solid-rock": {
+    "name": "Solid Rock",
+    "debut": 4,
+    "gens": {}
+  },
+  "soundproof": {
+    "name": "Soundproof",
     "debut": 3,
     "gens": {}
   },
@@ -378,6 +494,11 @@
     "debut": 4,
     "gens": {}
   },
+  "triple-threat": {
+    "name": "Triple Threat",
+    "debut": 3,
+    "gens": {}
+  },
   "unaware": {
     "name": "Unaware",
     "debut": 4,
@@ -401,6 +522,10 @@
   "wind-rider": {
     "name": "Wind Rider",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "immuneTo": "Flying"
+      }
+    }
   }
 }
