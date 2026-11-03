@@ -2,12 +2,14 @@
 const GENS=[1,2,3,4],ROMAN={1:'I',2:'II',3:'III',4:'IV'},REGION={1:'Kanto',2:'Johto',3:'Hoenn',4:'Sinnoh'};
 const COLS=['pokemon','abilities','items','moves','effects','trainers'];
 const SLOT_NAMES=['Ability I','Ability II','Ability III'];
+const STAT_MAX=255;
 const NAV=[['dex','National Dex'],['types','Type Chart'],['abilities','Abilities'],['items','Items'],['moves','Moves'],['effects','Battle Effects'],['status','Status Effects'],['trainers','Trainers']];
 const CAT={Physical:'var(--hot)',Special:'var(--cool)',Status:'var(--stat)'};
 const S={pokemon:{},abilities:{},items:{},moves:{},effects:{},trainers:{},chart:null};
-const UI={gen:4,route:'dex',arg:null,q:'',type:'All',cat:'All',group:'All',view:'all',newOnly:false,sort:'dex',dir:1,sel:null,editChart:false,chartFuture:true};
+const UI={gen:4,route:'dex',arg:null,q:'',type:'All',cat:'All',group:'All',view:'all',newOnly:false,sort:'dex',dir:1,sel:null,editChart:false,chartFuture:true,perPage:'all',page:0};
+const PER_PAGE=[['25','25'],['50','50'],['100','100'],['all','Endless']];
 let canEdit=false,loaded=false,failed=false,bodyFn=null,F=null,timer=0;
-try{const g=+localStorage.getItem('gen');if(GENS.includes(g))UI.gen=g}catch(e){}
+try{const g=+localStorage.getItem('gen');if(GENS.includes(g))UI.gen=g;const pp=localStorage.getItem('perPage');if(PER_PAGE.some(o=>o[0]===pp))UI.perPage=pp}catch(e){}
 
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -77,6 +79,7 @@ function pokeChanges(p,g){
   for(let i=0;i<3;i++)if(sa[i]!==sb[i])out.push(sa[i]?`${SLOT_NAMES[i]}: ${sa[i]} to ${sb[i]||'none'}.`:`${SLOT_NAMES[i]}: adds ${sb[i]}.`);
   if((a.evolvesFrom||a.evoMethod)&&(a.evolvesFrom!==b.evolvesFrom||a.evoMethod!==b.evoMethod))out.push('Evolution changed.');
   if((!blank(a.eggGroups)||a.eggCycles!=null||a.genderM!=null||a.hatchesAs)&&(!eq(a.eggGroups,b.eggGroups)||a.genderM!==b.genderM||a.eggCycles!==b.eggCycles||a.hatchesAs!==b.hatchesAs))out.push('Breeding changed.');
+  if(hasVitals(a)&&(a.species!==b.species||a.height!==b.height||a.weight!==b.weight||a.growthRate!==b.growthRate))out.push('Vitals changed.');
   if(a.sprite&&a.sprite!==b.sprite)out.push('New sprite.');
   return out.length?out:['No changes from the previous generation.'];
 }
@@ -105,7 +108,7 @@ function fillLists(){
   $('dl-groups').innerHTML=opt(['Weather','Terrain','Field','Major','Volatile',...rows('effects').flatMap(e=>GENS.map(g=>e.gens?.[g]?.group))]);
 }
 function renderChrome(){
-  const dark=themeNow()==='dark';$('theme').textContent=dark?'Light mode':'Dark mode';
+  const dark=themeNow()==='dark';$('theme').textContent=dark?'Light mode':'Dark mode';$('addmon').hidden=!canEdit;
   const cur=({p:'dex',m:'moves',t:'trainers'})[UI.route]||UI.route;
   $('nav').innerHTML=NAV.map(([k,l])=>`<a href="#${k}"${k===cur?' aria-current="page"':''}>${l}</a>`).join('');
   const allGens=cur==='trainers';
@@ -138,7 +141,7 @@ const PAGES={
   dex(){
     bodyFn=dexBody;
     return titleBar('National Dex',`Every Pokémon available in Gen ${ROMAN[UI.gen]} (${REGION[UI.gen]}), shown with Gen ${ROMAN[UI.gen]} data.`,addBtn('Add Pokémon','new-pokemon'))+
-    `<div class="toolbar">${search('Search')}${typeSelect()}<label class="check"><input id="newOnly" type="checkbox" data-model="newOnly"${UI.newOnly?' checked':''}>New in Gen ${ROMAN[UI.gen]} only</label></div><div id="body"></div>`;
+    `<div class="toolbar">${search('Search')}${typeSelect()}${UI.gen>1?`<label class="check"><input id="newOnly" type="checkbox" data-model="newOnly"${UI.newOnly?' checked':''}>New in Gen ${ROMAN[UI.gen]} only</label>`:''}<label class="ctl push" style="flex:0 1 150px">Pokémon per page<select id="perPage" data-model="perPage">${PER_PAGE.map(([k,l])=>`<option value="${k}"${UI.perPage===k?' selected':''}>${l}</option>`).join('')}</select></label></div><div id="body"></div>`;
   },
   types(){
     return titleBar('Type Chart',`Gen ${ROMAN[UI.gen]} matchups. Rows attack and columns defend.`,canEdit?`<div class="btns">${UI.editChart?'<button type="button" class="btn" data-act="add-type">Add type</button>':''}<button type="button" class="btn${UI.editChart?' primary':''}" data-act="edit-chart" aria-pressed="${UI.editChart}">${UI.editChart?'Done editing':'Edit chart'}</button></div>`:'')+chartPage();
@@ -159,18 +162,22 @@ function dexBody(){
   if(!loaded)return loading();
   const g=UI.gen;
   let list=rows('pokemon').filter(p=>(p.debut||1)<=g).filter(matchQ);
-  if(UI.newOnly)list=list.filter(p=>(p.debut||1)===g);
+  if(UI.newOnly&&g>1)list=list.filter(p=>(p.debut||1)===g);
   if(UI.type!=='All')list=list.filter(p=>(eff(p,g).types||[]).includes(UI.type));
   if(!rows('pokemon').length)return emptyMsg('Your Dex is empty. Add your first Pokémon, new or existing, and fill in its typing, stats, abilities, evolution and breeding.','new-pokemon','Add Pokémon');
   if(!list.length)return emptyMsg('No Pokémon match these filters.');
   const keys=statsAt({},g).map(s=>s[0]);
   const val=(p)=>{const e=eff(p,g);if(UI.sort==='dex')return p.dex??1e9;if(UI.sort==='name')return p.name||'';if(UI.sort==='bst')return total(e,g)??-1;return (statsAt(e,g).find(s=>s[0]===UI.sort)||[])[2]??-1};
   list.sort((a,b)=>{const x=val(a),y=val(b);return (typeof x==='string'?x.localeCompare(y):x-y)*UI.dir||(a.dex??0)-(b.dex??0)});
+  const size=UI.perPage==='all'?list.length:+UI.perPage,pages=Math.max(1,Math.ceil(list.length/size)),count=list.length;
+  UI.page=Math.min(Math.max(UI.page,0),pages-1);
+  const start=UI.page*size;list=list.slice(start,start+size);
+  const pager=(where)=>pages<2?'':`<nav class="pager" aria-label="Dex pages, ${where}"><button type="button" class="btn small" data-act="page" data-v="-1"${UI.page===0?' disabled':''} aria-label="Previous page">← Previous</button><span class="muted">Page ${UI.page+1} of ${pages} · ${start+1}–${start+list.length} of ${count}</span><button type="button" class="btn small" data-act="page" data-v="1"${UI.page===pages-1?' disabled':''} aria-label="Next page">Next →</button></nav>`;
   const arrow=k=>UI.sort===k?(UI.dir>0?' ↑':' ↓'):'';
   const short={hp:'HP',atk:'Atk',def:'Def',spa:'SpA',spd:'SpD',spc:'Spc',spe:'Spe'};
   const th=(k,l)=>`<th class="num"><button type="button" data-act="sort" data-v="${k}">${l}${arrow(k)}</button></th>`;
-  return `<div class="box"><table style="min-width:980px"><thead><tr><th><button type="button" data-act="sort" data-v="dex">No.${arrow('dex')}</button></th><th aria-label="Sprite"></th><th><button type="button" data-act="sort" data-v="name">Name${arrow('name')}</button></th><th>Type</th><th>Abilities</th>${keys.map(k=>th(k,short[k])).join('')}${th('bst','Total')}</tr></thead><tbody>${list.map(p=>{const e=eff(p,g),st=statsAt(e,g);
-    return `<tr><td class="mono mid muted">${pad(p.dex)}</td><td class="mid">${pokeTile(p,e,g,40)}</td><td class="mid name"><a href="#p-${esc(p.id)}">${esc(p.name)}</a>${changedTag(p)}</td><td class="mid">${chips(e.types)}</td><td class="mid">${g<3?'<span class="muted">—</span>':(slotText(e.abilitySlots).map(esc).join('<br>')||'<span class="muted">Not set</span>')}</td>${st.map(s=>`<td class="num mono mid">${dash(s[2])}</td>`).join('')}<td class="num mono mid name">${dash(total(e,g))}</td></tr>`}).join('')}</tbody></table></div><p class="hint">${list.length} shown</p>`;
+  return `${pager('top')}<div class="box" id="dextable"><table style="min-width:980px"><thead><tr><th><button type="button" data-act="sort" data-v="dex">No.${arrow('dex')}</button></th><th aria-label="Sprite"></th><th><button type="button" data-act="sort" data-v="name">Name${arrow('name')}</button></th><th>Type</th><th>Abilities</th>${keys.map(k=>th(k,short[k])).join('')}${th('bst','Total')}</tr></thead><tbody>${list.map(p=>{const e=eff(p,g),st=statsAt(e,g);
+    return `<tr><td class="mono mid muted">${pad(p.dex)}</td><td class="mid">${pokeTile(p,e,g,40)}</td><td class="mid name"><a href="#p-${esc(p.id)}">${esc(p.name)}</a>${changedTag(p)}</td><td class="mid">${chips(e.types)}</td><td class="mid">${g<3?'<span class="muted">—</span>':(slotText(e.abilitySlots).map(esc).join('<br>')||'<span class="muted">Not set</span>')}</td>${st.map(s=>`<td class="num mono mid">${dash(s[2])}</td>`).join('')}<td class="num mono mid name">${dash(total(e,g))}</td></tr>`}).join('')}</tbody></table></div>${pages<2?`<p class="hint">${count} shown</p>`:pager('bottom')}`;
 }
 
 function abilityBody(){
@@ -252,6 +259,24 @@ function chartPage(){
 
 function notThere(name,debut,back){return `<div class="empty"><p>${esc(name)} debuts in Gen ${ROMAN[debut]}, so it has no Gen ${ROMAN[UI.gen]} data.</p><div class="btns"><button type="button" class="btn primary" data-act="gen" data-v="${debut}">Go to Gen ${ROMAN[debut]}</button><a class="btn" href="${back}">Back</a></div></div>`}
 
+// The Pokémon before and after this one in Dex number order, counting only those in the generation being viewed.
+function dexNeighbours(id,g){
+  const list=rows('pokemon').filter(p=>(p.debut||1)<=g).sort((a,b)=>(a.dex??1e9)-(b.dex??1e9)||a.name.localeCompare(b.name));
+  const i=list.findIndex(p=>p.id===id);
+  return i<0?[null,null]:[list[i-1]||null,list[i+1]||null];
+}
+// Gender ratio bar. Labels sit under the bar so small shares never get clipped.
+function genderBar(m){
+  const male=Math.min(Math.max(Number(m)||0,0),100),fem=+(100-male).toFixed(2);
+  if(male===100||fem===0)return '<div class="gender" style="grid-template-columns:1fr" aria-hidden="true"><span style="background:var(--cool)"></span></div><div class="glabels"><span>Male only</span></div>';
+  if(male===0)return '<div class="gender" style="grid-template-columns:1fr" aria-hidden="true"><span style="background:var(--hot)"></span></div><div class="glabels"><span>Female only</span></div>';
+  return `<div class="gender" style="grid-template-columns:${male}fr ${fem}fr" aria-hidden="true"><span style="background:var(--cool)"></span><span style="background:var(--hot)"></span></div><div class="glabels"><span>${male}% male</span><span>${fem}% female</span></div>`;
+}
+// Vitals: height in metres and weight in kilograms, with feet/inches and pounds alongside.
+const GROWTH=['Erratic','Fast','Medium Fast','Medium Slow','Slow','Fluctuating'];
+function heightText(m){if(m==null)return '';const inches=Math.round(m/0.0254);return `${m} m (${Math.floor(inches/12)}′${String(inches%12).padStart(2,'0')}″)`}
+function weightText(kg){if(kg==null)return '';return `${kg} kg (${(kg*2.20462).toFixed(1)} lbs)`}
+const hasVitals=e=>!!(e.species||e.height!=null||e.weight!=null||e.growthRate);
 function pokemonPage(id){
   const raw=S.pokemon[id];
   if(!raw)return loaded?emptyMsg('This Pokémon is not in your Dex.'):loading();
@@ -266,13 +291,16 @@ function pokemonPage(id){
   const evo=family(p,g);
   const evoHtml=evo.length>1?`<div class="evo">${evo.map((lv,i)=>`${i?`<svg aria-hidden="true" width="34" height="14" viewBox="0 0 34 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h30M25 1l6 6-6 6"/></svg>`:''}<div class="stage">${lv.map(c=>{const m=S.pokemon[c],x=eff(m,g);return `<a class="evotile" href="#p-${esc(c)}"${c===id?' aria-current="true"':''}>${pokeTile(m,x,g,36)}<span>${esc(m.name)}${i&&x.evoMethod?`<small>${esc(x.evoMethod)}</small>`:''}</span></a>`}).join('')}</div>`).join('')}</div>`:'<p class="muted" style="margin:0">Does not evolve.</p>';
   const t=total(e,g);
-  const breeding=g<2?'<p class="muted" style="margin:0">Breeding arrives in Gen II.</p>':(blank(e.eggGroups)&&e.eggCycles==null&&e.genderM===undefined&&!e.hatchesAs)?'<p class="muted" style="margin:0">Not set.</p>':`<dl class="defs"><div><dt>Egg groups</dt><dd>${dash((e.eggGroups||[]).join(', '))}</dd></div><div><dt>Egg cycles</dt><dd>${dash(e.eggCycles)}</dd></div><div><dt>Hatches as</dt><dd>${dash(e.hatchesAs)}</dd></div></dl><div style="margin-top:12px"><span class="muted" style="font-size:13px">Gender ratio</span>${e.genderM===null||e.genderM===undefined?'<div style="font-weight:600">Genderless</div>':`<div class="gender" style="grid-template-columns:${Math.max(e.genderM,1)}fr ${Math.max(100-e.genderM,1)}fr"><span style="background:var(--cool)">${e.genderM}% male</span><span style="background:var(--hot);text-align:right">${100-e.genderM}% female</span></div>`}</div>`;
+  const breeding=g<2?'<p class="muted" style="margin:0">Breeding arrives in Gen II.</p>':(blank(e.eggGroups)&&e.eggCycles==null&&e.genderM===undefined&&!e.hatchesAs)?'<p class="muted" style="margin:0">Not set.</p>':`<dl class="defs"><div><dt>Egg groups</dt><dd>${dash((e.eggGroups||[]).join(', '))}</dd></div><div><dt>Egg cycles</dt><dd>${dash(e.eggCycles)}</dd></div><div><dt>Hatches as</dt><dd>${dash(e.hatchesAs)}</dd></div></dl><div style="margin-top:12px"><span class="muted" style="font-size:13px">Gender ratio</span>${e.genderM===null||e.genderM===undefined?'<div style="font-weight:600">Genderless</div>':genderBar(e.genderM)}</div>`;
   const hasAlt=slots.some(o=>o.length>1);
-  return `<a href="#dex" style="align-self:flex-start;display:flex;align-items:center;min-height:44px;font-weight:600">Back to National Dex</a>
+  const [prevP,nextP]=dexNeighbours(id,g);
+  const step=(q,dir)=>q?`<a class="btn small" href="#p-${esc(q.id)}" data-nav="${dir}" aria-label="${dir==='prev'?'Previous':'Next'} Pokémon: ${esc(q.name)}"><span>${dir==='prev'?`← <span class="mono">${pad(q.dex)}</span> ${esc(q.name)}`:`${esc(q.name)} <span class="mono">${pad(q.dex)}</span> →`}</span></a>`:`<span class="btn small" aria-disabled="true">${dir==='prev'?'← First in Dex':'Last in Dex →'}</span>`;
+  return `<div class="pnav"><a href="#dex" style="display:flex;align-items:center;min-height:44px;font-weight:600">Back to National Dex</a><nav class="btns" aria-label="Previous and next Pokémon">${step(prevP,'prev')}${step(nextP,'next')}</nav></div>
   <section class="hero">${pokeTile(p,e,g,132)}<div class="grow"><span class="mono">No. ${pad(p.dex)} · Debuted in Gen ${ROMAN[p.debut||1]} (${REGION[p.debut||1]})</span><h1>${esc(p.name)}</h1>${(e.types||[]).length?chips(e.types):'<span>No type set</span>'}</div>${canEdit?`<button type="button" class="btn" data-act="edit-pokemon" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</section>
   <section class="note" aria-label="Changes"><strong>Gen ${ROMAN[g]}:</strong>${pokeChanges(p,g).map(c=>`<span>${esc(c)}</span>`).join('')}</section>
   <div class="cols"><div class="col">
-    <section class="card"><div style="display:flex;justify-content:space-between;gap:12px"><h2>Base stats</h2><span class="mono" style="font-weight:600">${t==null?'':'Total '+t}</span></div>${st.map(s=>`<div class="stat"><span>${s[1]}</span><span class="mono" style="text-align:right">${dash(s[2])}</span><span class="bar" aria-hidden="true"><i style="width:${Math.min((s[2]||0)/255*100,100).toFixed(1)}%"></i></span></div>`).join('')}</section>
+    <section class="card"><div style="display:flex;justify-content:space-between;gap:12px"><h2>Base stats</h2><span class="mono" style="font-weight:600">${t==null?'':'Total '+t}</span></div>${st.map(s=>`<div class="stat"><span>${s[1]}</span><span class="mono" style="text-align:right">${dash(s[2])}</span><span class="bar" aria-hidden="true"><i style="width:${Math.min((s[2]||0)/STAT_MAX*100,100).toFixed(1)}%"></i></span></div>`).join('')}</section>
+    <section class="card"><h2>Vitals</h2>${hasVitals(e)?`<dl class="defs"><div><dt>Species</dt><dd>${dash(e.species)}</dd></div><div><dt>Height</dt><dd>${dash(heightText(e.height))}</dd></div><div><dt>Weight</dt><dd>${dash(weightText(e.weight))}</dd></div><div><dt>Growth rate</dt><dd>${dash(e.growthRate)}</dd></div></dl>`:'<p class="muted" style="margin:0">Not set.</p>'}</section>
     <section class="card"><h2>Evolution chain</h2>${evoHtml}</section>
   </div><div class="col">
     <section class="card"><h2>Abilities</h2>${g<3?'<p class="muted" style="margin:0">Abilities arrive in Gen III.</p>':slots.length?slots.map((o,i)=>`<div class="slot"><span class="muted">${SLOT_NAMES[i]}</span><span style="font-weight:600">${o.map(a=>`<a href="#abilities">${esc(label('abilities',a))}</a>`).join(' / ')}</span></div>`).join('')+(hasAlt?'<p class="hint" style="margin-top:8px">Abilities sharing a slot are switched outside battle.</p>':''):'<p class="muted" style="margin:0">Not set.</p>'}</section>
@@ -303,13 +331,33 @@ function trainerList(){
   (!loaded?loading():!list.length?emptyMsg('No trainers yet. Add your first one, then give them a blurb and an encounter with their team.','new-trainer','Add trainer'):
   `<div class="tcards">${list.map(t=>{const enc=t.encounters||[],gs=[...new Set(enc.map(e=>e.gen))].sort();return `<a class="tcard" href="#t-${esc(t.id)}">${trainerTile(t,64)}<div style="min-width:0"><div class="name" style="font-size:18px">${esc(t.name)}</div>${t.title?`<div class="muted">${esc(t.title)}</div>`:''}<div class="chips" style="margin-top:6px">${gs.map(g=>`<span class="pill">Gen ${ROMAN[g]}</span>`).join('')||'<span class="muted" style="font-size:13px">No encounters yet</span>'}</div></div></a>`}).join('')}</div>`);
 }
+/* Trainer team members. Which fields exist depends on the encounter's generation:
+   Gen I: DVs. Gen II: DVs and item. Gen III and IV: item, nature, EVs, IVs and up to three ability slots.
+   Fields a generation does not use stay saved. They are just not shown. */
+const DV_KEYS=[['atk','Attack'],['def','Defense'],['spe','Speed'],['spc','Special']];
+const EV_KEYS=[['hp','HP'],['atk','Atk'],['def','Def'],['spa','SpA'],['spd','SpD'],['spe','Spe']];
+const DV_MAX=15,IV_MAX=30,EV_MAX=300,EV_TOTAL=1000,EVS_PER_POINT=4;
+const dexSlots=(p,gen)=>gen<3||!S.pokemon[p]?[]:(eff(S.pokemon[p],gen).abilitySlots||[]).filter(o=>o&&o.length);
+const savedAbilities=m=>Array.isArray(m.abilities)?m.abilities:(m.ability?[m.ability]:[]);
+// One ability id per slot ('' when a shared slot has not been chosen). A single "ability" from older saves still counts.
+function chosenAbilities(m,gen){
+  const slots=dexSlots(m.p,gen),saved=savedAbilities(m);
+  if(!slots.length)return saved.slice(0,3);
+  return slots.map((o,i)=>o.length===1?o[0]:o.includes(saved[i])?saved[i]:o.includes(m.ability)?m.ability:'');
+}
+const evSum=evs=>Object.values(evs||{}).reduce((a,b)=>a+(Number(b)||0),0);
+const evText=t=>`EV total: ${t} / ${EV_TOTAL}. Up to ${EV_MAX} per stat. Every ${EVS_PER_POINT} EVs give +1 stat point.`;
 function monCard(m,gen,isNew){
   const sp=S.pokemon[m.p],e=sp?eff(sp,gen):{},name=label('pokemon',m.p)||'Unknown';
-  const evs=Object.entries(m.evs||{}).filter(([,v])=>v);
-  const names={hp:'HP',atk:'Atk',def:'Def',spa:'SpA',spd:'SpD',spe:'Spe'};
+  const short={hp:'HP',atk:'Atk',def:'Def',spa:'SpA',spd:'SpD',spe:'Spe',spc:'Spc'};
+  const line=(o,keys,keep)=>keys.filter(([k])=>keep(o?.[k])).map(([k])=>`${esc(o[k])} ${short[k]}`).join(' / ');
+  const set=x=>x!=null&&x!=='';
+  const dvs=gen<=2?line(m.dvs,DV_KEYS,set):'',evs=gen>=3?line(m.evs,EV_KEYS,x=>!!x):'',ivs=gen>=3?line(m.ivs,EV_KEYS,set):'';
+  const slots=dexSlots(m.p,gen);
+  const abil=gen>=3?chosenAbilities(m,gen).map((a,i)=>{const txt=a?label('abilities',a):slots[i]?slots[i].map(x=>label('abilities',x)).join(' / ')+' (not chosen)':'';return txt?`<dt>${SLOT_NAMES[i]}</dt><dd>${esc(txt)}</dd>`:''}).join(''):'';
   const moves=(m.moves||[]).filter(Boolean);
   return `<div class="mon"><div class="monhead">${sp?pokeTile(sp,e,gen,44):tile(name,null,null,44)}<div><div class="name">${pokeLink(m.p)||esc(name)}${m.level?` <span class="muted mono">Lv. ${esc(m.level)}</span>`:''}${isNew?' <span class="pill new">New</span>':''}</div>${(e.types||[]).length?chips(e.types):''}</div></div>
-  <dl class="monmeta">${m.ability?`<dt>Ability</dt><dd>${esc(label('abilities',m.ability))}</dd>`:''}${m.item?`<dt>Item</dt><dd><span class="withicon">${itemIcon(m.item)}${esc(label('items',m.item))}</span></dd>`:''}${m.nature?`<dt>Nature</dt><dd>${esc(m.nature)}</dd>`:''}${evs.length?`<dt>EVs</dt><dd class="mono" style="font-size:13px">${evs.map(([k,v])=>`${esc(v)} ${names[k]}`).join(' / ')}</dd>`:''}</dl>
+  <dl class="monmeta">${abil}${gen>=2&&m.item?`<dt>Item</dt><dd><span class="withicon">${itemIcon(m.item)}${esc(label('items',m.item))}</span></dd>`:''}${gen>=3&&m.nature?`<dt>Nature</dt><dd>${esc(m.nature)}</dd>`:''}${dvs?`<dt>DVs</dt><dd class="mono" style="font-size:13px">${dvs}</dd>`:''}${evs?`<dt>EVs</dt><dd class="mono" style="font-size:13px">${evs}</dd>`:''}${ivs?`<dt>IVs</dt><dd class="mono" style="font-size:13px">${ivs}</dd>`:''}</dl>
   ${moves.length?`<ul class="moves">${moves.map(x=>`<li>${moveLink(x)}</li>`).join('')}</ul>`:''}${m.notes?`<p class="hint">${esc(m.notes)}</p>`:''}</div>`;
 }
 function trainerPage(id){
@@ -318,13 +366,14 @@ function trainerPage(id){
   const t={id,...raw},enc=(t.encounters||[]).map((e,i)=>({...e,i})).sort((a,b)=>a.gen-b.gen||a.i-b.i);
   const gs=[...new Set(enc.map(e=>e.gen))];
   const sections=gs.map(g=>`<h2 class="genhead">Gen ${ROMAN[g]} <span>${REGION[g]}</span></h2>${enc.filter(e=>e.gen===g).map(e=>{const pos=enc.indexOf(e),prev=pos?enc[pos-1]:null,prevSet=new Set((prev?.team||[]).map(m=>m.p));
-    return `<article class="enc"><div class="enchead"><div><h3>${esc(e.label||'Battle')}</h3><p class="muted" style="margin:0">${[e.location,e.game].filter(Boolean).map(esc).join(' · ')||'Location not set'}</p></div>${canEdit?`<div class="btns"><button type="button" class="btn small" data-act="edit-enc" data-id="${esc(id)}" data-v="${e.i}">Edit</button><button type="button" class="btn small" data-act="copy-enc" data-id="${esc(id)}" data-v="${e.i}">Copy team to new encounter</button><button type="button" class="btn small danger" data-act="del-enc" data-id="${esc(id)}" data-v="${e.i}">Delete</button></div>`:''}</div>
+    return `${e.story?`<div class="story"><p class="blurb">${esc(e.story)}</p></div>`:''}<article class="enc"><div class="enchead"><div><h3>${esc(e.label||'Battle')}</h3><p class="muted" style="margin:0">${[e.location,e.game].filter(Boolean).map(esc).join(' · ')||'Location not set'}</p></div>${canEdit?`<div class="btns"><button type="button" class="btn small" data-act="edit-enc" data-id="${esc(id)}" data-v="${e.i}">Edit</button><button type="button" class="btn small" data-act="copy-enc" data-id="${esc(id)}" data-v="${e.i}">Copy team to new encounter</button><button type="button" class="btn small danger" data-act="del-enc" data-id="${esc(id)}" data-v="${e.i}">Delete</button></div>`:''}</div>
     ${(e.team||[]).length?`<div class="teams">${e.team.map(m=>monCard(m,g,prev&&!prevSet.has(m.p))).join('')}</div>`:'<p class="muted" style="margin:0">No team added yet.</p>'}</article>`}).join('')}`).join('');
   return `<a href="#trainers" style="align-self:flex-start;display:flex;align-items:center;min-height:44px;font-weight:600">Back to Trainers</a>
   <section class="hero">${trainerTile(t,132)}<div class="grow">${t.title?`<span class="mono">${esc(t.title)}</span>`:''}<h1>${esc(t.name)}</h1></div>${canEdit?`<button type="button" class="btn" data-act="edit-trainer" data-id="${esc(id)}">Edit trainer</button>`:''}</section>
   ${t.blurb?`<section class="card"><p class="blurb">${esc(t.blurb)}</p></section>`:''}
   <div class="title"><h2 style="margin:0;font-family:var(--display);font-size:32px;text-transform:uppercase">Teams by generation</h2>${addBtn('Add encounter','new-enc',`data-id="${esc(id)}"`)}</div>
-  ${sections||'<div class="empty"><p>No encounters yet. Add one with its generation, battle location and team.</p></div>'}`;
+  ${sections||'<div class="empty"><p>No encounters yet. Add one with its generation, battle location and team.</p></div>'}
+  ${t.epilogue?`<div class="story"><p class="blurb">${esc(t.epilogue)}</p></div>`:''}`;
 }
 
 /* Saving */
@@ -364,7 +413,7 @@ function confirmBox(title,msg,yes,fn){
 const v=k=>($('f-'+k)?.value??'').trim();
 const n=k=>{const x=v(k);return x===''?null:Number(x)};
 const genSelect=(k,val,lab)=>`<label class="ctl">${esc(lab)}<select id="f-${k}" >${GENS.map(g=>`<option value="${g}"${g===val?' selected':''}>Gen ${ROMAN[g]} (${REGION[g]})</option>`).join('')}</select></label>`;
-const input=(k,lab,val,o={})=>`<label class="ctl">${esc(lab)}<input id="f-${k}" type="${o.type||'text'}" value="${esc(val??'')}"${o.list?` list="${o.list}"`:''}${o.ph?` placeholder="${esc(o.ph)}"`:''}${o.min!=null?` min="${o.min}"`:''}${o.max!=null?` max="${o.max}"`:''}></label>`;
+const input=(k,lab,val,o={})=>`<label class="ctl">${esc(lab)}<input id="f-${k}" type="${o.type||'text'}" value="${esc(val??'')}"${o.list?` list="${o.list}"`:''}${o.ph?` placeholder="${esc(o.ph)}"`:''}${o.min!=null?` min="${o.min}"`:''}${o.max!=null?` max="${o.max}"`:''}${o.step?` step="${o.step}"`:''}></label>`;
 const area=(k,lab,val,ph)=>`<label class="ctl">${esc(lab)}<textarea id="f-${k}"${ph?` placeholder="${esc(ph)}"`:''}>${esc(val??'')}</textarea></label>`;
 const select=(k,lab,val,opts,none)=>`<label class="ctl">${esc(lab)}<select id="f-${k}">${none!=null?`<option value="">${esc(none)}</option>`:''}${opts.map(o=>`<option${o===val?' selected':''}>${esc(o)}</option>`).join('')}</select></label>`;
 const foot=(id,del)=>`<p class="error" id="f-err" hidden style="padding:0 20px"></p><div class="formfoot"><button type="submit" class="btn primary">Save</button><button type="button" class="btn" data-act="close">Cancel</button>${id&&del?`<button type="button" class="btn danger push" data-act="${del}" data-id="${esc(id)}">Delete</button>`:''}</div>`;
@@ -425,6 +474,7 @@ function openPokemon(id){
   const ts=allTypes();
   modal(`${id?'Edit':'Add'} Pokémon`,`<div class="formbody">${genNote(doc,doc?.debut||1)}<div class="fgrid">${input('name','Name',doc?.name)}${input('dex','Dex number',doc?.dex??nextDex(),{type:'number',min:1})}${genSelect('debut',doc?.debut??g,'Generation introduced')}</div>
   <div class="fgrid">${select('t1','Type 1',(d.types||[])[0],ts,'Choose')}${select('t2','Type 2',(d.types||[])[1],ts,'None')}${input('evofrom','Evolves from',d.evolvesFrom?label('pokemon',d.evolvesFrom):'',{list:'dl-pokemon'})}${input('evomethod','Evolution method',d.evoMethod,{ph:'Level 25'})}</div>
+  <fieldset><legend>Vitals</legend><div class="fgrid">${input('species','Species',d.species,{ph:'Seed Pokémon'})}${input('height','Height (m)',d.height,{type:'number',min:0,step:'0.1',ph:'0.7'})}${input('weight','Weight (kg)',d.weight,{type:'number',min:0,step:'0.1',ph:'6.9'})}${input('growth','Growth rate',d.growthRate,{list:'dl-growth'})}</div><datalist id="dl-growth">${[...new Set([...GROWTH,...rows('pokemon').flatMap(p=>GENS.map(x=>p.gens?.[x]?.growthRate))].filter(Boolean))].map(x=>`<option value="${esc(x)}"></option>`).join('')}</datalist></fieldset>
   <div id="dyn" style="display:flex;flex-direction:column;gap:14px">${pokeDyn(g,d)}</div>
   <div class="fgrid">${input('art','PokéAPI sprite number',doc?.art??'',{type:'number',min:0,max:493,ph:'Blank uses the Dex number'})}<label class="ctl">Your own sprite (replaces PokéAPI art)<input id="f-sprite" type="file" accept="image/png,image/jpeg,image/gif,image/webp"></label></div><p class="hint">Blank uses the Dex number, up to 493. Enter 0 for no PokéAPI art, or another number to borrow that Pokémon's sprites.</p></div>${foot(id,'del-record')}`,savePokemon);
   drawSlots();
@@ -437,7 +487,7 @@ async function savePokemon(){
   const clash=rows('pokemon').find(p=>p.dex===dex&&p.id!==id);if(clash)return fail(`No. ${dex} is already ${clash.name}.`);
   readSlots();
   const stats={};statsAt({},g).forEach(s=>{stats[s[0]]=n('st-'+s[0])});
-  const patch={types:[v('t1'),v('t2')].filter(Boolean),stats:Object.values(stats).every(x=>x==null)?null:stats,evoMethod:v('evomethod')};
+  const patch={types:[v('t1'),v('t2')].filter(Boolean),stats:Object.values(stats).every(x=>x==null)?null:stats,evoMethod:v('evomethod'),species:v('species'),height:n('height'),weight:n('weight'),growthRate:v('growth')};
   const abPatch={},brPatch={};
   if(g>=3){const out=[];for(const o of F.slots){const ids=[];for(const a of o)if(a.trim())ids.push(await ensure('abilities',a,Math.max(g,3)));if(ids.length)out.push(ids)}abPatch.abilitySlots=out}
   if(g>=2){brPatch.eggGroups=[v('egg1'),v('egg2')].filter(Boolean);brPatch.eggCycles=n('cycles');brPatch.hatchesAs=v('hatch');brPatch.genderM=n('male')}
@@ -462,45 +512,90 @@ async function savePokemon(){
 /* Trainer editors */
 function openTrainer(id){
   const t=id?S.trainers[id]:{};F={col:'trainers',id};
-  modal(`${id?'Edit':'Add'} trainer`,`<div class="formbody"><div class="fgrid">${input('name','Name',t.name)}${input('title','Title',t.title,{ph:'Cerulean City Gym Leader'})}</div>${area('blurb','Blurb',t.blurb)}<label class="ctl">Your own picture (PNG, JPG, GIF or WebP)<input id="f-sprite" type="file" accept="image/png,image/jpeg,image/gif,image/webp"></label></div>${foot(id,'del-record')}`,saveTrainer);
+  modal(`${id?'Edit':'Add'} trainer`,`<div class="formbody"><div class="fgrid">${input('name','Name',t.name)}${input('title','Title',t.title,{ph:'Cerulean City Gym Leader'})}</div>${area('blurb','Blurb',t.blurb)}${area('epilogue','Story after the last encounter',t.epilogue,'Optional. Shown at the end of the trainer page.')}<label class="ctl">Your own picture (PNG, JPG, GIF or WebP)<input id="f-sprite" type="file" accept="image/png,image/jpeg,image/gif,image/webp"></label></div>${foot(id,'del-record')}`,saveTrainer);
 }
 async function saveTrainer(){
   const {id}=F,name=v('name');if(!name)return fail('Give the trainer a name.');
-  const doc=id?clone(S.trainers[id]):{encounters:[]};doc.name=name;doc.title=v('title');doc.blurb=v('blurb');
+  const doc=id?clone(S.trainers[id]):{encounters:[]};doc.name=name;doc.title=v('title');doc.blurb=v('blurb');doc.epilogue=v('epilogue');
   const f=$('f-sprite')?.files?.[0];
   if(f){try{doc.sprite=await uploadSprite(f)}catch(e){return fail('That image could not be saved. Use a PNG, JPG, GIF or WebP under 25 MB.')}}
   const key=id||newId('trainers',name);S.trainers[key]=doc;
   if(!await put('trainers/'+key,doc))return;
   closeModal();if(!id)location.hash='t-'+key;render();toast('Saved');
 }
+function abilityBlock(m,i,gen){
+  const slots=dexSlots(m.p,gen),sp=S.pokemon[m.p];
+  if(slots.length){
+    const ab=chosenAbilities(m,gen),shared=slots.some(o=>o.length>1);
+    return `<div class="fgrid" data-mode="dex">${slots.map((o,s)=>o.length===1
+      ?`<div class="ctl"><span>${SLOT_NAMES[s]}</span><output class="abfixed">${esc(label('abilities',o[0]))}</output></div>`
+      :`<label class="ctl">${SLOT_NAMES[s]}<select id="f-m${i}-ab${s}" data-slot="${s}"><option value="">Choose one</option>${o.map(a=>`<option value="${esc(a)}"${a===ab[s]?' selected':''}>${esc(label('abilities',a))}</option>`).join('')}</select></label>`).join('')}</div>
+      <p class="hint">Filled in from ${esc(sp.name)}'s Gen ${ROMAN[gen]} abilities.${shared?' Two abilities share a slot, so choose the one this trainer’s Pokémon has.':''}</p>`;
+  }
+  const saved=savedAbilities(m);
+  return `<div class="fgrid" data-mode="manual">${[0,1,2].map(s=>input(`m${i}-ab${s}`,SLOT_NAMES[s],label('abilities',saved[s]||''),{list:'dl-abilities'})).join('')}</div>
+    <p class="hint">${sp?`${esc(sp.name)} has no Gen ${ROMAN[gen]} abilities in your Dex`:m.p?'This Pokémon is not in your Dex':'Choose a Pokémon to fill these in from your Dex'}. You can enter up to three by hand.</p>`;
+}
 function drawTeam(){
-  const names=[['hp','HP'],['atk','Atk'],['def','Def'],['spa','SpA'],['spd','SpD'],['spe','Spe']];
-  $('team').innerHTML=F.team.map((m,i)=>`<fieldset><legend>Pokémon ${i+1}</legend><div class="fgrid">${input(`m${i}-p`,'Pokémon',label('pokemon',m.p),{list:'dl-pokemon'})}${input(`m${i}-level`,'Level',m.level,{type:'number',min:1})}${input(`m${i}-ability`,'Ability',label('abilities',m.ability),{list:'dl-abilities'})}${input(`m${i}-item`,'Item',label('items',m.item),{list:'dl-items'})}${input(`m${i}-nature`,'Nature',m.nature)}</div>
+  const g=F.gen;
+  $('team').innerHTML=F.team.map((m,i)=>`<fieldset><legend>Pokémon ${i+1}</legend><div class="fgrid">${input(`m${i}-p`,'Pokémon',label('pokemon',m.p),{list:'dl-pokemon'})}${input(`m${i}-level`,'Level',m.level,{type:'number',min:1})}${g>=2?input(`m${i}-item`,'Item',label('items',m.item),{list:'dl-items'}):''}${g>=3?input(`m${i}-nature`,'Nature',m.nature):''}</div>
+  ${g>=3?`<fieldset><legend>Abilities</legend><div id="m${i}-ab">${abilityBlock(m,i,g)}</div></fieldset>`:''}
   <div class="fgrid">${[0,1,2,3].map(j=>input(`m${i}-mv${j}`,`Move ${j+1}`,label('moves',(m.moves||[])[j]),{list:'dl-moves'})).join('')}</div>
-  <div class="fnarrow">${names.map(([k,l])=>input(`m${i}-ev-${k}`,`${l} EVs`,m.evs?.[k],{type:'number',min:0,max:255})).join('')}</div>
+  ${g<=2?`<div class="fnarrow">${DV_KEYS.map(([k,l])=>input(`m${i}-dv-${k}`,`${l} DV`,m.dvs?.[k],{type:'number',min:0,max:DV_MAX})).join('')}</div><p class="hint">DVs go from 0 to ${DV_MAX}.</p>`
+    :`<div class="fnarrow">${EV_KEYS.map(([k,l])=>input(`m${i}-ev-${k}`,`${l} EVs`,m.evs?.[k],{type:'number',min:0,max:EV_MAX})).join('')}</div><p class="hint" id="m${i}-evtotal">${evText(evSum(m.evs))}</p>
+  <div class="fnarrow">${EV_KEYS.map(([k,l])=>input(`m${i}-iv-${k}`,`${l} IVs`,m.ivs?.[k],{type:'number',min:0,max:IV_MAX})).join('')}</div><p class="hint">IVs go from 0 to ${IV_MAX}.</p>`}
   ${input(`m${i}-notes`,'Notes',m.notes)}<div><button type="button" class="btn small danger" data-act="mon-del" data-v="${i}">Remove from team</button></div></fieldset>`).join('')+(F.team.length<6?`<button type="button" class="btn" data-act="mon-add">Add Pokémon to team</button>`:'');
 }
+// Reads only the fields on screen, so anything hidden in this generation is kept as it was.
 function readTeam(){
-  F.team=F.team.map((_,i)=>{const evs={};['hp','atk','def','spa','spd','spe'].forEach(k=>{const x=n(`m${i}-ev-${k}`);if(x)evs[k]=x});
-    return {p:ref('pokemon',v(`m${i}-p`)),level:n(`m${i}-level`),ability:ref('abilities',v(`m${i}-ability`)),item:ref('items',v(`m${i}-item`)),nature:v(`m${i}-nature`),moves:[0,1,2,3].map(j=>ref('moves',v(`m${i}-mv${j}`))),evs,notes:v(`m${i}-notes`)}});
+  const has=k=>!!$('f-'+k);
+  const nums=(i,kind,keys,keep)=>{const o={};keys.forEach(([k])=>{const x=n(`m${i}-${kind}-${k}`);if(x!=null&&keep(x))o[k]=x});return o};
+  F.team=F.team.map((m,i)=>{
+    if(!has(`m${i}-p`))return m;
+    const o={...m,p:ref('pokemon',v(`m${i}-p`)),level:n(`m${i}-level`),moves:[0,1,2,3].map(j=>ref('moves',v(`m${i}-mv${j}`))),notes:v(`m${i}-notes`)};
+    if(has(`m${i}-item`))o.item=ref('items',v(`m${i}-item`));
+    if(has(`m${i}-nature`))o.nature=v(`m${i}-nature`);
+    if(has(`m${i}-dv-atk`))o.dvs=nums(i,'dv',DV_KEYS,()=>true);
+    if(has(`m${i}-ev-hp`))o.evs=nums(i,'ev',EV_KEYS,x=>x!==0);
+    if(has(`m${i}-iv-hp`))o.ivs=nums(i,'iv',EV_KEYS,()=>true);
+    const box=$(`m${i}-ab`)?.firstElementChild;
+    if(box?.dataset.mode==='manual'){const a=[0,1,2].map(s=>ref('abilities',v(`m${i}-ab${s}`)));while(a.length&&!a[a.length-1])a.pop();o.abilities=a}
+    else if(box?.dataset.mode==='dex'){const sels=box.querySelectorAll('select[data-slot]');if(sels.length){const a=savedAbilities(m).slice();sels.forEach(x=>{a[+x.dataset.slot]=x.value});for(let k=0;k<a.length;k++)a[k]=a[k]??'';o.abilities=a}}
+    return o;
+  });
+}
+function checkTeam(team,gen){
+  const whole=(x,lo,hi)=>Number.isInteger(x)&&x>=lo&&x<=hi;
+  for(const m of team){
+    const who=label('pokemon',m.p)||'A team member';
+    if(gen<=2){for(const [k,l] of DV_KEYS){const x=m.dvs?.[k];if(x!=null&&!whole(x,0,DV_MAX))return `${who}: ${l} DV must be a whole number from 0 to ${DV_MAX}.`}continue}
+    for(const [k,l] of EV_KEYS){const x=m.evs?.[k];if(x!=null&&!whole(x,0,EV_MAX))return `${who}: ${l} EVs must be a whole number from 0 to ${EV_MAX}.`}
+    const t=evSum(m.evs);if(t>EV_TOTAL)return `${who} has ${t} EVs. The most a Pokémon can have is ${EV_TOTAL}.`;
+    for(const [k,l] of EV_KEYS){const x=m.ivs?.[k];if(x!=null&&!whole(x,0,IV_MAX))return `${who}: ${l} IVs must be a whole number from 0 to ${IV_MAX}.`}
+  }
+  return '';
 }
 function openEncounter(tid,idx,from){
   const t=S.trainers[tid],e=idx!=null?t.encounters[idx]:(from||{});
-  F={col:'enc',tid,idx,team:clone(e.team)||[]};
-  modal(`${idx!=null?'Edit':'Add'} encounter`,`<div class="formbody"><div class="fgrid">${genSelect('gen',e.gen??UI.gen,'Generation')}${input('label','Encounter',from?'':e.label,{ph:'Gym battle'})}${input('location','Battle location',from?'':e.location)}${input('game','Game',e.game)}</div><div id="team" style="display:flex;flex-direction:column;gap:12px"></div></div>${foot(null)}`,saveEncounter);
+  F={col:'enc',tid,idx,gen:e.gen??UI.gen,team:clone(e.team)||[]};
+  modal(`${idx!=null?'Edit':'Add'} encounter`,`<div class="formbody"><div class="fgrid">${genSelect('gen',F.gen,'Generation')}${input('label','Encounter',from?'':e.label,{ph:'Gym battle'})}${input('location','Battle location',from?'':e.location)}${input('game','Game',e.game)}</div>${area('story','Story leading into this encounter',from?'':e.story,'Optional. Shown on the trainer page just above this encounter.')}<div id="team" style="display:flex;flex-direction:column;gap:12px"></div></div>${foot(null)}`,saveEncounter);
   drawTeam();
 }
 async function saveEncounter(){
   readTeam();
-  const {tid,idx}=F,doc=clone(S.trainers[tid]);doc.encounters=doc.encounters||[];
-  const enc={gen:+v('gen'),label:v('label'),location:v('location'),game:v('game'),team:F.team.filter(m=>m.p)};
+  const {tid,idx}=F,gen=+v('gen'),team=F.team.filter(m=>m.p);
+  const bad=checkTeam(team,gen);if(bad)return fail(bad);
+  // Dex abilities are saved per slot as well, so the record still reads correctly on its own.
+  if(gen>=3)team.forEach(m=>{if(dexSlots(m.p,gen).length)m.abilities=chosenAbilities(m,gen)});
+  const doc=clone(S.trainers[tid]);doc.encounters=doc.encounters||[];
+  const enc={gen,label:v('label'),location:v('location'),game:v('game'),story:v('story'),team};
   if(idx!=null)doc.encounters[idx]=enc;else doc.encounters.push(enc);
   S.trainers[tid]=doc;
   if(!await put('trainers/'+tid,doc))return;
   closeModal();render();toast('Saved');
 }
 
-function setGen(g){UI.gen=g;try{localStorage.setItem('gen',g)}catch(e){}render()}
+function setGen(g){UI.gen=g;UI.page=0;try{localStorage.setItem('gen',g)}catch(e){}render()}
 async function saveChart(c){S.chart=c;render();await put('config/typechart',c)}
 function setCell(c,g,a,d,val){
   c.gens=c.gens||{};c.gens[g]=c.gens[g]||{};c.gens[g].cells=c.gens[g].cells||{};
@@ -531,7 +626,8 @@ const ACT={
   theme:toggleTheme,
   gen:(d)=>setGen(+d.v),
   view:(d)=>{UI.view=d.v;render()},
-  sort:(d)=>{if(UI.sort===d.v)UI.dir=-UI.dir;else{UI.sort=d.v;UI.dir=(d.v==='dex'||d.v==='name')?1:-1}renderBody()},
+  page:(d)=>{UI.page+=+d.v;renderBody();const t=$('body');if(t&&t.getBoundingClientRect().top<0)t.scrollIntoView()},
+  sort:(d)=>{UI.page=0;if(UI.sort===d.v)UI.dir=-UI.dir;else{UI.sort=d.v;UI.dir=(d.v==='dex'||d.v==='name')?1:-1}renderBody()},
   sel:(d)=>{UI.sel=d.v;render()},
   'edit-chart':()=>{UI.editChart=!UI.editChart;render()},
   cell:(d)=>cycleCell(d.a,d.d),
@@ -557,18 +653,29 @@ const ACT={
   'mon-del':(d)=>{readTeam();F.team.splice(+d.v,1);drawTeam()}
 };
 document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(!b)return;const f=ACT[b.dataset.act];if(f){e.preventDefault();f(b.dataset)}});
-document.addEventListener('input',e=>{const m=e.target.dataset.model;if(!m)return;UI[m]=e.target.type==='checkbox'?e.target.checked:e.target.value;renderBody()});
+document.addEventListener('input',e=>{
+  const ev=F?.col==='enc'&&e.target.id.match(/^f-m(\d+)-ev-/);
+  if(ev){const i=+ev[1],h=$(`m${i}-evtotal`);if(h)h.textContent=evText(EV_KEYS.reduce((a,[k])=>a+(n(`m${i}-ev-${k}`)||0),0));return}
+  const m=e.target.dataset.model;if(!m)return;UI.page=0;if(m==='perPage')try{localStorage.setItem('perPage',e.target.value)}catch(x){}UI[m]=e.target.type==='checkbox'?e.target.checked:e.target.value;renderBody()});
 document.addEventListener('change',e=>{
   if(e.target.id==='f-debut'&&F?.col==='pokemon'&&!F.id){readSlots();const g=+e.target.value;F.g=g;const keep={};
     statsAt({},g).forEach(s=>{const x=$('f-st-'+s[0]);if(x&&x.value!=='')keep[s[0]]=Number(x.value)});
     $('dyn').innerHTML=pokeDyn(g,{stats:keep});drawSlots()}
+  if(F?.col==='enc'&&e.target.id==='f-gen'){readTeam();F.gen=+e.target.value;drawTeam();return}
+  const mp=F?.col==='enc'&&e.target.id.match(/^f-m(\d+)-p$/);
+  if(mp&&$(`m${mp[1]}-ab`)){readTeam();const i=+mp[1];$(`m${i}-ab`).innerHTML=abilityBlock(F.team[i],i,F.gen)}
 });
 document.addEventListener('error',e=>{const i=e.target;if(i.tagName!=='IMG')return;const a=(i.dataset.alt||'').split('|').filter(Boolean);if(a.length){i.dataset.alt=a.slice(1).join('|');i.src=a[0]}else i.remove()},true);
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',renderChrome);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('modal-root').firstChild)closeModal()});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&$('modal-root').firstChild)closeModal();
+  // Left and right arrow keys step through the Dex on a Pokémon page, unless you are typing or a dialog is open.
+  if(UI.route==='p'&&(e.key==='ArrowLeft'||e.key==='ArrowRight')&&!e.altKey&&!e.ctrlKey&&!e.metaKey&&!$('modal-root').firstChild&&!e.target.closest('input,select,textarea')){const a=document.querySelector(`[data-nav="${e.key==='ArrowLeft'?'prev':'next'}"]`);if(a){e.preventDefault();location.hash=a.getAttribute('href').slice(1)}}
+});
 function route(){
   const h=location.hash.slice(1)||'dex',m=h.match(/^([pmt])-(.+)$/),prev=UI.route;
   if(m){UI.route=m[1];UI.arg=m[2]}else{UI.route=PAGES[h]&&!['p','m','t'].includes(h)?h:'dex';UI.arg=null}
+  if(!['dex','p'].includes(UI.route))UI.page=0;
   if(prev!==UI.route){UI.q='';UI.type='All';UI.cat='All';UI.group='All';UI.newOnly=false;UI.editChart=false}
   window.scrollTo(0,0);render();
 }
