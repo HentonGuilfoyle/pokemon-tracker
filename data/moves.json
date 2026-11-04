@@ -27,6 +27,18 @@
     "name": "Acid",
     "debut": 1
   },
+  "acid-armor": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Defense by two stages."
+      }
+    },
+    "name": "Acid Armor",
+    "debut": 1
+  },
   "agility": {
     "gens": {
       "1": {
@@ -41,6 +53,18 @@
     "name": "Agility",
     "debut": 1
   },
+  "amnesia": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "target": "user",
+        "effect": "Resets the user's stat changes."
+      }
+    },
+    "name": "Amnesia",
+    "debut": 1
+  },
   "aurora-beam": {
     "gens": {
       "1": {
@@ -53,6 +77,44 @@
       }
     },
     "name": "Aurora Beam",
+    "debut": 1
+  },
+  "barrage": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Hits 3-5 times per turn used."
+      }
+    },
+    "name": "Barrage",
+    "debut": 1
+  },
+  "barrier": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "target": "user",
+        "effect": "Doubles the user's Defense against physical attacks until it switches out."
+      }
+    },
+    "name": "Barrier",
+    "debut": 1
+  },
+  "bide": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "The user endures attacks for 2-3 turns, then strikes back for double the damage it took."
+      }
+    },
+    "name": "Bide",
     "debut": 1
   },
   "bind": {
@@ -271,6 +333,33 @@
     "name": "Confusion",
     "debut": 1
   },
+  "constrict": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and lowers the target's Speed by one stage."
+      }
+    },
+    "name": "Constrict",
+    "debut": 1
+  },
+  "conversion": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "effect": "Changes the user's type to match the target's.",
+        "target": "single"
+      }
+    },
+    "name": "Conversion",
+    "debut": 1
+  },
   "counter": {
     "gens": {
       "1": {
@@ -282,6 +371,20 @@
       }
     },
     "name": "Counter",
+    "debut": 1
+  },
+  "crabhammer": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 100,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of lowering the target's Speed by one stage."
+      }
+    },
+    "name": "Crabhammer",
     "debut": 1
   },
   "cut": {
@@ -296,6 +399,18 @@
       }
     },
     "name": "Cut",
+    "debut": 1
+  },
+  "defense-curl": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Defense by one stage."
+      }
+    },
+    "name": "Defense Curl",
     "debut": 1
   },
   "dig": {
@@ -322,6 +437,20 @@
       }
     },
     "name": "Disable",
+    "debut": 1
+  },
+  "dizzy-punch": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Hits 3-5 times per turn used. Each hit has a 10% chance of confusing the target."
+      }
+    },
+    "name": "Dizzy Punch",
     "debut": 1
   },
   "double-edge": {
@@ -378,6 +507,20 @@
     "name": "Dragon Tail",
     "debut": 1
   },
+  "dream-eater": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Only works on a sleeping target. Deals damage and the user will recover 50% of the HP drained."
+      }
+    },
+    "name": "Dream Eater",
+    "debut": 1
+  },
   "drill-peck": {
     "gens": {
       "1": {
@@ -413,6 +556,20 @@
     "name": "Earthquake",
     "debut": 1
   },
+  "egg-bomb": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 100,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Egg Bomb",
+    "debut": 1
+  },
   "ember": {
     "gens": {
       "1": {
@@ -425,6 +582,20 @@
       }
     },
     "name": "Ember",
+    "debut": 1
+  },
+  "explosion": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 250,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage, but the user faints."
+      }
+    },
+    "name": "Explosion",
     "debut": 1
   },
   "fire-blast": {
@@ -500,6 +671,19 @@
     "name": "Flamethrower",
     "debut": 1
   },
+  "flash": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Lowers the target's Accuracy by one stage."
+      }
+    },
+    "name": "Flash",
+    "debut": 1
+  },
   "fly": {
     "gens": {
       "1": {
@@ -540,6 +724,20 @@
     "name": "Fury Attack",
     "debut": 1
   },
+  "fury-swipes": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Hits 3-5 times per turn used."
+      }
+    },
+    "name": "Fury Swipes",
+    "debut": 1
+  },
   "giga-drain": {
     "gens": {
       "1": {
@@ -552,6 +750,19 @@
       }
     },
     "name": "Giga Drain",
+    "debut": 1
+  },
+  "glare": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Paralyzes the opponent."
+      }
+    },
+    "name": "Glare",
     "debut": 1
   },
   "growl": {
@@ -642,6 +853,18 @@
     "name": "Harden",
     "debut": 1
   },
+  "haze": {
+    "gens": {
+      "1": {
+        "type": "Ice",
+        "category": "Status",
+        "accuracy": 100,
+        "effect": "Resets the stat changes of both Pokémon and removes confusion, Leech Seed, Focus Energy, Mist, Reflect and Light Screen. Also cures the target's status condition."
+      }
+    },
+    "name": "Haze",
+    "debut": 1
+  },
   "headbutt": {
     "gens": {
       "1": {
@@ -660,6 +883,20 @@
       }
     },
     "name": "Headbutt",
+    "debut": 1
+  },
+  "high-jump-kick": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/3 of its maximum HP."
+      }
+    },
+    "name": "High Jump Kick",
     "debut": 1
   },
   "horn-attack": {
@@ -721,6 +958,20 @@
       }
     },
     "name": "Hyper Beam",
+    "debut": 1
+  },
+  "hyper-fang": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 85,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of causing the target to flinch."
+      }
+    },
+    "name": "Hyper Fang",
     "debut": 1
   },
   "hypnosis": {
@@ -807,6 +1058,20 @@
     "name": "Karate Chop",
     "debut": 1
   },
+  "leech-life": {
+    "gens": {
+      "1": {
+        "type": "Bug",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and the user will recover 50% of the HP drained."
+      }
+    },
+    "name": "Leech Life",
+    "debut": 1
+  },
   "leech-seed": {
     "gens": {
       "1": {
@@ -859,6 +1124,31 @@
       }
     },
     "name": "Lick",
+    "debut": 1
+  },
+  "light-screen": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "target": "user",
+        "effect": "Doubles the user's Special against special attacks until it switches out."
+      }
+    },
+    "name": "Light Screen",
+    "debut": 1
+  },
+  "lovely-kiss": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 75,
+        "target": "single",
+        "effect": "Puts the target to sleep."
+      }
+    },
+    "name": "Lovely Kiss",
     "debut": 1
   },
   "low-kick": {
@@ -928,6 +1218,18 @@
       }
     },
     "name": "Mega Punch",
+    "debut": 1
+  },
+  "metronome": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "effect": "Uses a randomly chosen move."
+      }
+    },
+    "name": "Metronome",
     "debut": 1
   },
   "mimic": {
@@ -1015,6 +1317,18 @@
     "name": "Outrage",
     "debut": 1
   },
+  "parrot-song": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "category": "Status",
+        "accuracy": 100,
+        "effect": "Uses the last move the target used."
+      }
+    },
+    "name": "Parrot Song",
+    "debut": 1
+  },
   "pay-day": {
     "gens": {
       "1": {
@@ -1068,6 +1382,19 @@
       }
     },
     "name": "Pin Missile",
+    "debut": 1
+  },
+  "poison-gas": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Status",
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Poisons the target."
+      }
+    },
+    "name": "Poison Gas",
     "debut": 1
   },
   "poison-sting": {
@@ -1187,6 +1514,19 @@
     "name": "Psychic",
     "debut": 1
   },
+  "psywave": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Special",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage equal to the user's level."
+      }
+    },
+    "name": "Psywave",
+    "debut": 1
+  },
   "quick-attack": {
     "gens": {
       "1": {
@@ -1270,6 +1610,18 @@
       }
     },
     "name": "Recover",
+    "debut": 1
+  },
+  "reflect": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": 100,
+        "effect": "Uses the last move the target used."
+      }
+    },
+    "name": "Reflect",
     "debut": 1
   },
   "rest": {
@@ -1407,6 +1759,20 @@
     "name": "Seismic Toss",
     "debut": 1
   },
+  "self-destruct": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 200,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage, but the user faints."
+      }
+    },
+    "name": "Self-Destruct",
+    "debut": 1
+  },
   "sharpen": {
     "gens": {
       "1": {
@@ -1434,6 +1800,20 @@
       }
     },
     "name": "Sing",
+    "debut": 1
+  },
+  "sky-attack": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 130,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The user charges up on the first turn. On the second turn, Sky Attack deals damage."
+      }
+    },
+    "name": "Sky Attack",
     "debut": 1
   },
   "slam": {
@@ -1469,6 +1849,20 @@
     "name": "Slam",
     "debut": 1
   },
+  "slash": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has an increased critical hit ratio."
+      }
+    },
+    "name": "Slash",
+    "debut": 1
+  },
   "sleep-powder": {
     "gens": {
       "1": {
@@ -1496,6 +1890,20 @@
     "name": "Sleep Powder",
     "debut": 1
   },
+  "sludge": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Physical",
+        "power": 65,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of poisoning the target."
+      }
+    },
+    "name": "Sludge",
+    "debut": 1
+  },
   "sludge-bomb": {
     "gens": {
       "1": {
@@ -1520,6 +1928,20 @@
     "name": "Sludge Bomb",
     "debut": 1
   },
+  "smog": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 80,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of poisoning the target."
+      }
+    },
+    "name": "Smog",
+    "debut": 1
+  },
   "smokescreen": {
     "gens": {
       "1": {
@@ -1531,6 +1953,18 @@
       }
     },
     "name": "Smokescreen",
+    "debut": 1
+  },
+  "soft-boiled": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Restores 50% of the user's max HP."
+      }
+    },
+    "name": "Soft-Boiled",
     "debut": 1
   },
   "solarbeam": {
@@ -1586,6 +2020,48 @@
       }
     },
     "name": "Spark",
+    "debut": 1
+  },
+  "spike-cannon": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Hits 3-5 times per turn used."
+      },
+      "2": {
+        "type": "Steel"
+      }
+    },
+    "name": "Spike Cannon",
+    "debut": 1
+  },
+  "splash": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Does nothing."
+      }
+    },
+    "name": "Splash",
+    "debut": 1
+  },
+  "spore": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Puts the target to sleep."
+      }
+    },
+    "name": "Spore",
     "debut": 1
   },
   "spring-kick": {
@@ -1655,6 +2131,20 @@
     "name": "String Shot",
     "debut": 1
   },
+  "struggle": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage, but the user takes recoil damage. Used automatically when the user has no PP left."
+      }
+    },
+    "name": "Struggle",
+    "debut": 1
+  },
   "stun-spore": {
     "gens": {
       "1": {
@@ -1682,6 +2172,31 @@
     "name": "Submission",
     "debut": 1
   },
+  "substitute": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "The user spends 1/4 of its max HP to make a substitute that takes hits in its place."
+      }
+    },
+    "name": "Substitute",
+    "debut": 1
+  },
+  "super-fang": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage equal to half the target's current HP."
+      }
+    },
+    "name": "Super Fang",
+    "debut": 1
+  },
   "supersonic": {
     "gens": {
       "1": {
@@ -1706,6 +2221,20 @@
       }
     },
     "name": "Surf",
+    "debut": 1
+  },
+  "swift": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and never misses."
+      }
+    },
+    "name": "Swift",
     "debut": 1
   },
   "swords-dance": {
@@ -1892,6 +2421,20 @@
     "name": "Transform",
     "debut": 1
   },
+  "tri-attack": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Tri Attack",
+    "debut": 1
+  },
   "twineedle": {
     "gens": {
       "1": {
@@ -1962,6 +2505,20 @@
     "name": "Water Gun",
     "debut": 1
   },
+  "waterfall": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 80,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Waterfall",
+    "debut": 1
+  },
   "wildfire": {
     "gens": {
       "1": {
@@ -1989,6 +2546,18 @@
       }
     },
     "name": "Wing Attack",
+    "debut": 1
+  },
+  "withdraw": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Defense by one stage."
+      }
+    },
+    "name": "Withdraw",
     "debut": 1
   },
   "wrap": {
