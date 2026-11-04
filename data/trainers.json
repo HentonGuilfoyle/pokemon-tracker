@@ -1,1 +1,479 @@
-{}
+{
+  "shigeru-ohkido": {
+    "encounters": [
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "Professor Oak's Lab",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-1.png",
+            "team": [
+              {
+                "p": "charmander",
+                "level": 5,
+                "moves": [
+                  "scracth",
+                  "growl",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-1.png",
+            "team": [
+              {
+                "p": "squirtle",
+                "level": 5,
+                "moves": [
+                  "pound",
+                  "tail-whip",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-1.png",
+            "team": [
+              {
+                "p": "bulbasaur",
+                "level": 5,
+                "moves": [
+                  "pound",
+                  "growl",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "",
+        "game": "Pokémon Red & Blue",
+        "story": "Optional encounter.",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgey",
+                "level": 8,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "charmander",
+                "level": 9,
+                "moves": [
+                  "ember",
+                  "scracth",
+                  "growl",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgey",
+                "level": 8,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "squirtle",
+                "level": 9,
+                "moves": [
+                  "bubble",
+                  "pound",
+                  "tail-whip",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgey",
+                "level": 8,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "bulbasaur",
+                "level": 9,
+                "moves": [
+                  "vine-whip",
+                  "pound",
+                  "growl",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "Nugget Bridge",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 18,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "abra",
+                "level": 15,
+                "moves": [
+                  "teleport",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "charmeleon",
+                "level": 18,
+                "moves": [
+                  "ember",
+                  "scracth",
+                  "growl",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 18,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "abra",
+                "level": 15,
+                "moves": [
+                  "teleport",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "wartortle",
+                "level": 18,
+                "moves": [
+                  "bubble",
+                  "pound",
+                  "tail-whip",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 18,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "abra",
+                "level": 15,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "ivysaur",
+                "level": 18,
+                "moves": [
+                  "vine-whip",
+                  "growth",
+                  "poisonpowder",
+                  "leech-seed"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "S.S. Anne",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 26,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "sandslash",
+                "level": 24,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kadabra",
+                "level": 25,
+                "moves": [
+                  "confusion",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "charmeleon",
+                "level": 27,
+                "moves": [
+                  "ember",
+                  "scracth",
+                  "growl",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 26,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "sandslash",
+                "level": 24,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kadabra",
+                "level": 25,
+                "moves": [
+                  "teleport",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "wartortle",
+                "level": 27,
+                "moves": [
+                  "bubble",
+                  "pound",
+                  "tail-whip",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-1-2.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 26,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "sandslash",
+                "level": 24,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kadabra",
+                "level": 25,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "ivysaur",
+                "level": 27,
+                "moves": [
+                  "sludge",
+                  "razor-leaf",
+                  "poisonpowder",
+                  "leech-seed"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "name": "Shigeru Ohkido",
+    "title": "Pokémon Researcher",
+    "blurb": "",
+    "epilogue": "",
+    "sprite": "spr-hgss-blue.png"
+  }
+}

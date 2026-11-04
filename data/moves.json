@@ -772,7 +772,13 @@
         "category": "Status",
         "pp": 100,
         "effect": "Lowers the target's Attack by one stage.",
-        "flavor": "The user growls in a cute way, making the target lower its Attack stat."
+        "flavor": "The user growls in a cute way, making the target lower its Attack stat.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 1"
+          }
+        ]
       }
     },
     "name": "Growl",
@@ -1038,7 +1044,7 @@
         "power": 100,
         "accuracy": 95,
         "target": "single",
-        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/3 of its maximum HP."
+        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/4 of its maximum HP."
       }
     },
     "name": "Jump Kick",
@@ -1056,6 +1062,20 @@
       }
     },
     "name": "Karate Chop",
+    "debut": 1
+  },
+  "kinesis": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 70,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Inflicts damage based on the target's Defense, not Special."
+      }
+    },
+    "name": "Kinesis",
     "debut": 1
   },
   "leech-life": {
@@ -1460,7 +1480,13 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "target": "single"
+        "target": "single",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 1"
+          }
+        ]
       }
     },
     "name": "Pound",
@@ -1540,6 +1566,20 @@
       }
     },
     "name": "Quick Attack",
+    "debut": 1
+  },
+  "rage": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 20,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The more times the user has been hit by attacks, the greater the move's power."
+      }
+    },
+    "name": "Rage",
     "debut": 1
   },
   "rapid-punch": {
@@ -1802,6 +1842,20 @@
     "name": "Sing",
     "debut": 1
   },
+  "skull-bash": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 150,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil."
+      }
+    },
+    "name": "Skull Bash",
+    "debut": 1
+  },
   "sky-attack": {
     "gens": {
       "1": {
@@ -1898,7 +1952,17 @@
         "power": 65,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of poisoning the target."
+        "effect": "Deals damage and has a 30% chance of poisoning the target.",
+        "learners": [
+          {
+            "p": "ivysaur",
+            "how": "Level 27"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 27"
+          }
+        ]
       }
     },
     "name": "Sludge",

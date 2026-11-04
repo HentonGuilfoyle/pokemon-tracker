@@ -62,6 +62,7 @@ The online copy can't be edited. Make changes on your computer, then push them.
 - Each Pokémon's "PokéAPI sprite number" controls this. Blank uses its Dex number, up to 493. 0 turns PokéAPI art off. Any other number borrows that Pokémon's sprites.
 - Sprites you upload go in `data/sprites` and replace PokéAPI art.
 - Trainers use Pokémon Showdown art when a file matches their name. Otherwise, upload a picture.
+- Each team in an encounter can have its own trainer picture. A team without one uses the trainer's picture.
 - Sprites load from the internet. Without a connection, you'll see a letter instead.
 
 ## Files
