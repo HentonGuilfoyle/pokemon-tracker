@@ -11,7 +11,11 @@
           "def": 15,
           "spc": 105,
           "spe": 80
-        }
+        },
+        "species": "Psi Pokémon",
+        "height": 0.9,
+        "weight": 15.5,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -54,7 +58,10 @@
           "spc": 60,
           "spe": 115
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Fossil Pokémon",
+        "height": 1.8,
+        "weight": 59
       },
       "2": {
         "stats": {
@@ -108,7 +115,11 @@
           "spe": 110
         },
         "evoMethod": "Trade",
-        "evolvesFrom": "kadabra"
+        "evolvesFrom": "kadabra",
+        "species": "Genius Pokémon",
+        "height": 1.5,
+        "weight": 40,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -173,7 +184,11 @@
         "evolvesFrom": "growlithe",
         "types": [
           "Fire"
-        ]
+        ],
+        "species": "Legendary Pokémon",
+        "height": 1.9,
+        "weight": 155,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -233,7 +248,10 @@
           "spc": 135,
           "spe": 105
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Ice Bird Pokémon",
+        "height": 1.7,
+        "weight": 55.4
       },
       "2": {
         "stats": {
@@ -284,7 +302,11 @@
           "spe": 85
         },
         "evoMethod": "Level 10",
-        "evolvesFrom": "kakuna"
+        "evolvesFrom": "kakuna",
+        "species": "Stinger Bee Pokémon",
+        "height": 1,
+        "weight": 8.1,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -354,7 +376,11 @@
           "Plant"
         ],
         "hatchesAs": "Oddish",
-        "genderM": 50
+        "genderM": 50,
+        "species": "Dancing Flower Pokémon",
+        "height": 0.4,
+        "weight": 2.8,
+        "growthRate": "Medium Fast"
       },
       "3": {
         "abilitySlots": [
@@ -392,7 +418,11 @@
           "spe": 42
         },
         "evoMethod": "Level 36",
-        "evolvesFrom": "wartortle"
+        "evolvesFrom": "wartortle",
+        "species": "Cannon Turtle Pokémon",
+        "height": 1.6,
+        "weight": 300.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -460,7 +490,11 @@
           "spe": 85
         },
         "evoMethod": "Level 24",
-        "evolvesFrom": "ekans"
+        "evolvesFrom": "ekans",
+        "species": "Cobra Pokémon",
+        "height": 3.5,
+        "weight": 64.3,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -506,7 +540,11 @@
           "def": 54,
           "spc": 65,
           "spe": 45
-        }
+        },
+        "species": "Bulb Pokémon",
+        "height": 0.7,
+        "weight": 14.9,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -552,7 +590,11 @@
           "spe": 70
         },
         "evoMethod": "Level 10",
-        "evolvesFrom": "metapod"
+        "evolvesFrom": "metapod",
+        "species": "Butterfly Pokémon",
+        "height": 1.1,
+        "weight": 3.8,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -614,7 +656,11 @@
           "def": 35,
           "spc": 20,
           "spe": 40
-        }
+        },
+        "species": "Caterpillar Pokémon",
+        "height": 0.3,
+        "weight": 2.9,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -660,7 +706,10 @@
           "spc": 105,
           "spe": 75
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Nurse Pokémon",
+        "height": 1.1,
+        "weight": 50
       },
       "2": {
         "stats": {
@@ -721,7 +770,11 @@
           "spe": 107
         },
         "evoMethod": "Level 36",
-        "evolvesFrom": "charmeleon"
+        "evolvesFrom": "charmeleon",
+        "species": "Wyvern Pokémon",
+        "height": 2.2,
+        "weight": 130.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -770,7 +823,11 @@
           "def": 46,
           "spc": 60,
           "spe": 60
-        }
+        },
+        "species": "Lizard Pokémon",
+        "height": 0.6,
+        "weight": 8.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -785,7 +842,8 @@
           "Reptile",
           "Creature"
         ],
-        "genderM": 50
+        "genderM": 50,
+        "hatchesAs": "Charmander"
       },
       "3": {
         "abilitySlots": [
@@ -814,7 +872,11 @@
           "spe": 75
         },
         "evoMethod": "Level 18",
-        "evolvesFrom": "charmander"
+        "evolvesFrom": "charmander",
+        "species": "Salamander Pokémon",
+        "height": 1.1,
+        "weight": 30,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -862,7 +924,11 @@
           "spe": 60
         },
         "evoMethod": "Moon Stone",
-        "evolvesFrom": "clefairy"
+        "evolvesFrom": "clefairy",
+        "species": "Moon Fairy Pokémon",
+        "height": 1.3,
+        "weight": 25,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -890,7 +956,8 @@
           [
             "run-away"
           ]
-        ]
+        ],
+        "growthRate": "Erratic"
       },
       "4": {
         "types": [
@@ -927,7 +994,11 @@
           "def": 48,
           "spc": 65,
           "spe": 35
-        }
+        },
+        "species": "Fairy Pokémon",
+        "height": 0.6,
+        "weight": 7.5,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -955,7 +1026,8 @@
           [
             "run-away"
           ]
-        ]
+        ],
+        "growthRate": "Erratic"
       },
       "4": {
         "types": [
@@ -995,7 +1067,10 @@
         },
         "evoMethod": "Water Stone",
         "evolvesFrom": "shellder",
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Spiked Clam Pokémon",
+        "height": 1.5,
+        "weight": 350
       },
       "2": {
         "stats": {
@@ -1058,7 +1133,11 @@
           "def": 95,
           "spc": 35,
           "spe": 35
-        }
+        },
+        "species": "Lonely Pokémon",
+        "height": 0.4,
+        "weight": 6.5,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -1106,7 +1185,10 @@
         },
         "evoMethod": "Level 31",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "seel"
+        "evolvesFrom": "seel",
+        "species": "Sea Lion Pokémon",
+        "height": 1.7,
+        "weight": 120
       },
       "2": {
         "stats": {
@@ -1168,7 +1250,11 @@
           "def": 25,
           "spc": 35,
           "spe": 95
-        }
+        },
+        "species": "Mole Pokémon",
+        "height": 0.2,
+        "weight": 0.8,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -1221,7 +1307,10 @@
           "spc": 50,
           "spe": 50
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Transform Pokémon",
+        "height": 0.3,
+        "weight": 4
       },
       "2": {
         "stats": {
@@ -1277,7 +1366,10 @@
         },
         "evoMethod": "Level 31",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "doduo"
+        "evolvesFrom": "doduo",
+        "species": "Triple Bird Pokémon",
+        "height": 1.8,
+        "weight": 85.2
       },
       "2": {
         "stats": {
@@ -1335,20 +1427,16 @@
           "hp": 35,
           "atk": 83,
           "def": 45,
-          "spc": 35,
-          "spe": 80
-        },
-        "growthRate": "Medium Fast"
-      },
-      "2": {
-        "stats": {
-          "hp": 35,
-          "atk": 83,
-          "def": 45,
           "spa": 35,
           "spd": 35,
           "spe": 80
         },
+        "growthRate": "Medium Fast",
+        "species": "Twin Bird Pokémon",
+        "height": 1.4,
+        "weight": 39.2
+      },
+      "2": {
         "eggGroups": [
           "Bird"
         ],
@@ -1400,7 +1488,10 @@
         },
         "evoMethod": "Level 30",
         "growthRate": "Slow",
-        "evolvesFrom": "dratini"
+        "evolvesFrom": "dratini",
+        "species": "Sea Serpent Pokémon",
+        "height": 4,
+        "weight": 40
       },
       "2": {
         "stats": {
@@ -1444,13 +1535,15 @@
           "hp": 101,
           "atk": 134,
           "def": 95,
-          "spa": 80,
-          "spd": 100,
+          "spc": 80,
           "spe": 90
         },
         "evoMethod": "Level 60",
         "growthRate": "Slow",
-        "evolvesFrom": "dragonair"
+        "evolvesFrom": "dragonair",
+        "species": "Dragon Pokémon",
+        "height": 2.2,
+        "weight": 210
       },
       "2": {
         "eggGroups": [
@@ -1458,7 +1551,15 @@
           "Beast"
         ],
         "hatchesAs": "Dratini",
-        "genderM": 50
+        "genderM": 50,
+        "stats": {
+          "hp": 101,
+          "atk": 134,
+          "def": 95,
+          "spa": 80,
+          "spd": 100,
+          "spe": 90
+        }
       },
       "3": {
         "abilitySlots": [
@@ -1492,7 +1593,10 @@
           "spc": 50,
           "spe": 50
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Serpent Pokémon",
+        "height": 1.8,
+        "weight": 3.3
       },
       "2": {
         "stats": {
@@ -1534,7 +1638,11 @@
           "def": 45,
           "spc": 90,
           "spe": 42
-        }
+        },
+        "species": "Dream Eater Pokémon",
+        "height": 1,
+        "weight": 32.4,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -1594,7 +1702,11 @@
           "spe": 125
         },
         "evoMethod": "Level 20",
-        "evolvesFrom": "diglett"
+        "evolvesFrom": "diglett",
+        "species": "Triple Mole Pokémon",
+        "height": 0.7,
+        "weight": 33.3,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -1654,7 +1766,9 @@
           "spe": 70
         },
         "growthRate": "Medium Fast",
-        "species": "Evolution Pokémon"
+        "species": "Evolution Pokémon",
+        "height": 0.3,
+        "weight": 3.5
       },
       "2": {
         "stats": {
@@ -1708,7 +1822,11 @@
           "def": 44,
           "spc": 40,
           "spe": 55
-        }
+        },
+        "species": "Snake Pokémon",
+        "height": 2,
+        "weight": 6.9,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -1757,7 +1875,10 @@
           "spc": 95,
           "spe": 78
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Electric Pokémon",
+        "height": 1.1,
+        "weight": 30
       },
       "2": {
         "stats": {
@@ -1820,7 +1941,11 @@
           "spe": 150
         },
         "evoMethod": "Level 30",
-        "evolvesFrom": "voltorb"
+        "evolvesFrom": "voltorb",
+        "species": "Bomb Pokémon",
+        "height": 1.2,
+        "weight": 66.6,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -1879,7 +2004,10 @@
           "spc": 60,
           "spe": 40
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Egg Pokémon",
+        "height": 0.4,
+        "weight": 2.5
       },
       "2": {
         "stats": {
@@ -1933,7 +2061,10 @@
         },
         "evoMethod": "Leaf Stone",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "exeggcute"
+        "evolvesFrom": "exeggcute",
+        "species": "Coconut Pokémon",
+        "height": 2,
+        "weight": 120
       },
       "2": {
         "stats": {
@@ -2000,7 +2131,11 @@
           "spe": 100
         },
         "evoMethod": "Level 24",
-        "evolvesFrom": "spearow"
+        "evolvesFrom": "spearow",
+        "species": "Beak Pokémon",
+        "height": 1.2,
+        "weight": 10,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -2051,7 +2186,10 @@
         },
         "evoMethod": "Fire Stone",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "eevee"
+        "evolvesFrom": "eevee",
+        "species": "Fire Pokémon",
+        "height": 0.9,
+        "weight": 25
       },
       "2": {
         "stats": {
@@ -2112,7 +2250,10 @@
           "spc": 95,
           "spe": 80
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Gas Pokémon",
+        "height": 1.3,
+        "weight": 0.1
       },
       "2": {
         "stats": {
@@ -2169,7 +2310,10 @@
         },
         "evoMethod": "Trade",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "haunter"
+        "evolvesFrom": "haunter",
+        "species": "Shadow Pokémon",
+        "height": 1.5,
+        "weight": 5
       },
       "2": {
         "stats": {
@@ -2229,7 +2373,11 @@
           "def": 100,
           "spc": 30,
           "spe": 40
-        }
+        },
+        "species": "Rock Pokémon",
+        "height": 0.4,
+        "weight": 80,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -2288,7 +2436,11 @@
           "spe": 40
         },
         "evoMethod": "Level 21",
-        "evolvesFrom": "oddish"
+        "evolvesFrom": "oddish",
+        "species": "Stench Pokémon",
+        "height": 0.8,
+        "weight": 14.6,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -2333,7 +2485,11 @@
           "spe": 90
         },
         "evoMethod": "Level 22",
-        "evolvesFrom": "zubat"
+        "evolvesFrom": "zubat",
+        "species": "Vampire Bat Pokémon",
+        "height": 1.6,
+        "weight": 20,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -2385,7 +2541,11 @@
           "def": 60,
           "spc": 35,
           "spe": 42
-        }
+        },
+        "species": "Goldfish Pokémon",
+        "height": 0.6,
+        "weight": 4,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -2430,7 +2590,11 @@
           "def": 48,
           "spc": 70,
           "spe": 49
-        }
+        },
+        "species": "Headache Pokémon",
+        "height": 0.8,
+        "weight": 19.6,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -2474,7 +2638,11 @@
           "spe": 60
         },
         "evoMethod": "Trade",
-        "evolvesFrom": "graveler"
+        "evolvesFrom": "graveler",
+        "species": "Megaton Pokémon",
+        "height": 1.4,
+        "weight": 2500,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -2533,7 +2701,11 @@
           "spe": 55
         },
         "evoMethod": "Level 24",
-        "evolvesFrom": "geodude"
+        "evolvesFrom": "geodude",
+        "species": "Boulder Pokémon",
+        "height": 1,
+        "weight": 650,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -2590,7 +2762,10 @@
           "spc": 75,
           "spe": 20
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Sludge Pokémon",
+        "height": 0.9,
+        "weight": 180
       },
       "2": {
         "stats": {
@@ -2648,7 +2823,11 @@
           "def": 60,
           "spc": 55,
           "spe": 60
-        }
+        },
+        "species": "Puppy Pokémon",
+        "height": 0.7,
+        "weight": 19,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -2692,7 +2871,11 @@
           "spe": 71
         },
         "evoMethod": "Level 50",
-        "evolvesFrom": "magikarp"
+        "evolvesFrom": "magikarp",
+        "species": "Atrocious Pokémon",
+        "height": 6.5,
+        "weight": 1800,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -2745,7 +2928,10 @@
         },
         "evoMethod": "Level 23",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "gastly"
+        "evolvesFrom": "gastly",
+        "species": "Ghost Pokémon",
+        "height": 1.6,
+        "weight": 0.1
       },
       "2": {
         "stats": {
@@ -2799,7 +2985,10 @@
           "spc": 74,
           "spe": 76
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Punching Pokémon",
+        "height": 1.4,
+        "weight": 50.2
       },
       "2": {
         "stats": {
@@ -2847,7 +3036,10 @@
           "spc": 63,
           "spe": 110
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Kicking Pokémon",
+        "height": 1.5,
+        "weight": 49.8
       },
       "2": {
         "stats": {
@@ -2895,7 +3087,10 @@
           "spc": 70,
           "spe": 60
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Seahorse Pokémon",
+        "height": 0.4,
+        "weight": 2
       },
       "2": {
         "stats": {
@@ -2942,7 +3137,11 @@
           "spe": 62
         },
         "evoMethod": "Level 26",
-        "evolvesFrom": "drowzee"
+        "evolvesFrom": "drowzee",
+        "species": "Hypnosis Pokémon",
+        "height": 1.6,
+        "weight": 75.6,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -3003,7 +3202,11 @@
           "spc": 80,
           "spe": 60
         },
-        "evoMethod": "Level 18"
+        "evoMethod": "Level 18",
+        "species": "Budding Pokémon",
+        "height": 1,
+        "weight": 45.6,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -3049,7 +3252,11 @@
           "def": 20,
           "spc": 45,
           "spe": 20
-        }
+        },
+        "species": "Lullaby Pokémon",
+        "height": 0.5,
+        "weight": 5.5,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -3112,7 +3319,10 @@
         },
         "evoMethod": "Thunder Stone",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "eevee"
+        "evolvesFrom": "eevee",
+        "species": "Thunder Pokémon",
+        "height": 0.8,
+        "weight": 24.5
       },
       "2": {
         "stats": {
@@ -3173,7 +3383,10 @@
           "spc": 120,
           "spe": 95
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Human Shape Pokémon",
+        "height": 1.4,
+        "weight": 40.6
       },
       "3": {
         "stats": {
@@ -3217,7 +3430,10 @@
           "spc": 50,
           "spe": 55
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Shellfish Pokémon",
+        "height": 0.5,
+        "weight": 6
       },
       "2": {
         "stats": {
@@ -3271,7 +3487,10 @@
         },
         "evoMethod": "Level 35",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "kabuto"
+        "evolvesFrom": "kabuto",
+        "species": "Sickle Pokémon",
+        "height": 1.3,
+        "weight": 40.5
       },
       "2": {
         "stats": {
@@ -3335,7 +3554,11 @@
           "spe": 95
         },
         "evoMethod": "Level 22",
-        "evolvesFrom": "abra"
+        "evolvesFrom": "abra",
+        "species": "Spoon Pokémon",
+        "height": 1.3,
+        "weight": 30.5,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -3400,7 +3623,11 @@
           "spe": 30
         },
         "evoMethod": "Level 6",
-        "evolvesFrom": "weedle"
+        "evolvesFrom": "weedle",
+        "species": "Cocoon Pokémon",
+        "height": 0.6,
+        "weight": 10,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -3443,7 +3670,10 @@
           "spc": 100,
           "spe": 90
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Mother Pokémon",
+        "height": 2.2,
+        "weight": 150
       },
       "2": {
         "stats": {
@@ -3483,7 +3713,68 @@
         ]
       }
     },
-    "name": "Kangaskhan",
+    "name": "Kangaskhan (F)",
+    "dex": 118,
+    "debut": 1,
+    "art": 115
+  },
+  "kangaskhan-m": {
+    "gens": {
+      "1": {
+        "types": [
+          "Normal"
+        ],
+        "species": "Father Pokémon",
+        "stats": {
+          "hp": 100,
+          "atk": 120,
+          "def": 100,
+          "spc": 80,
+          "spe": 90
+        },
+        "height": 2.5,
+        "weight": 220,
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 100,
+          "atk": 120,
+          "def": 100,
+          "spa": 40,
+          "spd": 80,
+          "spe": 90
+        },
+        "eggGroups": [
+          "Beast"
+        ],
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "inner-focus"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "inner-focus"
+          ],
+          [
+            "scrappy"
+          ]
+        ]
+      }
+    },
+    "name": "Kangaskhan (M)",
     "dex": 118,
     "debut": 1,
     "art": 115
@@ -3502,7 +3793,11 @@
           "spe": 50
         },
         "evoMethod": "Level 28",
-        "evolvesFrom": "krabby"
+        "evolvesFrom": "krabby",
+        "species": "King Crab Pokémon",
+        "height": 1.3,
+        "weight": 120,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -3562,7 +3857,10 @@
           "spc": 60,
           "spe": 35
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Poison Gas Pokémon",
+        "height": 0.6,
+        "weight": 1
       },
       "2": {
         "stats": {
@@ -3620,7 +3918,11 @@
           "def": 90,
           "spc": 25,
           "spe": 50
-        }
+        },
+        "species": "River Crab Pokémon",
+        "height": 0.4,
+        "weight": 6.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -3680,7 +3982,10 @@
           "spc": 130,
           "spe": 25
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Transport Pokémon",
+        "height": 2.5,
+        "weight": 500
       },
       "2": {
         "stats": {
@@ -3747,7 +4052,10 @@
         },
         "evoMethod": "Leaf Stone",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "eevee"
+        "evolvesFrom": "eevee",
+        "species": "Leaf Pokémon",
+        "height": 1,
+        "weight": 25.5
       },
       "2": {
         "stats": {
@@ -3808,7 +4116,11 @@
           "spe": 60
         },
         "evoMethod": "Trade",
-        "evolvesFrom": "machoke"
+        "evolvesFrom": "machoke",
+        "species": "Four-Arm Pokémon",
+        "height": 1.9,
+        "weight": 152.6,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -3871,7 +4183,11 @@
           "spe": 50
         },
         "evoMethod": "Level 22",
-        "evolvesFrom": "machop"
+        "evolvesFrom": "machop",
+        "species": "Bodybuilder Pokémon",
+        "height": 1.5,
+        "weight": 70.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -3917,7 +4233,11 @@
           "def": 50,
           "spc": 20,
           "spe": 35
-        }
+        },
+        "species": "Training Pokémon",
+        "height": 0.8,
+        "weight": 19.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -3967,7 +4287,10 @@
         },
         "evoMethod": "Level 38",
         "growthRate": "Slow",
-        "evolvesFrom": "slugma"
+        "evolvesFrom": "slugma",
+        "species": "Lava Shell Pokémon",
+        "height": 0.8,
+        "weight": 350
       },
       "2": {
         "stats": {
@@ -4030,7 +4353,11 @@
           "def": 55,
           "spc": 15,
           "spe": 50
-        }
+        },
+        "species": "Fish Pokémon",
+        "height": 0.9,
+        "weight": 10,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -4073,7 +4400,10 @@
           "spc": 100,
           "spe": 78
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Spitfire Pokémon",
+        "height": 1.3,
+        "weight": 44.5
       },
       "2": {
         "stats": {
@@ -4120,7 +4450,11 @@
           "def": 70,
           "spc": 85,
           "spe": 45
-        }
+        },
+        "species": "Magnet Pokémon",
+        "height": 0.3,
+        "weight": 6,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "types": [
@@ -4182,7 +4516,11 @@
           "spe": 50
         },
         "evoMethod": "Level 20",
-        "evolvesFrom": "magnemite"
+        "evolvesFrom": "magnemite",
+        "species": "Triple Magnet Pokémon",
+        "height": 0.6,
+        "weight": 18,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -4250,7 +4588,11 @@
           "def": 45,
           "spc": 35,
           "spe": 70
-        }
+        },
+        "species": "Pig Monkey Pokémon",
+        "height": 0.5,
+        "weight": 6,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -4296,7 +4638,11 @@
           "spe": 45
         },
         "evoMethod": "Level 28",
-        "evolvesFrom": "cubone"
+        "evolvesFrom": "cubone",
+        "species": "Bone Keeper Pokémon",
+        "height": 1,
+        "weight": 30,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -4359,7 +4705,11 @@
           "def": 35,
           "spc": 35,
           "spe": 80
-        }
+        },
+        "species": "Scratch Cat Pokémon",
+        "height": 0.4,
+        "weight": 4.2,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -4406,7 +4756,11 @@
           "spe": 25
         },
         "evoMethod": "Level 6",
-        "evolvesFrom": "caterpie"
+        "evolvesFrom": "caterpie",
+        "species": "Chrysalis Pokémon",
+        "height": 0.7,
+        "weight": 9.9,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -4449,7 +4803,10 @@
           "spc": 100,
           "spe": 100
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Ancestor Pokémon",
+        "height": 0.4,
+        "weight": 4
       },
       "2": {
         "stats": {
@@ -4498,7 +4855,10 @@
           "spc": 154,
           "spe": 130
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Genetic Pokémon",
+        "height": 2,
+        "weight": 122
       },
       "2": {
         "stats": {
@@ -4543,7 +4903,10 @@
           "spc": 120,
           "spe": 40
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Mime Pokémon",
+        "height": 1.3,
+        "weight": 35
       },
       "2": {
         "stats": {
@@ -4600,7 +4963,10 @@
           "spc": 135,
           "spe": 100
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Fire Bird Pokémon",
+        "height": 2,
+        "weight": 60
       },
       "2": {
         "stats": {
@@ -4651,7 +5017,20 @@
         },
         "evoMethod": "Level 38",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "grimer"
+        "evolvesFrom": "grimer",
+        "species": "Toxic Sludge Pokémon",
+        "height": 1.2,
+        "weight": 800
+      },
+      "2": {
+        "stats": {
+          "hp": 115,
+          "atk": 105,
+          "def": 75,
+          "spa": 65,
+          "spd": 100,
+          "spe": 25
+        }
       },
       "3": {
         "stats": {
@@ -4710,7 +5089,11 @@
           "spe": 76
         },
         "evoMethod": "Moon Stone",
-        "evolvesFrom": "nidorino"
+        "evolvesFrom": "nidorino",
+        "species": "Poison King Pokémon",
+        "height": 1.7,
+        "weight": 192,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -4724,16 +5107,13 @@
         "eggGroups": [
           "Beast"
         ],
-        "hatchesAs": "Nidoran",
+        "hatchesAs": "Nidoran (M)",
         "genderM": 100
       },
       "3": {
         "abilitySlots": [
           [
             "poison-point"
-          ],
-          [
-            "rivalry"
           ],
           [
             "sheer-force"
@@ -4775,7 +5155,11 @@
           "spe": 76
         },
         "evoMethod": "Moon Stone",
-        "evolvesFrom": "nidorina"
+        "evolvesFrom": "nidorina",
+        "species": "Poison Queen Pokémon",
+        "height": 1.5,
+        "weight": 140,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -4789,16 +5173,13 @@
         "eggGroups": [
           "Beast"
         ],
-        "hatchesAs": "Nidoran",
+        "hatchesAs": "Nidoran (F)",
         "genderM": 0
       },
       "3": {
         "abilitySlots": [
           [
             "poison-point"
-          ],
-          [
-            "rivalry"
           ],
           [
             "battle-armor"
@@ -4837,13 +5218,103 @@
           "def": 52,
           "spc": 40,
           "spe": 46
-        }
+        },
+        "species": "Poison Barb Pokémon",
+        "height": 0.4,
+        "weight": 7,
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 55,
+          "atk": 47,
+          "def": 52,
+          "spa": 40,
+          "spd": 40,
+          "spe": 46
+        },
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 0
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry"
+          ]
+        ]
       }
     },
-    "name": "Nidoran",
+    "name": "Nidoran (F)",
     "dex": 29,
     "debut": 1,
     "art": 29
+  },
+  "nidoran-m": {
+    "gens": {
+      "1": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 46,
+          "atk": 57,
+          "def": 44,
+          "spc": 43,
+          "spe": 50
+        },
+        "species": "Poison Pin Pokémon",
+        "height": 0.5,
+        "weight": 9,
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 46,
+          "atk": 57,
+          "def": 44,
+          "spa": 40,
+          "spd": 43,
+          "spe": 50
+        },
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 100
+      },
+      "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ]
+        ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "rivalry"
+          ]
+        ]
+      }
+    },
+    "name": "Nidoran (M)",
+    "dex": 29,
+    "debut": 1,
+    "art": 32
   },
   "nidorina": {
     "gens": {
@@ -4859,7 +5330,11 @@
           "spe": 61
         },
         "evoMethod": "Level 16",
-        "evolvesFrom": "nidoran"
+        "evolvesFrom": "nidoran",
+        "species": "Poison Spine Pokémon",
+        "height": 0.8,
+        "weight": 20,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -4873,10 +5348,20 @@
         "eggGroups": [
           "Creature"
         ],
-        "hatchesAs": "Nidoran",
+        "hatchesAs": "Nidoran (F)",
         "genderM": 0
       },
       "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "anticipation"
+          ]
+        ]
+      },
+      "4": {
         "abilitySlots": [
           [
             "poison-point"
@@ -4909,7 +5394,11 @@
           "spe": 65
         },
         "evoMethod": "Level 16",
-        "evolvesFrom": "nidoran"
+        "evolvesFrom": "nidoran-m",
+        "species": "Poison Horn Pokémon",
+        "height": 0.9,
+        "weight": 25.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -4923,10 +5412,20 @@
         "eggGroups": [
           "Creature"
         ],
-        "hatchesAs": "Nidoran",
+        "hatchesAs": "Nidoran (M)",
         "genderM": 100
       },
       "3": {
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "hyper-cutter"
+          ]
+        ]
+      },
+      "4": {
         "abilitySlots": [
           [
             "poison-point"
@@ -4960,7 +5459,11 @@
           "spe": 100
         },
         "evoMethod": "Fire Stone",
-        "evolvesFrom": "vulpix"
+        "evolvesFrom": "vulpix",
+        "species": "Nine-Tailed Pokémon",
+        "height": 1.1,
+        "weight": 19.9,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -5019,7 +5522,11 @@
           "def": 45,
           "spc": 60,
           "spe": 45
-        }
+        },
+        "species": "Weed Pokémon",
+        "height": 0.5,
+        "weight": 5.4,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5063,7 +5570,10 @@
           "spc": 70,
           "spe": 35
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Spiral",
+        "height": 0.4,
+        "weight": 7.5
       },
       "2": {
         "stats": {
@@ -5117,7 +5627,10 @@
         },
         "evoMethod": "Level 35",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "omanyte"
+        "evolvesFrom": "omanyte",
+        "species": "Ancient Spiral Pokémon",
+        "height": 1,
+        "weight": 90
       },
       "2": {
         "stats": {
@@ -5174,7 +5687,11 @@
           "def": 160,
           "spc": 30,
           "spe": 70
-        }
+        },
+        "species": "Rock Snake Pokémon",
+        "height": 8.8,
+        "weight": 6000,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -5238,7 +5755,11 @@
           "def": 55,
           "spc": 55,
           "spe": 40
-        }
+        },
+        "species": "Spore Pokémon",
+        "height": 0.3,
+        "weight": 5.4,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5299,7 +5820,11 @@
           "spe": 20
         },
         "evoMethod": "Level 22",
-        "evolvesFrom": "paras"
+        "evolvesFrom": "paras",
+        "species": "Parasite Pokémon",
+        "height": 1,
+        "weight": 29.5,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5361,8 +5886,12 @@
           "spc": 60,
           "spe": 115
         },
-        "evoMethod": "30",
-        "evolvesFrom": "meowth"
+        "evoMethod": "Level 30",
+        "evolvesFrom": "meowth",
+        "species": "Classy Cat Pokémon",
+        "height": 1,
+        "weight": 32,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5448,7 +5977,11 @@
           "spe": 121
         },
         "evoMethod": "Level 30",
-        "evolvesFrom": "pidgeotto"
+        "evolvesFrom": "pidgeotto",
+        "species": "Pigeon Eagle Pokémon",
+        "height": 1.8,
+        "weight": 154.1,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5513,7 +6046,11 @@
           "spe": 86
         },
         "evoMethod": "Level 16",
-        "evolvesFrom": "pidgey"
+        "evolvesFrom": "pidgey",
+        "species": "Pigeon Hawk Pokémon",
+        "height": 1.1,
+        "weight": 12,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5570,7 +6107,11 @@
           "def": 40,
           "spc": 35,
           "spe": 56
-        }
+        },
+        "species": "Tiny Pigeon Pokémon",
+        "height": 0.3,
+        "weight": 0.9,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5628,7 +6169,11 @@
           "spe": 90
         },
         "evoMethod": "High Friendship",
-        "evolvesFrom": "pichu"
+        "evolvesFrom": "pichu",
+        "species": "Spark Mouse Pokémon",
+        "height": 0.4,
+        "weight": 6,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -5691,7 +6236,10 @@
           "spc": 55,
           "spe": 70
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Stag Beetle Pokémon",
+        "height": 1.5,
+        "weight": 55
       },
       "2": {
         "stats": {
@@ -5745,7 +6293,11 @@
           "spe": 70
         },
         "evoMethod": "Level 17",
-        "evolvesFrom": "poliwrath"
+        "evolvesFrom": "poliwrath",
+        "species": "Swirl Pokémon",
+        "height": 1,
+        "weight": 40,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -5795,7 +6347,11 @@
           "def": 40,
           "spc": 40,
           "spe": 45
-        }
+        },
+        "species": "Tadpole Pokémon",
+        "height": 0.6,
+        "weight": 12.4,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -5838,21 +6394,18 @@
           "hp": 95,
           "atk": 100,
           "def": 85,
-          "spc": 75,
-          "spe": 70
-        },
-        "evoMethod": "Level 34",
-        "evolvesFrom": "poliwhirl"
-      },
-      "2": {
-        "stats": {
-          "hp": 95,
-          "atk": 100,
-          "def": 85,
           "spa": 75,
           "spd": 75,
           "spe": 70
         },
+        "evoMethod": "Level 34",
+        "evolvesFrom": "poliwhirl",
+        "species": "Battle Frog Pokémon",
+        "height": 1.3,
+        "weight": 90,
+        "growthRate": "Medium Fast"
+      },
+      "2": {
         "eggGroups": [
           "Amphibian",
           "Human-Like"
@@ -5906,7 +6459,10 @@
           "spc": 65,
           "spe": 90
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Fire Foal Pokémon",
+        "height": 1,
+        "weight": 60
       },
       "2": {
         "stats": {
@@ -5918,9 +6474,8 @@
           "spe": 90
         },
         "eggGroups": [
-          "Creature"
+          "None"
         ],
-        "hatchesAs": "Ponyta",
         "genderM": 50
       },
       "3": {
@@ -5955,7 +6510,10 @@
           "spc": 85,
           "spe": 45
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Virtual Pokémon",
+        "height": 0.8,
+        "weight": 10
       },
       "2": {
         "stats": {
@@ -6014,7 +6572,11 @@
           "spe": 100
         },
         "evolvesFrom": "mankey",
-        "evoMethod": "Level 30"
+        "evoMethod": "Level 30",
+        "species": "Rage Monkey Pokémon",
+        "height": 1,
+        "weight": 32,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -6059,7 +6621,11 @@
           "spe": 79
         },
         "evoMethod": "Level 30",
-        "evolvesFrom": "golduck"
+        "evolvesFrom": "golduck",
+        "species": "Duck Pokémon",
+        "height": 1.7,
+        "weight": 76.6,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -6107,7 +6673,11 @@
           "spe": 110
         },
         "evoMethod": "Thunder Stone",
-        "evolvesFrom": "pikachu"
+        "evolvesFrom": "pikachu",
+        "species": "Thunder Mouse Pokémon",
+        "height": 0.8,
+        "weight": 30,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -6172,7 +6742,10 @@
         },
         "evoMethod": "Level 34",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "ponyta"
+        "evolvesFrom": "ponyta",
+        "species": "Fire Horse Pokémon",
+        "height": 1.7,
+        "weight": 300
       },
       "2": {
         "stats": {
@@ -6222,7 +6795,11 @@
           "spe": 97
         },
         "evoMethod": "Level 17",
-        "evolvesFrom": "rattata"
+        "evolvesFrom": "rattata",
+        "species": "Giant Rat Pokémon",
+        "height": 0.7,
+        "weight": 25.5,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -6282,7 +6859,11 @@
           "def": 35,
           "spc": 25,
           "spe": 72
-        }
+        },
+        "species": "Rat Pokémon",
+        "height": 0.3,
+        "weight": 3.5,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -6343,7 +6924,10 @@
         },
         "evoMethod": "Level 42",
         "growthRate": "Slow",
-        "evolvesFrom": "rhyhorn"
+        "evolvesFrom": "rhyhorn",
+        "species": "Drill Pokémon",
+        "height": 1.9,
+        "weight": 900
       },
       "2": {
         "stats": {
@@ -6406,7 +6990,10 @@
           "spc": 30,
           "spe": 50
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Spikes Pokémon",
+        "height": 1,
+        "weight": 400
       },
       "2": {
         "stats": {
@@ -6454,7 +7041,11 @@
           "def": 80,
           "spc": 20,
           "spe": 50
-        }
+        },
+        "species": "Shrew Pokémon",
+        "height": 0.6,
+        "weight": 12,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -6509,7 +7100,11 @@
           "spe": 80
         },
         "evoMethod": "Level 24",
-        "evolvesFrom": "sandshrew"
+        "evolvesFrom": "sandshrew",
+        "species": "Pangolin Pokémon",
+        "height": 1,
+        "weight": 29.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -6573,7 +7168,10 @@
           "spc": 55,
           "spe": 115
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Mantis Pokémon",
+        "height": 1.5,
+        "weight": 25
       },
       "2": {
         "stats": {
@@ -6628,7 +7226,10 @@
         },
         "evoMethod": "Level 24",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "horsea"
+        "evolvesFrom": "horsea",
+        "species": "Sea Dragon Pokémon",
+        "height": 1.2,
+        "weight": 25
       },
       "2": {
         "stats": {
@@ -6678,7 +7279,11 @@
           "spe": 83
         },
         "evoMethod": "Level 30",
-        "evolvesFrom": "goldeen"
+        "evolvesFrom": "goldeen",
+        "species": "Kingfish Pokémon",
+        "height": 1.3,
+        "weight": 39,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -6738,7 +7343,10 @@
           "spc": 70,
           "spe": 45
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Seal Pokémon",
+        "height": 1.1,
+        "weight": 45
       },
       "2": {
         "stats": {
@@ -6801,7 +7409,10 @@
           "spc": 25,
           "spe": 30
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Clam Pokémon",
+        "height": 0.3,
+        "weight": 4
       },
       "2": {
         "stats": {
@@ -6861,7 +7472,10 @@
         "types": [
           "Psychic",
           "Water"
-        ]
+        ],
+        "species": "Shell Tail Pokémon",
+        "height": 1.6,
+        "weight": 150.5
       },
       "2": {
         "stats": {
@@ -6926,7 +7540,10 @@
           "spc": 40,
           "spe": 15
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Dopey Pokémon",
+        "height": 1.2,
+        "weight": 90
       },
       "3": {
         "stats": {
@@ -6981,7 +7598,10 @@
           "spc": 70,
           "spe": 20
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Lava Pokémon",
+        "height": 0.7,
+        "weight": 35
       },
       "2": {
         "stats": {
@@ -7027,7 +7647,10 @@
           "spc": 110,
           "spe": 30
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Sleeping Pokémon",
+        "height": 2.1,
+        "weight": 1500
       },
       "2": {
         "stats": {
@@ -7079,7 +7702,11 @@
           "def": 40,
           "spc": 31,
           "spe": 70
-        }
+        },
+        "species": "Sparrow Pokémon",
+        "height": 0.3,
+        "weight": 0.6,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -7121,7 +7748,11 @@
           "def": 65,
           "spc": 48,
           "spe": 42
-        }
+        },
+        "species": "Tiny Turtle Pokémon",
+        "height": 0.5,
+        "weight": 9,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -7167,7 +7798,10 @@
         },
         "evoMethod": "Water Stone",
         "growthRate": "Slow",
-        "evolvesFrom": "staryu"
+        "evolvesFrom": "staryu",
+        "species": "Mysterious Pokémon",
+        "height": 1.1,
+        "weight": 80
       },
       "2": {
         "stats": {
@@ -7228,7 +7862,10 @@
           "spc": 80,
           "spe": 70
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Star Shape Pokémon",
+        "height": 0.8,
+        "weight": 34.5
       },
       "2": {
         "stats": {
@@ -7284,7 +7921,10 @@
           "spc": 55,
           "spe": 60
         },
-        "growthRate": "Medium Fast"
+        "growthRate": "Medium Fast",
+        "species": "Vine Pokémon",
+        "height": 1,
+        "weight": 35
       },
       "2": {
         "stats": {
@@ -7343,7 +7983,10 @@
         },
         "evoMethod": "Leaf Stone",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "tangela"
+        "evolvesFrom": "tangela",
+        "species": "Giant Vine Pokémon",
+        "height": 2,
+        "weight": 128.6
       },
       "2": {
         "stats": {
@@ -7401,7 +8044,10 @@
           "spc": 40,
           "spe": 110
         },
-        "growthRate": "Medium Slow"
+        "growthRate": "Medium Slow",
+        "species": "Wild Bull Pokémon",
+        "height": 1.4,
+        "weight": 500
       },
       "2": {
         "stats": {
@@ -7448,7 +8094,11 @@
           "def": 54,
           "spc": 50,
           "spe": 45
-        }
+        },
+        "species": "Little Bear Pokémon",
+        "height": 0.6,
+        "weight": 8.8,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -7501,7 +8151,11 @@
           "def": 35,
           "spc": 80,
           "spe": 60
-        }
+        },
+        "species": "Jellyfish Pokémon",
+        "height": 0.9,
+        "weight": 20.5,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -7551,8 +8205,12 @@
           "spc": 120,
           "spe": 70
         },
-        "evoMethod": "33",
-        "evolvesFrom": "tentacool"
+        "evoMethod": "Level 33",
+        "evolvesFrom": "tentacool",
+        "species": "Giant Jellyfish Pokémon",
+        "height": 1.6,
+        "weight": 100,
+        "growthRate": "Slow"
       },
       "2": {
         "stats": {
@@ -7602,7 +8260,11 @@
           "spe": 75
         },
         "evoMethod": "Level 32",
-        "evolvesFrom": "teddiursa"
+        "evolvesFrom": "teddiursa",
+        "species": "Hibernator Pokémon",
+        "height": 2,
+        "weight": 200.8,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -7665,7 +8327,10 @@
         },
         "evoMethod": "Water Stone",
         "growthRate": "Medium Fast",
-        "evolvesFrom": "eevee"
+        "evolvesFrom": "eevee",
+        "species": "Water Pokémon",
+        "height": 1,
+        "weight": 29
       },
       "2": {
         "stats": {
@@ -7728,7 +8393,11 @@
           "spe": 90
         },
         "evoMethod": "Level 20",
-        "evolvesFrom": "venonat"
+        "evolvesFrom": "venonat",
+        "species": "Poison Moth Pokémon",
+        "height": 1.5,
+        "weight": 8.2,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -7774,7 +8443,11 @@
           "def": 50,
           "spc": 55,
           "spe": 45
-        }
+        },
+        "species": "Gnat Pokémon",
+        "height": 1,
+        "weight": 20,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -7821,7 +8494,27 @@
           "spe": 75
         },
         "evoMethod": "Level 36",
-        "evolvesFrom": "ivysaur"
+        "evolvesFrom": "ivysaur",
+        "species": "Bloom Pokémon",
+        "height": 2,
+        "weight": 350.2,
+        "growthRate": "Medium Slow"
+      },
+      "2": {
+        "stats": {
+          "hp": 90,
+          "atk": 82,
+          "def": 83,
+          "spa": 100,
+          "spd": 100,
+          "spe": 75
+        },
+        "eggGroups": [
+          "Plant",
+          "Beast"
+        ],
+        "hatchesAs": "Bulbasaur",
+        "genderM": 50
       },
       "3": {
         "abilitySlots": [
@@ -7837,26 +8530,6 @@
         ]
       },
       "4": {
-        "types": [
-          "Grass",
-          "Poison"
-        ],
-        "evolvesFrom": "ivysaur",
-        "stats": {
-          "hp": 90,
-          "atk": 82,
-          "def": 83,
-          "spa": 100,
-          "spd": 100,
-          "spe": 75
-        },
-        "evoMethod": "Level 36",
-        "eggGroups": [
-          "Plant",
-          "Beast"
-        ],
-        "hatchesAs": "Bulbasaur",
-        "genderM": 50,
         "abilitySlots": [
           [
             "overgrow"
@@ -7889,7 +8562,11 @@
           "spe": 50
         },
         "evoMethod": "Leaf Stone",
-        "evolvesFrom": "gloom"
+        "evolvesFrom": "gloom",
+        "species": "Big Flower Pokémon",
+        "height": 1.2,
+        "weight": 35,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {
@@ -7934,7 +8611,11 @@
           "def": 50,
           "spc": 55,
           "spe": 100
-        }
+        },
+        "species": "Ball Pokémon",
+        "height": 0.5,
+        "weight": 10.4,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -7991,7 +8672,11 @@
           "def": 40,
           "spc": 70,
           "spe": 65
-        }
+        },
+        "species": "Fox Pokémon",
+        "height": 0.6,
+        "weight": 6.1,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -8034,7 +8719,11 @@
           "spe": 52
         },
         "evoMethod": "Level 18",
-        "evolvesFrom": "squirtle"
+        "evolvesFrom": "squirtle",
+        "species": "Winged Turtle Pokémon",
+        "height": 1,
+        "weight": 70.5,
+        "growthRate": "Medium Slow"
       },
       "2": {
         "stats": {
@@ -8091,7 +8780,11 @@
           "def": 30,
           "spc": 20,
           "spe": 40
-        }
+        },
+        "species": "Stinger Pokémon",
+        "height": 0.3,
+        "weight": 3.2,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -8139,7 +8832,10 @@
         },
         "evoMethod": "Level 40",
         "growthRate": "Medium Slow",
-        "evolvesFrom": "koffing"
+        "evolvesFrom": "koffing",
+        "species": "Smog Pokémon",
+        "height": 1.2,
+        "weight": 5.3
       },
       "2": {
         "stats": {
@@ -8199,7 +8895,11 @@
           "spe": 45
         },
         "evoMethod": "Moon Stone",
-        "evolvesFrom": "jigglypuff"
+        "evolvesFrom": "jigglypuff",
+        "species": "Balloon Rabbit Pokémon",
+        "height": 1,
+        "weight": 12,
+        "growthRate": "Fast"
       },
       "2": {
         "stats": {
@@ -8267,7 +8967,10 @@
           "spc": 135,
           "spe": 100
         },
-        "growthRate": "Slow"
+        "growthRate": "Slow",
+        "species": "Thunder Bird Pokémon",
+        "height": 1.6,
+        "weight": 52.6
       },
       "2": {
         "stats": {
@@ -8316,7 +9019,11 @@
           "def": 35,
           "spc": 25,
           "spe": 55
-        }
+        },
+        "species": "Bat Pokémon",
+        "height": 0.8,
+        "weight": 2.8,
+        "growthRate": "Medium Fast"
       },
       "2": {
         "stats": {

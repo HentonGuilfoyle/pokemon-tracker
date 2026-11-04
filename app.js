@@ -7,8 +7,8 @@ const NAV=[['dex','National Dex'],['types','Type Chart'],['abilities','Abilities
 const CAT={Physical:'var(--hot)',Special:'var(--cool)',Status:'var(--stat)'};
 // Before Gen IV there is no per-move physical/special split: a damaging move's type decides it.
 const SPLIT_FROM=4;
-const PHYSICAL_TYPES=['Normal','Fighting','Flying','Poison','Ground','Rock','Bug','Ghost','Steel'];
-const SPECIAL_TYPES=['Fire','Water','Grass','Electric','Psychic','Ice','Dragon','Dark'];
+const PHYSICAL_TYPES=['Normal','Fighting','Flying','Poison','Ground','Rock','Bug','Ghost','Steel','Dragon'];
+const SPECIAL_TYPES=['Fire','Water','Grass','Electric','Psychic','Ice','Dark'];
 const typeCat=t=>PHYSICAL_TYPES.includes(t)?'Physical':SPECIAL_TYPES.includes(t)?'Special':'';
 // A move's data as it applies in gen g, with the category worked out from the type before the split.
 function effMove(m,g){const e=eff(m,g);if(g<SPLIT_FROM&&e.category&&e.category!=='Status')e.category=typeCat(e.type)||e.category;return e}
@@ -19,7 +19,7 @@ const targetsAt=g=>Object.keys(TARGETS).filter(k=>g>=3||!DOUBLES_TARGETS.include
 const prioText=p=>p==null||p===''?'':p>0?'+'+p:String(p);
 const contactText=c=>c===true?'Yes':c===false?'No':'';
 const S={pokemon:{},abilities:{},items:{},moves:{},effects:{},trainers:{},chart:null};
-const UI={gen:4,route:'dex',arg:null,q:'',type:'All',cat:'All',group:'All',view:'all',newOnly:false,sort:'dex',dir:1,sel:null,editChart:false,chartFuture:true,perPage:'all',page:0};
+const UI={gen:4,route:'dex',arg:null,q:'',type:'All',cat:'All',group:'All',view:'all',newOnly:false,sort:'dex',dir:1,msort:'name',mdir:1,sel:null,editChart:false,chartFuture:true,perPage:'all',page:0};
 const PER_PAGE=[['25','25'],['50','50'],['100','100'],['all','Endless']];
 let canEdit=false,loaded=false,failed=false,bodyFn=null,F=null,timer=0;
 try{const g=+localStorage.getItem('gen');if(GENS.includes(g))UI.gen=g;const pp=localStorage.getItem('perPage');if(PER_PAGE.some(o=>o[0]===pp))UI.perPage=pp}catch(e){}
@@ -222,10 +222,14 @@ function moveBody(){
   let list=rows('moves').filter(m=>(m.debut||1)<=g).filter(matchQ);
   if(UI.type!=='All')list=list.filter(m=>eff(m,g).type===UI.type);
   if(UI.cat!=='All')list=list.filter(m=>effMove(m,g).category===UI.cat);
-  list.sort((a,b)=>a.name.localeCompare(b.name));
+  // Sort by the clicked column. Moves with no value for it always go last, whichever way it runs.
+  const MV={name:m=>m.name||'',type:m=>effMove(m,g).type||'',category:m=>effMove(m,g).category||'',power:m=>effMove(m,g).power,accuracy:m=>effMove(m,g).accuracy,pp:m=>effMove(m,g).pp,effect:m=>effMove(m,g).effect||'',gen:m=>m.debut||1};
+  const mv=MV[UI.msort]||MV.name,none=x=>x==null||x==='';
+  list.sort((a,b)=>{const x=mv(a),y=mv(b);if(none(x)||none(y))return none(x)-none(y)||a.name.localeCompare(b.name);return (typeof x==='string'?x.localeCompare(y):x-y)*UI.mdir||a.name.localeCompare(b.name)});
+  const mth=(k,l,num)=>{const on=UI.msort===k;return `<th${num?' class="num"':''}${on?` aria-sort="${UI.mdir>0?'ascending':'descending'}"`:''}><button type="button" data-act="msort" data-v="${k}">${l}${on?(UI.mdir>0?' ↑':' ↓'):''}</button></th>`};
   if(!rows('moves').length)return emptyMsg('No moves yet. Add your first one.','new-moves','Add move');
   if(!list.length)return emptyMsg('No moves match these filters.');
-  const table=r=>`<div class="box"><table style="min-width:900px"><thead><tr><th>Name</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Accuracy</th><th class="num">PP</th><th>Effect</th><th>Gen</th></tr></thead><tbody>${r.map(m=>{const e=effMove(m,g);
+  const table=r=>`<div class="box"><table style="min-width:900px"><thead><tr>${mth('name','Name')}${mth('type','Type')}${mth('category','Category')}${mth('power','Power',1)}${mth('accuracy','Accuracy',1)}${mth('pp','PP',1)}${mth('effect','Effect')}${mth('gen','Gen')}</tr></thead><tbody>${r.map(m=>{const e=effMove(m,g);
     return `<tr><td class="name mid"><a href="#m-${esc(m.id)}">${esc(m.name)}</a>${changedTag(m)}</td><td class="mid">${e.type?chip(e.type):'—'}</td><td class="mid">${e.category?`<span class="cat" style="background:${CAT[e.category]||'var(--soft)'}">${esc(e.category)}</span>`:'—'}</td><td class="num mono mid">${dash(e.power)}</td><td class="num mono mid">${dash(e.accuracy)}</td><td class="num mono mid">${dash(e.pp)}</td><td class="mid">${dash(e.effect)}</td><td class="mono mid">${ROMAN[m.debut||1]}</td></tr>`}).join('')}</tbody></table></div>`;
   return grouped(list,table);
 }
@@ -274,7 +278,7 @@ function notThere(name,debut,back){return `<div class="empty"><p>${esc(name)} de
 
 // The Pokémon before and after this one in Dex number order, counting only those in the generation being viewed.
 function dexNeighbours(id,g){
-  const list=rows('pokemon').filter(p=>(p.debut||1)<=g).sort((a,b)=>(a.dex??1e9)-(b.dex??1e9)||a.name.localeCompare(b.name));
+  const list=rows('pokemon').filter(p=>(p.debut||1)<=g).sort((a,b)=>(a.dex??1e9)-(b.dex??1e9));
   const i=list.findIndex(p=>p.id===id);
   return i<0?[null,null]:[list[i-1]||null,list[i+1]||null];
 }
@@ -428,6 +432,8 @@ async function ensure(col,name,gen,extra={}){
   const id=newId(col,t),doc={name:t,debut:gen,gens:{},...extra};
   S[col][id]=doc;await put(col+'/'+id,doc);return id;
 }
+// Several Pokémon can share a Dex number (gender differences, regional variants). Same-number entries list in the order they were added.
+const dexShare=(dex,id)=>{const o=rows('pokemon').filter(p=>p.dex===dex&&p.id!==id&&dex);return o.length?`Shares No. ${pad(dex)} with ${o.map(p=>p.name).join(', ')}. That's fine for a variant or a gender difference.`:''};
 const nextDex=()=>rows('pokemon').reduce((m,p)=>Math.max(m,p.dex||0),0)+1;
 function toast(msg){const t=$('toast');t.textContent=msg;t.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>{t.hidden=true},3500)}
 
@@ -510,7 +516,7 @@ function openPokemon(id){
   const doc=id?S.pokemon[id]:null,d=id?eff(doc,UI.gen):{},g=id?UI.gen:UI.gen;
   F={col:'pokemon',id,g,slots:(d.abilitySlots||[]).map(o=>o.map(a=>label('abilities',a)))};
   const ts=allTypes();
-  modal(`${id?'Edit':'Add'} Pokémon`,`<div class="formbody">${genNote(doc,doc?.debut||1)}<div class="fgrid">${input('name','Name',doc?.name)}${input('dex','Dex number',doc?.dex??nextDex(),{type:'number',min:1})}${genSelect('debut',doc?.debut??g,'Generation introduced')}</div>
+  modal(`${id?'Edit':'Add'} Pokémon`,`<div class="formbody">${genNote(doc,doc?.debut||1)}<div class="fgrid">${input('name','Name',doc?.name)}${input('dex','Dex number',doc?.dex??nextDex(),{type:'number',min:1})}${genSelect('debut',doc?.debut??g,'Generation introduced')}</div><p class="hint" id="dex-share"${dexShare(doc?.dex??nextDex(),id)?'':' hidden'}>${esc(dexShare(doc?.dex??nextDex(),id))}</p>
   <div class="fgrid">${select('t1','Type 1',(d.types||[])[0],ts,'Choose')}${select('t2','Type 2',(d.types||[])[1],ts,'None')}${input('evofrom','Evolves from',d.evolvesFrom?label('pokemon',d.evolvesFrom):'',{list:'dl-pokemon'})}${input('evomethod','Evolution method',d.evoMethod,{ph:'Level 25'})}</div>
   <fieldset><legend>Vitals</legend><div class="fgrid">${input('species','Species',d.species,{ph:'Seed Pokémon'})}${input('height','Height (m)',d.height,{type:'number',min:0,step:'0.1',ph:'0.7'})}${input('weight','Weight (kg)',d.weight,{type:'number',min:0,step:'0.1',ph:'6.9'})}${input('growth','Growth rate',d.growthRate,{list:'dl-growth'})}</div><datalist id="dl-growth">${[...new Set([...GROWTH,...rows('pokemon').flatMap(p=>GENS.map(x=>p.gens?.[x]?.growthRate))].filter(Boolean))].map(x=>`<option value="${esc(x)}"></option>`).join('')}</datalist></fieldset>
   <div id="dyn" style="display:flex;flex-direction:column;gap:14px">${pokeDyn(g,d)}</div>
@@ -522,7 +528,6 @@ async function savePokemon(){
   if(!name)return fail('Give it a name.');
   if(!dex)return fail('Give it a Dex number.');
   const dup=byName('pokemon',name);if(dup&&dup!==id)return fail(`${name} already exists.`);
-  const clash=rows('pokemon').find(p=>p.dex===dex&&p.id!==id);if(clash)return fail(`No. ${dex} is already ${clash.name}.`);
   readSlots();
   const stats={};statsAt({},g).forEach(s=>{stats[s[0]]=n('st-'+s[0])});
   const patch={types:[v('t1'),v('t2')].filter(Boolean),stats:Object.values(stats).every(x=>x==null)?null:stats,evoMethod:v('evomethod'),species:v('species'),height:n('height'),weight:n('weight'),growthRate:v('growth')};
@@ -695,6 +700,7 @@ const ACT={
   gen:(d)=>setGen(+d.v),
   view:(d)=>{UI.view=d.v;render()},
   page:(d)=>{UI.page+=+d.v;renderBody();const t=$('body');if(t&&t.getBoundingClientRect().top<0)t.scrollIntoView()},
+  msort:(d)=>{if(UI.msort===d.v)UI.mdir=-UI.mdir;else{UI.msort=d.v;UI.mdir=['power','accuracy','pp'].includes(d.v)?-1:1}renderBody()},
   sort:(d)=>{UI.page=0;if(UI.sort===d.v)UI.dir=-UI.dir;else{UI.sort=d.v;UI.dir=(d.v==='dex'||d.v==='name')?1:-1}renderBody()},
   sel:(d)=>{UI.sel=d.v;render()},
   'edit-chart':()=>{UI.editChart=!UI.editChart;render()},
@@ -727,6 +733,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-act]');if(
 document.addEventListener('input',e=>{
   const ev=F?.col==='enc'&&e.target.id.match(/^f-m(\d+)-ev-/);
   if(ev){const i=+ev[1],h=$(`m${i}-evtotal`);if(h)h.textContent=evText(EV_KEYS.reduce((a,[k])=>a+(n(`m${i}-ev-${k}`)||0),0));return}
+  if(e.target.id==='f-dex'&&F?.col==='pokemon'){const h=$('dex-share'),t=dexShare(n('dex'),F.id);if(h){h.textContent=t;h.hidden=!t}return}
   const m=e.target.dataset.model;if(!m)return;UI.page=0;if(m==='perPage')try{localStorage.setItem('perPage',e.target.value)}catch(x){}UI[m]=e.target.type==='checkbox'?e.target.checked:e.target.value;renderBody()});
 document.addEventListener('change',e=>{
   if(e.target.id==='f-debut'&&F?.col==='pokemon'&&!F.id){readSlots();const g=+e.target.value;F.g=g;const keep={};

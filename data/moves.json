@@ -1,4 +1,18 @@
 {
+  "absorb": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and the user will recover 50% of the HP drained."
+      }
+    },
+    "name": "Absorb",
+    "debut": 1
+  },
   "acid": {
     "gens": {
       "1": {
@@ -27,6 +41,20 @@
     "name": "Agility",
     "debut": 1
   },
+  "aurora-beam": {
+    "gens": {
+      "1": {
+        "type": "Ice",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "effect": "Deals damage and has a 10% chance of lowering the target's Special by one stage.",
+        "target": "single"
+      }
+    },
+    "name": "Aurora Beam",
+    "debut": 1
+  },
   "bind": {
     "gens": {
       "1": {
@@ -36,7 +64,21 @@
         "accuracy": 90,
         "pp": 10,
         "target": "single",
-        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/16 of their maximum HP after each turn, for 3-5 turns."
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/16 of their maximum HP after each turn, for 3-5 turns.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 19"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 19"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 19"
+          }
+        ]
       }
     },
     "name": "Bind",
@@ -50,7 +92,13 @@
         "power": 65,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Bite",
@@ -83,6 +131,159 @@
     "name": "Body Slam",
     "debut": 1
   },
+  "bone-club": {
+    "gens": {
+      "1": {
+        "type": "Rock",
+        "category": "Physical",
+        "power": 85,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance to lower the target's Defense by one stage."
+      }
+    },
+    "name": "Bone Club",
+    "debut": 1
+  },
+  "bonemerang": {
+    "gens": {
+      "1": {
+        "type": "Rock",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage and will strike twice (with 40 base power each time)."
+      }
+    },
+    "name": "Bonemerang",
+    "debut": 1
+  },
+  "bubble": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of lowering the target's Speed by one stage.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 7"
+          }
+        ]
+      }
+    },
+    "name": "Bubble",
+    "debut": 1
+  },
+  "bubble-blast": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of lowering the target's Speed by one stage.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 28"
+          }
+        ]
+      }
+    },
+    "name": "Bubble Blast",
+    "debut": 1
+  },
+  "bubblebeam": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "effect": "Deals damage and has a 10% chance of lowering the target's Speed by one stage.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 16"
+          }
+        ]
+      }
+    },
+    "name": "Bubble Beam",
+    "debut": 1
+  },
+  "calm-mind": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Special by two stages."
+      }
+    },
+    "name": "Calm Mind",
+    "debut": 1
+  },
+  "clamp": {
+    "gens": {
+      "1": {
+        "type": "Water",
+        "power": 50,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/8 of their maximum HP after each turn, for 3-5 turns.",
+        "category": "Special"
+      }
+    },
+    "name": "Clamp",
+    "debut": 1
+  },
+  "confuse-ray": {
+    "gens": {
+      "1": {
+        "type": "Ghost",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Confuses the target."
+      }
+    },
+    "name": "Confuse Ray",
+    "debut": 1
+  },
+  "confusion": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of confusing the target."
+      }
+    },
+    "name": "Confusion",
+    "debut": 1
+  },
+  "counter": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "When hit by a Physical Attack, the user strikes back with double the power."
+      }
+    },
+    "name": "Counter",
+    "debut": 1
+  },
   "cut": {
     "gens": {
       "1": {
@@ -97,13 +298,27 @@
     "name": "Cut",
     "debut": 1
   },
+  "dig": {
+    "gens": {
+      "1": {
+        "type": "Ground",
+        "category": "Physical",
+        "power": 70,
+        "accuracy": 100,
+        "effect": "The user burrows underground on the first turn, disappearing from view and becoming invulnerable to most attacks. On the second turn, Dig deals damage."
+      }
+    },
+    "name": "Dig",
+    "debut": 1
+  },
   "disable": {
     "gens": {
       "1": {
         "type": "Psychic",
         "category": "Status",
         "accuracy": 80,
-        "effect": "Causes the previous move the target used to be \"disabled\" for 3-5 turns, which prevents the move's use."
+        "effect": "Causes the previous move the target used to be \"disabled\" for 3-5 turns, which prevents the move's use.",
+        "target": "single"
       }
     },
     "name": "Disable",
@@ -149,6 +364,55 @@
     "name": "Double Team",
     "debut": 1
   },
+  "dragon-tail": {
+    "gens": {
+      "1": {
+        "type": "Dragon",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 95,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of lowering target's Defense by one stage."
+      }
+    },
+    "name": "Dragon Tail",
+    "debut": 1
+  },
+  "drill-peck": {
+    "gens": {
+      "1": {
+        "type": "Flying",
+        "category": "Physical",
+        "power": 80,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Drill Peck",
+    "debut": 1
+  },
+  "earthquake": {
+    "gens": {
+      "1": {
+        "type": "Ground",
+        "category": "Physical",
+        "power": 100,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      },
+      "2": {
+        "effect": "Deals damage with no additional effect. It will hit with double power if an opponent is underground due to the move Dig."
+      },
+      "3": {
+        "target": "field",
+        "contact": false
+      }
+    },
+    "name": "Earthquake",
+    "debut": 1
+  },
   "ember": {
     "gens": {
       "1": {
@@ -161,6 +425,19 @@
       }
     },
     "name": "Ember",
+    "debut": 1
+  },
+  "fire-blast": {
+    "gens": {
+      "1": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 110,
+        "accuracy": 85,
+        "effect": "Deals damage and has a 10% chance of burning the target."
+      }
+    },
+    "name": "Fire Blast",
     "debut": 1
   },
   "fire-punch": {
@@ -179,6 +456,33 @@
       }
     },
     "name": "Fire Punch",
+    "debut": 1
+  },
+  "fire-spin": {
+    "gens": {
+      "1": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 30,
+        "accuracy": 75,
+        "target": "single",
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/16 of their maximum HP after each turn, for 3-5 turns."
+      }
+    },
+    "name": "Fire Spin",
+    "debut": 1
+  },
+  "fissure": {
+    "gens": {
+      "1": {
+        "type": "Ground",
+        "category": "Physical",
+        "accuracy": 30,
+        "target": "single",
+        "effect": "Always makes the target faint."
+      }
+    },
+    "name": "Fissure",
     "debut": 1
   },
   "flamethrower": {
@@ -236,6 +540,20 @@
     "name": "Fury Attack",
     "debut": 1
   },
+  "giga-drain": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 75,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and the user will recover 50% of the HP drained."
+      }
+    },
+    "name": "Giga Drain",
+    "debut": 1
+  },
   "growl": {
     "gens": {
       "1": {
@@ -247,6 +565,39 @@
       }
     },
     "name": "Growl",
+    "debut": 1
+  },
+  "growth": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Special by one stage.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 13"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 13"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 13"
+          }
+        ]
+      },
+      "2": {
+        "effect": "Raises the user's Attack and Special Attack by one stage."
+      },
+      "3": {
+        "effect": "Raises the user's Attack and Special Attack by one stage. During Harsh Sunlight it raises each stat by two stages.",
+        "contact": false
+      }
+    },
+    "name": "Growth",
     "debut": 1
   },
   "guillotine": {
@@ -299,7 +650,13 @@
         "power": 70,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 19"
+          }
+        ]
       }
     },
     "name": "Headbutt",
@@ -341,10 +698,42 @@
         "power": 110,
         "accuracy": 85,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 34"
+          }
+        ]
       }
     },
     "name": "Hydro Pump",
+    "debut": 1
+  },
+  "hyper-beam": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 200,
+        "accuracy": 100,
+        "effect": "Deals damage, but the user must recharge on the next turn. If Hyper beam knocks out the target, the user does not need to recharge."
+      }
+    },
+    "name": "Hyper Beam",
+    "debut": 1
+  },
+  "hypnosis": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "accuracy": 60,
+        "target": "single",
+        "effect": "Puts the target to sleep."
+      }
+    },
+    "name": "Hypnosis",
     "debut": 1
   },
   "ice-beam": {
@@ -376,6 +765,20 @@
     "name": "Ice Punch",
     "debut": 1
   },
+  "jab": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Jab",
+    "debut": 1
+  },
   "jump-kick": {
     "gens": {
       "1": {
@@ -404,6 +807,33 @@
     "name": "Karate Chop",
     "debut": 1
   },
+  "leech-seed": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Status",
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Plants a seed on the target that drains 1/16 of its maximum HP at the end of each turn and restores it to the user, or any Pokémon that takes its place. If the target is also badly poisoned, the damage also increases by 1/16 each turn.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 10"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 10"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 10"
+          }
+        ]
+      }
+    },
+    "name": "Leech Seed",
+    "debut": 1
+  },
   "leer": {
     "gens": {
       "1": {
@@ -415,6 +845,61 @@
       }
     },
     "name": "Leer",
+    "debut": 1
+  },
+  "lick": {
+    "gens": {
+      "1": {
+        "type": "Ghost",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of paralyzing the target."
+      }
+    },
+    "name": "Lick",
+    "debut": 1
+  },
+  "low-kick": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 50,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+      }
+    },
+    "name": "Low Kick",
+    "debut": 1
+  },
+  "meditate": {
+    "gens": {
+      "3": {
+        "type": "Psychic",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Attack and Special Attack by one stage.",
+        "contact": false
+      }
+    },
+    "name": "Meditate",
+    "debut": 3
+  },
+  "mega-drain": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 60,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and the user will recover 50% of the HP drained."
+      }
+    },
+    "name": "Mega Drain",
     "debut": 1
   },
   "mega-kick": {
@@ -445,6 +930,44 @@
     "name": "Mega Punch",
     "debut": 1
   },
+  "mimic": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Copies the last move used by the target, replacing Mimic in the user's moves. The copied move always has 5 PP. The effect only lasts while the user is in battle."
+      }
+    },
+    "name": "Mimic",
+    "debut": 1
+  },
+  "mind-fog": {
+    "gens": {
+      "1": {
+        "type": "Ghost",
+        "category": "Status",
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Lowers the target's Special by two stages."
+      }
+    },
+    "name": "Mind Fog",
+    "debut": 1
+  },
+  "minimize": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Evasion by one stage."
+      }
+    },
+    "name": "Minimize",
+    "debut": 1
+  },
   "mist": {
     "gens": {
       "1": {
@@ -455,6 +978,41 @@
       }
     },
     "name": "Mist",
+    "debut": 1
+  },
+  "night-shade": {
+    "gens": {
+      "1": {
+        "type": "Ghost",
+        "category": "Physical",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage equal to the user's level."
+      }
+    },
+    "name": "Night Shade",
+    "debut": 1
+  },
+  "outrage": {
+    "gens": {
+      "1": {
+        "type": "Dragon",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused."
+      },
+      "3": {
+        "category": "Physical",
+        "contact": true
+      },
+      "4": {
+        "category": "Physical",
+        "contact": true
+      }
+    },
+    "name": "Outrage",
     "debut": 1
   },
   "pay-day": {
@@ -470,6 +1028,33 @@
       }
     },
     "name": "Pay Day",
+    "debut": 1
+  },
+  "peck": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Peck",
+    "debut": 1
+  },
+  "petal-dance": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused."
+      }
+    },
+    "name": "Petal Dance",
     "debut": 1
   },
   "pin-missile": {
@@ -498,6 +1083,49 @@
     "name": "Poison Sting",
     "debut": 1
   },
+  "poisonpowder": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Status",
+        "accuracy": 75,
+        "target": "single",
+        "effect": "Poisons the target.",
+        "learners": [
+          {
+            "p": "ivysaur",
+            "how": "Level 18"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 18"
+          }
+        ]
+      },
+      "2": {
+        "accuracy": 80
+      },
+      "3": {
+        "contact": false
+      }
+    },
+    "name": "Poison Powder",
+    "debut": 1
+  },
+  "poltergeist": {
+    "gens": {
+      "1": {
+        "type": "Ghost",
+        "category": "Physical",
+        "power": 110,
+        "accuracy": 85,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Poltergeist",
+    "debut": 1
+  },
   "pound": {
     "gens": {
       "1": {
@@ -520,10 +1148,58 @@
         "flavor": "Enables the user to protect itself from all attacks. It may fail is used in succession.",
         "target": "user",
         "priority": 3,
-        "category": "Status"
+        "category": "Status",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 22"
+          }
+        ]
       }
     },
     "name": "Protect",
+    "debut": 1
+  },
+  "psybeam": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "effect": "Deals damage and has a 10% chance of confusing the target."
+      }
+    },
+    "name": "Psybeam",
+    "debut": 1
+  },
+  "psychic": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance to lower the target's Special by one stage."
+      }
+    },
+    "name": "Psychic",
+    "debut": 1
+  },
+  "quick-attack": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "priority": 1,
+        "effect": "Deals damage with increased priority."
+      }
+    },
+    "name": "Quick Attack",
     "debut": 1
   },
   "rapid-punch": {
@@ -538,6 +1214,34 @@
       }
     },
     "name": "Rapid Punch",
+    "debut": 1
+  },
+  "razor-leaf": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 50,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has an increased critical hit ratio.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 22"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 23"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 23"
+          }
+        ]
+      }
+    },
+    "name": "Razor Leaf",
     "debut": 1
   },
   "razor-wing": {
@@ -581,6 +1285,48 @@
     "name": "Rest",
     "debut": 1
   },
+  "rock-slide": {
+    "gens": {
+      "1": {
+        "type": "Rock",
+        "category": "Physical",
+        "power": 75,
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+      }
+    },
+    "name": "Rock Slide",
+    "debut": 1
+  },
+  "rock-throw": {
+    "gens": {
+      "1": {
+        "type": "Rock",
+        "category": "Physical",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Rock Throw",
+    "debut": 1
+  },
+  "rock-tomb": {
+    "gens": {
+      "1": {
+        "type": "Rock",
+        "category": "Physical",
+        "power": 60,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and lowers the target's Speed by one stage."
+      }
+    },
+    "name": "Rock Tomb",
+    "debut": 1
+  },
   "sand-attack": {
     "gens": {
       "1": {
@@ -592,6 +1338,32 @@
       }
     },
     "name": "Sand Attack",
+    "debut": 1
+  },
+  "sap-spray": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Status",
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Lowers the target's Speed by two stages."
+      }
+    },
+    "name": "Sap Spray",
+    "debut": 1
+  },
+  "scary-face": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Lowers the target's Attack by two stages."
+      }
+    },
+    "name": "Scary Face",
     "debut": 1
   },
   "scracth": {
@@ -607,6 +1379,48 @@
       }
     },
     "name": "Scratch",
+    "debut": 1
+  },
+  "screech": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 90,
+        "target": "single",
+        "effect": "Lowers the target's Defense by two stages."
+      }
+    },
+    "name": "Screech",
+    "debut": 1
+  },
+  "seismic-toss": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage equal to the user's level."
+      }
+    },
+    "name": "Seismic Toss",
+    "debut": 1
+  },
+  "sharpen": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Attack by one stage."
+      },
+      "3": {
+        "effect": "\"Sharpens\" the user's body, causing any attacker that makes contact to take damage. It can be used up to three times with damage scaling from 1/16, 1/8, and 1/4 respectively.",
+        "contact": false
+      }
+    },
+    "name": "Sharpen",
     "debut": 1
   },
   "sing": {
@@ -631,10 +1445,120 @@
         "accuracy": 90,
         "pp": 20,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "squirtle",
+            "how": "Level 25"
+          },
+          {
+            "p": "bulbasaur",
+            "how": "Level 28"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 35"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 35"
+          }
+        ]
       }
     },
     "name": "Slam",
+    "debut": 1
+  },
+  "sleep-powder": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Status",
+        "accuracy": 75,
+        "target": "single",
+        "effect": "Puts the target to sleep.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 16"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 16"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 16"
+          }
+        ]
+      }
+    },
+    "name": "Sleep Powder",
+    "debut": 1
+  },
+  "sludge-bomb": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Physical",
+        "power": 90,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of poisoning the target.",
+        "learners": [
+          {
+            "p": "ivysaur",
+            "how": "Level 39"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 39"
+          }
+        ]
+      }
+    },
+    "name": "Sludge Bomb",
+    "debut": 1
+  },
+  "smokescreen": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Lowers the target's Accuracy by one stage."
+      }
+    },
+    "name": "Smokescreen",
+    "debut": 1
+  },
+  "solarbeam": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Special",
+        "power": 130,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "The user will \"absorb light\" on the first turn. One the second turn, Solar Beam deals damage.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 31"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 43"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 43"
+          }
+        ]
+      }
+    },
+    "name": "Solar Beam",
     "debut": 1
   },
   "sonic-boom": {
@@ -644,10 +1568,24 @@
         "category": "Physical",
         "accuracy": 100,
         "target": "single",
-        "effect": "The damage of Sonic Boom is equal to the user's level."
+        "effect": "Deals damage equal to the user's level."
       }
     },
     "name": "Sonic Boom",
+    "debut": 1
+  },
+  "spark": {
+    "gens": {
+      "1": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 65,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+      }
+    },
+    "name": "Spark",
     "debut": 1
   },
   "spring-kick": {
@@ -676,6 +1614,72 @@
       }
     },
     "name": "Stomp",
+    "debut": 1
+  },
+  "strength": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Physical",
+        "power": 100,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage with no additional effect."
+      }
+    },
+    "name": "Strength",
+    "debut": 1
+  },
+  "stretching": {
+    "gens": {
+      "1": {
+        "type": "Normal",
+        "category": "Status",
+        "target": "user",
+        "effect": "Raises the user's Attack by one stage."
+      }
+    },
+    "name": "Stretching",
+    "debut": 1
+  },
+  "string-shot": {
+    "gens": {
+      "1": {
+        "type": "Bug",
+        "category": "Status",
+        "accuracy": 95,
+        "target": "single",
+        "effect": "Lowers the target's Speed by one stage."
+      }
+    },
+    "name": "String Shot",
+    "debut": 1
+  },
+  "stun-spore": {
+    "gens": {
+      "1": {
+        "type": "Grass",
+        "category": "Status",
+        "accuracy": 75,
+        "target": "single",
+        "effect": "Paralyzes the opponent."
+      }
+    },
+    "name": "Stun Spore",
+    "debut": 1
+  },
+  "submission": {
+    "gens": {
+      "1": {
+        "type": "Fighting",
+        "category": "Physical",
+        "power": 120,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil."
+      }
+    },
+    "name": "Submission",
     "debut": 1
   },
   "supersonic": {
@@ -757,6 +1761,22 @@
     "name": "Take Down",
     "debut": 1
   },
+  "teleport": {
+    "gens": {
+      "1": {
+        "type": "Psychic",
+        "category": "Status",
+        "target": "user",
+        "effect": "Allows the user to flee from wild battles."
+      },
+      "3": {
+        "effect": "Switches the user out. Allows the user to flee from wild battles.",
+        "contact": false
+      }
+    },
+    "name": "Teleport",
+    "debut": 1
+  },
   "thrash": {
     "gens": {
       "1": {
@@ -771,6 +1791,20 @@
     "name": "Thrash",
     "debut": 1
   },
+  "thunder": {
+    "gens": {
+      "1": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 70,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+      }
+    },
+    "name": "Thunder",
+    "debut": 1
+  },
   "thunder-punch": {
     "gens": {
       "1": {
@@ -779,10 +1813,67 @@
         "power": 75,
         "accuracy": 100,
         "pp": 15,
-        "effect": "Deals damage and has a 10% chance of burning the target."
+        "effect": "Deals damage and has a 10% chance of paralyzing the target."
       }
     },
     "name": "Thunder Punch",
+    "debut": 1
+  },
+  "thunder-shock": {
+    "gens": {
+      "1": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 40,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+      }
+    },
+    "name": "Thunder Shock",
+    "debut": 1
+  },
+  "thunder-wave": {
+    "gens": {
+      "1": {
+        "type": "Electric",
+        "category": "Status",
+        "accuracy": 80,
+        "target": "single",
+        "effect": "Paralyzes the opponent."
+      },
+      "2": {
+        "accuracy": 80
+      }
+    },
+    "name": "Thunder Wave",
+    "debut": 1
+  },
+  "thunderbolt": {
+    "gens": {
+      "1": {
+        "type": "Electric",
+        "category": "Special",
+        "power": 90,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+      }
+    },
+    "name": "Thunderbolt",
+    "debut": 1
+  },
+  "toxic": {
+    "gens": {
+      "1": {
+        "type": "Poison",
+        "category": "Status",
+        "accuracy": 80,
+        "target": "single",
+        "effect": "Badly poisons the target."
+      }
+    },
+    "name": "Toxic",
     "debut": 1
   },
   "transform": {
@@ -837,7 +1928,21 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "bulbasaur",
+            "how": "Level 7"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 7"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Vine Whip",
@@ -855,6 +1960,20 @@
       }
     },
     "name": "Water Gun",
+    "debut": 1
+  },
+  "wildfire": {
+    "gens": {
+      "1": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 120,
+        "accuracy": 70,
+        "target": "single",
+        "effect": "Deals damage and has a 10% chance of burning the target."
+      }
+    },
+    "name": "Wildfire",
     "debut": 1
   },
   "wing-attack": {
