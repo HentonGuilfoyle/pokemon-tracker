@@ -7,7 +7,41 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and the user will recover 50% of the HP drained."
+        "effect": "Deals damage and the user will recover 50% of the HP drained.",
+        "learners": [
+          {
+            "p": "tangela",
+            "how": "Level 29"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 4"
+          },
+          {
+            "p": "kabuto",
+            "how": "Level 34"
+          },
+          {
+            "p": "kabutops",
+            "how": "Level 34"
+          },
+          {
+            "p": "paras",
+            "how": "Level 4"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 4"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 4"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 4"
+          }
+        ]
       }
     },
     "name": "Absorb",
@@ -21,7 +55,21 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of lowering the target's Defense by one stage."
+        "effect": "Deals damage and has a 10% chance of lowering the target's Defense by one stage.",
+        "learners": [
+          {
+            "p": "bul",
+            "how": "Level 22"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 22"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 26"
+          }
+        ]
       }
     },
     "name": "Acid",
@@ -33,7 +81,37 @@
         "type": "Poison",
         "category": "Status",
         "target": "user",
-        "effect": "Raises the user's Defense by two stages."
+        "effect": "Raises the user's Defense by two stages.",
+        "learners": [
+          {
+            "p": "magcargo",
+            "how": "Level 25"
+          },
+          {
+            "p": "grimer",
+            "how": "Level 55"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 17"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 25"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 42"
+          },
+          {
+            "p": "muk",
+            "how": "Level 60"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 17"
+          }
+        ]
       }
     },
     "name": "Acid Armor",
@@ -47,7 +125,129 @@
         "pp": 5,
         "effect": "Raises the user's Speed by two stages",
         "flavor": "The user relaxes its body to sharply boost its Speed stat.",
-        "target": "user"
+        "target": "user",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 23"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 28"
+          },
+          {
+            "p": "scyther",
+            "how": "Level 42"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 28"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 25"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 31"
+          },
+          {
+            "p": "dragonite",
+            "how": "Level 20"
+          },
+          {
+            "p": "doduo",
+            "how": "Level 44"
+          },
+          {
+            "p": "moltres",
+            "how": "Level 55"
+          },
+          {
+            "p": "articuno",
+            "how": "Level 55"
+          },
+          {
+            "p": "zapdos",
+            "how": "Level 55"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 28"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 25"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 25"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 22"
+          },
+          {
+            "p": "dratini",
+            "how": "Level 20"
+          },
+          {
+            "p": "dragonair",
+            "how": "Level 20"
+          },
+          {
+            "p": "horsea",
+            "how": "Level 37"
+          },
+          {
+            "p": "seadra",
+            "how": "Level 41"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 44"
+          },
+          {
+            "p": "beedrill",
+            "how": "Level 30"
+          },
+          {
+            "p": "dodrio",
+            "how": "Level 51"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 31"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 23"
+          },
+          {
+            "p": "persian",
+            "how": "Level 28"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 28"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 28"
+          },
+          {
+            "p": "ponyta",
+            "how": "Level 48"
+          },
+          {
+            "p": "rapidash",
+            "how": "Level 55"
+          },
+          {
+            "p": "porygon",
+            "how": "Level 35"
+          }
+        ]
       }
     },
     "name": "Agility",
@@ -59,7 +259,49 @@
         "type": "Psychic",
         "category": "Status",
         "target": "user",
-        "effect": "Resets the user's stat changes."
+        "effect": "Resets the user's stat changes.",
+        "learners": [
+          {
+            "p": "slowbro",
+            "how": "Level 44"
+          },
+          {
+            "p": "magcargo",
+            "how": "Level 13"
+          },
+          {
+            "p": "slowpoke",
+            "how": "Level 40"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 13"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 13"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 16"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 16"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 16"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 13"
+          },
+          {
+            "p": "mewtwo",
+            "how": "Level 81"
+          }
+        ]
       }
     },
     "name": "Amnesia",
@@ -73,7 +315,37 @@
         "power": 65,
         "accuracy": 100,
         "effect": "Deals damage and has a 10% chance of lowering the target's Special by one stage.",
-        "target": "single"
+        "target": "single",
+        "learners": [
+          {
+            "p": "shellder",
+            "how": "Level 30"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 33"
+          },
+          {
+            "p": "seel",
+            "how": "Level 35"
+          },
+          {
+            "p": "dewgong",
+            "how": "Level 35"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 33"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 25"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 25"
+          }
+        ]
       }
     },
     "name": "Aurora Beam",
@@ -99,7 +371,45 @@
         "type": "Psychic",
         "category": "Status",
         "target": "user",
-        "effect": "Doubles the user's Defense against physical attacks until it switches out."
+        "effect": "Doubles the user's Defense against physical attacks until it switches out.",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 27"
+          },
+          {
+            "p": "voltorb",
+            "how": "Level 25"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 37"
+          },
+          {
+            "p": "kadabra",
+            "how": "Level 42"
+          },
+          {
+            "p": "mewtwo",
+            "how": "Level 63"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 25"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 40"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 47"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 38"
+          }
+        ]
       }
     },
     "name": "Barrier",
@@ -111,7 +421,17 @@
         "type": "Normal",
         "category": "Status",
         "target": "user",
-        "effect": "The user endures attacks for 2-3 turns, then strikes back for double the damage it took."
+        "effect": "The user endures attacks for 2-3 turns, then strikes back for double the damage it took.",
+        "learners": [
+          {
+            "p": "cubone",
+            "how": "Level 17"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 17"
+          }
+        ]
       }
     },
     "name": "Bide",
@@ -139,6 +459,18 @@
           {
             "p": "venusaur",
             "how": "Level 19"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 25"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 5"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 5"
           }
         ]
       }
@@ -159,6 +491,122 @@
           {
             "p": "squirtle",
             "how": "Level 13"
+          },
+          {
+            "p": "kangaskhan",
+            "how": "Level 26"
+          },
+          {
+            "p": "kangaskhan-m",
+            "how": "Level 26"
+          },
+          {
+            "p": "nidoran",
+            "how": "Level 7"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 7"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 7"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 13"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 7"
+          },
+          {
+            "p": "onix",
+            "how": "Level 10"
+          },
+          {
+            "p": "bul",
+            "how": "Level 4"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 7"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 10"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 7"
+          },
+          {
+            "p": "eevee",
+            "how": "Level 37"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 40"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 40"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 4"
+          },
+          {
+            "p": "paras",
+            "how": "Level 7"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 10"
+          },
+          {
+            "p": "persian",
+            "how": "Level 7"
+          },
+          {
+            "p": "rattata",
+            "how": "Level 4"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 4"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 7"
+          },
+          {
+            "p": "aerodactyl",
+            "how": "Level 38"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 13"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 13"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 13"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 13"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 10"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 10"
           }
         ]
       }
@@ -173,7 +621,17 @@
         "category": "Special",
         "power": 120,
         "accuracy": 70,
-        "effect": "Deals damage and has a 10% chance of freezing the target."
+        "effect": "Deals damage and has a 10% chance of freezing the target.",
+        "learners": [
+          {
+            "p": "jynx",
+            "how": "Level 58"
+          },
+          {
+            "p": "articuno",
+            "how": "Level 51"
+          }
+        ]
       }
     },
     "name": "Blizzard",
@@ -187,7 +645,37 @@
         "power": 80,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of paralyzing the target."
+        "effect": "Deals damage and has a 30% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "lapras",
+            "how": "Level 25"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 36"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 22"
+          },
+          {
+            "p": "jynx",
+            "how": "Level 39"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 13"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 13"
+          },
+          {
+            "p": "snorlax",
+            "how": "Level 35"
+          }
+        ]
       }
     },
     "name": "Body Slam",
@@ -201,7 +689,17 @@
         "power": 85,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance to lower the target's Defense by one stage."
+        "effect": "Deals damage and has a 10% chance to lower the target's Defense by one stage.",
+        "learners": [
+          {
+            "p": "cubone",
+            "how": "Level 5"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 5"
+          }
+        ]
       }
     },
     "name": "Bone Club",
@@ -215,7 +713,17 @@
         "power": 40,
         "accuracy": 90,
         "target": "single",
-        "effect": "Deals damage and will strike twice (with 40 base power each time)."
+        "effect": "Deals damage and will strike twice (with 40 base power each time).",
+        "learners": [
+          {
+            "p": "cubone",
+            "how": "Level 33"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 33"
+          }
+        ]
       }
     },
     "name": "Bonemerang",
@@ -233,6 +741,34 @@
         "learners": [
           {
             "p": "squirtle",
+            "how": "Level 7"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 7"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 4"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 7"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 4"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 4"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 7"
+          },
+          {
+            "p": "wartortle",
             "how": "Level 7"
           }
         ]
@@ -254,6 +790,34 @@
           {
             "p": "squirtle",
             "how": "Level 28"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 31"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 25"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 25"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 31"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 31"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 25"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 31"
           }
         ]
       }
@@ -273,6 +837,42 @@
           {
             "p": "squirtle",
             "how": "Level 16"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 16"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 13"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 16"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 13"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 13"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 16"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 19"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 19"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 16"
           }
         ]
       }
@@ -286,7 +886,33 @@
         "type": "Psychic",
         "category": "Status",
         "target": "user",
-        "effect": "Raises the user's Special by two stages."
+        "effect": "Raises the user's Special by two stages.",
+        "learners": [
+          {
+            "p": "kadabra",
+            "how": "Level 30"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 28"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 31"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 31"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 28"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Calm Mind",
@@ -300,7 +926,21 @@
         "accuracy": 90,
         "target": "single",
         "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/8 of their maximum HP after each turn, for 3-5 turns.",
-        "category": "Special"
+        "category": "Special",
+        "learners": [
+          {
+            "p": "shellder",
+            "how": "Level 23"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 13"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Clamp",
@@ -313,7 +953,61 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Confuses the target."
+        "effect": "Confuses the target.",
+        "learners": [
+          {
+            "p": "lapras",
+            "how": "Level 31"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 25"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 7"
+          },
+          {
+            "p": "magmar",
+            "how": "Level 39"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 13"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 13"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 13"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 19"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 13"
+          },
+          {
+            "p": "butterfree",
+            "how": "Level 26"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 7"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 19"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 25"
+          }
+        ]
       }
     },
     "name": "Confuse Ray",
@@ -327,7 +1021,53 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of confusing the target."
+        "effect": "Deals damage and has a 10% chance of confusing the target.",
+        "learners": [
+          {
+            "p": "kadabra",
+            "how": "Level 22"
+          },
+          {
+            "p": "psyduck",
+            "how": "Level 36"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 4"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 16"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 16"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 9"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 9"
+          },
+          {
+            "p": "butterfree",
+            "how": "Level 18"
+          },
+          {
+            "p": "golduck",
+            "how": "Level 39"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 4"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 22"
+          }
+        ]
       }
     },
     "name": "Confusion",
@@ -341,7 +1081,41 @@
         "power": 60,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and lowers the target's Speed by one stage."
+        "effect": "Deals damage and lowers the target's Speed by one stage.",
+        "learners": [
+          {
+            "p": "nidoking",
+            "how": "Level 20"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 31"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 13"
+          },
+          {
+            "p": "bul",
+            "how": "Level 16"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 16"
+          },
+          {
+            "p": "bulbasaur",
+            "how": "Level 25"
+          },
+          {
+            "p": "venusaur",
+            "how": "Level 31"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Constrict",
@@ -367,7 +1141,37 @@
         "category": "Physical",
         "accuracy": 100,
         "target": "single",
-        "effect": "When hit by a Physical Attack, the user strikes back with double the power."
+        "effect": "When hit by a Physical Attack, the user strikes back with double the power.",
+        "learners": [
+          {
+            "p": "machoke",
+            "how": "Level 30"
+          },
+          {
+            "p": "hitmonchan",
+            "how": "Level 53"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 22"
+          },
+          {
+            "p": "machop",
+            "how": "Level 28"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 40"
+          },
+          {
+            "p": "dugtrio",
+            "how": "Level 22"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Counter",
@@ -381,7 +1185,17 @@
         "power": 100,
         "accuracy": 90,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of lowering the target's Speed by one stage."
+        "effect": "Deals damage and has a 10% chance of lowering the target's Speed by one stage.",
+        "learners": [
+          {
+            "p": "krabby",
+            "how": "Level 22"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 22"
+          }
+        ]
       }
     },
     "name": "Crabhammer",
@@ -407,7 +1221,29 @@
         "type": "Normal",
         "category": "Status",
         "target": "user",
-        "effect": "Raises the user's Defense by one stage."
+        "effect": "Raises the user's Defense by one stage.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 5"
+          },
+          {
+            "p": "chansey",
+            "how": "Level 44"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 5"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 5"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 5"
+          }
+        ]
       }
     },
     "name": "Defense Curl",
@@ -420,7 +1256,57 @@
         "category": "Physical",
         "power": 70,
         "accuracy": 100,
-        "effect": "The user burrows underground on the first turn, disappearing from view and becoming invulnerable to most attacks. On the second turn, Dig deals damage."
+        "effect": "The user burrows underground on the first turn, disappearing from view and becoming invulnerable to most attacks. On the second turn, Dig deals damage.",
+        "learners": [
+          {
+            "p": "arcanine",
+            "how": "Level 22"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 22"
+          },
+          {
+            "p": "onix",
+            "how": "Level 13"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 30"
+          },
+          {
+            "p": "golem",
+            "how": "Level 31"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 13"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 24"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 24"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 29"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 25"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 22"
+          }
+        ]
       }
     },
     "name": "Dig",
@@ -433,7 +1319,73 @@
         "category": "Status",
         "accuracy": 80,
         "effect": "Causes the previous move the target used to be \"disabled\" for 3-5 turns, which prevents the move's use.",
-        "target": "single"
+        "target": "single",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 23"
+          },
+          {
+            "p": "slowbro",
+            "how": "Level 18"
+          },
+          {
+            "p": "slowpoke",
+            "how": "Level 18"
+          },
+          {
+            "p": "kadabra",
+            "how": "Level 22"
+          },
+          {
+            "p": "psyduck",
+            "how": "Level 31"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 19"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 28"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 19"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 19"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 25"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 27"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 34"
+          },
+          {
+            "p": "golduck",
+            "how": "Level 31"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 19"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 34"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 22"
+          }
+        ]
       }
     },
     "name": "Disable",
@@ -447,7 +1399,25 @@
         "power": 20,
         "accuracy": 100,
         "target": "single",
-        "effect": "Hits 3-5 times per turn used. Each hit has a 10% chance of confusing the target."
+        "effect": "Hits 3-5 times per turn used. Each hit has a 10% chance of confusing the target.",
+        "learners": [
+          {
+            "p": "kangaskhan",
+            "how": "Level 46"
+          },
+          {
+            "p": "kangaskhan-m",
+            "how": "Level 46"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 27"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 27"
+          }
+        ]
       }
     },
     "name": "Dizzy Punch",
@@ -460,7 +1430,97 @@
         "category": "Physical",
         "power": 120,
         "accuracy": 100,
-        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil."
+        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 27"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 30"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 41"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 35"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 34"
+          },
+          {
+            "p": "chansey",
+            "how": "Level 54"
+          },
+          {
+            "p": "machoke",
+            "how": "Level 34"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 40"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 31"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 28"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 34"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 23"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 24"
+          },
+          {
+            "p": "machop",
+            "how": "Level 31"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 42"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 37"
+          },
+          {
+            "p": "snorlax",
+            "how": "Level 48"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 27"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 41"
+          },
+          {
+            "p": "rattata",
+            "how": "Level 22"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 23"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Double-Edge",
@@ -474,7 +1534,13 @@
         "power": 40,
         "accuracy": 90,
         "target": "single",
-        "effect": "Deals damage and will strike twice (with 40 base power each time)."
+        "effect": "Deals damage and will strike twice (with 40 base power each time).",
+        "learners": [
+          {
+            "p": "jolteon",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Double Kick",
@@ -487,7 +1553,21 @@
         "category": "Status",
         "pp": 15,
         "effect": "Raises the user's Evasion by one stage.",
-        "flavor": "The user creates illusory copies of itself to raise its Evasion stat."
+        "flavor": "The user creates illusory copies of itself to raise its Evasion stat.",
+        "learners": [
+          {
+            "p": "scyther",
+            "how": "Level 24"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 16"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 16"
+          }
+        ]
       }
     },
     "name": "Double Team",
@@ -501,7 +1581,13 @@
         "power": 90,
         "accuracy": 95,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of lowering target's Defense by one stage."
+        "effect": "Deals damage and has a 10% chance of lowering target's Defense by one stage.",
+        "learners": [
+          {
+            "p": "gyarados",
+            "how": "Level 55"
+          }
+        ]
       }
     },
     "name": "Dragon Tail",
@@ -515,7 +1601,29 @@
         "power": 120,
         "accuracy": 100,
         "target": "single",
-        "effect": "Only works on a sleeping target. Deals damage and the user will recover 50% of the HP drained."
+        "effect": "Only works on a sleeping target. Deals damage and the user will recover 50% of the HP drained.",
+        "learners": [
+          {
+            "p": "gengar",
+            "how": "Level 38"
+          },
+          {
+            "p": "gastly",
+            "how": "Level 35"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 22"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 22"
+          },
+          {
+            "p": "haunter",
+            "how": "Level 38"
+          }
+        ]
       }
     },
     "name": "Dream Eater",
@@ -529,7 +1637,21 @@
         "power": 80,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "spearow",
+            "how": "Level 28"
+          },
+          {
+            "p": "doduo",
+            "how": "Level 30"
+          },
+          {
+            "p": "dodrio",
+            "how": "Level 30"
+          }
+        ]
       }
     },
     "name": "Drill Peck",
@@ -543,7 +1665,29 @@
         "power": 100,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "nidoking",
+            "how": "Level 35"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 35"
+          },
+          {
+            "p": "onix",
+            "how": "Level 31"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 25"
+          },
+          {
+            "p": "dugtrio",
+            "how": "Level 25"
+          }
+        ]
       },
       "2": {
         "effect": "Deals damage with no additional effect. It will hit with double power if an opponent is underground due to the move Dig."
@@ -578,7 +1722,49 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of burning the target."
+        "effect": "Deals damage and has a 10% chance of burning the target.",
+        "learners": [
+          {
+            "p": "magcargo",
+            "how": "Level 9"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 4"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 4"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 9"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 4"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 4"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 31"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 7"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 7"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Ember",
@@ -592,7 +1778,45 @@
         "power": 250,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage, but the user faints."
+        "effect": "Deals damage, but the user faints.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 37"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 40"
+          },
+          {
+            "p": "golem",
+            "how": "Level 43"
+          },
+          {
+            "p": "koffing",
+            "how": "Level 48"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 35"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 42"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 37"
+          },
+          {
+            "p": "weezing",
+            "how": "Level 53"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 39"
+          }
+        ]
       }
     },
     "name": "Explosion",
@@ -605,7 +1829,17 @@
         "category": "Special",
         "power": 110,
         "accuracy": 85,
-        "effect": "Deals damage and has a 10% chance of burning the target."
+        "effect": "Deals damage and has a 10% chance of burning the target.",
+        "learners": [
+          {
+            "p": "arcanine",
+            "how": "Level 39"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 37"
+          }
+        ]
       }
     },
     "name": "Fire Blast",
@@ -620,7 +1854,29 @@
         "accuracy": 100,
         "pp": 15,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of burning the target."
+        "effect": "Deals damage and has a 10% chance of burning the target.",
+        "learners": [
+          {
+            "p": "hitmonchan",
+            "how": "Level 33"
+          },
+          {
+            "p": "magmar",
+            "how": "Level 43"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 22"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 23"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 23"
+          }
+        ]
       },
       "4": {
         "category": "Physical"
@@ -637,7 +1893,41 @@
         "power": 30,
         "accuracy": 75,
         "target": "single",
-        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/16 of their maximum HP after each turn, for 3-5 turns."
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/16 of their maximum HP after each turn, for 3-5 turns.",
+        "learners": [
+          {
+            "p": "vulpix",
+            "how": "Level 22"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 22"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 44"
+          },
+          {
+            "p": "ponyta",
+            "how": "Level 39"
+          },
+          {
+            "p": "rapidash",
+            "how": "Level 39"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 31"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 35"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 35"
+          }
+        ]
       }
     },
     "name": "Fire Spin",
@@ -650,7 +1940,21 @@
         "category": "Physical",
         "accuracy": 30,
         "target": "single",
-        "effect": "Always makes the target faint."
+        "effect": "Always makes the target faint.",
+        "learners": [
+          {
+            "p": "onix",
+            "how": "Level 43"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 40"
+          },
+          {
+            "p": "dugtrio",
+            "how": "Level 45"
+          }
+        ]
       }
     },
     "name": "Fissure",
@@ -665,7 +1969,53 @@
         "accuracy": 100,
         "pp": 10,
         "effect": "Deals damage and has a 10% chance of burning the target.",
-        "flavor": "The target is scorched with intense flames. The target may suffer a burn."
+        "flavor": "The target is scorched with intense flames. The target may suffer a burn.",
+        "learners": [
+          {
+            "p": "magcargo",
+            "how": "Level 29"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 31"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 31"
+          },
+          {
+            "p": "magmar",
+            "how": "Level 55"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 29"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 28"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 28"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 54"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 28"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 31"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 31"
+          }
+        ]
       }
     },
     "name": "Flamethrower",
@@ -705,7 +2055,53 @@
         "category": "Status",
         "pp": 20,
         "effect": "Increases the user's critical hit ratio by one stage",
-        "flavor": "The user takes a deep breath and focuses to raise its critical-hit ratio"
+        "flavor": "The user takes a deep breath and focuses to raise its critical-hit ratio",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 15"
+          },
+          {
+            "p": "scyther",
+            "how": "Level 20"
+          },
+          {
+            "p": "pinsir",
+            "how": "Level 36"
+          },
+          {
+            "p": "machoke",
+            "how": "Level 22"
+          },
+          {
+            "p": "hitmonlee",
+            "how": "Level 43"
+          },
+          {
+            "p": "machop",
+            "how": "Level 22"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 22"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 22"
+          },
+          {
+            "p": "rattata",
+            "how": "Level 10"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 10"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 28"
+          }
+        ]
       }
     },
     "name": "Focus Energy",
@@ -718,7 +2114,57 @@
         "category": "Physical",
         "power": 20,
         "accuracy": 100,
-        "effect": "Hits 3-5 times per turn used."
+        "effect": "Hits 3-5 times per turn used.",
+        "learners": [
+          {
+            "p": "rhydon",
+            "how": "Level 40"
+          },
+          {
+            "p": "nidoran-m",
+            "how": "Level 10"
+          },
+          {
+            "p": "spearow",
+            "how": "Level 7"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 10"
+          },
+          {
+            "p": "rhyhorn",
+            "how": "Level 40"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 7"
+          },
+          {
+            "p": "doduo",
+            "how": "Level 24"
+          },
+          {
+            "p": "beedrill",
+            "how": "Level 10"
+          },
+          {
+            "p": "dodrio",
+            "how": "Level 24"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 13"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 10"
+          }
+        ]
       }
     },
     "name": "Fury Attack",
@@ -732,7 +2178,77 @@
         "power": 20,
         "accuracy": 100,
         "target": "single",
-        "effect": "Hits 3-5 times per turn used."
+        "effect": "Hits 3-5 times per turn used.",
+        "learners": [
+          {
+            "p": "nidoran",
+            "how": "Level 10"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 10"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 10"
+          },
+          {
+            "p": "psyduck",
+            "how": "Level 43"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 13"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 13"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 7"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 7"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 10"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 10"
+          },
+          {
+            "p": "paras",
+            "how": "Level 10"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 13"
+          },
+          {
+            "p": "golduck",
+            "how": "Level 48"
+          },
+          {
+            "p": "persian",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 10"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 13"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Fury Swipes",
@@ -759,7 +2275,17 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Paralyzes the opponent."
+        "effect": "Paralyzes the opponent.",
+        "learners": [
+          {
+            "p": "bul",
+            "how": "Level 13"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Glare",
@@ -777,6 +2303,62 @@
           {
             "p": "bulbasaur",
             "how": "Level 1"
+          },
+          {
+            "p": "slowbro",
+            "how": "Level 27"
+          },
+          {
+            "p": "slowpoke",
+            "how": "Level 27"
+          },
+          {
+            "p": "chansey",
+            "how": "Level 30"
+          },
+          {
+            "p": "seel",
+            "how": "Level 30"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 4"
+          },
+          {
+            "p": "doduo",
+            "how": "Level 20"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 7"
+          },
+          {
+            "p": "dodrio",
+            "how": "Level 20"
+          },
+          {
+            "p": "dugtrio",
+            "how": "Level 4"
+          },
+          {
+            "p": "dewgong",
+            "how": "Level 30"
+          },
+          {
+            "p": "ponyta",
+            "how": "Level 35"
+          },
+          {
+            "p": "rapidash",
+            "how": "Level 35"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 4"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 4"
           }
         ]
       }
@@ -803,6 +2385,30 @@
           {
             "p": "venusaur",
             "how": "Level 13"
+          },
+          {
+            "p": "tangela",
+            "how": "Level 49"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 22"
+          },
+          {
+            "p": "paras",
+            "how": "Level 22"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 7"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 7"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 7"
           }
         ]
       },
@@ -825,7 +2431,21 @@
         "accuracy": 30,
         "pp": 5,
         "target": "single",
-        "effect": "Always makes the target faint."
+        "effect": "Always makes the target faint.",
+        "learners": [
+          {
+            "p": "pinsir",
+            "how": "Level 30"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 40"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 44"
+          }
+        ]
       }
     },
     "name": "Guillotine",
@@ -840,7 +2460,37 @@
         "pp": 15,
         "effect": "Deals damage with no additional effect.",
         "category": "Physical",
-        "target": "single"
+        "target": "single",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 11"
+          },
+          {
+            "p": "spearow",
+            "how": "Level 10"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 10"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 7"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 16"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 7"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Gust",
@@ -853,7 +2503,53 @@
         "category": "Status",
         "pp": 30,
         "effect": "Raises the user's Defense by one stage.",
-        "flavor": "The user stiffens its body to raise its Defense stat."
+        "flavor": "The user stiffens its body to raise its Defense stat.",
+        "learners": [
+          {
+            "p": "magcargo",
+            "how": "Level 5"
+          },
+          {
+            "p": "grimer",
+            "how": "Level 42"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 25"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 22"
+          },
+          {
+            "p": "pinsir",
+            "how": "Level 43"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 5"
+          },
+          {
+            "p": "golem",
+            "how": "Level 5"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 5"
+          },
+          {
+            "p": "snorlax",
+            "how": "Level 41"
+          },
+          {
+            "p": "muk",
+            "how": "Level 45"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 5"
+          }
+        ]
       }
     },
     "name": "Harden",
@@ -865,7 +2561,37 @@
         "type": "Ice",
         "category": "Status",
         "accuracy": 100,
-        "effect": "Resets the stat changes of both Pokémon and removes confusion, Leech Seed, Focus Energy, Mist, Reflect and Light Screen. Also cures the target's status condition."
+        "effect": "Resets the stat changes of both Pokémon and removes confusion, Leech Seed, Focus Energy, Mist, Reflect and Light Screen. Also cures the target's status condition.",
+        "learners": [
+          {
+            "p": "drowzee",
+            "how": "Level 25"
+          },
+          {
+            "p": "koffing",
+            "how": "Level 45"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 44"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 22"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 25"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 22"
+          },
+          {
+            "p": "weezing",
+            "how": "Level 49"
+          }
+        ]
       }
     },
     "name": "Haze",
@@ -884,6 +2610,70 @@
           {
             "p": "squirtle",
             "how": "Level 19"
+          },
+          {
+            "p": "voltorb",
+            "how": "Level 13"
+          },
+          {
+            "p": "slowbro",
+            "how": "Level 22"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 13"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 19"
+          },
+          {
+            "p": "slowpoke",
+            "how": "Level 22"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 10"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 13"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 10"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 16"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 16"
+          },
+          {
+            "p": "dugtrio",
+            "how": "Level 10"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 10"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 13"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 13"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 13"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 19"
           }
         ]
       }
@@ -899,7 +2689,13 @@
         "power": 120,
         "accuracy": 90,
         "target": "single",
-        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/3 of its maximum HP."
+        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/3 of its maximum HP.",
+        "learners": [
+          {
+            "p": "hitmonlee",
+            "how": "Level 48"
+          }
+        ]
       }
     },
     "name": "High Jump Kick",
@@ -913,7 +2709,41 @@
         "power": 70,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "nidoran-m",
+            "how": "Level 7"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 7"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 20"
+          },
+          {
+            "p": "omanyte",
+            "how": "Level 34"
+          },
+          {
+            "p": "omastar",
+            "how": "Level 34"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 10"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 10"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Horn Attack",
@@ -927,7 +2757,33 @@
         "accuracy": 30,
         "pp": 5,
         "effect": "Always makes the target faint.",
-        "flavor": "The horn is rotated like a drill to ram. The target faints instantly if this attack hits."
+        "flavor": "The horn is rotated like a drill to ram. The target faints instantly if this attack hits.",
+        "learners": [
+          {
+            "p": "rhydon",
+            "how": "Level 48"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 50"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 50"
+          },
+          {
+            "p": "rhyhorn",
+            "how": "Level 45"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 37"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 39"
+          }
+        ]
       }
     },
     "name": "Horn Drill",
@@ -946,6 +2802,78 @@
           {
             "p": "squirtle",
             "how": "Level 34"
+          },
+          {
+            "p": "lapras",
+            "how": "Level 46"
+          },
+          {
+            "p": "gyarados",
+            "how": "Level 65"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 49"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 47"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 43"
+          },
+          {
+            "p": "psyduck",
+            "how": "Level 52"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 31"
+          },
+          {
+            "p": "kabuto",
+            "how": "Level 49"
+          },
+          {
+            "p": "kabutops",
+            "how": "Level 53"
+          },
+          {
+            "p": "horsea",
+            "how": "Level 45"
+          },
+          {
+            "p": "seadra",
+            "how": "Level 52"
+          },
+          {
+            "p": "omanyte",
+            "how": "Level 53"
+          },
+          {
+            "p": "omastar",
+            "how": "Level 49"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 54"
+          },
+          {
+            "p": "golduck",
+            "how": "Level 59"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 32"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 53"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 39"
           }
         ]
       }
@@ -960,7 +2888,33 @@
         "category": "Physical",
         "power": 200,
         "accuracy": 100,
-        "effect": "Deals damage, but the user must recharge on the next turn. If Hyper beam knocks out the target, the user does not need to recharge."
+        "effect": "Deals damage, but the user must recharge on the next turn. If Hyper beam knocks out the target, the user does not need to recharge.",
+        "learners": [
+          {
+            "p": "gyarados",
+            "how": "Level 70"
+          },
+          {
+            "p": "dragonite",
+            "how": "Level 60"
+          },
+          {
+            "p": "dratini",
+            "how": "Level 50"
+          },
+          {
+            "p": "dragonair",
+            "how": "Level 55"
+          },
+          {
+            "p": "snorlax",
+            "how": "Level 56"
+          },
+          {
+            "p": "aerodactyl",
+            "how": "Level 54"
+          }
+        ]
       }
     },
     "name": "Hyper Beam",
@@ -974,7 +2928,53 @@
         "power": 85,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 10% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "nidoran",
+            "how": "Level 19"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 25"
+          },
+          {
+            "p": "gyarados",
+            "how": "Level 50"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 25"
+          },
+          {
+            "p": "onix",
+            "how": "Level 22"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 31"
+          },
+          {
+            "p": "persian",
+            "how": "Level 31"
+          },
+          {
+            "p": "rattata",
+            "how": "Level 13"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 20"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 34"
+          }
+        ]
       }
     },
     "name": "Hyper Fang",
@@ -987,7 +2987,41 @@
         "category": "Status",
         "accuracy": 60,
         "target": "single",
-        "effect": "Puts the target to sleep."
+        "effect": "Puts the target to sleep.",
+        "learners": [
+          {
+            "p": "gengar",
+            "how": "Level 29"
+          },
+          {
+            "p": "gastly",
+            "how": "Level 27"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 19"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 10"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 10"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 10"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 19"
+          },
+          {
+            "p": "haunter",
+            "how": "Level 29"
+          }
+        ]
       }
     },
     "name": "Hypnosis",
@@ -1001,7 +3035,29 @@
         "power": 90,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of freezing the target."
+        "effect": "Deals damage and has a 10% chance of freezing the target.",
+        "learners": [
+          {
+            "p": "lapras",
+            "how": "Level 38"
+          },
+          {
+            "p": "shellder",
+            "how": "Level 50"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 39"
+          },
+          {
+            "p": "seel",
+            "how": "Level 50"
+          },
+          {
+            "p": "dewgong",
+            "how": "Level 56"
+          }
+        ]
       }
     },
     "name": "Ice Beam",
@@ -1016,7 +3072,17 @@
         "accuracy": 100,
         "pp": 15,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of freezing the target."
+        "effect": "Deals damage and has a 10% chance of freezing the target.",
+        "learners": [
+          {
+            "p": "hitmonchan",
+            "how": "Level 38"
+          },
+          {
+            "p": "jynx",
+            "how": "Level 31"
+          }
+        ]
       }
     },
     "name": "Ice Punch",
@@ -1030,7 +3096,17 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "mankey",
+            "how": "Level 7"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Jab",
@@ -1044,7 +3120,13 @@
         "power": 100,
         "accuracy": 95,
         "target": "single",
-        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/4 of its maximum HP."
+        "effect": "Deals damage, however, if it misses the user \"keeps going and crashes\", losing 1/4 of its maximum HP.",
+        "learners": [
+          {
+            "p": "hitmonlee",
+            "how": "Level 38"
+          }
+        ]
       }
     },
     "name": "Jump Kick",
@@ -1058,7 +3140,33 @@
         "power": 50,
         "accuracy": 100,
         "target": "user",
-        "effect": "Deals damage and has an increased critical hit ratio."
+        "effect": "Deals damage and has an increased critical hit ratio.",
+        "learners": [
+          {
+            "p": "machoke",
+            "how": "Level 4"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 16"
+          },
+          {
+            "p": "machop",
+            "how": "Level 4"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 34"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 16"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 4"
+          }
+        ]
       }
     },
     "name": "Karate Chop",
@@ -1086,7 +3194,33 @@
         "power": 60,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and the user will recover 50% of the HP drained."
+        "effect": "Deals damage and the user will recover 50% of the HP drained.",
+        "learners": [
+          {
+            "p": "parasect",
+            "how": "Level 13"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 16"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 7"
+          },
+          {
+            "p": "paras",
+            "how": "Level 13"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 16"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Leech Life",
@@ -1112,6 +3246,30 @@
           {
             "p": "venusaur",
             "how": "Level 10"
+          },
+          {
+            "p": "exeggcute",
+            "how": "Level 28"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 26"
+          },
+          {
+            "p": "paras",
+            "how": "Level 25"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 10"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 10"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 10"
           }
         ]
       }
@@ -1126,7 +3284,125 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Lowers the target's Special by one stage."
+        "effect": "Lowers the target's Special by one stage.",
+        "learners": [
+          {
+            "p": "rhydon",
+            "how": "Level 55"
+          },
+          {
+            "p": "kangaskhan",
+            "how": "Level 41"
+          },
+          {
+            "p": "kangaskhan-m",
+            "how": "Level 41"
+          },
+          {
+            "p": "spearow",
+            "how": "Level 4"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 9"
+          },
+          {
+            "p": "rhyhorn",
+            "how": "Level 50"
+          },
+          {
+            "p": "gyarados",
+            "how": "Level 50"
+          },
+          {
+            "p": "shellder",
+            "how": "Level 39"
+          },
+          {
+            "p": "scyther",
+            "how": "Level 17"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 4"
+          },
+          {
+            "p": "machoke",
+            "how": "Level 10"
+          },
+          {
+            "p": "magmar",
+            "how": "Level 36"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 4"
+          },
+          {
+            "p": "tauros",
+            "how": "Level 35"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 4"
+          },
+          {
+            "p": "moltres",
+            "how": "Level 51"
+          },
+          {
+            "p": "kabuto",
+            "how": "Level 44"
+          },
+          {
+            "p": "kabutops",
+            "how": "Level 46"
+          },
+          {
+            "p": "horsea",
+            "how": "Level 24"
+          },
+          {
+            "p": "seadra",
+            "how": "Level 24"
+          },
+          {
+            "p": "omanyte",
+            "how": "Level 39"
+          },
+          {
+            "p": "omastar",
+            "how": "Level 39"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 42"
+          },
+          {
+            "p": "machop",
+            "how": "Level 10"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 4"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 4"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 10"
+          },
+          {
+            "p": "persian",
+            "how": "Level 30"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 9"
+          }
+        ]
       }
     },
     "name": "Leer",
@@ -1140,7 +3416,37 @@
         "power": 60,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of paralyzing the target."
+        "effect": "Deals damage and has a 30% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "arcanine",
+            "how": "Level 10"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 10"
+          },
+          {
+            "p": "jynx",
+            "how": "Level 18"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 19"
+          },
+          {
+            "p": "persian",
+            "how": "Level 19"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 7"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Lick",
@@ -1152,7 +3458,57 @@
         "type": "Psychic",
         "category": "Status",
         "target": "user",
-        "effect": "Doubles the user's Special against special attacks until it switches out."
+        "effect": "Doubles the user's Special against special attacks until it switches out.",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 27"
+          },
+          {
+            "p": "voltorb",
+            "how": "Level 25"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 37"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 42"
+          },
+          {
+            "p": "kadabra",
+            "how": "Level 42"
+          },
+          {
+            "p": "chansey",
+            "how": "Level 48"
+          },
+          {
+            "p": "electabuzz",
+            "how": "Level 49"
+          },
+          {
+            "p": "zapdos",
+            "how": "Level 60"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 25"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 40"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 47"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 38"
+          }
+        ]
       }
     },
     "name": "Light Screen",
@@ -1179,7 +3535,21 @@
         "power": 50,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "machoke",
+            "how": "Level 7"
+          },
+          {
+            "p": "machop",
+            "how": "Level 7"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Low Kick",
@@ -1206,7 +3576,29 @@
         "power": 60,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and the user will recover 50% of the HP drained."
+        "effect": "Deals damage and the user will recover 50% of the HP drained.",
+        "learners": [
+          {
+            "p": "parasect",
+            "how": "Level 19"
+          },
+          {
+            "p": "paras",
+            "how": "Level 19"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 19"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 19"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 19"
+          }
+        ]
       }
     },
     "name": "Mega Drain",
@@ -1220,7 +3612,13 @@
         "power": 90,
         "accuracy": 95,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "hitmonlee",
+            "how": "Level 53"
+          }
+        ]
       }
     },
     "name": "Mega Kick",
@@ -1234,7 +3632,61 @@
         "power": 75,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect"
+        "effect": "Deals damage with no additional effect",
+        "learners": [
+          {
+            "p": "kangaskhan",
+            "how": "Level 36"
+          },
+          {
+            "p": "kangaskhan-m",
+            "how": "Level 36"
+          },
+          {
+            "p": "mew",
+            "how": "Level 20"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 13"
+          },
+          {
+            "p": "machoke",
+            "how": "Level 13"
+          },
+          {
+            "p": "hitmonchan",
+            "how": "Level 48"
+          },
+          {
+            "p": "golem",
+            "how": "Level 13"
+          },
+          {
+            "p": "machop",
+            "how": "Level 13"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 23"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 23"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 13"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 26"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Mega Punch",
@@ -1246,7 +3698,21 @@
         "type": "Normal",
         "category": "Status",
         "accuracy": 100,
-        "effect": "Uses a randomly chosen move."
+        "effect": "Uses a randomly chosen move.",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 21"
+          },
+          {
+            "p": "mew",
+            "how": "Level 30"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 31"
+          }
+        ]
       }
     },
     "name": "Metronome",
@@ -1259,7 +3725,21 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Copies the last move used by the target, replacing Mimic in the user's moves. The copied move always has 5 PP. The effect only lasts while the user is in battle."
+        "effect": "Copies the last move used by the target, replacing Mimic in the user's moves. The copied move always has 5 PP. The effect only lasts while the user is in battle.",
+        "learners": [
+          {
+            "p": "parasect",
+            "how": "Level 38"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 19"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 19"
+          }
+        ]
       }
     },
     "name": "Mimic",
@@ -1284,7 +3764,49 @@
         "type": "Normal",
         "category": "Status",
         "target": "user",
-        "effect": "Raises the user's Evasion by one stage."
+        "effect": "Raises the user's Evasion by one stage.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 29"
+          },
+          {
+            "p": "magcargo",
+            "how": "Level 21"
+          },
+          {
+            "p": "grimer",
+            "how": "Level 33"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 37"
+          },
+          {
+            "p": "chansey",
+            "how": "Level 38"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 21"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 15"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 15"
+          },
+          {
+            "p": "muk",
+            "how": "Level 33"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 29"
+          }
+        ]
       }
     },
     "name": "Minimize",
@@ -1296,7 +3818,25 @@
         "type": "Ice",
         "category": "Status",
         "accuracy": 100,
-        "effect": "User's stats cannot be changed until they switch out or the battle ends."
+        "effect": "User's stats cannot be changed until they switch out or the battle ends.",
+        "learners": [
+          {
+            "p": "lapras",
+            "how": "Level 20"
+          },
+          {
+            "p": "articuno",
+            "how": "Level 60"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 48"
+          },
+          {
+            "p": "mewtwo",
+            "how": "Level 75"
+          }
+        ]
       }
     },
     "name": "Mist",
@@ -1309,7 +3849,13 @@
         "category": "Physical",
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage equal to the user's level."
+        "effect": "Deals damage equal to the user's level.",
+        "learners": [
+          {
+            "p": "parasect",
+            "how": "Level 34"
+          }
+        ]
       }
     },
     "name": "Night Shade",
@@ -1323,7 +3869,25 @@
         "power": 120,
         "accuracy": 100,
         "target": "single",
-        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused."
+        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused.",
+        "learners": [
+          {
+            "p": "gyarados",
+            "how": "Level 50"
+          },
+          {
+            "p": "dragonite",
+            "how": "Level 45"
+          },
+          {
+            "p": "dratini",
+            "how": "Level 40"
+          },
+          {
+            "p": "dragonair",
+            "how": "Level 45"
+          }
+        ]
       },
       "3": {
         "category": "Physical",
@@ -1343,7 +3907,29 @@
         "type": "Flying",
         "category": "Status",
         "accuracy": 100,
-        "effect": "Uses the last move the target used."
+        "effect": "Uses the last move the target used.",
+        "learners": [
+          {
+            "p": "spearow",
+            "how": "Level 31"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 33"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 28"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 32"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Parrot Song",
@@ -1358,7 +3944,17 @@
         "accuracy": 100,
         "pp": 20,
         "target": "single",
-        "effect": "Money is earned after the battle."
+        "effect": "Money is earned after the battle.",
+        "learners": [
+          {
+            "p": "meowth",
+            "how": "Level 16"
+          },
+          {
+            "p": "persian",
+            "how": "Level 16"
+          }
+        ]
       }
     },
     "name": "Pay Day",
@@ -1385,7 +3981,21 @@
         "power": 120,
         "accuracy": 100,
         "target": "single",
-        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused."
+        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused.",
+        "learners": [
+          {
+            "p": "oddish",
+            "how": "Level 28"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 37"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Petal Dance",
@@ -1398,7 +4008,21 @@
         "category": "Physical",
         "power": 20,
         "accuracy": 100,
-        "effect": "Hits 3-5 times per turn used."
+        "effect": "Hits 3-5 times per turn used.",
+        "learners": [
+          {
+            "p": "sandslash",
+            "how": "Level 30"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 48"
+          },
+          {
+            "p": "beedrill",
+            "how": "Level 26"
+          }
+        ]
       }
     },
     "name": "Pin Missile",
@@ -1411,7 +4035,17 @@
         "category": "Status",
         "accuracy": 90,
         "target": "single",
-        "effect": "Poisons the target."
+        "effect": "Poisons the target.",
+        "learners": [
+          {
+            "p": "grimer",
+            "how": "Level 30"
+          },
+          {
+            "p": "muk",
+            "how": "Level 30"
+          }
+        ]
       }
     },
     "name": "Poison Gas",
@@ -1424,7 +4058,53 @@
         "category": "Physical",
         "power": 20,
         "accuracy": 100,
-        "effect": "Deals damage and has a 30% chance of poisoning the target."
+        "effect": "Deals damage and has a 30% chance of poisoning the target.",
+        "learners": [
+          {
+            "p": "nidoran-m",
+            "how": "Level 4"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 4"
+          },
+          {
+            "p": "nidoran",
+            "how": "Level 4"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 4"
+          },
+          {
+            "p": "bul",
+            "how": "Level 10"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 22"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 10"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 7"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 7"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 4"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 4"
+          }
+        ]
       }
     },
     "name": "Poison Sting",
@@ -1446,6 +4126,38 @@
           {
             "p": "venusaur",
             "how": "Level 18"
+          },
+          {
+            "p": "exeggcute",
+            "how": "Level 37"
+          },
+          {
+            "p": "tangela",
+            "how": "Level 32"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 7"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 7"
+          },
+          {
+            "p": "butterfree",
+            "how": "Level 14"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 22"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 22"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 15"
           }
         ]
       },
@@ -1467,7 +4179,13 @@
         "power": 110,
         "accuracy": 85,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "marowak",
+            "how": "Level 60"
+          }
+        ]
       }
     },
     "name": "Poltergeist",
@@ -1485,6 +4203,14 @@
           {
             "p": "bulbasaur",
             "how": "Level 1"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 4"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 4"
           }
         ]
       }
@@ -1506,6 +4232,14 @@
           {
             "p": "squirtle",
             "how": "Level 22"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 23"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 23"
           }
         ]
       }
@@ -1520,7 +4254,33 @@
         "category": "Special",
         "power": 65,
         "accuracy": 100,
-        "effect": "Deals damage and has a 10% chance of confusing the target."
+        "effect": "Deals damage and has a 10% chance of confusing the target.",
+        "learners": [
+          {
+            "p": "kadabra",
+            "how": "Level 26"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 25"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 26"
+          },
+          {
+            "p": "butterfree",
+            "how": "Level 30"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 27"
+          },
+          {
+            "p": "porygon",
+            "how": "Level 23"
+          }
+        ]
       }
     },
     "name": "Psybeam",
@@ -1534,7 +4294,49 @@
         "power": 90,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance to lower the target's Special by one stage."
+        "effect": "Deals damage and has a 10% chance to lower the target's Special by one stage.",
+        "learners": [
+          {
+            "p": "slowbro",
+            "how": "Level 55"
+          },
+          {
+            "p": "mew",
+            "how": "Level 40"
+          },
+          {
+            "p": "slowpoke",
+            "how": "Level 48"
+          },
+          {
+            "p": "kadabra",
+            "how": "Level 38"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 31"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 39"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 42"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 32"
+          },
+          {
+            "p": "mewtwo",
+            "how": "Level 66"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Psychic",
@@ -1547,7 +4349,25 @@
         "category": "Special",
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage equal to the user's level."
+        "effect": "Deals damage equal to the user's level.",
+        "learners": [
+          {
+            "p": "kadabra",
+            "how": "Level 34"
+          },
+          {
+            "p": "drowzee",
+            "how": "Level 16"
+          },
+          {
+            "p": "hypno",
+            "how": "Level 16"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 37"
+          }
+        ]
       }
     },
     "name": "Psywave",
@@ -1562,7 +4382,105 @@
         "accuracy": 100,
         "target": "single",
         "priority": 1,
-        "effect": "Deals damage with increased priority."
+        "effect": "Deals damage with increased priority.",
+        "learners": [
+          {
+            "p": "spearow",
+            "how": "Level 13"
+          },
+          {
+            "p": "voltorb",
+            "how": "Level 11"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 13"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 13"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 13"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 10"
+          },
+          {
+            "p": "bul",
+            "how": "Level 7"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 19"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 10"
+          },
+          {
+            "p": "vulpix",
+            "how": "Level 10"
+          },
+          {
+            "p": "ninetales",
+            "how": "Level 10"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 13"
+          },
+          {
+            "p": "eevee",
+            "how": "Level 27"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 27"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 27"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 27"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 7"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 19"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 11"
+          },
+          {
+            "p": "persian",
+            "how": "Level 10"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 10"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 10"
+          },
+          {
+            "p": "rattata",
+            "how": "Level 7"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Quick Attack",
@@ -1576,7 +4494,101 @@
         "power": 20,
         "accuracy": 100,
         "target": "single",
-        "effect": "The more times the user has been hit by attacks, the greater the move's power."
+        "effect": "The more times the user has been hit by attacks, the greater the move's power.",
+        "learners": [
+          {
+            "p": "nidoran-m",
+            "how": "Level 19"
+          },
+          {
+            "p": "spearow",
+            "how": "Level 25"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 16"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 29"
+          },
+          {
+            "p": "gyarados",
+            "how": "Level 60"
+          },
+          {
+            "p": "onix",
+            "how": "Level 34"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 25"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 17"
+          },
+          {
+            "p": "golem",
+            "how": "Level 17"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 10"
+          },
+          {
+            "p": "tauros",
+            "how": "Level 44"
+          },
+          {
+            "p": "doduo",
+            "how": "Level 36"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 48"
+          },
+          {
+            "p": "beedrill",
+            "how": "Level 18"
+          },
+          {
+            "p": "dodrio",
+            "how": "Level 39"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 10"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 29"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 16"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 17"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 16"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 16"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 16"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 38"
+          }
+        ]
       }
     },
     "name": "Rage",
@@ -1590,7 +4602,13 @@
         "power": 15,
         "accuracy": 100,
         "target": "single",
-        "effect": "Hits 6-10 times per turn used."
+        "effect": "Hits 6-10 times per turn used.",
+        "learners": [
+          {
+            "p": "machamp",
+            "how": "Level 47"
+          }
+        ]
       }
     },
     "name": "Rapid Punch",
@@ -1617,6 +4635,10 @@
           {
             "p": "venusaur",
             "how": "Level 23"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 33"
           }
         ]
       }
@@ -1633,7 +4655,25 @@
         "accuracy": 100,
         "pp": 15,
         "target": "single",
-        "effect": "Deals damage and has an increased critical hit ratio."
+        "effect": "Deals damage and has an increased critical hit ratio.",
+        "learners": [
+          {
+            "p": "pidgey",
+            "how": "Level 16"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 16"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 16"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 39"
+          }
+        ]
       }
     },
     "name": "Razor Wind",
@@ -1646,7 +4686,53 @@
         "pp": 5,
         "effect": "Restores 50% of the user's max HP.",
         "flavor": "A self-healing move that restores HP by up to half of the user's maximum HP.",
-        "category": "Status"
+        "category": "Status",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 29"
+          },
+          {
+            "p": "magcargo",
+            "how": "Level 33"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 45"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 27"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 33"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 28"
+          },
+          {
+            "p": "mewtwo",
+            "how": "Level 70"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 28"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 43"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 48"
+          },
+          {
+            "p": "porygon",
+            "how": "Level 28"
+          }
+        ]
       }
     },
     "name": "Recover",
@@ -1658,7 +4744,21 @@
         "type": "Psychic",
         "category": "Status",
         "accuracy": 100,
-        "effect": "Uses the last move the target used."
+        "effect": "Uses the last move the target used.",
+        "learners": [
+          {
+            "p": "exeggcute",
+            "how": "Level 25"
+          },
+          {
+            "p": "kadabra",
+            "how": "Level 46"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 52"
+          }
+        ]
       }
     },
     "name": "Reflect",
@@ -1671,7 +4771,33 @@
         "pp": 5,
         "effect": "Sleeps for 2 turns but is healed completely",
         "flavor": "The user sleeps for two turns to fully restore HP and heal any status problems",
-        "category": "Status"
+        "category": "Status",
+        "learners": [
+          {
+            "p": "seel",
+            "how": "Level 40"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 11"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 11"
+          },
+          {
+            "p": "dewgong",
+            "how": "Level 44"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 22"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 25"
+          }
+        ]
       }
     },
     "name": "Rest",
@@ -1685,7 +4811,25 @@
         "power": 75,
         "accuracy": 90,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "onix",
+            "how": "Level 28"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 25"
+          },
+          {
+            "p": "golem",
+            "how": "Level 25"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 25"
+          }
+        ]
       }
     },
     "name": "Rock Slide",
@@ -1699,7 +4843,33 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "magcargo",
+            "how": "Level 17"
+          },
+          {
+            "p": "onix",
+            "how": "Level 7"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 9"
+          },
+          {
+            "p": "golem",
+            "how": "Level 9"
+          },
+          {
+            "p": "slugma",
+            "how": "Level 17"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 9"
+          }
+        ]
       }
     },
     "name": "Rock Throw",
@@ -1713,7 +4883,13 @@
         "power": 60,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and lowers the target's Speed by one stage."
+        "effect": "Deals damage and lowers the target's Speed by one stage.",
+        "learners": [
+          {
+            "p": "onix",
+            "how": "Level 16"
+          }
+        ]
       }
     },
     "name": "Rock Tomb",
@@ -1726,7 +4902,37 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Lowers the target's Accuracy by one stage."
+        "effect": "Lowers the target's Accuracy by one stage.",
+        "learners": [
+          {
+            "p": "pidgey",
+            "how": "Level 4"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 4"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 7"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 7"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 4"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 4"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 4"
+          }
+        ]
       }
     },
     "name": "Sand Attack",
@@ -1739,7 +4945,17 @@
         "category": "Status",
         "accuracy": 90,
         "target": "single",
-        "effect": "Lowers the target's Speed by two stages."
+        "effect": "Lowers the target's Speed by two stages.",
+        "learners": [
+          {
+            "p": "gloom",
+            "how": "Level 29"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Sap Spray",
@@ -1752,7 +4968,41 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Lowers the target's Attack by two stages."
+        "effect": "Lowers the target's Attack by two stages.",
+        "learners": [
+          {
+            "p": "gyarados",
+            "how": "Level 50"
+          },
+          {
+            "p": "bul",
+            "how": "Level 19"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 22"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 19"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 22"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 22"
+          },
+          {
+            "p": "persian",
+            "how": "Level 35"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Scary Face",
@@ -1780,7 +5030,121 @@
         "category": "Status",
         "accuracy": 90,
         "target": "single",
-        "effect": "Lowers the target's Defense by two stages."
+        "effect": "Lowers the target's Defense by two stages.",
+        "learners": [
+          {
+            "p": "spearow",
+            "how": "Level 22"
+          },
+          {
+            "p": "voltorb",
+            "how": "Level 15"
+          },
+          {
+            "p": "grimer",
+            "how": "Level 48"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 25"
+          },
+          {
+            "p": "onix",
+            "how": "Level 25"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 22"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 19"
+          },
+          {
+            "p": "bul",
+            "how": "Level 25"
+          },
+          {
+            "p": "electabuzz",
+            "how": "Level 37"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 19"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 28"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 19"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 22"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 10"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 25"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 28"
+          },
+          {
+            "p": "dugtrio",
+            "how": "Level 19"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 10"
+          },
+          {
+            "p": "muk",
+            "how": "Level 53"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 15"
+          },
+          {
+            "p": "persian",
+            "how": "Level 22"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 25"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 20"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 20"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 19"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 25"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 25"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 27"
+          }
+        ]
       }
     },
     "name": "Screech",
@@ -1793,7 +5157,29 @@
         "category": "Physical",
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage equal to the user's level."
+        "effect": "Deals damage equal to the user's level.",
+        "learners": [
+          {
+            "p": "pinsir",
+            "how": "Level 25"
+          },
+          {
+            "p": "machoke",
+            "how": "Level 26"
+          },
+          {
+            "p": "machop",
+            "how": "Level 25"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 35"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 27"
+          }
+        ]
       }
     },
     "name": "Seismic Toss",
@@ -1807,7 +5193,61 @@
         "power": 200,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage, but the user faints."
+        "effect": "Deals damage, but the user faints.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 21"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 21"
+          },
+          {
+            "p": "golem",
+            "how": "Level 21"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 44"
+          },
+          {
+            "p": "koffing",
+            "how": "Level 40"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 34"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 21"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 21"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 36"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 21"
+          },
+          {
+            "p": "weezing",
+            "how": "Level 43"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 21"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 40"
+          }
+        ]
       }
     },
     "name": "Self-Destruct",
@@ -1819,7 +5259,33 @@
         "type": "Normal",
         "category": "Status",
         "target": "user",
-        "effect": "Raises the user's Attack by one stage."
+        "effect": "Raises the user's Attack by one stage.",
+        "learners": [
+          {
+            "p": "nidoran-m",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidoran",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 25"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 13"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 13"
+          }
+        ]
       },
       "3": {
         "effect": "\"Sharpens\" the user's body, causing any attacker that makes contact to take damage. It can be used up to three times with damage scaling from 1/16, 1/8, and 1/4 respectively.",
@@ -1836,7 +5302,25 @@
         "category": "Status",
         "accuracy": 55,
         "target": "single",
-        "effect": "Puts the target to sleep."
+        "effect": "Puts the target to sleep.",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 5"
+          },
+          {
+            "p": "lapras",
+            "how": "Level 16"
+          },
+          {
+            "p": "chansey",
+            "how": "Level 24"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Sing",
@@ -1850,7 +5334,37 @@
         "power": 150,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil."
+        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil.",
+        "learners": [
+          {
+            "p": "nidoking",
+            "how": "Level 45"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 45"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 45"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 35"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 45"
+          },
+          {
+            "p": "squirtle",
+            "how": "Level 31"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 35"
+          }
+        ]
       }
     },
     "name": "Skull Bash",
@@ -1864,7 +5378,33 @@
         "power": 130,
         "accuracy": 100,
         "target": "single",
-        "effect": "The user charges up on the first turn. On the second turn, Sky Attack deals damage."
+        "effect": "The user charges up on the first turn. On the second turn, Sky Attack deals damage.",
+        "learners": [
+          {
+            "p": "spearow",
+            "how": "Level 34"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 37"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 31"
+          },
+          {
+            "p": "moltres",
+            "how": "Level 60"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 36"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 37"
+          }
+        ]
       }
     },
     "name": "Sky Attack",
@@ -1896,6 +5436,102 @@
           {
             "p": "venusaur",
             "how": "Level 35"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 20"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 20"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 21"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 27"
+          },
+          {
+            "p": "tangela",
+            "how": "Level 45"
+          },
+          {
+            "p": "onix",
+            "how": "Level 19"
+          },
+          {
+            "p": "bul",
+            "how": "Level 29"
+          },
+          {
+            "p": "dragonite",
+            "how": "Level 35"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 19"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 19"
+          },
+          {
+            "p": "dratini",
+            "how": "Level 30"
+          },
+          {
+            "p": "dragonair",
+            "how": "Level 35"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 25"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 26"
+          },
+          {
+            "p": "ekans",
+            "how": "Level 28"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 21"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 28"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 28"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 28"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 19"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 19"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 27"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 19"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 42"
           }
         ]
       }
@@ -1911,7 +5547,77 @@
         "power": 80,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has an increased critical hit ratio."
+        "effect": "Deals damage and has an increased critical hit ratio.",
+        "learners": [
+          {
+            "p": "scyther",
+            "how": "Level 29"
+          },
+          {
+            "p": "pinsir",
+            "how": "Level 49"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 30"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 25"
+          },
+          {
+            "p": "krabby",
+            "how": "Level 19"
+          },
+          {
+            "p": "kabuto",
+            "how": "Level 39"
+          },
+          {
+            "p": "kabutops",
+            "how": "Level 39"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 22"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 22"
+          },
+          {
+            "p": "paras",
+            "how": "Level 28"
+          },
+          {
+            "p": "beedrill",
+            "how": "Level 22"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 19"
+          },
+          {
+            "p": "persian",
+            "how": "Level 25"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 18"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 18"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 19"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 19"
+          }
+        ]
       }
     },
     "name": "Slash",
@@ -1937,6 +5643,46 @@
           {
             "p": "venusaur",
             "how": "Level 16"
+          },
+          {
+            "p": "exeggcute",
+            "how": "Level 48"
+          },
+          {
+            "p": "tangela",
+            "how": "Level 39"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 16"
+          },
+          {
+            "p": "paras",
+            "how": "Level 16"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 20"
+          },
+          {
+            "p": "butterfree",
+            "how": "Level 14"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 13"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 13"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 13"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 18"
           }
         ]
       }
@@ -1961,6 +5707,46 @@
           {
             "p": "venusaur",
             "how": "Level 27"
+          },
+          {
+            "p": "grimer",
+            "how": "Level 37"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 29"
+          },
+          {
+            "p": "koffing",
+            "how": "Level 32"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 22"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 22"
+          },
+          {
+            "p": "muk",
+            "how": "Level 37"
+          },
+          {
+            "p": "weezing",
+            "how": "Level 32"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 29"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 21"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 21"
           }
         ]
       }
@@ -1985,6 +5771,30 @@
           {
             "p": "venusaur",
             "how": "Level 39"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 41"
+          },
+          {
+            "p": "venonat",
+            "how": "Level 31"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 38"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 43"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 33"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 37"
           }
         ]
       }
@@ -2000,7 +5810,13 @@
         "power": 40,
         "accuracy": 80,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of poisoning the target."
+        "effect": "Deals damage and has a 30% chance of poisoning the target.",
+        "learners": [
+          {
+            "p": "magmar",
+            "how": "Level 52"
+          }
+        ]
       }
     },
     "name": "Smog",
@@ -2013,7 +5829,41 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Lowers the target's Accuracy by one stage."
+        "effect": "Lowers the target's Accuracy by one stage.",
+        "learners": [
+          {
+            "p": "magmar",
+            "how": "Level 48"
+          },
+          {
+            "p": "koffing",
+            "how": "Level 37"
+          },
+          {
+            "p": "horsea",
+            "how": "Level 19"
+          },
+          {
+            "p": "seadra",
+            "how": "Level 19"
+          },
+          {
+            "p": "weezing",
+            "how": "Level 39"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 10"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 10"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 10"
+          }
+        ]
       }
     },
     "name": "Smokescreen",
@@ -2052,6 +5902,10 @@
           {
             "p": "venusaur",
             "how": "Level 43"
+          },
+          {
+            "p": "exeggcute",
+            "how": "Level 42"
           }
         ]
       }
@@ -2066,7 +5920,25 @@
         "category": "Physical",
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage equal to the user's level."
+        "effect": "Deals damage equal to the user's level.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 3"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 7"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 3"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 7"
+          }
+        ]
       }
     },
     "name": "Sonic Boom",
@@ -2080,7 +5952,29 @@
         "power": 65,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+        "effect": "Deals damage and has a 10% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 17"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 16"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 16"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 17"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 16"
+          }
+        ]
       }
     },
     "name": "Spark",
@@ -2094,7 +5988,29 @@
         "power": 20,
         "accuracy": 100,
         "target": "single",
-        "effect": "Hits 3-5 times per turn used."
+        "effect": "Hits 3-5 times per turn used.",
+        "learners": [
+          {
+            "p": "omanyte",
+            "how": "Level 46"
+          },
+          {
+            "p": "omastar",
+            "how": "Level 44"
+          },
+          {
+            "p": "cloyster",
+            "how": "Level 50"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 22"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 22"
+          }
+        ]
       },
       "2": {
         "type": "Steel"
@@ -2122,7 +6038,17 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Puts the target to sleep."
+        "effect": "Puts the target to sleep.",
+        "learners": [
+          {
+            "p": "parasect",
+            "how": "Level 42"
+          },
+          {
+            "p": "paras",
+            "how": "Level 31"
+          }
+        ]
       }
     },
     "name": "Spore",
@@ -2136,7 +6062,13 @@
         "power": 90,
         "accuracy": 95,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "hitmonlee",
+            "how": "Level 33"
+          }
+        ]
       }
     },
     "name": "Spring Kick",
@@ -2150,7 +6082,33 @@
         "power": 65,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 30% chance of causing the target to flinch."
+        "effect": "Deals damage and has a 30% chance of causing the target to flinch.",
+        "learners": [
+          {
+            "p": "rhydon",
+            "how": "Level 30"
+          },
+          {
+            "p": "exeggutor",
+            "how": "Level 28"
+          },
+          {
+            "p": "rhyhorn",
+            "how": "Level 30"
+          },
+          {
+            "p": "tauros",
+            "how": "Level 21"
+          },
+          {
+            "p": "ponyta",
+            "how": "Level 32"
+          },
+          {
+            "p": "rapidash",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Stomp",
@@ -2216,7 +6174,49 @@
         "category": "Status",
         "accuracy": 75,
         "target": "single",
-        "effect": "Paralyzes the opponent."
+        "effect": "Paralyzes the opponent.",
+        "learners": [
+          {
+            "p": "exeggcute",
+            "how": "Level 32"
+          },
+          {
+            "p": "tangela",
+            "how": "Level 36"
+          },
+          {
+            "p": "parasect",
+            "how": "Level 16"
+          },
+          {
+            "p": "paras",
+            "how": "Level 16"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 20"
+          },
+          {
+            "p": "butterfree",
+            "how": "Level 14"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 22"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 22"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 22"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 21"
+          }
+        ]
       }
     },
     "name": "Stun Spore",
@@ -2230,7 +6230,33 @@
         "power": 120,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil."
+        "effect": "Deals damage, but the user receives 1/3 of their max HP in recoil.",
+        "learners": [
+          {
+            "p": "machoke",
+            "how": "Level 38"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 37"
+          },
+          {
+            "p": "machop",
+            "how": "Level 34"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 45"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 38"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Submission",
@@ -2242,7 +6268,17 @@
         "type": "Normal",
         "category": "Status",
         "target": "user",
-        "effect": "The user spends 1/4 of its max HP to make a substitute that takes hits in its place."
+        "effect": "The user spends 1/4 of its max HP to make a substitute that takes hits in its place.",
+        "learners": [
+          {
+            "p": "krabby",
+            "how": "Level 37"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 40"
+          }
+        ]
       }
     },
     "name": "Substitute",
@@ -2255,7 +6291,17 @@
         "category": "Physical",
         "accuracy": 90,
         "target": "single",
-        "effect": "Deals damage equal to half the target's current HP."
+        "effect": "Deals damage equal to half the target's current HP.",
+        "learners": [
+          {
+            "p": "rattata",
+            "how": "Level 19"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 19"
+          }
+        ]
       }
     },
     "name": "Super Fang",
@@ -2267,7 +6313,41 @@
         "type": "Normal",
         "category": "Status",
         "accuracy": 55,
-        "effect": "Causes the target to become confused."
+        "effect": "Causes the target to become confused.",
+        "learners": [
+          {
+            "p": "nidoqueen",
+            "how": "Level 16"
+          },
+          {
+            "p": "shellder",
+            "how": "Level 18"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 4"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 4"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 16"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 16"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 16"
+          },
+          {
+            "p": "aerodactyl",
+            "how": "Level 33"
+          }
+        ]
       }
     },
     "name": "Supersonic",
@@ -2295,7 +6375,41 @@
         "power": 60,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and never misses."
+        "effect": "Deals damage and never misses.",
+        "learners": [
+          {
+            "p": "clefairy",
+            "how": "Level 17"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 32"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 22"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 25"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 22"
+          },
+          {
+            "p": "oddish",
+            "how": "Level 16"
+          },
+          {
+            "p": "gloom",
+            "how": "Level 16"
+          },
+          {
+            "p": "vileplume",
+            "how": "Level 16"
+          }
+        ]
       }
     },
     "name": "Swift",
@@ -2308,7 +6422,17 @@
         "category": "Status",
         "pp": 5,
         "target": "user",
-        "effect": "Raises the user's Attack by two stages."
+        "effect": "Raises the user's Attack by two stages.",
+        "learners": [
+          {
+            "p": "scyther",
+            "how": "Level 35"
+          },
+          {
+            "p": "pinsir",
+            "how": "Level 54"
+          }
+        ]
       }
     },
     "name": "Swords Dance",
@@ -2322,7 +6446,25 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "gyarados",
+            "how": "Level 10"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 3"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 3"
+          },
+          {
+            "p": "magikarp",
+            "how": "Level 10"
+          }
+        ]
       }
     },
     "name": "Tackle",
@@ -2335,7 +6477,89 @@
         "category": "Status",
         "accuracy": 100,
         "target": "single",
-        "effect": "Lowers the target's Defense by one stage."
+        "effect": "Lowers the target's Defense by one stage.",
+        "learners": [
+          {
+            "p": "rhydon",
+            "how": "Level 35"
+          },
+          {
+            "p": "kangaskhan",
+            "how": "Level 31"
+          },
+          {
+            "p": "kangaskhan-m",
+            "how": "Level 31"
+          },
+          {
+            "p": "clefairy",
+            "how": "Level 3"
+          },
+          {
+            "p": "rhyhorn",
+            "how": "Level 35"
+          },
+          {
+            "p": "psyduck",
+            "how": "Level 28"
+          },
+          {
+            "p": "tauros",
+            "how": "Level 28"
+          },
+          {
+            "p": "poliwrath",
+            "how": "Level 7"
+          },
+          {
+            "p": "meowth",
+            "how": "Level 4"
+          },
+          {
+            "p": "eevee",
+            "how": "Level 31"
+          },
+          {
+            "p": "flareon",
+            "how": "Level 37"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 37"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 37"
+          },
+          {
+            "p": "poliwhirl",
+            "how": "Level 7"
+          },
+          {
+            "p": "poliwrath-2",
+            "how": "Level 7"
+          },
+          {
+            "p": "golduck",
+            "how": "Level 28"
+          },
+          {
+            "p": "clefable",
+            "how": "Level 4"
+          },
+          {
+            "p": "persian",
+            "how": "Level 4"
+          },
+          {
+            "p": "ponyta",
+            "how": "Level 30"
+          },
+          {
+            "p": "rapidash",
+            "how": "Level 30"
+          }
+        ]
       }
     },
     "name": "Tail Whip",
@@ -2348,7 +6572,141 @@
         "category": "Physical",
         "power": 90,
         "accuracy": 100,
-        "effect": "Deals damage, but the user receives 1/4 of their max HP in recoil."
+        "effect": "Deals damage, but the user receives 1/4 of their max HP in recoil.",
+        "learners": [
+          {
+            "p": "rhydon",
+            "how": "Level 64"
+          },
+          {
+            "p": "voltorb",
+            "how": "Level 19"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 21"
+          },
+          {
+            "p": "rhyhorn",
+            "how": "Level 55"
+          },
+          {
+            "p": "arcanine",
+            "how": "Level 19"
+          },
+          {
+            "p": "growlithe",
+            "how": "Level 19"
+          },
+          {
+            "p": "machoke",
+            "how": "Level 19"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 25"
+          },
+          {
+            "p": "seel",
+            "how": "Level 45"
+          },
+          {
+            "p": "tauros",
+            "how": "Level 51"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 25"
+          },
+          {
+            "p": "sandshrew",
+            "how": "Level 19"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 19"
+          },
+          {
+            "p": "jigglypuff",
+            "how": "Level 17"
+          },
+          {
+            "p": "wigglytuff",
+            "how": "Level 17"
+          },
+          {
+            "p": "eevee",
+            "how": "Level 45"
+          },
+          {
+            "p": "machop",
+            "how": "Level 19"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 25"
+          },
+          {
+            "p": "dewgong",
+            "how": "Level 50"
+          },
+          {
+            "p": "machamp",
+            "how": "Level 19"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 19"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 21"
+          },
+          {
+            "p": "ponyta",
+            "how": "Level 43"
+          },
+          {
+            "p": "rapidash",
+            "how": "Level 47"
+          },
+          {
+            "p": "rattata",
+            "how": "Level 16"
+          },
+          {
+            "p": "raticate",
+            "how": "Level 16"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 20"
+          },
+          {
+            "p": "aerodactyl",
+            "how": "Level 45"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 25"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 27"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 27"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 16"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 16"
+          }
+        ]
       }
     },
     "name": "Take Down",
@@ -2378,7 +6736,61 @@
         "power": 120,
         "accuracy": 100,
         "target": "single",
-        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused."
+        "effect": "The user attacks for 2-3 turns, during which it cannot switch out, and then becomes confused.",
+        "learners": [
+          {
+            "p": "nidoking",
+            "how": "Level 30"
+          },
+          {
+            "p": "cubone",
+            "how": "Level 37"
+          },
+          {
+            "p": "gyarados",
+            "how": "Level 40"
+          },
+          {
+            "p": "graveler",
+            "how": "Level 35"
+          },
+          {
+            "p": "golem",
+            "how": "Level 37"
+          },
+          {
+            "p": "mankey",
+            "how": "Level 34"
+          },
+          {
+            "p": "jynx",
+            "how": "Level 47"
+          },
+          {
+            "p": "primeape",
+            "how": "Level 34"
+          },
+          {
+            "p": "magikarp",
+            "how": "Level 40"
+          },
+          {
+            "p": "marowak",
+            "how": "Level 37"
+          },
+          {
+            "p": "geodude",
+            "how": "Level 34"
+          },
+          {
+            "p": "teddiursa",
+            "how": "Level 31"
+          },
+          {
+            "p": "ursaring",
+            "how": "Level 31"
+          }
+        ]
       }
     },
     "name": "Thrash",
@@ -2392,7 +6804,33 @@
         "power": 120,
         "accuracy": 70,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+        "effect": "Deals damage and has a 10% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "electabuzz",
+            "how": "Level 54"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 36"
+          },
+          {
+            "p": "zapdos",
+            "how": "Level 51"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 34"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 54"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 34"
+          }
+        ]
       }
     },
     "name": "Thunder",
@@ -2406,7 +6844,17 @@
         "power": 75,
         "accuracy": 100,
         "pp": 15,
-        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+        "effect": "Deals damage and has a 10% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "hitmonchan",
+            "how": "Level 43"
+          },
+          {
+            "p": "electabuzz",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Thunder Punch",
@@ -2420,7 +6868,37 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+        "effect": "Deals damage and has a 10% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "voltorb",
+            "how": "Level 7"
+          },
+          {
+            "p": "electabuzz",
+            "how": "Level 34"
+          },
+          {
+            "p": "magneton",
+            "how": "Level 4"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 4"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 31"
+          },
+          {
+            "p": "electrode",
+            "how": "Level 7"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 4"
+          }
+        ]
       }
     },
     "name": "Thunder Shock",
@@ -2433,7 +6911,37 @@
         "category": "Status",
         "accuracy": 80,
         "target": "single",
-        "effect": "Paralyzes the opponent."
+        "effect": "Paralyzes the opponent.",
+        "learners": [
+          {
+            "p": "magneton",
+            "how": "Level 10"
+          },
+          {
+            "p": "dragonite",
+            "how": "Level 10"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 10"
+          },
+          {
+            "p": "dratini",
+            "how": "Level 10"
+          },
+          {
+            "p": "dragonair",
+            "how": "Level 10"
+          },
+          {
+            "p": "jolteon",
+            "how": "Level 40"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 10"
+          }
+        ]
       },
       "2": {
         "accuracy": 80
@@ -2450,7 +6958,21 @@
         "power": 90,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of paralyzing the target."
+        "effect": "Deals damage and has a 10% chance of paralyzing the target.",
+        "learners": [
+          {
+            "p": "magneton",
+            "how": "Level 28"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 28"
+          },
+          {
+            "p": "magnemite",
+            "how": "Level 28"
+          }
+        ]
       }
     },
     "name": "Thunderbolt",
@@ -2463,7 +6985,33 @@
         "category": "Status",
         "accuracy": 80,
         "target": "single",
-        "effect": "Badly poisons the target."
+        "effect": "Badly poisons the target.",
+        "learners": [
+          {
+            "p": "nidoran-m",
+            "how": "Level 31"
+          },
+          {
+            "p": "nidoking",
+            "how": "Level 40"
+          },
+          {
+            "p": "nidoran",
+            "how": "Level 31"
+          },
+          {
+            "p": "nidoqueen",
+            "how": "Level 40"
+          },
+          {
+            "p": "nidorino",
+            "how": "Level 32"
+          },
+          {
+            "p": "nidorina",
+            "how": "Level 32"
+          }
+        ]
       }
     },
     "name": "Toxic",
@@ -2476,7 +7024,13 @@
         "pp": 10,
         "effect": "User takes on the form and attacks of the target.",
         "flavor": "The user transforms into a copy of the target with even the same moveset.",
-        "category": "Status"
+        "category": "Status",
+        "learners": [
+          {
+            "p": "mew",
+            "how": "Level 10"
+          }
+        ]
       },
       "3": {
         "effect": "User takes on the form and attacks of the target. Can target any Pokémon on the field."
@@ -2493,7 +7047,29 @@
         "power": 80,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "magneton",
+            "how": "Level 25"
+          },
+          {
+            "p": "diglett",
+            "how": "Level 25"
+          },
+          {
+            "p": "doduo",
+            "how": "Level 40"
+          },
+          {
+            "p": "dodrio",
+            "how": "Level 45"
+          },
+          {
+            "p": "porygon",
+            "how": "Level 42"
+          }
+        ]
       }
     },
     "name": "Tri Attack",
@@ -2506,7 +7082,13 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "effect": "Deals damage and will strike twice (with 40 base power each time). It has a 30% chance of poisoning the target on each hit."
+        "effect": "Deals damage and will strike twice (with 40 base power each time). It has a 30% chance of poisoning the target on each hit.",
+        "learners": [
+          {
+            "p": "beedrill",
+            "how": "Level 14"
+          }
+        ]
       }
     },
     "name": "Twineedle",
@@ -2521,7 +7103,17 @@
         "accuracy": 100,
         "pp": 15,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "krabby",
+            "how": "Level 10"
+          },
+          {
+            "p": "kingler",
+            "how": "Level 10"
+          }
+        ]
       }
     },
     "name": "Vice Grip",
@@ -2563,7 +7155,49 @@
         "power": 40,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "slowbro",
+            "how": "Level 33"
+          },
+          {
+            "p": "tentacool",
+            "how": "Level 9"
+          },
+          {
+            "p": "staryu",
+            "how": "Level 17"
+          },
+          {
+            "p": "slowpoke",
+            "how": "Level 33"
+          },
+          {
+            "p": "horsea",
+            "how": "Level 30"
+          },
+          {
+            "p": "seadra",
+            "how": "Level 30"
+          },
+          {
+            "p": "vaporeon",
+            "how": "Level 31"
+          },
+          {
+            "p": "tentacruel",
+            "how": "Level 9"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 4"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 4"
+          }
+        ]
       }
     },
     "name": "Water Gun",
@@ -2577,7 +7211,25 @@
         "power": 80,
         "accuracy": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "gyarados",
+            "how": "Level 50"
+          },
+          {
+            "p": "magikarp",
+            "how": "Level 50"
+          },
+          {
+            "p": "goldeen",
+            "how": "Level 31"
+          },
+          {
+            "p": "seaking",
+            "how": "Level 31"
+          }
+        ]
       }
     },
     "name": "Waterfall",
@@ -2591,7 +7243,21 @@
         "power": 120,
         "accuracy": 70,
         "target": "single",
-        "effect": "Deals damage and has a 10% chance of burning the target."
+        "effect": "Deals damage and has a 10% chance of burning the target.",
+        "learners": [
+          {
+            "p": "charmander",
+            "how": "Level 34"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 39"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 44"
+          }
+        ]
       }
     },
     "name": "Wildfire",
@@ -2606,7 +7272,45 @@
         "accuracy": 100,
         "pp": 20,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "spearow",
+            "how": "Level 19"
+          },
+          {
+            "p": "fearow",
+            "how": "Level 19"
+          },
+          {
+            "p": "pidgey",
+            "how": "Level 22"
+          },
+          {
+            "p": "zubat",
+            "how": "Level 13"
+          },
+          {
+            "p": "venomoth",
+            "how": "Level 30"
+          },
+          {
+            "p": "golbat",
+            "how": "Level 13"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 24"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 24"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 36"
+          }
+        ]
       }
     },
     "name": "Wing Attack",
@@ -2618,7 +7322,25 @@
         "type": "Normal",
         "category": "Status",
         "target": "user",
-        "effect": "Raises the user's Defense by one stage."
+        "effect": "Raises the user's Defense by one stage.",
+        "learners": [
+          {
+            "p": "slowbro",
+            "how": "Level 37"
+          },
+          {
+            "p": "blastoise",
+            "how": "Level 10"
+          },
+          {
+            "p": "squirtle",
+            "how": "Level 10"
+          },
+          {
+            "p": "wartortle",
+            "how": "Level 10"
+          }
+        ]
       }
     },
     "name": "Withdraw",
@@ -2632,7 +7354,17 @@
         "power": 50,
         "accuracy": 90,
         "target": "single",
-        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/8 of their maximum HP after each turn, for 3-5 turns."
+        "effect": "Inflicts damage on the first turn then traps the opponent, causing them to lose 1/8 of their maximum HP after each turn, for 3-5 turns.",
+        "learners": [
+          {
+            "p": "onix",
+            "how": "Level 4"
+          },
+          {
+            "p": "leafeon",
+            "how": "Level 13"
+          }
+        ]
       }
     },
     "name": "Wrap",
