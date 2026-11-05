@@ -7986,7 +7986,8 @@
         "evolvesFrom": "tangela",
         "species": "Giant Vine Pokémon",
         "height": 2,
-        "weight": 128.6
+        "weight": 128.6,
+        "sprite": "tangrowth-beta.png"
       },
       "2": {
         "stats": {
@@ -8028,8 +8029,7 @@
     },
     "name": "Tangrowth",
     "dex": 123,
-    "debut": 1,
-    "art": 465
+    "debut": 1
   },
   "tauros": {
     "gens": {

@@ -1024,10 +1024,6 @@
         "effect": "Deals damage and has a 10% chance of confusing the target.",
         "learners": [
           {
-            "p": "kadabra",
-            "how": "Level 22"
-          },
-          {
             "p": "psyduck",
             "how": "Level 36"
           },
@@ -1062,10 +1058,6 @@
           {
             "p": "hypno",
             "how": "Level 4"
-          },
-          {
-            "p": "alakazam",
-            "how": "Level 22"
           }
         ]
       }
@@ -1473,10 +1465,6 @@
             "how": "Level 28"
           },
           {
-            "p": "sandslash",
-            "how": "Level 34"
-          },
-          {
             "p": "jigglypuff",
             "how": "Level 23"
           },
@@ -1519,6 +1507,10 @@
           {
             "p": "ursaring",
             "how": "Level 42"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 33"
           }
         ]
       }
@@ -3180,7 +3172,17 @@
         "power": 70,
         "accuracy": 100,
         "target": "single",
-        "effect": "Inflicts damage based on the target's Defense, not Special."
+        "effect": "Inflicts damage based on the target's Defense, not Special.",
+        "learners": [
+          {
+            "p": "kadabra",
+            "how": "Level 22"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 22"
+          }
+        ]
       }
     },
     "name": "Kinesis",
@@ -3401,8 +3403,23 @@
           {
             "p": "marowak",
             "how": "Level 9"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 4"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 4"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 4"
           }
         ]
+      },
+      "3": {
+        "flavor": "The target is given an intimidating look that lowers its Special Attack stat."
       }
     },
     "name": "Leer",
@@ -3967,7 +3984,21 @@
         "category": "Physical",
         "power": 40,
         "accuracy": 100,
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "pidgey",
+            "how": "Level 1"
+          },
+          {
+            "p": "pidgeotto",
+            "how": "Level 1"
+          },
+          {
+            "p": "pidgeot",
+            "how": "Level 1"
+          }
+        ]
       }
     },
     "name": "Peck",
@@ -4011,16 +4042,16 @@
         "effect": "Hits 3-5 times per turn used.",
         "learners": [
           {
-            "p": "sandslash",
-            "how": "Level 30"
-          },
-          {
             "p": "jolteon",
             "how": "Level 48"
           },
           {
             "p": "beedrill",
             "how": "Level 26"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 29"
           }
         ]
       }
@@ -4081,10 +4112,6 @@
             "how": "Level 10"
           },
           {
-            "p": "sandslash",
-            "how": "Level 22"
-          },
-          {
             "p": "ekans",
             "how": "Level 10"
           },
@@ -4103,6 +4130,10 @@
           {
             "p": "nidorina",
             "how": "Level 4"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 24"
           }
         ]
       }
@@ -5017,7 +5048,25 @@
         "accuracy": 100,
         "pp": 100,
         "target": "single",
-        "effect": "Deals damage with no additional effect."
+        "effect": "Deals damage with no additional effect.",
+        "learners": [
+          {
+            "p": "sandslash",
+            "how": "Level 1"
+          },
+          {
+            "p": "charmander",
+            "how": "Level 1"
+          },
+          {
+            "p": "charmeleon",
+            "how": "Level 1"
+          },
+          {
+            "p": "charizard",
+            "how": "Level 1"
+          }
+        ]
       }
     },
     "name": "Scratch",
@@ -5490,10 +5539,6 @@
             "how": "Level 25"
           },
           {
-            "p": "sandslash",
-            "how": "Level 26"
-          },
-          {
             "p": "ekans",
             "how": "Level 28"
           },
@@ -5532,6 +5577,10 @@
           {
             "p": "leafeon",
             "how": "Level 42"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 25"
           }
         ]
       }
@@ -5582,10 +5631,6 @@
             "how": "Level 22"
           },
           {
-            "p": "sandslash",
-            "how": "Level 22"
-          },
-          {
             "p": "paras",
             "how": "Level 28"
           },
@@ -5616,6 +5661,10 @@
           {
             "p": "ursaring",
             "how": "Level 19"
+          },
+          {
+            "p": "sandslash",
+            "how": "Level 22"
           }
         ]
       }
@@ -6718,7 +6767,21 @@
         "type": "Psychic",
         "category": "Status",
         "target": "user",
-        "effect": "Allows the user to flee from wild battles."
+        "effect": "Allows the user to flee from wild battles.",
+        "learners": [
+          {
+            "p": "abra",
+            "how": "1"
+          },
+          {
+            "p": "kadabra",
+            "how": "Level 1"
+          },
+          {
+            "p": "alakazam",
+            "how": "Level 1"
+          }
+        ]
       },
       "3": {
         "effect": "Switches the user out. Allows the user to flee from wild battles.",

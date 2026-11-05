@@ -17,7 +17,7 @@
                 "level": 5,
                 "moves": [
                   "scracth",
-                  "growl",
+                  "leer",
                   "",
                   ""
                 ],
@@ -79,9 +79,9 @@
                 "p": "pidgey",
                 "level": 8,
                 "moves": [
-                  "",
-                  "",
-                  "",
+                  "gust",
+                  "peck",
+                  "sand-attack",
                   ""
                 ],
                 "notes": "",
@@ -93,7 +93,7 @@
                 "moves": [
                   "ember",
                   "scracth",
-                  "growl",
+                  "leer",
                   ""
                 ],
                 "notes": "",
@@ -109,9 +109,9 @@
                 "p": "pidgey",
                 "level": 8,
                 "moves": [
-                  "",
-                  "",
-                  "",
+                  "gust",
+                  "peck",
+                  "sand-attack",
                   ""
                 ],
                 "notes": "",
@@ -139,9 +139,9 @@
                 "p": "pidgey",
                 "level": 8,
                 "moves": [
-                  "",
-                  "",
-                  "",
+                  "gust",
+                  "peck",
+                  "sand-attack",
                   ""
                 ],
                 "notes": "",
@@ -178,10 +178,10 @@
                 "p": "pidgeotto",
                 "level": 18,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "razor-wing",
+                  "quick-attack",
+                  "peck",
+                  "sand-attack"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -204,7 +204,7 @@
                 "moves": [
                   "ember",
                   "scracth",
-                  "growl",
+                  "leer",
                   ""
                 ],
                 "notes": "",
@@ -220,10 +220,10 @@
                 "p": "pidgeotto",
                 "level": 18,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "razor-wing",
+                  "quick-attack",
+                  "peck",
+                  "sand-attack"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -262,10 +262,10 @@
                 "p": "pidgeotto",
                 "level": 18,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "razor-wing",
+                  "quick-attack",
+                  "peck",
+                  "sand-attack"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -274,7 +274,7 @@
                 "p": "abra",
                 "level": 15,
                 "moves": [
-                  "",
+                  "teleport",
                   "",
                   "",
                   ""
@@ -307,16 +307,16 @@
         "teams": [
           {
             "when": "Player Chose Bulbasaur",
-            "sprite": "spr-rg-blue-1-2.png",
+            "sprite": "spr-rg-blue-2.png",
             "team": [
               {
                 "p": "pidgeotto",
                 "level": 26,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "wing-attack",
+                  "razor-wing",
+                  "quick-attack",
+                  "screech"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -325,10 +325,10 @@
                 "p": "sandslash",
                 "level": 24,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "slash",
+                  "dig",
+                  "headbutt",
+                  "sand-attack"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -337,9 +337,9 @@
                 "p": "kadabra",
                 "level": 25,
                 "moves": [
-                  "confusion",
-                  "",
-                  "",
+                  "kinesis",
+                  "disable",
+                  "teleport",
                   ""
                 ],
                 "notes": "",
@@ -349,10 +349,10 @@
                 "p": "charmeleon",
                 "level": 27,
                 "moves": [
-                  "ember",
-                  "scracth",
-                  "growl",
-                  ""
+                  "slam",
+                  "fire-punch",
+                  "bite",
+                  "leer"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -361,16 +361,16 @@
           },
           {
             "when": "Player Chose Charmander",
-            "sprite": "spr-rg-blue-1-2.png",
+            "sprite": "spr-rg-blue-2-2.png",
             "team": [
               {
                 "p": "pidgeotto",
                 "level": 26,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "wing-attack",
+                  "razor-wing",
+                  "quick-attack",
+                  "screech"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -379,10 +379,10 @@
                 "p": "sandslash",
                 "level": 24,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "slash",
+                  "dig",
+                  "headbutt",
+                  "sand-attack"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -391,9 +391,9 @@
                 "p": "kadabra",
                 "level": 25,
                 "moves": [
+                  "kinesis",
+                  "disable",
                   "teleport",
-                  "",
-                  "",
                   ""
                 ],
                 "notes": "",
@@ -403,10 +403,10 @@
                 "p": "wartortle",
                 "level": 27,
                 "moves": [
-                  "bubble",
-                  "pound",
-                  "tail-whip",
-                  ""
+                  "slam",
+                  "headbutt",
+                  "bubblebeam",
+                  "withdraw"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -415,16 +415,16 @@
           },
           {
             "when": "Player Chose Squirtle",
-            "sprite": "spr-rg-blue-1-2.png",
+            "sprite": "spr-rg-blue-2-3.png",
             "team": [
               {
                 "p": "pidgeotto",
                 "level": 26,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "wing-attack",
+                  "razor-wing",
+                  "quick-attack",
+                  "screech"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -433,10 +433,10 @@
                 "p": "sandslash",
                 "level": 24,
                 "moves": [
-                  "",
-                  "",
-                  "",
-                  ""
+                  "slash",
+                  "dig",
+                  "headbutt",
+                  "sand-attack"
                 ],
                 "notes": "",
                 "dvs": {}
@@ -445,9 +445,9 @@
                 "p": "kadabra",
                 "level": 25,
                 "moves": [
-                  "",
-                  "",
-                  "",
+                  "kinesis",
+                  "disable",
+                  "teleport",
                   ""
                 ],
                 "notes": "",
@@ -461,6 +461,900 @@
                   "razor-leaf",
                   "poisonpowder",
                   "leech-seed"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "Pokémon Tower",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 31,
+                "moves": [
+                  "wing-attack",
+                  "razor-wing",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 29,
+                "moves": [
+                  "thunder-punch",
+                  "mega-punch",
+                  "low-kick",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kadabra",
+                "level": 30,
+                "moves": [
+                  "kinesis",
+                  "psybeam",
+                  "disable",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "charmeleon",
+                "level": 32,
+                "moves": [
+                  "flamethrower",
+                  "slam",
+                  "fire-punch",
+                  "leer"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-2-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 31,
+                "moves": [
+                  "wing-attack",
+                  "razor-wing",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 29,
+                "moves": [
+                  "thunder-punch",
+                  "mega-punch",
+                  "low-kick",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kadabra",
+                "level": 30,
+                "moves": [
+                  "kinesis",
+                  "psybeam",
+                  "disable",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "wartortle",
+                "level": 32,
+                "moves": [
+                  "bubble-blast",
+                  "slam",
+                  "bite",
+                  "withdraw"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-2-3.png",
+            "team": [
+              {
+                "p": "pidgeotto",
+                "level": 31,
+                "moves": [
+                  "wing-attack",
+                  "razor-wing",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 29,
+                "moves": [
+                  "thunder-punch",
+                  "mega-punch",
+                  "low-kick",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kadabra",
+                "level": 30,
+                "moves": [
+                  "kinesis",
+                  "psybeam",
+                  "disable",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "ivysaur",
+                "level": 32,
+                "moves": [
+                  "sludge",
+                  "razor-leaf",
+                  "poisonpowder",
+                  "leech-seed"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "Silph Co.",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 43,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "vileplume",
+                "level": 40,
+                "moves": [
+                  "sludge-bomb",
+                  "giga-drain",
+                  "poisonpowder",
+                  "sap-spray"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 41,
+                "moves": [
+                  "thunderbolt",
+                  "ice-punch",
+                  "low-kick",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 42,
+                "moves": [
+                  "psychic",
+                  "kinesis",
+                  "disable",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "charizard",
+                "level": 44,
+                "moves": [
+                  "flamethrower",
+                  "slam",
+                  "wing-attack",
+                  "leer"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-2-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 43,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "rapidash",
+                "level": 40,
+                "moves": [
+                  "jump-kick",
+                  "flamethrower",
+                  "stomp",
+                  "quick-attack"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 41,
+                "moves": [
+                  "thunderbolt",
+                  "ice-punch",
+                  "low-kick",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 42,
+                "moves": [
+                  "psychic",
+                  "kinesis",
+                  "disable",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "blastoise",
+                "level": 44,
+                "moves": [
+                  "hydro-pump",
+                  "ice-beam",
+                  "bubble-blast",
+                  "body-slam"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-2-3.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 43,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "poliwrath-2",
+                "level": 40,
+                "moves": [
+                  "bubble-blast",
+                  "dizzy-punch",
+                  "karate-chop",
+                  "hypnosis"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 41,
+                "moves": [
+                  "thunderbolt",
+                  "ice-punch",
+                  "low-kick",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 42,
+                "moves": [
+                  "psychic",
+                  "kinesis",
+                  "disable",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "venusaur",
+                "level": 44,
+                "moves": [
+                  "sludge-bomb",
+                  "giga-drain",
+                  "bind",
+                  "leech-seed"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Rival Battle",
+        "location": "Route 22",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 53,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "vileplume",
+                "level": 50,
+                "moves": [
+                  "sludge-bomb",
+                  "giga-drain",
+                  "toxic",
+                  "sap-spray"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 51,
+                "moves": [
+                  "thunderbolt",
+                  "mega-kick",
+                  "ice-punch",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "gyarados",
+                "level": 50,
+                "moves": [
+                  "outrage",
+                  "hyper-fang",
+                  "waterfall",
+                  "leer"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 52,
+                "moves": [
+                  "psychic",
+                  "kinesis",
+                  "barrier",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "charizard",
+                "level": 54,
+                "moves": [
+                  "fire-blast",
+                  "thunder-punch",
+                  "wing-attack",
+                  "leer"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-2-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 53,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "rapidash",
+                "level": 50,
+                "moves": [
+                  "jump-kick",
+                  "flamethrower",
+                  "mega-kick",
+                  "quick-attack"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 51,
+                "moves": [
+                  "thunderbolt",
+                  "mega-kick",
+                  "ice-punch",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "tangrowth",
+                "level": 50,
+                "moves": [
+                  "slam",
+                  "giga-drain",
+                  "bind",
+                  "poisonpowder"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 52,
+                "moves": [
+                  "psychic",
+                  "kinesis",
+                  "barrier",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "blastoise",
+                "level": 54,
+                "moves": [
+                  "hydro-pump",
+                  "ice-beam",
+                  "bubble-blast",
+                  "body-slam"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-2-3.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 53,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "poliwrath-2",
+                "level": 50,
+                "moves": [
+                  "submission",
+                  "bubble-blast",
+                  "dizzy-punch",
+                  "hypnosis"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 51,
+                "moves": [
+                  "thunderbolt",
+                  "mega-kick",
+                  "ice-punch",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "ninetales",
+                "level": 50,
+                "moves": [
+                  "flamethrower",
+                  "psychic",
+                  "calm-mind",
+                  "confuse-ray"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 52,
+                "moves": [
+                  "psychic",
+                  "kinesis",
+                  "barrier",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "venusaur",
+                "level": 54,
+                "moves": [
+                  "sludge-bomb",
+                  "giga-drain",
+                  "bind",
+                  "leech-seed"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "gen": 1,
+        "label": "Champion",
+        "location": "Indigo Plateau",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Bulbasaur",
+            "sprite": "spr-rg-blue-3.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 67,
+                "moves": [
+                  "hyper-beam",
+                  "sky-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "tangrowth",
+                "level": 64,
+                "moves": [
+                  "earthquake",
+                  "giga-drain",
+                  "bind",
+                  "sleep-powder"
+                ],
+                "notes": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "electabuzz",
+                "level": 65,
+                "moves": [
+                  "hyper-beam",
+                  "thunderbolt",
+                  "ice-punch",
+                  "thunder-wave"
+                ],
+                "notes": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "gyarados",
+                "level": 64,
+                "moves": [
+                  "hyper-beam",
+                  "outrage",
+                  "hydro-pump",
+                  "earthquake"
+                ],
+                "notes": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "alakazam",
+                "level": 66,
+                "moves": [
+                  "psychic",
+                  "barrier",
+                  "calm-mind",
+                  "recover"
+                ],
+                "notes": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "charizard",
+                "level": 68,
+                "moves": [
+                  "fire-blast",
+                  "earthquake",
+                  "body-slam",
+                  "wing-attack"
+                ],
+                "notes": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Charmander",
+            "sprite": "spr-rg-blue-3-2.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 67,
+                "moves": [
+                  "hyper-beam",
+                  "sky-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "ninetales",
+                "level": 64,
+                "moves": [
+                  "flamethrower",
+                  "psychic",
+                  "fire-spin",
+                  "calm-mind"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 65,
+                "moves": [
+                  "hyper-beam",
+                  "thunderbolt",
+                  "ice-punch",
+                  "thunder-wave"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "tangrowth",
+                "level": 64,
+                "moves": [
+                  "earthquake",
+                  "giga-drain",
+                  "bind",
+                  "sleep-powder"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 66,
+                "moves": [
+                  "psychic",
+                  "barrier",
+                  "calm-mind",
+                  "recover"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "blastoise",
+                "level": 68,
+                "moves": [
+                  "hyper-beam",
+                  "hydro-pump",
+                  "ice-beam",
+                  "body-slam"
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Squirtle",
+            "sprite": "spr-rg-blue-3-3.png",
+            "team": [
+              {
+                "p": "pidgeot",
+                "level": 67,
+                "moves": [
+                  "sky-attack",
+                  "wing-attack",
+                  "quick-attack",
+                  "screech"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "gyarados",
+                "level": 64,
+                "moves": [
+                  "hyper-beam",
+                  "outrage",
+                  "waterfall",
+                  "leer"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": 65,
+                "moves": [
+                  "thunderbolt",
+                  "mega-kick",
+                  "ice-punch",
+                  "fire-punch"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "ninetales",
+                "level": 64,
+                "moves": [
+                  "flamethrower",
+                  "psychic",
+                  "calm-mind",
+                  "confuse-ray"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": 66,
+                "moves": [
+                  "psychic",
+                  "calm-mind",
+                  "barrier",
+                  "recover"
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "venusaur",
+                "level": 68,
+                "moves": [
+                  "sludge-bomb",
+                  "giga-drain",
+                  "bind",
+                  "sleep-powder"
                 ],
                 "notes": "",
                 "dvs": {}
