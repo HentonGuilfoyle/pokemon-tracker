@@ -1,1 +1,20 @@
-{}
+{
+  "leftovers": {
+    "gens": {
+      "2": {
+        "category": "Hold Items"
+      }
+    },
+    "name": "Leftovers",
+    "debut": 2
+  },
+  "light-ball": {
+    "gens": {
+      "2": {
+        "category": "Hold Items"
+      }
+    },
+    "name": "Light Ball",
+    "debut": 2
+  }
+}

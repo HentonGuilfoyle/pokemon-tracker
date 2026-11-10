@@ -39,14 +39,29 @@
       }
     }
   },
+  "beacon": {
+    "name": "Beacon",
+    "debut": 4,
+    "gens": {}
+  },
   "blaze": {
     "name": "Blaze",
+    "debut": 3,
+    "gens": {}
+  },
+  "bloom": {
+    "name": "Bloom",
     "debut": 3,
     "gens": {}
   },
   "bulletproof": {
     "name": "Bulletproof",
     "debut": 4,
+    "gens": {}
+  },
+  "cacophony": {
+    "name": "Cacophony",
+    "debut": 3,
     "gens": {}
   },
   "calming-scent": {
@@ -127,6 +142,11 @@
   "delay": {
     "name": "Delay",
     "debut": 3,
+    "gens": {}
+  },
+  "devour": {
+    "name": "Devour",
+    "debut": 4,
     "gens": {}
   },
   "down-to-earth": {
@@ -213,6 +233,11 @@
     "debut": 3,
     "gens": {}
   },
+  "frisk": {
+    "name": "Frisk",
+    "debut": 4,
+    "gens": {}
+  },
   "galvanize": {
     "name": "Galvanize",
     "debut": 4,
@@ -220,6 +245,11 @@
   },
   "gluttony": {
     "name": "Gluttony",
+    "debut": 3,
+    "gens": {}
+  },
+  "grassy-surge": {
+    "name": "Grassy Surge",
     "debut": 3,
     "gens": {}
   },
@@ -291,6 +321,11 @@
   "immunity": {
     "name": "Immunity",
     "debut": 3,
+    "gens": {}
+  },
+  "impenetrable": {
+    "name": "Impenetrable",
+    "debut": 4,
     "gens": {}
   },
   "imposter": {
@@ -395,6 +430,11 @@
       }
     }
   },
+  "mentalize": {
+    "name": "Mentalize",
+    "debut": 4,
+    "gens": {}
+  },
   "merciless": {
     "name": "Merciless",
     "debut": 4,
@@ -439,6 +479,11 @@
     "debut": 3,
     "gens": {}
   },
+  "obsfucate": {
+    "name": "Obsfucate",
+    "debut": 4,
+    "gens": {}
+  },
   "overcharge": {
     "name": "Overcharge",
     "debut": 3,
@@ -453,6 +498,21 @@
     "debut": 3,
     "gens": {},
     "name": "Overgrow"
+  },
+  "own-tempo": {
+    "name": "Own Tempo",
+    "debut": 3,
+    "gens": {}
+  },
+  "phoenix-down": {
+    "name": "Phoenix Down",
+    "debut": 3,
+    "gens": {}
+  },
+  "pickpocket": {
+    "name": "Pickpocket",
+    "debut": 4,
+    "gens": {}
   },
   "pickup": {
     "name": "Pickup",
@@ -484,6 +544,11 @@
     "debut": 3,
     "gens": {}
   },
+  "pollinator": {
+    "name": "Pollinator",
+    "debut": 4,
+    "gens": {}
+  },
   "pressure": {
     "name": "Pressure",
     "debut": 3,
@@ -502,6 +567,11 @@
   "quick-fists": {
     "name": "Quick Fists",
     "debut": 4,
+    "gens": {}
+  },
+  "rain-dish": {
+    "name": "Rain Dish",
+    "debut": 3,
     "gens": {}
   },
   "reckless": {
@@ -569,8 +639,18 @@
     "debut": 4,
     "gens": {}
   },
+  "sea-guardian": {
+    "name": "Sea Guardian",
+    "debut": 3,
+    "gens": {}
+  },
   "seed-sower": {
     "name": "Seed Sower",
+    "debut": 4,
+    "gens": {}
+  },
+  "sensory-shift": {
+    "name": "Sensory Shift",
     "debut": 4,
     "gens": {}
   },
@@ -601,7 +681,7 @@
   },
   "sheer-force": {
     "name": "Sheer Force",
-    "debut": 4,
+    "debut": 3,
     "gens": {}
   },
   "shell-armor": {
@@ -611,6 +691,11 @@
   },
   "short-circuit": {
     "name": "Short Circuit",
+    "debut": 4,
+    "gens": {}
+  },
+  "side-mounting": {
+    "name": "Side-Mounting",
     "debut": 4,
     "gens": {}
   },
@@ -664,6 +749,16 @@
     "debut": 3,
     "gens": {}
   },
+  "spicy-scent": {
+    "name": "Spicy Scent",
+    "debut": 3,
+    "gens": {}
+  },
+  "spin-master": {
+    "name": "Spin Master",
+    "debut": 3,
+    "gens": {}
+  },
   "static": {
     "name": "Static",
     "debut": 3,
@@ -691,6 +786,11 @@
   },
   "sturdy": {
     "name": "Sturdy",
+    "debut": 3,
+    "gens": {}
+  },
+  "suction-cups": {
+    "name": "Suction Cups",
     "debut": 3,
     "gens": {}
   },
@@ -722,6 +822,16 @@
   "symbiosis": {
     "name": "Symbiosis",
     "debut": 4,
+    "gens": {}
+  },
+  "synchronize": {
+    "name": "Synchronize",
+    "debut": 3,
+    "gens": {}
+  },
+  "tail-bundle": {
+    "name": "Tail Bundle",
+    "debut": 3,
     "gens": {}
   },
   "tangled-feet": {
@@ -764,6 +874,11 @@
     "debut": 4,
     "gens": {}
   },
+  "trickster": {
+    "name": "Trickster",
+    "debut": 4,
+    "gens": {}
+  },
   "triple-threat": {
     "name": "Triple Threat",
     "debut": 3,
@@ -781,6 +896,11 @@
   },
   "unburden": {
     "name": "Unburden",
+    "debut": 4,
+    "gens": {}
+  },
+  "unfettered": {
+    "name": "Unfettered",
     "debut": 4,
     "gens": {}
   },
@@ -804,6 +924,11 @@
     "debut": 3,
     "gens": {}
   },
+  "vortex": {
+    "name": "Vortex",
+    "debut": 4,
+    "gens": {}
+  },
   "water-absorb": {
     "name": "Water Absorb",
     "debut": 3,
@@ -816,6 +941,11 @@
   },
   "weak-armor": {
     "name": "Weak Armor",
+    "debut": 3,
+    "gens": {}
+  },
+  "wicked-power": {
+    "name": "Wicked Power",
     "debut": 3,
     "gens": {}
   },

@@ -1,4 +1,54 @@
 {
+  "eras": [
+    {
+      "id": "gen1",
+      "timeline": "original",
+      "gen": 1,
+      "region": "Kanto"
+    },
+    {
+      "id": "gen2",
+      "timeline": "original",
+      "gen": 2,
+      "region": "Johto",
+      "continues": "gen1"
+    },
+    {
+      "id": "gen3-kanto",
+      "timeline": "updated",
+      "gen": 3,
+      "region": "Kanto"
+    },
+    {
+      "id": "gen3-hoenn",
+      "timeline": "updated",
+      "gen": 3,
+      "region": "Hoenn"
+    },
+    {
+      "id": "gen4-johto",
+      "timeline": "updated",
+      "gen": 4,
+      "region": "Johto",
+      "continues": "gen3-kanto"
+    },
+    {
+      "id": "gen4-sinnoh",
+      "timeline": "updated",
+      "gen": 4,
+      "region": "Sinnoh"
+    }
+  ],
+  "timelines": [
+    {
+      "id": "original",
+      "name": "Original"
+    },
+    {
+      "id": "updated",
+      "name": "Updated"
+    }
+  ],
   "typechart": {
     "gens": {
       "1": {

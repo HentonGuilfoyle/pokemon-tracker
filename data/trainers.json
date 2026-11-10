@@ -1,7 +1,272 @@
 {
+  "giovanni-sakkaki": {
+    "encounters": [
+      {
+        "era": "gen1",
+        "gen": 1,
+        "label": "",
+        "location": "Team Rocket HQ",
+        "game": "Pokémon Red & Blue",
+        "story": "",
+        "teams": [
+          {
+            "team": [
+              {
+                "p": "gengar",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "rhydon",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "persian",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "kangaskhan-m",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "gyarados",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              },
+              {
+                "p": "nidoking",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "era": "gen2",
+        "gen": 2,
+        "label": "",
+        "location": "",
+        "game": "",
+        "story": "",
+        "teams": [
+          {
+            "team": [
+              {
+                "p": "beedrill",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "empurror",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "name": "Giovanni Sakaki",
+    "title": "Former Team Rocket Boss",
+    "blurb": "",
+    "sprite": "spr-gs-sw99-giovanni.png"
+  },
+  "red": {
+    "encounters": [
+      {
+        "era": "gen2",
+        "gen": 2,
+        "label": "",
+        "location": "Mt. Silver",
+        "game": "Pokémon Gold & Silver",
+        "story": "",
+        "teams": [
+          {
+            "team": [
+              {
+                "p": "pikachu",
+                "level": 90,
+                "moves": [
+                  "thunder",
+                  "thunderbolt",
+                  "quick-attack",
+                  "tail-whip"
+                ],
+                "notes": "",
+                "item": "light-ball",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "snorlax",
+                "level": null,
+                "moves": [
+                  "earthquake",
+                  "body-slam",
+                  "",
+                  "rest"
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "blastoise",
+                "level": null,
+                "moves": [
+                  "blizzard",
+                  "hydro-pump",
+                  "earthquake",
+                  "bubble-blast"
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "venusaur",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "charizard",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "mewtwo",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "name": "Red",
+    "title": "Former Champion",
+    "blurb": "",
+    "sprite": "spr-gs-red.png"
+  },
   "shigeru-ohkido": {
     "encounters": [
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "Professor Oak's Lab",
@@ -65,6 +330,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "",
@@ -164,6 +430,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "Nugget Bridge",
@@ -299,6 +566,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "S.S. Anne",
@@ -470,6 +738,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "Pokémon Tower",
@@ -641,6 +910,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "Silph Co.",
@@ -848,6 +1118,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Rival Battle",
         "location": "Route 22",
@@ -1091,6 +1362,7 @@
         ]
       },
       {
+        "era": "gen1",
         "gen": 1,
         "label": "Champion",
         "location": "Indigo Plateau",
@@ -1362,12 +1634,467 @@
             ]
           }
         ]
+      },
+      {
+        "era": "gen2",
+        "gen": 2,
+        "label": "Gym Battle",
+        "location": "Viridian City Gym",
+        "game": "Pokémon Gold & Silver",
+        "story": "",
+        "teams": [
+          {
+            "team": [
+              {
+                "p": "sandslash",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "electabuzz",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "vileplume",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "rapidash",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "poliwrath-2",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "pidgeot",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "era": "gen2",
+        "gen": 2,
+        "label": "",
+        "location": "Professor Oak's Lab",
+        "game": "Pokémon Gold & Silver",
+        "story": "The player challenges Blue to a battle using his old team.",
+        "teams": [
+          {
+            "team": [
+              {
+                "p": "electabuzz",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "tangrowth",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "ninetales",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "gyarados",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "alakazam",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "pidgeot",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
       }
     ],
     "name": "Shigeru Ohkido",
     "title": "Pokémon Researcher",
+    "blurb": "Grandson of famed Professor Ohkido and rival to former Indigo Champion Red, Shigeru Ohkiado is currently the Gym Leader of Viridian City. Shigeru is a former Indigo League Champion in his own right so he's no pushover.",
+    "sprite": "spr-gs-blue.png"
+  },
+  "silver": {
+    "encounters": [
+      {
+        "era": "gen2",
+        "gen": 2,
+        "label": "Rival Battle",
+        "location": "",
+        "game": "Pokemon Gold & Silver",
+        "story": "",
+        "teams": [
+          {
+            "when": "Player Chose Chikorita",
+            "team": [
+              {
+                "p": "typhlosion",
+                "level": null,
+                "moves": [
+                  "earthquake",
+                  "flamethrower",
+                  "thunder-punch",
+                  "burning-rage"
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {
+                  "atk": 15,
+                  "def": 15,
+                  "spe": 15,
+                  "spc": 15
+                }
+              },
+              {
+                "p": "crobat",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "empurror",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "heracross",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "espeon",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "steelix",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Cynadquil",
+            "team": [
+              {
+                "p": "feraligator",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "crobat",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "empurror",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "heracross",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "espeon",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "steelix",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              }
+            ]
+          },
+          {
+            "when": "Player Chose Totodile",
+            "team": [
+              {
+                "p": "meganium",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "crobat",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "empurror",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "heracross",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "espeon",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              },
+              {
+                "p": "steelix",
+                "level": null,
+                "moves": [
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "notes": "",
+                "item": "",
+                "dvs": {}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "name": "Silver",
+    "title": "Rival",
     "blurb": "",
-    "epilogue": "",
-    "sprite": "spr-hgss-blue.png"
+    "sprite": "spr-gs-silver-2.png"
   }
 }

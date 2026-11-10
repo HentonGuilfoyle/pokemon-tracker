@@ -880,6 +880,21 @@
     "name": "Bubble Beam",
     "debut": 1
   },
+  "burning-rage": {
+    "gens": {
+      "2": {
+        "type": "Fire",
+        "category": "Special",
+        "power": 30,
+        "accuracy": 100,
+        "target": "single",
+        "effect": "Every time the user is hit, this move's power increases by 30 stopping at 210.",
+        "flavor": "The more times the user has been hit by attacks, the greater the move's power."
+      }
+    },
+    "name": "Burning Rage",
+    "debut": 2
+  },
   "calm-mind": {
     "gens": {
       "1": {
@@ -4242,6 +4257,10 @@
           {
             "p": "sandslash",
             "how": "Level 4"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 1"
           }
         ]
       }
@@ -4525,7 +4544,7 @@
         "power": 20,
         "accuracy": 100,
         "target": "single",
-        "effect": "The more times the user has been hit by attacks, the greater the move's power.",
+        "effect": "Every time the user is hit, this move's power increases by 20 stopping at 140.",
         "learners": [
           {
             "p": "nidoran-m",
@@ -4619,7 +4638,8 @@
             "p": "ursaring",
             "how": "Level 38"
           }
-        ]
+        ],
+        "flavor": "The more times the user has been hit by attacks, the greater the move's power."
       }
     },
     "name": "Rage",
@@ -6607,6 +6627,10 @@
           {
             "p": "rapidash",
             "how": "Level 30"
+          },
+          {
+            "p": "pikachu",
+            "how": "Level 1"
           }
         ]
       }
