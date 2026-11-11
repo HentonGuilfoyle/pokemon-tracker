@@ -1621,6 +1621,44 @@
     "debut": 1,
     "art": 1
   },
+  "burmy": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 44,
+          "def": 70,
+          "spa": 29,
+          "spd": 70,
+          "spe": 21
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Burmy",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "overcoat"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Burmy",
+    "dex": 410,
+    "debut": 4,
+    "art": 412
+  },
   "butterfree": {
     "gens": {
       "1": {
@@ -3159,6 +3197,45 @@
     "debut": 3,
     "art": 256
   },
+  "corphish": {
+    "gens": {
+      "4": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 43,
+          "atk": 80,
+          "def": 70,
+          "spa": 50,
+          "spd": 40,
+          "spe": 35
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Corphish",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "hyper-cutter",
+            "tough-claws"
+          ],
+          [
+            "shell-armor"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Corphish",
+    "dex": 413,
+    "debut": 4,
+    "art": 341
+  },
   "corsola": {
     "gens": {
       "3": {
@@ -3252,6 +3329,48 @@
     "dex": 374,
     "debut": 3,
     "art": 346
+  },
+  "crawdaunt": {
+    "gens": {
+      "4": {
+        "types": [
+          "Water",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 73,
+          "atk": 120,
+          "def": 90,
+          "spa": 90,
+          "spd": 60,
+          "spe": 55
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "corphish",
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Corphish",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "hyper-cutter",
+            "tough-claws"
+          ],
+          [
+            "shell-armor"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Crawdaunt",
+    "dex": 414,
+    "debut": 4,
+    "art": 342
   },
   "crobat": {
     "gens": {
@@ -5691,6 +5810,43 @@
     "debut": 2,
     "art": 180
   },
+  "flabebe": {
+    "gens": {
+      "4": {
+        "types": [
+          "Fairy"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 38,
+          "def": 39,
+          "spa": 51,
+          "spd": 69,
+          "spe": 42
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 0,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "flower-guard"
+          ],
+          [
+            "symbiosis"
+          ]
+        ]
+      }
+    },
+    "name": "Flabebe",
+    "dex": 415,
+    "debut": 4,
+    "art": 669
+  },
   "flareon": {
     "gens": {
       "1": {
@@ -6342,6 +6498,38 @@
     "dex": 206,
     "debut": 2,
     "art": 203
+  },
+  "glameow": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 49,
+          "atk": 57,
+          "def": 42,
+          "spa": 42,
+          "spd": 37,
+          "spe": 82
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "limber"
+          ]
+        ],
+        "hatchesAs": "Glameow"
+      }
+    },
+    "name": "Glameow",
+    "dex": 408,
+    "debut": 4,
+    "art": 431
   },
   "gloom": {
     "gens": {
@@ -9001,6 +9189,76 @@
     "dex": 68,
     "debut": 1,
     "art": 98
+  },
+  "kricketot": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug",
+          "Normal"
+        ],
+        "stats": {
+          "hp": 37,
+          "atk": 25,
+          "def": 41,
+          "spa": 35,
+          "spd": 41,
+          "spe": 30
+        },
+        "growthRate": "Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "cacophony"
+          ]
+        ]
+      }
+    },
+    "name": "Kricketot",
+    "dex": 406,
+    "debut": 4,
+    "art": 401
+  },
+  "kricketune": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug",
+          "Normal"
+        ],
+        "stats": {
+          "hp": 77,
+          "atk": 85,
+          "def": 61,
+          "spa": 85,
+          "spd": 61,
+          "spe": 60
+        },
+        "evoMethod": "Level 10",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "kricketot",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Kricketot",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "cacophony"
+          ],
+          [
+            "technician"
+          ]
+        ]
+      }
+    },
+    "name": "Kricketune",
+    "dex": 407,
+    "debut": 4,
+    "art": 402
   },
   "lairon": {
     "gens": {
@@ -11871,6 +12129,47 @@
     "dex": 396,
     "debut": 4,
     "art": 391
+  },
+  "mothim": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 74,
+          "def": 70,
+          "spa": 74,
+          "spd": 70,
+          "spe": 86
+        },
+        "evoMethod": "Level 20 & Male",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "burmy",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Burmy",
+        "genderM": 100,
+        "abilitySlots": [
+          [
+            "honey-gather"
+          ],
+          [
+            "steady-wings"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Mothim",
+    "dex": 412,
+    "debut": 4,
+    "art": 414
   },
   "mudkip": {
     "gens": {
@@ -14798,6 +15097,43 @@
     "dex": 244,
     "debut": 2,
     "art": 247
+  },
+  "purugly": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 109,
+          "atk": 87,
+          "def": 83,
+          "spa": 62,
+          "spd": 77,
+          "spe": 62
+        },
+        "evoMethod": "Level 32",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "glameow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Glameow",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "intimidate"
+          ]
+        ]
+      }
+    },
+    "name": "Purugly",
+    "dex": 409,
+    "debut": 4,
+    "art": 432
   },
   "quagsire": {
     "gens": {
@@ -18365,6 +18701,113 @@
     "debut": 2,
     "art": 234
   },
+  "staraptor": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 117,
+          "def": 73,
+          "spa": 50,
+          "spd": 70,
+          "spe": 100
+        },
+        "evoMethod": "Level 32",
+        "evoMethod2": "Level 45 & Starly or Staraptor in Party",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "staravia",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Starly",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "steady-wings"
+          ],
+          [
+            "reckless"
+          ]
+        ]
+      }
+    },
+    "name": "Staraptor",
+    "dex": 405,
+    "debut": 4,
+    "art": 398
+  },
+  "staravia": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 72,
+          "def": 53,
+          "spa": 40,
+          "spd": 50,
+          "spe": 80
+        },
+        "evoMethod": "Level 14",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "starly",
+        "eggGroups": [
+          "Bird"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "flock"
+          ]
+        ],
+        "hatchesAs": "Starly"
+      }
+    },
+    "name": "Staravia",
+    "dex": 404,
+    "debut": 4,
+    "art": 397
+  },
+  "starly": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 52,
+          "def": 38,
+          "spa": 30,
+          "spd": 35,
+          "spe": 60
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Starly",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "flock"
+          ]
+        ]
+      }
+    },
+    "name": "Starly",
+    "dex": 403,
+    "debut": 4,
+    "art": 396
+  },
   "starmie": {
     "gens": {
       "1": {
@@ -21410,6 +21853,132 @@
     "dex": 184,
     "debut": 2,
     "art": 194
+  },
+  "wormadam": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug",
+          "Grass"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 74,
+          "def": 100,
+          "spa": 59,
+          "spd": 120,
+          "spe": 21
+        },
+        "evoMethod": "Level 20, Female, and in Grass",
+        "evolvesFrom": "burmy",
+        "eggGroups": [
+          "Bug",
+          "Plant"
+        ],
+        "hatchesAs": "Burmy",
+        "genderM": 0,
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "overcoat"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Wormadam (Plant)",
+    "dex": 411,
+    "debut": 4,
+    "art": 413
+  },
+  "wormadam-sandy": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 74,
+          "def": 120,
+          "spa": 59,
+          "spd": 100,
+          "spe": 21
+        },
+        "evoMethod": "Level 20, Female, and in Caves or Beaches",
+        "evolvesFrom": "burmy",
+        "eggGroups": [
+          "Bug",
+          "Mineral"
+        ],
+        "hatchesAs": "Burmy",
+        "genderM": 0,
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "overcoat"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "formOf": "wormadam",
+    "name": "Wormadam (Sandy)",
+    "dex": 411,
+    "debut": 4,
+    "art": 0
+  },
+  "wormadam-trash": {
+    "gens": {
+      "4": {
+        "types": [
+          "Bug",
+          "Steel"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 74,
+          "def": 110,
+          "spa": 59,
+          "spd": 110,
+          "spe": 21
+        },
+        "evoMethod": "Level 20, Female, and in Cities",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "burmy",
+        "eggGroups": [
+          "Bug",
+          "Mineral"
+        ],
+        "genderM": 0,
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ],
+          [
+            "overcoat"
+          ],
+          [
+            "adaptability"
+          ]
+        ],
+        "hatchesAs": "Burmy"
+      }
+    },
+    "formOf": "wormadam",
+    "name": "Wormadam (Trash)",
+    "dex": 411,
+    "debut": 4,
+    "art": 0
   },
   "wurmple": {
     "gens": {

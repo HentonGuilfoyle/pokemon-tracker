@@ -69,7 +69,7 @@ The online copy can't be edited. Make changes on your computer, then push them.
 
 | Path | What it holds |
 | --- | --- |
-| `data/*.json` | Your Pokémon, abilities, items, moves, effects, trainers and type chart |
+| `data/*.json` | Your Pokémon, abilities, items, moves, TM lists, effects, trainers and type chart |
 | `data/sprites` | Images you upload |
 | `index.html`, `style.css`, `app.js` | The site |
 | `server.js` | Runs the site on your computer and saves edits |

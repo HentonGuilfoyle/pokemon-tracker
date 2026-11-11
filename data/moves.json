@@ -2308,10 +2308,6 @@
         "flavor": "The user growls in a cute way, making the target lower its Attack stat.",
         "learners": [
           {
-            "p": "bulbasaur",
-            "how": "Level 1"
-          },
-          {
             "p": "slowbro",
             "how": "Level 27"
           },
@@ -2365,6 +2361,18 @@
           },
           {
             "p": "ursaring",
+            "how": "Level 4"
+          },
+          {
+            "p": "bulbasaur",
+            "how": "Level 4"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 4"
+          },
+          {
+            "p": "venusaur",
             "how": "Level 4"
           }
         ]
@@ -4260,6 +4268,14 @@
           },
           {
             "p": "pikachu",
+            "how": "Level 1"
+          },
+          {
+            "p": "ivysaur",
+            "how": "Level 1"
+          },
+          {
+            "p": "venusaur",
             "how": "Level 1"
           }
         ]

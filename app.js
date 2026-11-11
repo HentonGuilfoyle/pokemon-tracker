@@ -1,6 +1,6 @@
 'use strict';
 const GENS=[1,2,3,4],ROMAN={1:'I',2:'II',3:'III',4:'IV'};
-const COLS=['pokemon','abilities','items','moves','effects','trainers'];
+const COLS=['pokemon','abilities','items','moves','effects','trainers','tms'];
 /* Trainer encounters belong to an era: a generation plus, when the generation has more than one, a region.
    Remakes put two eras in one generation, like Gen III (Kanto) and Gen III (Hoenn). The era's generation decides
    the battle rules (DVs or EVs, items, abilities). "continues" names the era whose story it carries on, which is
@@ -25,7 +25,7 @@ const SLOT_NAMES=['Ability I','Ability II','Ability III'];
 // From Gen IV a slot can share up to this many abilities, switched outside battle.
 const SLOT_OPTS=3;
 const STAT_MAX=255;
-const NAV=[['dex','National Dex'],['types','Type Chart'],['abilities','Abilities'],['items','Items'],['moves','Moves'],['mechanics','Battle Mechanics'],['trainers','Trainers']];
+const NAV=[['dex','National Dex'],['types','Type Chart'],['abilities','Abilities'],['items','Items'],['moves','Moves'],['tms','TMs & HMs'],['mechanics','Battle Mechanics'],['trainers','Trainers'],['cmp','Compare'],['calc','Damage Calc']];
 const CAT={Physical:'var(--hot)',Special:'var(--cool)',Status:'var(--stat)'};
 // Before Gen IV there is no per-move physical/special split: a damaging move's type decides it.
 const SPLIT_FROM=4;
@@ -40,7 +40,7 @@ const DOUBLES_TARGETS=['foes','field'],CONTACT_FROM=3;
 const targetsAt=g=>Object.keys(TARGETS).filter(k=>g>=3||!DOUBLES_TARGETS.includes(k));
 const prioText=p=>p==null||p===''?'':p>0?'+'+p:String(p);
 const contactText=c=>c===true?'Yes':c===false?'No':'';
-const S={pokemon:{},abilities:{},items:{},moves:{},effects:{},trainers:{},chart:null};
+const S={pokemon:{},abilities:{},items:{},moves:{},effects:{},trainers:{},tms:{},chart:null};
 const UI={gen:4,route:'dex',arg:null,q:'',type:'All',cat:'All',group:'All',view:'all',when:'',timeline:'',tgroup:'all',newOnly:false,battleForms:false,sort:'dex',dir:1,msort:'name',mdir:1,sel:null,editChart:false,chartFuture:true,perPage:'all',page:0};
 const PER_PAGE=[['25','25'],['50','50'],['100','100'],['all','Endless']];
 let canEdit=false,loaded=false,failed=false,bodyFn=null,F=null,timer=0;
@@ -171,6 +171,7 @@ function render(){
   const fn=PAGES[UI.route]||PAGES.dex;
   $('app').innerHTML=(failed?'<p class="error">The data files could not be read. Run the tracker with start.bat, not by opening index.html directly.</p>':'')+fn();
   if(bodyFn)renderBody();
+  dmgFill();
 }
 function renderBody(){const b=$('body');if(b&&bodyFn)b.innerHTML=bodyFn()}
 const titleBar=(t,sub,action)=>`<div class="title"><div><h1>${esc(t)}</h1>${sub?`<p class="sub">${sub}</p>`:''}</div>${action||''}</div>`;
@@ -207,7 +208,10 @@ const PAGES={
   p(){return pokemonPage(UI.arg)},
   m(){return movePage(UI.arg)},
   t(){return trainerPage(UI.arg)},
-  ty(){return typePage(UI.arg)}
+  ty(){return typePage(UI.arg)},
+  cmp(){return comparePage()},
+  tms(){return tmPage()},
+  calc(){return calcPage()}
 };
 
 function dexBody(){
@@ -470,7 +474,7 @@ function pokemonPage(id){
   const tabs=others.length?`<nav class="formtabs" aria-label="Variants and forms">${[base,...variants].map(tab).join('')}${changes.length?`${variants.length?'<span class="tablabel">Forms</span>':''}${changes.map(tab).join('')}`:''}</nav>`:'';
   const variantOf=isVariant(id)?` · ${esc(p.variant)} variant of <a href="#p-${esc(base)}">${esc(S.pokemon[base].name)}</a>`:'';
   return `<div class="pnav"><a href="#dex" style="display:flex;align-items:center;min-height:44px;font-weight:600">Back to National Dex</a><nav class="btns" aria-label="Previous and next Pokémon">${step(prevP,'prev')}${step(nextP,'next')}</nav></div>${tabs}
-  <section class="hero">${pokeTile(p,e,g,132)}<div class="grow"><span class="mono">No. ${pad(p.dex)}${variantOf} · Debuted in Gen ${ROMAN[p.debut||1]}</span><h1>${esc(p.name)}</h1>${(e.types||[]).length?chips(e.types):'<span>No type set</span>'}</div>${canEdit?`<button type="button" class="btn" data-act="edit-pokemon" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</section>
+  <section class="hero">${pokeTile(p,e,g,132)}<div class="grow"><span class="mono">No. ${pad(p.dex)}${variantOf} · Debuted in Gen ${ROMAN[p.debut||1]}</span><h1>${esc(p.name)}</h1>${(e.types||[]).length?chips(e.types):'<span>No type set</span>'}</div><div class="btns"><a class="btn" href="#cmp-${esc(id)}">Compare</a><a class="btn" href="#calc-${esc(id)}">Damage calculator</a>${canEdit?`<button type="button" class="btn" data-act="edit-pokemon" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</div></section>
   <section class="note" aria-label="Changes"><strong>Gen ${ROMAN[g]}:</strong>${pokeChanges(p,g).map(c=>`<span>${esc(c)}</span>`).join('')}</section>
   <div class="cols"><div class="col">
     <section class="card"><div style="display:flex;justify-content:space-between;gap:12px"><h2>Base stats</h2><span class="mono" style="font-weight:600">${t==null?'':'Total '+t}</span></div>${st.map(s=>`<div class="stat"><span>${s[1]}</span><span class="mono" style="text-align:right">${dash(s[2])}</span><span class="bar" aria-hidden="true"><i style="width:${Math.min((s[2]||0)/STAT_MAX*100,100).toFixed(1)}%"></i></span></div>`).join('')}</section>
@@ -489,6 +493,391 @@ function movesetCard(id,g){
   const own=movesetOf(id,g),shared=!own.length&&isForm(id)?movesetOf(baseOf(id),g):[],set=own.length?own:shared,btn=canEdit?`<button type="button" class="btn small" data-act="edit-moveset" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} moveset</button>`:'';
   const row=x=>{const e=effMove(S.moves[x.m],g);return `<tr><td class="name mid"><a href="#m-${esc(x.m)}">${esc(label('moves',x.m))}</a></td><td class="mid">${e.type?chip(e.type):'—'}</td><td class="mid">${e.category?`<span class="cat" style="background:${CAT[e.category]||'var(--soft)'}">${esc(e.category)}</span>`:'—'}</td><td class="num mono mid">${dash(e.power)}</td><td class="num mono mid">${dash(e.accuracy)}</td><td class="num mono mid">${dash(e.pp)}</td><td class="mid">${dash(x.how)}</td></tr>`};
   return `<section class="card"><div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 12px;margin-bottom:10px"><h2 style="margin:0">Moveset</h2>${btn}</div>${shared.length?`<p class="hint" style="margin-bottom:8px">Same as ${esc(S.pokemon[baseOf(id)].name)}. Editing gives this form its own moveset.</p>`:''}${set.length?`<div class="box" style="border:0"><table style="min-width:640px"><thead><tr><th>Move</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Acc.</th><th class="num">PP</th><th>How it learns it</th></tr></thead><tbody>${set.map(row).join('')}</tbody></table></div>`:'<p class="muted" style="margin:0">No moves added yet.</p>'}</section>`;
+}
+/* Stat calculator. The formulas match the Battle Mechanics page, including this tracker's IV, EV and DV limits. */
+const SE_MAX=65535;
+// A nature's multiplier for each stat it changes, like {atk:1.1, spa:0.9}. Neutral or unknown natures change nothing.
+function natureMods(name){
+  const t=String(name||'').trim().toLowerCase();
+  for(let i=0;i<NATURES.length;i++)for(let j=0;j<NATURES[i].length;j++)if(NATURES[i][j].toLowerCase()===t)return i===j?{}:{[NATURE_STATS[i][0]]:1.1,[NATURE_STATS[j][0]]:.9};
+  return {};
+}
+// Gen I and II: HP's DV comes from the last bit of the other four.
+const hpDV=dv=>((dv?.atk|0)&1)*8+((dv?.def|0)&1)*4+((dv?.spe|0)&1)*2+((dv?.spc|0)&1);
+// Gen II's Sp. Atk and Sp. Def both use the Special DV and Special Stat Exp.
+const oldKey=k=>k==='spa'||k==='spd'?'spc':k;
+// o: {dv, se} for Gen I–II, or {iv, ev, nature} for Gen III+. o.mod forces one nature multiplier on every stat except HP (used for the min and max columns).
+function calcStats(e,g,L,o){
+  const mods=o.mod?null:natureMods(o.nature);
+  return statsAt(e,g).map(([k,lab,b])=>{
+    if(b==null||!L)return [k,lab,null];
+    if(g<=2){
+      const dv=k==='hp'?hpDV(o.dv):(o.dv?.[oldKey(k)]||0),se=o.se?.[oldKey(k)]||0;
+      const core=Math.floor(((b+dv)*2+Math.floor(Math.min(255,Math.ceil(Math.sqrt(se)))/4))*L/100);
+      return [k,lab,k==='hp'?core+L+10:core+5];
+    }
+    const core=Math.floor((2*b+(o.iv?.[k]||0)+Math.floor((o.ev?.[k]||0)/EVS_PER_POINT))*L/100);
+    if(k==='hp')return [k,lab,b===1?1:core+L+10];
+    return [k,lab,Math.floor((core+5)*(o.mod||mods[k]||1))];
+  });
+}
+// A trainer's Pokémon's actual stats, when its level and every DV (Gen I–II) or IV (Gen III+) are filled in. Missing EVs count as 0.
+function teamStats(m,e,gen){
+  const L=Number(m.level),set=x=>x!=null&&x!=='';
+  if(!L||!e.stats)return '';
+  const keys=gen<=2?DV_KEYS:EV_KEYS,src=gen<=2?m.dvs:m.ivs;
+  if(!keys.every(([k])=>set(src?.[k])))return '';
+  const num=o=>Object.fromEntries(Object.entries(o||{}).map(([k,x])=>[k,Number(x)||0]));
+  const r=calcStats(e,gen,L,gen<=2?{dv:num(m.dvs),se:{}}:{iv:num(m.ivs),ev:num(m.evs),nature:m.nature});
+  if(r.some(x=>x[2]==null))return '';
+  const short={hp:'HP',atk:'Atk',def:'Def',spa:'SpA',spd:'SpD',spe:'Spe',spc:'Spc'};
+  return r.map(([k,,x])=>`<span><b>${short[k]}</b>${x}</span>`).join('');
+}
+
+/* Compare: up to three Pokémon side by side. The address holds the picks, like #cmp-bulbasaur,charmander. */
+const CMP_MAX=3;
+const cmpIds=()=>String(UI.arg||'').split(',').filter(x=>S.pokemon[x]).slice(0,CMP_MAX);
+function comparePage(){
+  const g=UI.gen,ids=cmpIds(),ts=typesAt(g);
+  const pick=[0,1,2].map(i=>`<label class="ctl" style="flex:1 1 200px">Pokémon ${i+1}<input id="cmp-${i}" list="dl-pokemon" value="${esc(ids[i]?S.pokemon[ids[i]].name:'')}" placeholder="Type a name" autocomplete="off"></label>`).join('');
+  const top=titleBar('Compare Pokémon',`Up to ${CMP_MAX} Pokémon side by side, with Gen ${ROMAN[g]} data.`)+`<div class="toolbar">${pick}${ids.length?'<button type="button" class="btn" data-act="cmp-clear">Clear</button>':''}</div>`;
+  if(!loaded)return top+loading();
+  if(!ids.length)return top+'<div class="empty"><p>Pick a Pokémon above to start. You can also open a Pokémon and press Compare.</p></div>';
+  const mons=ids.map(id=>({id,p:S.pokemon[id],there:(S.pokemon[id].debut||1)<=g})).map(x=>({...x,e:x.there?eff(x.p,g):{}}));
+  const cols=mons.length,na=`<td class="muted">Not in Gen ${ROMAN[g]}</td>`;
+  const sec=t=>`<tr class="cmpsec"><th colspan="${cols+1}" scope="colgroup">${t}</th></tr>`;
+  const line=(lab,f)=>`<tr><th scope="row">${lab}</th>${mons.map(x=>x.there?`<td>${f(x)}</td>`:na).join('')}</tr>`;
+  const head=`<tr><th></th>${mons.map(x=>`<th scope="col" class="cmphead"><a href="#p-${esc(x.id)}">${pokeTile(x.p,x.e,g,56)}<span>${esc(x.p.name)}</span></a><span class="mono muted">No. ${pad(x.p.dex)}</span></th>`).join('')}</tr>`;
+  // Stats: the highest in each row is marked when there is more than one Pokémon.
+  const st=statsAt({},g).map(([k,lab])=>{
+    const vals=mons.map(x=>x.there?statsAt(x.e,g).find(s=>s[0]===k)[2]:null),top=Math.max(...vals.filter(v=>v!=null));
+    return `<tr><th scope="row">${lab}</th>${mons.map((x,i)=>!x.there?na:`<td><div class="cmpstat${cols>1&&vals[i]===top?' best':''}"><span class="mono">${dash(vals[i])}</span><span class="bar" aria-hidden="true"><i style="width:${Math.min((vals[i]||0)/STAT_MAX*100,100).toFixed(1)}%"></i></span></div></td>`).join('')}</tr>`;
+  }).join('');
+  const tots=mons.map(x=>x.there?total(x.e,g):null),tTop=Math.max(...tots.filter(v=>v!=null));
+  const totRow=`<tr><th scope="row">Total</th>${mons.map((x,i)=>!x.there?na:`<td class="mono${cols>1&&tots[i]===tTop?' cmpbest':''}">${dash(tots[i])}</td>`).join('')}</tr>`;
+  // Type matchups: only types where at least one of them is not neutral.
+  const defm=x=>Object.fromEntries(ts.map(a=>[a,(x.e.types||[]).filter(d=>ts.includes(d)).reduce((m,d)=>m*cell(g,a,d),1)]));
+  const dm=mons.map(x=>x.there?defm(x):null);
+  const mstyle=m=>m>=4?'background:var(--hot);color:var(--on-data);font-weight:700':m>=2?'background:var(--hot);color:var(--on-data)':m===0?'background:var(--zero);color:var(--on-zero)':m<=.25?'background:var(--cooler);color:var(--on-data)':m<1?'background:var(--cool);color:var(--on-data)':'';
+  const matchRows=ts.filter(a=>dm.some(d=>d&&d[a]!==1)).map(a=>`<tr><th scope="row">${chip(a)}</th>${mons.map((x,i)=>!x.there?na:`<td class="mono cmpmult" style="${mstyle(dm[i][a])}">×${mult(dm[i][a])}</td>`).join('')}</tr>`).join('');
+  // Resistances: how many attacking types each one takes ×½, ×¼ or ×0 from. The total counts all three, and the highest is marked.
+  const count=(i,f)=>Object.values(dm[i]).filter(f).length;
+  const resCounts=mons.map((x,i)=>x.there?{half:count(i,m=>m===.5),quarter:count(i,m=>m>0&&m<=.25),zero:count(i,m=>m===0)}:null);
+  const resTot=resCounts.map(c=>c?c.half+c.quarter+c.zero:null),resTop=Math.max(...resTot.filter(v=>v!=null));
+  const resLine=(lab,f,bold)=>`<tr><th scope="row">${lab}</th>${mons.map((x,i)=>!x.there?na:`<td class="mono${bold&&cols>1&&resTot[i]===resTop?' cmpbest':''}">${f(i)}</td>`).join('')}</tr>`;
+  const resRows=resLine('×½',i=>resCounts[i].half)+resLine('×¼',i=>resCounts[i].quarter)+resLine('Immune (×0)',i=>resCounts[i].zero)+resLine('Total resistances',i=>resTot[i],true);
+  // Movesets: every move any of them learns, with how each one learns it.
+  const sets=mons.map(x=>x.there?movesetOf(x.id,g):[]);
+  const allMoves=[...new Set(sets.flat().map(x=>x.m))].sort((a,b)=>label('moves',a).localeCompare(label('moves',b)));
+  const shared=allMoves.filter(m=>sets.every((s,i)=>!mons[i].there||s.some(x=>x.m===m))).length;
+  const moveRows=allMoves.map(m=>{const e=effMove(S.moves[m],g);return `<tr><th scope="row"><span class="cmpmove"><a href="#m-${esc(m)}">${esc(label('moves',m))}</a>${e.type?chipText(e.type):''}</span></th>${mons.map((x,i)=>!x.there?na:`<td>${sets[i].filter(s=>s.m===m).map(s=>esc(s.how||'Yes')).join('<br>')||'<span class="muted">—</span>'}</td>`).join('')}</tr>`}).join('');
+  const body=[
+    line('Type',x=>(x.e.types||[]).length?chips(x.e.types):'<span class="muted">Not set</span>'),
+    sec('Base stats'),st,totRow,
+    g>=3?sec('Abilities')+line('Abilities',x=>(x.e.abilitySlots||[]).map((o,i)=>`<div><span class="muted">${i+1}.</span> ${esc(o.map(a=>label('abilities',a)).join(' / '))}</div>`).join('')||'<span class="muted">Not set</span>'):'',
+    sec('Vitals'),line('Growth rate',x=>dash(x.e.growthRate)),line('Height',x=>dash(heightText(x.e.height))),line('Weight',x=>dash(weightText(x.e.weight))),line('Evolves from',x=>x.e.evolvesFrom?`${pokeLink(x.e.evolvesFrom)}${x.e.evoMethod?` <span class="muted">(${esc(x.e.evoMethod)})</span>`:''}`:'<span class="muted">—</span>'),
+    sec('Damage taken'),matchRows||`<tr><td colspan="${cols+1}" class="muted">Neutral against every type.</td></tr>`,
+    sec('Resistances'),resRows,
+    sec(`Moves <span class="muted" style="font-weight:400;text-transform:none">${allMoves.length} total${cols>1?`, ${shared} shared by all`:''}</span>`),moveRows||`<tr><td colspan="${cols+1}" class="muted">No moves added yet.</td></tr>`
+  ].join('');
+  return top+`<div class="box"><table class="cmp" style="min-width:${200+cols*200}px"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+}
+function cmpPick(){
+  const ids=[0,1,2].map(i=>byName('pokemon',$('cmp-'+i)?.value)).filter(Boolean);
+  const h='cmp'+(ids.length?'-'+[...new Set(ids)].join(','):'');
+  if(location.hash.slice(1)!==h)location.hash=h;
+}
+/* TMs and HMs. Each game has its own list, stored in data/tms.json as {name, gen, tms:[{n:'TM01', m:moveId, where, price}]}. */
+// Reads "tm1", "TM 01" or "HM05" as {kind:'TM', num:1}. Anything else gives null.
+function tmParse(s){const x=String(s||'').match(/^\s*(TM|HM)\s*0*(\d+)/i);return x?{kind:x[1].toUpperCase(),num:+x[2],rest:String(s).slice(x[0].length)}:null}
+const tmLabel=t=>`${t.kind}${String(t.num).padStart(2,'0')}`;
+const tmOrder=(a,b)=>{const x=tmParse(a.n),y=tmParse(b.n);if(!x||!y)return !x-!y;return (x.kind==='HM')-(y.kind==='HM')||x.num-y.num};
+const gamesAt=g=>rows('tms').filter(x=>x.gen===g).sort((a,b)=>a.name.localeCompare(b.name));
+function tmPage(){
+  const g=UI.gen,games=gamesAt(g),cur=games.find(x=>x.id===UI.tmGame)||games[0];
+  const top=titleBar('TMs & HMs',`Gen ${ROMAN[g]} games. Each game keeps its own list.`,addBtn('Add game','new-tms'));
+  if(!loaded)return top+loading();
+  if(!games.length)return top+emptyMsg(`No Gen ${ROMAN[g]} games have a TM list yet.${canEdit?' Add one, like Red & Blue, and fill in its TMs and HMs.':''}`,'new-tms','Add game');
+  const tabs=games.length>1?`<div class="btns" role="group" aria-label="Game">${games.map(x=>`<button type="button" class="btn" data-act="tm-game" data-v="${esc(x.id)}" aria-pressed="${x.id===cur.id}">${esc(x.name)}</button>`).join('')}</div>`:'';
+  const list=(cur.tms||[]).slice().sort(tmOrder);
+  const row=t=>{const mv=S.moves[t.m],e=mv?effMove(mv,g):{};return `<tr><td class="mono mid" style="font-weight:600">${esc(t.n)}</td><td class="name mid">${moveLink(t.m)||'—'}</td><td class="mid">${e.type?chip(e.type):'—'}</td><td class="mid">${e.category?`<span class="cat" style="background:${CAT[e.category]||'var(--soft)'}">${esc(e.category)}</span>`:'—'}</td><td class="num mono mid">${dash(e.power)}</td><td class="num mono mid">${dash(e.accuracy)}</td><td class="num mono mid">${dash(e.pp)}</td><td class="mid">${dash(t.where)}</td><td class="num mono mid">${t.price==null?'—':'₽'+Number(t.price).toLocaleString()}</td></tr>`};
+  const nTM=list.filter(t=>tmParse(t.n)?.kind==='TM').length,nHM=list.length-nTM;
+  return top+`<div class="toolbar">${tabs}${canEdit?`<button type="button" class="btn push" data-act="edit-tms" data-id="${esc(cur.id)}">Edit ${esc(cur.name)}</button>`:''}</div>
+  <section class="card"><h2>${esc(cur.name)} <span class="muted" style="font-size:16px;font-family:var(--body);text-transform:none">${nTM} TMs, ${nHM} HMs</span></h2>${list.length?`<div class="box" style="border:0"><table style="min-width:760px"><thead><tr><th>No.</th><th>Move</th><th>Type</th><th>Category</th><th class="num">Power</th><th class="num">Acc.</th><th class="num">PP</th><th>Where to get it</th><th class="num">Price</th></tr></thead><tbody>${list.map(row).join('')}</tbody></table></div>`:'<p class="muted" style="margin:0">No TMs added yet.</p>'}</section>`;
+}
+function openTms(id){
+  const d=id?S.tms[id]:{name:'',gen:UI.gen,tms:[]};
+  F={col:'tms',id,rows:(d.tms||[]).slice().sort(tmOrder).map(t=>({n:t.n,m:label('moves',t.m),where:t.where||'',price:t.price??''}))};
+  if(!F.rows.length)F.rows.push({n:'TM01',m:'',where:'',price:''});
+  const others=rows('tms').filter(x=>x.id!==id).sort((a,b)=>a.gen-b.gen||a.name.localeCompare(b.name));
+  const copy=others.length?`<div class="toolbar"><label class="ctl" style="flex:1 1 220px">Start from another game's list<select id="tm-src">${others.map(x=>`<option value="${esc(x.id)}">${esc(x.name)} (Gen ${ROMAN[x.gen]})</option>`).join('')}</select></label><button type="button" class="btn" data-act="tm-copyfrom">Replace rows with this list</button></div>`:'';
+  modal(`${id?'Edit':'Add'} TM list`,`<div class="formbody"><div class="fgrid">${input('name','Game',d.name,{ph:'Red & Blue'})}${genSelect('gen',d.gen,'Generation')}</div>${copy}<p class="hint">Number is like TM01 or HM05. New move names are added to Moves. Price is optional.</p><div id="tmrows" style="display:flex;flex-direction:column;gap:8px"></div></div>${foot(id,'del-tms')}`,saveTms);
+  drawTms();
+}
+function drawTms(){
+  $('tmrows').innerHTML=F.rows.map((x,i)=>`<div class="tmrow">${input(`tm${i}-n`,'No.',x.n,{ph:'TM01'})}${input(`tm${i}-m`,'Move',x.m,{list:'dl-moves'})}${input(`tm${i}-where`,'Where to get it',x.where)}${input(`tm${i}-price`,'Price',x.price,{type:'number',min:0})}<button type="button" class="btn small" data-act="tm-del" data-v="${i}" aria-label="Remove row ${i+1}">Remove</button></div>`).join('')+'<div class="btns"><button type="button" class="btn small" data-act="tm-add" data-v="TM">Add TM</button><button type="button" class="btn small" data-act="tm-add" data-v="HM">Add HM</button></div>';
+}
+function readTms(){F.rows=F.rows.map((_,i)=>({n:v(`tm${i}-n`),m:v(`tm${i}-m`),where:v(`tm${i}-where`),price:v(`tm${i}-price`)}))}
+// New rows take the next free number of that kind.
+function addTmRow(kind){
+  readTms();
+  const max=F.rows.map(r=>tmParse(r.n)).filter(t=>t&&t.kind===kind).reduce((m,t)=>Math.max(m,t.num),0);
+  F.rows.push({n:tmLabel({kind,num:max+1}),m:'',where:'',price:''});drawTms();$(`f-tm${F.rows.length-1}-m`)?.focus();
+}
+function tmCopyFrom(){
+  readTms();const src=S.tms[$('tm-src').value];if(!src)return;
+  F.rows=(src.tms||[]).slice().sort(tmOrder).map(t=>({n:t.n,m:label('moves',t.m),where:t.where||'',price:t.price??''}));
+  drawTms();toast(`Copied ${F.rows.length} rows from ${src.name}. Change what's different, then Save.`);
+}
+async function saveTms(){
+  readTms();
+  const name=v('name'),gen=+v('gen');
+  if(!name)return fail('Give the game a name.');
+  if(rows('tms').some(x=>x.id!==F.id&&x.name.toLowerCase()===name.toLowerCase()))return fail(`There's already a list called ${name}.`);
+  const list=F.rows.filter(r=>r.n||r.m),seen=new Set();
+  for(const r of list){
+    const t=tmParse(r.n);
+    if(!t||t.rest.trim())return fail(`"${r.n||'(blank)'}" isn't a TM or HM number. Use something like TM01 or HM05.`);
+    if(!r.m)return fail(`${tmLabel(t)} needs a move.`);
+    if(seen.has(tmLabel(t)))return fail(`${tmLabel(t)} is listed twice.`);seen.add(tmLabel(t));
+    const mid=byName('moves',r.m);if(mid&&(S.moves[mid].debut||1)>gen)return fail(`${S.moves[mid].name} debuts in Gen ${ROMAN[S.moves[mid].debut]}, so it can't be a Gen ${ROMAN[gen]} TM.`);
+    if(r.price!==''&&!(Number(r.price)>=0))return fail(`${tmLabel(t)}'s price must be 0 or more.`);
+  }
+  const tms=[];
+  for(const r of list){const t=tmParse(r.n),o={n:tmLabel(t),m:await ensure('moves',r.m,gen)};if(r.where)o.where=r.where;if(r.price!=='')o.price=Number(r.price);tms.push(o)}
+  const id=F.id||newId('tms',name),doc={name,gen,tms:tms.sort(tmOrder)};
+  if(!await put('tms/'+id,doc))return;
+  S.tms[id]=doc;UI.tmGame=id;
+  if(gen!==UI.gen){UI.gen=gen;try{localStorage.setItem('gen',gen)}catch(e){}}
+  closeModal();render();toast('Saved');
+}
+
+/* Copying the previous generation's moveset into this one. TMs and HMs are checked against one of this generation's games:
+   ones that game doesn't have are dropped, and ones with a different number there are renumbered. */
+function copyPrevMoveset(){
+  const {pid,g}=F,game=S.tms[$('ms-game')?.value||''];
+  const byMove=new Map();for(const t of (game?.tms||[]).slice().sort(tmOrder))if(!byMove.has(t.m))byMove.set(t.m,t.n);
+  const kept=[],dropped=[],renum=[];let unchecked=0;
+  for(const x of movesetOf(pid,g-1)){
+    const t=tmParse(x.how),name=label('moves',x.m);
+    if(!t){kept.push({m:name,how:x.how});continue}
+    if(!game){unchecked++;kept.push({m:name,how:x.how});continue}
+    const now=byMove.get(x.m);
+    if(!now){dropped.push(`${name} (${tmLabel(t)})`);continue}
+    if(now!==tmLabel(t))renum.push(`${name}: ${tmLabel(t)} to ${now}`);
+    kept.push({m:name,how:now+t.rest});
+  }
+  F.ms=kept.length?kept:[{m:'',how:''}];
+  drawMoveset();
+  const out=[`Copied ${kept.length} move${kept.length===1?'':'s'} from Gen ${ROMAN[g-1]}. Nothing is saved until you press Save.`];
+  if(game){
+    out.push(dropped.length?`Removed ${dropped.length}, not a TM or HM in ${game.name}: ${dropped.join(', ')}.`:`Every TM and HM is also in ${game.name}.`);
+    if(renum.length)out.push(`Renumbered ${renum.length}: ${renum.join('; ')}.`);
+  }else if(unchecked)out.push(`${unchecked} TMs and HMs were copied unchanged because no Gen ${ROMAN[g]} game has a TM list. Add one on the TMs & HMs page to check them.`);
+  $('ms-note').innerHTML=out.map(s=>`<span style="display:block">${esc(s)}</span>`).join('');$('ms-note').hidden=false;
+}
+
+/* Damage calculator, laid out like the Showdown calc: results on top, then Pokémon 1 · field · Pokémon 2.
+   The address can name a Pokémon to put on the left, like #calc-venusaur.
+   Items and abilities are free text in this tracker, so their effect goes in each side's "Extra multiplier". */
+const WEATHER=[['','None',1],['sun','Sun',2],['rain','Rain',2],['sand','Sand',2],['hail','Hail',3]];
+const WEATHER_IN={sun:'in Sun',rain:'in Rain',sand:'in Sand',hail:'in Hail'};
+const STATUS_OPTS=[['','Healthy'],['brn','Burned'],['par','Paralyzed'],['other','Other status']];
+// Barrier and Light Screen double the user's Defense or Special until it switches out (see their move pages). Crits ignore them.
+const SIDE_TOGGLES=[['barrier','Barrier'],['light','Light Screen']];
+const STAT_SHORT={hp:'HP',atk:'Atk',def:'Def',spa:'SpA',spd:'SpD',spe:'Spe',spc:'Spc'};
+function dmgSide(){return {p:null,level:50,dv:{atk:DV_MAX,def:DV_MAX,spe:DV_MAX,spc:DV_MAX},se:{},iv:Object.fromEntries(EV_KEYS.map(([k])=>[k,IV_MAX])),ev:{},nature:'',stages:{},status:'',hpv:null,mult:1,moves:['','','',''],crits:[false,false,false,false],barrier:false,light:false}}
+const dmgState=()=>UI.dmg||(UI.dmg={sides:[dmgSide(),dmgSide()],weather:'',sel:{i:0,j:0},applied:null});
+const stageMul=n=>n>=0?(2+n)/2:2/(2-n);
+function dmgStats(s,g){
+  const p=S.pokemon[s.p];if(!p||(p.debut||1)>g)return null;
+  const e=eff(p,g),raw=Object.fromEntries(calcStats(e,g,s.level||1,g<=2?{dv:s.dv,se:s.se}:{iv:s.iv,ev:s.ev,nature:s.nature}).map(([k,,x])=>[k,x]));
+  return {e,raw:Object.values(raw).some(x=>x==null)?null:raw};
+}
+const dmgCurHP=(s,st)=>Math.min(Math.max(s.hpv??st.raw.hp,0),st.raw.hp);
+// Final Speed after stages and paralysis (×¼ in Gens I–IV).
+const dmgSpeed=(s,st)=>Math.floor(Math.floor(st.raw.spe*stageMul(s.stages.spe||0))*(s.status==='par'?.25:1));
+// Every damage roll for one move. Returns {rolls, ...} or {why} when it can't be worked out.
+function dmgRolls(g,A,a,D,d,mid,weather,crit){
+  const mv=S.moves[mid];if(!mv)return {why:'Unknown move'};
+  if((mv.debut||1)>g)return {why:`Debuts in Gen ${ROMAN[mv.debut]}`};
+  const m=effMove(mv,g);
+  if(!m.category)return {why:'No category set',m};
+  if(m.category==='Status')return {why:'Status move',m};
+  if(!m.power)return {why:'No power set',m};
+  if(!m.type)return {why:'No type set',m};
+  const phys=m.category==='Physical',aK=phys?'atk':g===1?'spc':'spa',dK=phys?'def':g===1?'spc':'spd';
+  let as=A.stages[aK]||0,ds=D.stages[dK]||0;
+  if(crit){if(g===1||(g===2&&as<=ds)){as=0;ds=0}else if(g>=3){as=Math.max(as,0);ds=Math.min(ds,0)}}
+  let atk=Math.floor(a.raw[aK]*stageMul(as)),def=Math.floor(d.raw[dK]*stageMul(ds));
+  const screen=!crit&&(phys?D.barrier:D.light),burn=phys&&A.status==='brn';
+  if(screen)def*=2;
+  if(g<=2){
+    if(burn&&!(g===1&&crit))atk=Math.floor(atk/2);
+    if(atk>255||def>255){atk=Math.max(1,Math.floor(atk/4));def=Math.max(1,Math.floor(def/4))}
+  }
+  const sandUp=g>=4&&weather==='sand'&&!phys&&(d.e.types||[]).includes('Rock');
+  if(sandUp)def=Math.floor(def*1.5);
+  const L=A.level||1,Lc=g===1&&crit?2*L:L;
+  let base=Math.floor(Math.floor(Math.floor(2*Lc/5+2)*m.power*atk/Math.max(1,def))/50);
+  const wm=g<2?1:weather==='sun'?(m.type==='Fire'?1.5:m.type==='Water'?.5:1):weather==='rain'?(m.type==='Water'?1.5:m.type==='Fire'?.5:1):1;
+  if(g<=2){base=Math.min(base,997)+2;if(g===2&&crit)base*=2;base=Math.floor(base*wm)}
+  else{if(burn)base=Math.floor(base/2);base=Math.floor(base*wm)+2;if(crit)base*=2}
+  base=Math.floor(base*(Number(A.mult)||1));
+  const ts=typesAt(g),each=(d.e.types||[]).filter(t=>ts.includes(t)).map(t=>cell(g,m.type,t)),te=each.reduce((x,y)=>x*y,1);
+  const stab=(a.e.types||[]).includes(m.type)?1.5:1,info={m,te,stab,aK,dK,as,ds,screen,burn,weatherHit:wm!==1||sandUp,crit};
+  if(te===0)return {rolls:[0],...info};
+  const finish=x=>{let v=Math.floor(x*stab);for(const t of each)v=Math.floor(v*t);return v};
+  const rolls=[];
+  if(g<=2){const b=finish(base);for(let r=217;r<=255;r++)rolls.push(Math.max(1,Math.floor(b*r/255)))}
+  else for(let r=85;r<=100;r++)rolls.push(Math.max(1,finish(Math.floor(base*r/100))));
+  return {rolls,...info};
+}
+// Chance that n hits in a row (every roll equally likely) do at least hp damage, for n = 1 to 4.
+function koText(rolls,hp){
+  if(!rolls.length||rolls[rolls.length-1]===0)return 'no damage';
+  let dist=new Map([[0,1]]);const p=1/rolls.length,name=n=>n===1?'OHKO':n+'HKO';
+  for(let n=1;n<=4;n++){
+    const next=new Map();for(const [s,q] of dist)for(const r of rolls){const t=Math.min(s+r,hp);next.set(t,(next.get(t)||0)+q*p)}
+    dist=next;const ko=dist.get(hp)||0;
+    if(ko>=.99995)return `guaranteed ${name(n)}`;
+    if(ko>0)return `${(ko*100).toFixed(1).replace(/\.0$/,'')}% chance to ${name(n)}`;
+  }
+  const lo=Math.ceil(hp/rolls[rolls.length-1]),hi=Math.ceil(hp/rolls[0]);
+  return lo===hi?`guaranteed ${name(lo)}`:`possible ${name(lo)}`;
+}
+// The one-line summary, like "+1 Lv. 50 252+ Atk Venusaur Razor Leaf vs. 0 HP / 0 Def Charizard: 23-28 (15 - 18.3%) -- guaranteed 6HKO".
+function dmgDesc(g,A,a,D,d,mid,r,hp){
+  const stage=n=>n?(n>0?'+'+n:String(n))+' ':'',lv=s=>s.level&&s.level!==100?`Lv. ${s.level} `:'';
+  const sign=(s,k)=>{const x=natureMods(s.nature)[k];return x>1?'+':x<1?'-':''};
+  const ev=(s,k)=>g>=3?`${s.ev[k]||0}${sign(s,k)} ${STAT_SHORT[k]} `:'';
+  const aS=r.as,dS=r.ds;
+  const left=`${stage(aS)}${lv(A)}${ev(A,r.aK)}${r.burn?'burned ':''}${esc(label('pokemon',A.p))}${Number(A.mult)!==1?` (×${A.mult})`:''} ${esc(label('moves',mid))}`;
+  const right=`${stage(dS)}${lv(D)}${g>=3?`${D.ev.hp||0} HP / `:''}${ev(D,r.dK).trim()} ${esc(label('pokemon',D.p))}`.replace(/\s+/g,' ').trim();
+  const extra=[r.screen?`through ${r.m.category==='Physical'?'Barrier':'Light Screen'}`:'',r.weatherHit?WEATHER_IN[dmgState().weather]:'',r.crit?'on a critical hit':''].filter(Boolean).join(' ');
+  const lo=r.rolls[0],hi=r.rolls[r.rolls.length-1],pct=x=>+(x/d.raw.hp*100).toFixed(1);
+  return `${left} vs. ${right}${extra?' '+extra:''}: ${lo}-${hi} (${pct(lo)} - ${pct(hi)}%) -- ${koText(r.rolls,hp)}`;
+}
+function dmgPanel(i,g){
+  const s=dmgState().sides[i],p=S.pokemon[s.p],old=g<=2,st=p?dmgStats(s,g):null,pfx=`dc-${i}-`;
+  const box=(key,val,max,lab,w)=>`<input class="calcin" id="${pfx}${key}" type="number" min="0" max="${max}" value="${esc(val??'')}" placeholder="0" aria-label="${esc(lab)}"${w?` style="width:${w}px"`:''}>`;
+  // Trainer Pokémon from this generation's encounters, so you can load one in a step.
+  const opts=[];
+  for(const t of rows('trainers').sort((a,b)=>a.name.localeCompare(b.name)))(t.encounters||[]).forEach((e,ei)=>{if(e.gen!==g)return;encTeams(e).forEach((x,ti)=>x.team.forEach((m,mi)=>{if(m.p)opts.push([`${t.id}|${ei}|${ti}|${mi}`,`${t.name} · ${e.label||'Battle'}${x.when?` (${x.when})`:''} · ${label('pokemon',m.p)}${m.level?' Lv '+m.level:''}`])}))});
+  const pick=`<div class="fgrid dcpick"><label class="ctl">Pokémon ${i+1}<input id="${pfx}p" list="dl-pokemon" value="${esc(p?p.name:'')}" placeholder="Type a name" autocomplete="off"></label>${opts.length?`<label class="ctl">Load a trainer's Pokémon<select id="${pfx}load"><option value="">Choose</option>${opts.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join('')}</select></label>`:''}</div>`;
+  const msg=t=>`<section class="card dcpanel">${pick}<p class="muted" style="margin:0">${t}</p></section>`;
+  if(!p)return msg('Pick a Pokémon.');
+  if(!st)return msg(`${esc(p.name)} debuts in Gen ${ROMAN[p.debut]}.`);
+  if(!st.raw)return msg(`Fill in all of ${esc(p.name)}'s base stats first.`);
+  const e=st.e;
+  const stageSel=k=>`<select class="calcin" id="${pfx}st-${k}" aria-label="${STAT_SHORT[k]} stage" style="width:62px">${[6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6].map(n=>`<option value="${n}"${(s.stages[k]||0)===n?' selected':''}>${n>0?'+'+n:n}</option>`).join('')}</select>`;
+  const row=([k,lab,b])=>{
+    let a,c;
+    if(old){a=k==='hp'?`<span class="mono muted" id="${pfx}hpdv">${hpDV(s.dv)}</span>`:g===2&&k==='spd'?'<span class="muted">Same</span>':box('dv-'+oldKey(k),s.dv[oldKey(k)],DV_MAX,lab+' DV',54);c=g===2&&k==='spd'?'<span class="muted">Same</span>':box('se-'+oldKey(k),s.se[oldKey(k)],SE_MAX,lab+' Stat Exp',78)}
+    else{a=box('iv-'+k,s.iv[k],IV_MAX,lab+' IV',54);c=box('ev-'+k,s.ev[k],EV_MAX,lab+' EV',62)}
+    return `<tr><th scope="row">${STAT_SHORT[k]}<span class="natmark" id="${pfx}nat-${k}"></span></th><td class="num mono">${b}</td><td>${a}</td><td>${c}</td><td class="num mono calcres" id="${pfx}out-${k}"></td><td>${k==='hp'?'':stageSel(k)}</td></tr>`;
+  };
+  const nat=old?'':`<label class="ctl">Nature<select id="${pfx}nature"><option value="">Neutral</option>${NATURES.map((r,x)=>r.map((n,y)=>x===y?'':`<option${s.nature===n?' selected':''} value="${n}">${n} (+${STAT_SHORT[NATURE_STATS[x][0]]}, −${STAT_SHORT[NATURE_STATS[y][0]]})</option>`).join('')).join('')}</select></label>`;
+  const moveRow=(m,j)=>`<div class="dcmove"><input class="calcin" id="${pfx}mv-${j}" list="dl-moves" value="${esc(m)}" autocomplete="off" aria-label="Move ${j+1}"><span class="mono muted" id="${pfx}mvbp-${j}"></span><span id="${pfx}mvtype-${j}"></span><span class="muted" id="${pfx}mvcat-${j}"></span><label class="check dccrit"><input type="checkbox" id="${pfx}crit-${j}"${s.crits[j]?' checked':''}>Crit</label></div>`;
+  return `<section class="card dcpanel">${pick}
+  <div class="dcid">${pokeTile(p,e,g,56)}<div style="min-width:0"><a class="name" href="#p-${esc(s.p)}" style="font-size:18px">${esc(p.name)}</a>${(e.types||[]).length?chips(e.types):''}</div><label class="ctl" style="margin-left:auto;width:84px">Level<input id="${pfx}level" type="number" min="1" max="100" value="${esc(s.level)}"></label></div>
+  <div class="box" style="border:0"><table class="calc"><thead><tr><th></th><th class="num">Base</th><th>${old?'DVs':'IVs'}</th><th>${old?'Stat Exp':'EVs'}</th><th class="num"></th><th>Boost</th></tr></thead><tbody>${statsAt(e,g).map(row).join('')}</tbody></table></div>
+  <p class="hint" id="${pfx}evtot"></p>
+  <div class="fgrid">${nat}<label class="ctl">Status<select id="${pfx}status">${STATUS_OPTS.map(([v,l])=>`<option value="${v}"${s.status===v?' selected':''}>${l}</option>`).join('')}</select></label><label class="ctl">Extra multiplier<input id="${pfx}mult" type="number" min="0" step="0.1" value="${esc(s.mult)}" title="Items and abilities, like 1.5 for a boosting item. Applies to this Pokémon's attacks."></label></div>
+  <div class="dchp"><span style="font-weight:600">Current HP</span><input class="calcin" id="${pfx}hpv" type="number" min="0" max="${st.raw.hp}" value="${dmgCurHP(s,st)}" aria-label="Current HP"><span class="mono">/ ${st.raw.hp}</span><input class="calcin" id="${pfx}hp" type="number" min="0" max="100" value="${Math.floor(dmgCurHP(s,st)/st.raw.hp*100)}" aria-label="Current HP percent" style="width:64px"><span>%</span></div>
+  <div class="hpbar" aria-hidden="true"><i id="${pfx}hpbar"></i></div>
+  <div class="dcmoves">${s.moves.map(moveRow).join('')}</div></section>`;
+}
+function dmgField(g){
+  const D=dmgState(),name=i=>esc(S.pokemon[D.sides[i].p]?.name||`Pokémon ${i+1}`);
+  const tog=(i,k,l)=>`<button type="button" class="btn small" data-act="dmg-tog" data-v="${i}|${k}" aria-pressed="${!!D.sides[i][k]}">${l}</button>`;
+  return `<section class="card dcfield"><h2>Field</h2>
+  ${g>=2?`<div class="dcgroup"><span class="dclbl">Weather</span><div class="btns" role="group" aria-label="Weather">${WEATHER.filter(x=>x[2]<=g).map(([v,l])=>`<button type="button" class="btn small" data-act="dmg-weather" data-v="${v}" aria-pressed="${D.weather===v}">${l}</button>`).join('')}</div></div>`:''}
+  <div class="dcsides">${[0,1].map(i=>`<div class="dcgroup"><span class="dclbl">${name(i)}'s side</span><div class="btns" style="flex-direction:column;align-items:stretch">${SIDE_TOGGLES.map(([k,l])=>tog(i,k,l)).join('')}</div></div>`).join('')}</div>
+  <div class="dcgroup"><span class="dclbl">Speed</span><div id="dc-speed" class="hint"></div></div>
+  <button type="button" class="btn" data-act="dmg-swap" style="width:100%">Swap sides</button></section>`;
+}
+function calcPage(){
+  const g=UI.gen,D=dmgState();
+  if(loaded&&S.pokemon[UI.arg]&&D.applied!==UI.arg){D.applied=UI.arg;const s=D.sides[0];s.p=UI.arg;s.moves=['','','',''];s.stages={};s.hpv=null;s.crits=[false,false,false,false]}
+  const top=titleBar('Damage Calculator',`Gen ${ROMAN[g]} formulas, from the Battle Mechanics page.`);
+  if(!loaded)return top+loading();
+  return top+`<section class="card dcres" id="dc-res"></section><div class="dcgrid">${dmgPanel(0,g)}${dmgField(g)}${dmgPanel(1,g)}</div>
+  <p class="hint">Every random roll is worked out. KO chances assume each hit lands with the same settings. Fixed-damage moves, multi-hit moves and other move effects aren't worked out. Barrier and Light Screen double the defending stat, and crits ignore them.</p>`;
+}
+// Fills every number and the results. Called after drawing and on every edit, so the box you're typing in keeps focus.
+function dmgFill(){
+  if(UI.route!=='calc'||!$('dc-res'))return;
+  const g=UI.gen,D=dmgState(),st=D.sides.map(s=>s.p?dmgStats(s,g):null),ok=st.map(x=>!!x?.raw),name=i=>esc(S.pokemon[D.sides[i].p]?.name||`Pokémon ${i+1}`);
+  const setVal=(id,v)=>{const el=$(id);if(el&&document.activeElement!==el)el.value=v};
+  D.sides.forEach((s,i)=>{
+    if(!ok[i])return;
+    const x=st[i],mods=g<=2?{}:natureMods(s.nature),pfx=`dc-${i}-`;
+    for(const [k] of statsAt(x.e,g)){const o=$(pfx+'out-'+k);if(o)o.textContent=x.raw[k];const nm=$(pfx+'nat-'+k);if(nm)nm.textContent=mods[k]>1?'+':mods[k]<1?'−':''}
+    const hd=$(pfx+'hpdv');if(hd)hd.textContent=hpDV(s.dv);
+    const et=$(pfx+'evtot');if(et){if(g>=3){const t=Object.values(s.ev).reduce((a,b)=>a+(b||0),0);et.textContent=`EVs: ${t} / ${EV_TOTAL}${t>EV_TOTAL?', over the limit':''}`}else et.hidden=true}
+    const cur=dmgCurHP(s,x),pc=cur/x.raw.hp*100;
+    setVal(pfx+'hpv',cur);setVal(pfx+'hp',Math.floor(pc));
+    const bar=$(pfx+'hpbar');if(bar){bar.style.width=pc.toFixed(1)+'%';bar.className=pc>50?'good':pc>20?'mid':'low'}
+    s.moves.forEach((nm,j)=>{const mid=byName('moves',nm),m=mid?effMove(S.moves[mid],g):{};
+      const bp=$(pfx+'mvbp-'+j),ty=$(pfx+'mvtype-'+j),ca=$(pfx+'mvcat-'+j);
+      if(bp)bp.textContent=m.power?m.power+' BP':'';if(ty)ty.innerHTML=m.type?chipText(m.type):'';if(ca)ca.textContent=m.category||''});
+  });
+  if(ok[0]&&ok[1]){
+    const a=dmgSpeed(D.sides[0],st[0]),b=dmgSpeed(D.sides[1],st[1]);
+    $('dc-speed').innerHTML=a===b?`Speed tie at ${a}.`:`<b>${name(a>b?0:1)}</b> moves first: ${Math.max(a,b)} to ${Math.min(a,b)}.`;
+  }else $('dc-speed').textContent='Pick two Pokémon.';
+  const res=$('dc-res');
+  if(!ok[0]||!ok[1]){res.innerHTML='<p class="muted" style="margin:0">Pick a Pokémon on each side to see damage.</p>';return}
+  // Every move's result, then the one picked for details.
+  const R=[0,1].map(i=>{const j=1-i,A=D.sides[i],Df=D.sides[j],hp=Math.max(1,dmgCurHP(Df,st[j]));
+    return A.moves.map((nm,k)=>{if(!nm.trim())return null;const mid=byName('moves',nm);return {mid,nm,hp,r:mid?dmgRolls(g,A,st[i],Df,st[j],mid,D.weather,A.crits[k]):{why:'Not in your Moves list'}}})});
+  const valid=(i,k)=>R[i][k]&&!R[i][k].r.why;
+  if(!valid(D.sel.i,D.sel.j)){const f=[[0,0],[0,1],[0,2],[0,3],[1,0],[1,1],[1,2],[1,3]].find(([i,k])=>valid(i,k));if(f)D.sel={i:f[0],j:f[1]}}
+  const btns=i=>`<div class="dcmovebtns"><span class="dclbl">${name(i)}'s moves (select one for details)</span>${R[i].map((x,k)=>{if(!x)return '';const r=x.r,mx=st[1-i].raw.hp;
+    const val=r.why?`<small>${esc(r.why==='Status move'?'Status':r.why)}</small>`:`<small class="mono">${+(r.rolls[0]/mx*100).toFixed(1)} - ${+(r.rolls[r.rolls.length-1]/mx*100).toFixed(1)}%</small>`;
+    return `<button type="button" class="btn dcmb" data-act="dmg-sel" data-v="${i}|${k}" aria-pressed="${D.sel.i===i&&D.sel.j===k}"${r.why?' disabled':''}><span>${esc(x.mid?label('moves',x.mid):x.nm)}</span>${val}</button>`}).join('')}</div>`;
+  const pick=valid(D.sel.i,D.sel.j)?R[D.sel.i][D.sel.j]:null;
+  let detail='<p class="muted" style="margin:0">None of the moves do damage yet.</p>';
+  if(pick){
+    const i=D.sel.i,j=1-i,r=pick.r,mx=st[j].raw.hp,lo=r.rolls[0],hi=r.rolls[r.rolls.length-1],cur=pick.hp/mx*100,lp=Math.min(lo/mx*100,cur),hp2=Math.min(hi/mx*100,cur);
+    detail=`<p class="dcdesc">${dmgDesc(g,D.sides[i],st[i],D.sides[j],st[j],pick.mid,r,pick.hp)}</p>
+    <div class="dmgbar" aria-hidden="true"><i class="cur" style="width:${cur.toFixed(1)}%"></i><i class="lo" style="width:${lp.toFixed(1)}%"></i><i class="hi" style="left:${lp.toFixed(1)}%;width:${Math.max(0,hp2-lp).toFixed(1)}%"></i></div>
+    <p class="hint" style="margin:6px 0 0"><span class="key lo"></span>lowest roll <span class="key hi"></span>highest roll <span class="key cur"></span>HP left</p>
+    <p class="hint" style="margin-top:8px">Possible damage amounts: (${r.rolls.join(', ')})</p>`;
+  }
+  res.innerHTML=`<div class="dcbtnrow">${btns(0)}${btns(1)}</div>${detail}`;
+}
+function dmgInput(el){
+  const D=dmgState(),x=el.id.match(/^dc-(\d)-(\w+)(?:-(\w+))?$/);if(!x)return;
+  const i=+x[1],s=D.sides[i],f=x[2],k=x[3];
+  if(f==='p'||f==='load')return; // handled on change
+  if(el.type==='checkbox'){if(f==='crit')s.crits[+k]=el.checked}
+  else if(f==='nature'||f==='status')s[f]=el.value;
+  else if(f==='mv')s.moves[+k]=el.value;
+  else if(f==='st')s.stages[k]=+el.value;
+  else{
+    const raw=el.value.trim(),num=raw===''?null:Number(raw),min=+el.min||0,max=el.max===''?Infinity:+el.max;
+    const good=num===null||(num>=min&&num<=max&&(f==='mult'||Number.isInteger(num)));
+    el.setAttribute('aria-invalid',String(!good));
+    const val=num===null?null:Math.min(Math.max(f==='mult'?num:Math.round(num),min),max);
+    if(f==='hp'){const st=dmgStats(s,UI.gen);if(st?.raw)s.hpv=val==null?null:Math.floor(st.raw.hp*val/100)}
+    else if(f==='hpv')s.hpv=val;
+    else if(k)s[f][k]=val;
+    else s[f]=f==='mult'?(val??1):val;
+  }
+  dmgFill();
+}
+function dmgPick(el){
+  const D=dmgState(),i=+el.id[3],s=D.sides[i];
+  if(el.id.endsWith('-p')){const id=byName('pokemon',el.value);if(!id||id===s.p)return;Object.assign(s,{p:id,moves:['','','',''],stages:{},hpv:null,crits:[false,false,false,false]});render();return}
+  const [tid,ei,ti,mi]=el.value.split('|'),e=S.trainers[tid]?.encounters?.[+ei];if(!e)return;
+  const m=encTeams(e)[+ti]?.team?.[+mi];if(!m)return;
+  const num=o=>Object.fromEntries(Object.entries(o||{}).filter(([,v])=>v!==''&&v!=null).map(([k,v])=>[k,Number(v)||0]));
+  const fresh=dmgSide();
+  Object.assign(fresh,{p:m.p,level:Number(m.level)||50,dv:{atk:0,def:0,spe:0,spc:0,...num(m.dvs)},iv:{...Object.fromEntries(EV_KEYS.map(([k])=>[k,0])),...num(m.ivs)},ev:num(m.evs),nature:m.nature||'',
+    moves:[0,1,2,3].map(j=>m.moves?.[j]?label('moves',m.moves[j]):''),barrier:s.barrier,light:s.light});
+  D.sides[i]=fresh;render();toast(`Loaded ${label('pokemon',m.p)}. Missing DVs or IVs count as 0.`);
 }
 function movePage(id){
   const raw=S.moves[id];
@@ -554,7 +943,7 @@ function monCard(m,gen,isNew){
   const abil=gen>=3?chosenAbilities(m,gen).map((a,i)=>{const txt=a?label('abilities',a):slots[i]?slots[i].map(x=>label('abilities',x)).join(' / ')+' (not chosen)':'';return txt?`<dt>${SLOT_NAMES[i]}</dt><dd>${esc(txt)}</dd>`:''}).join(''):'';
   const moves=(m.moves||[]).filter(Boolean);
   const meta=`${abil}${gen>=2&&m.item?`<dt>Item</dt><dd><span class="withicon">${itemIcon(m.item)}${esc(label('items',m.item))}</span></dd>`:''}${gen>=3&&m.nature?`<dt>Nature</dt><dd>${esc(m.nature)}</dd>`:''}`;
-  const strips=[['DVs',dvs],['EVs',evs],['IVs',ivs]].filter(x=>x[1]).map(([l,h])=>`<div class="strip"><span class="striplbl">${l}</span><div class="stripvals">${h}</div></div>`).join('');
+  const strips=[['Stats',sp?teamStats(m,e,gen):''],['DVs',dvs],['EVs',evs],['IVs',ivs]].filter(x=>x[1]).map(([l,h])=>`<div class="strip"><span class="striplbl">${l}</span><div class="stripvals">${h}</div></div>`).join('');
   return `<div class="mon">${isNew?'<span class="pill new monnew">New</span>':''}<div class="monid">${sp?pokeTile(sp,e,gen,72):tile(name,null,null,72)}
   <div class="monname">${pokeLink(m.p)||esc(name)}</div>${m.level?`<div class="muted mono monlv">Lv. ${esc(m.level)}</div>`:''}${(e.types||[]).length?chips(e.types):''}</div>
   <div class="monside">${moves.length?`<ul class="mvgrid">${moves.map(x=>moveTile(x,gen)).join('')}</ul>`:'<p class="hint">No moves added.</p>'}${meta?`<dl class="monmeta">${meta}</dl>`:''}${strips}${m.notes?`<p class="hint">${esc(m.notes)}</p>`:''}</div></div>`;
@@ -806,16 +1195,37 @@ async function savePokemon(){
 }
 
 /* Moveset editor */
+function movesetCopyBar(pid,g){
+  const games=gamesAt(g);
+  return `<div class="toolbar">${games.length?`<label class="ctl" style="flex:1 1 200px">Check TMs and HMs against<select id="ms-game">${games.map(x=>`<option value="${esc(x.id)}">${esc(x.name)}</option>`).join('')}</select></label>`:''}<button type="button" class="btn" data-act="ms-copyprev">Copy Gen ${ROMAN[g-1]} moveset</button></div>${games.length?'':`<p class="hint">No Gen ${ROMAN[g]} game has a TM list yet, so copied TMs and HMs can't be checked.</p>`}`;
+}
 function openMoveset(pid){
   const g=UI.gen;
   const src=movesetOf(pid,g).length||!isForm(pid)?pid:baseOf(pid);
   F={col:'moveset',pid,g,ms:movesetOf(src,g).map(x=>({m:label('moves',x.m),how:x.how}))};
   if(!F.ms.length)F.ms.push({m:'',how:''});
-  modal(`${S.pokemon[pid].name}: Gen ${ROMAN[g]} moveset`,`<div class="formbody"><p class="hint">Each move here is also listed on that move's page under "Pokémon that learn it" for Gen ${ROMAN[g]}. New move names are added to Moves.</p><div id="ms" style="display:flex;flex-direction:column;gap:8px"></div></div>${foot(null)}`,saveMoveset);
+  modal(`${S.pokemon[pid].name}: Gen ${ROMAN[g]} moveset`,`<div class="formbody"><p class="hint">Each move here is also listed on that move's page under "Pokémon that learn it" for Gen ${ROMAN[g]}. New move names are added to Moves.</p>${g>1?movesetCopyBar(pid,g):''}<p class="hint" id="ms-note" hidden></p><div id="ms" style="display:flex;flex-direction:column;gap:8px"></div></div>${foot(null)}`,saveMoveset);
   drawMoveset();
 }
+// Earlier stages in this generation, nearest first: Venusaur gives Ivysaur, then Bulbasaur.
+function prevEvos(pid,g){
+  const out=[],seen=new Set([pid]);let cur=pid;
+  for(;;){const up=eff(S.pokemon[cur],g).evolvesFrom;if(!up||seen.has(up)||!S.pokemon[up]||(S.pokemon[up].debut||1)>g)break;seen.add(up);out.push(up);cur=up}
+  return out;
+}
 function drawMoveset(){
-  $('ms').innerHTML=F.ms.map((x,i)=>`<div class="msrow">${input(`ms${i}-m`,'Move',x.m,{list:'dl-moves'})}${input(`ms${i}-how`,'How it learns it',x.how,{ph:'Level 12, TM30, Egg move'})}<button type="button" class="btn small" data-act="ms-del" data-v="${i}" aria-label="Remove move ${i+1}">Remove</button></div>`).join('')+'<div><button type="button" class="btn small" data-act="ms-add">Add move</button></div>';
+  const imports=prevEvos(F.pid,F.g).map(e=>`<button type="button" class="btn small" data-act="ms-import" data-v="${esc(e)}">Import ${esc(S.pokemon[e].name)}'s moves</button>`).join('');
+  $('ms').innerHTML=F.ms.map((x,i)=>`<div class="msrow">${input(`ms${i}-m`,'Move',x.m,{list:'dl-moves'})}${input(`ms${i}-how`,'How it learns it',x.how,{ph:'Level 12, TM30, Egg move'})}<button type="button" class="btn small" data-act="ms-del" data-v="${i}" aria-label="Remove move ${i+1}">Remove</button></div>`).join('')+`<div style="display:flex;flex-wrap:wrap;gap:8px"><button type="button" class="btn small" data-act="ms-add">Add move</button>${imports}</div>`;
+}
+// Adds an earlier stage's Gen moveset to the form. Rows that already match (same move and same "how") are skipped. Nothing is saved until you press Save.
+function importMoveset(from){
+  readMoveset();
+  const key=x=>String(x.m).trim().toLowerCase()+'|'+String(x.how||'').trim().toLowerCase();
+  const have=new Set(F.ms.filter(x=>x.m).map(key));
+  const add=movesetOf(from,F.g).map(x=>({m:label('moves',x.m),how:x.how})).filter(x=>!have.has(key(x)));
+  if(add.length)F.ms=F.ms.filter(x=>x.m||x.how).concat(add);
+  drawMoveset();
+  toast(add.length?`Added ${add.length} move${add.length===1?'':'s'} from ${S.pokemon[from].name}. Review them, then Save.`:`${S.pokemon[from].name} has no Gen ${ROMAN[F.g]} moves that aren't already here.`);
 }
 function readMoveset(){F.ms=F.ms.map((_,i)=>({m:v(`ms${i}-m`),how:v(`ms${i}-how`)}))}
 async function saveMoveset(){
@@ -1038,7 +1448,21 @@ const ACT={
   'team-pic-del':()=>{readTeam();const x=F.teams[F.cur];x.sprite='';x.file=null;drawTeams()},
   'edit-moveset':(d)=>openMoveset(d.id),
   'ms-add':()=>{readMoveset();F.ms.push({m:'',how:''});drawMoveset();$(`f-ms${F.ms.length-1}-m`)?.focus()},
-  'ms-del':(d)=>{readMoveset();F.ms.splice(+d.v,1);drawMoveset()}
+  'ms-del':(d)=>{readMoveset();F.ms.splice(+d.v,1);drawMoveset()},
+  'ms-import':(d)=>importMoveset(d.v),
+  'cmp-clear':()=>{location.hash='cmp'},
+  'ms-copyprev':()=>copyPrevMoveset(),
+  'dmg-swap':()=>{const D=dmgState();D.sides.reverse();D.sel.i=1-D.sel.i;render()},
+  'dmg-tog':(d)=>{const [i,k]=d.v.split('|'),s=dmgState().sides[+i];s[k]=!s[k];render()},
+  'dmg-weather':(d)=>{dmgState().weather=d.v;render()},
+  'dmg-sel':(d)=>{const [i,j]=d.v.split('|');dmgState().sel={i:+i,j:+j};dmgFill()},
+  'new-tms':()=>openTms(null),
+  'edit-tms':(d)=>openTms(d.id),
+  'tm-game':(d)=>{UI.tmGame=d.v;render()},
+  'tm-add':(d)=>addTmRow(d.v),
+  'tm-del':(d)=>{readTms();F.rows.splice(+d.v,1);drawTms()},
+  'tm-copyfrom':()=>tmCopyFrom(),
+  'del-tms':(d)=>{const name=S.tms[d.id].name;confirmBox(`Delete ${name}`,`Delete the ${name} TM list? Movesets aren't changed.`,'Delete',async()=>{if(await remove('tms/'+d.id))delete S.tms[d.id]})}
 };
 // A trainer card under a timeline or game opens the trainer page on that timeline.
 document.addEventListener('click',e=>{const a=e.target.closest('a[data-tl]');if(a)UI.timeline=a.dataset.tl});
@@ -1049,11 +1473,14 @@ document.addEventListener('input',e=>{
   if(e.target.id==='f-when'&&F?.col==='enc'){const b=document.querySelector(`[data-act="team-pick"][data-v="${F.cur}"]`);if(b)b.textContent=e.target.value.trim()||`Team ${F.cur+1}`;return}
   if(e.target.id==='f-formof'&&F?.col==='pokemon'){const b=S.pokemon[byName('pokemon',e.target.value)];if(b?.dex!=null&&$('f-dex')){$('f-dex').value=b.dex;$('f-dex').dispatchEvent(new Event('input',{bubbles:true}))}return}
   if(e.target.id==='f-dex'&&F?.col==='pokemon'){const h=$('dex-share'),t=dexShare(n('dex'),F.id);if(h){h.textContent=t;h.hidden=!t}return}
+  if(e.target.id?.startsWith('dc-')){dmgInput(e.target);return}
   const m=e.target.dataset.model;if(!m)return;UI.page=0;if(m==='perPage')try{localStorage.setItem('perPage',e.target.value)}catch(x){}UI[m]=e.target.type==='checkbox'?e.target.checked:e.target.value;renderBody()});
 document.addEventListener('change',e=>{
   if(e.target.id==='f-debut'&&F?.col==='pokemon'&&!F.id){readSlots();readHatch();readForms();const g=+e.target.value;F.g=g;const keep={};
     statsAt({},g).forEach(s=>{const x=$('f-st-'+s[0]);if(x&&x.value!=='')keep[s[0]]=Number(x.value)});
     $('dyn').innerHTML=pokeDyn(g,{stats:keep});drawSlots();drawHatch();drawForms()}
+  if(/^cmp-\d$/.test(e.target.id)){cmpPick();return}
+  if(/^dc-\d-(p|load)$/.test(e.target.id)){dmgPick(e.target);return}
   // The era's generation decides which fields each team member has.
   if(F?.col==='enc'&&e.target.id==='f-era'){readTeam();F.gen=eraGet(e.target.value)?.gen??F.gen;drawTeam();return}
   // A new timeline swaps the Generation list, keeping the same generation when that timeline has it.
@@ -1141,7 +1568,7 @@ document.addEventListener('keydown',e=>{
 });
 function route(){
   let h=location.hash.slice(1)||'dex';if(h==='effects'||h==='status')h='mechanics';
-  const m=h.match(/^(ty|[pmt])-(.+)$/),prev=UI.route;
+  const m=h.match(/^(ty|cmp|calc|[pmt])-(.+)$/),prev=UI.route;
   const prevArg=UI.arg;
   if(m){UI.route=m[1];try{UI.arg=m[1]==='ty'?decodeURIComponent(m[2]):m[2]}catch(e){UI.arg=m[2]}}else{UI.route=PAGES[h]&&!['p','m','t','ty'].includes(h)?h:'dex';UI.arg=null}
   if(prevArg!==UI.arg)UI.when='';
