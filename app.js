@@ -1,5 +1,5 @@
 'use strict';
-const GENS=[1,2,3,4],ROMAN={1:'I',2:'II',3:'III',4:'IV'},REGION={1:'Kanto',2:'Johto',3:'Hoenn',4:'Sinnoh'};
+const GENS=[1,2,3,4],ROMAN={1:'I',2:'II',3:'III',4:'IV'};
 const COLS=['pokemon','abilities','items','moves','effects','trainers'];
 /* Trainer encounters belong to an era: a generation plus, when the generation has more than one, a region.
    Remakes put two eras in one generation, like Gen III (Kanto) and Gen III (Hoenn). The era's generation decides
@@ -22,6 +22,8 @@ const eraIdx=id=>ERAS.findIndex(x=>x.id===id);
 const eraShared=x=>ERAS.filter(y=>y.gen===x.gen).length>1;
 const eraName=id=>{const x=eraGet(id);return x?`Gen ${ROMAN[x.gen]}${x.region&&eraShared(x)?` (${x.region})`:''}`:id};
 const SLOT_NAMES=['Ability I','Ability II','Ability III'];
+// From Gen IV a slot can share up to this many abilities, switched outside battle.
+const SLOT_OPTS=3;
 const STAT_MAX=255;
 const NAV=[['dex','National Dex'],['types','Type Chart'],['abilities','Abilities'],['items','Items'],['moves','Moves'],['mechanics','Battle Mechanics'],['trainers','Trainers']];
 const CAT={Physical:'var(--hot)',Special:'var(--cool)',Status:'var(--stat)'};
@@ -75,9 +77,11 @@ const artNo=p=>p.art!==undefined?(p.art||null):(p.dex&&p.dex<=493?p.dex:null);
 function pokeArt(p,gen,e){
   if(e.sprite)return['data/sprites/'+e.sprite];
   const a=artNo(p);if(!a)return[];
-  const g=Math.max(gen,a<=151?1:a<=251?2:a<=386?3:4);
-  const file={1:`generation-i/red-blue/transparent/${a}.png`,2:`generation-ii/crystal/transparent/${a}.png`,3:`generation-iii/emerald/${a}.png`,4:`generation-iv/platinum/${a}.png`}[g];
-  return[RAW+'pokemon/versions/'+file,RAW+`pokemon/${a}.png`];
+  // Plain Dex numbers start at the Pokémon's debut gen; forms (422-east, 10013) try the viewed gen first, then later gens.
+  const dexNo=/^\d+$/.test(String(a))&&+a<=493?+a:0,from=dexNo?Math.max(gen,dexNo<=151?1:dexNo<=251?2:dexNo<=386?3:4):Math.min(gen,4);
+  const file={1:`generation-i/red-blue/transparent/${a}.png`,2:`generation-ii/crystal/transparent/${a}.png`,3:`generation-iii/emerald/${a}.png`,4:`generation-iv/platinum/${a}.png`};
+  const out=[];for(let g=from;g<=4;g++)out.push(RAW+'pokemon/versions/'+file[g]);
+  return[...out,RAW+`pokemon/${a}.png`];
 }
 function tile(name,type,srcs,size){
   const c=typeColor(type),has=srcs&&srcs.length;
@@ -112,6 +116,8 @@ function pokeChanges(p,g){
   const sa=slotText(a.abilitySlots),sb=slotText(b.abilitySlots);
   for(let i=0;i<3;i++)if(sa[i]!==sb[i])out.push(sa[i]?`${SLOT_NAMES[i]}: ${sa[i]} to ${sb[i]||'none'}.`:`${SLOT_NAMES[i]}: adds ${sb[i]}.`);
   if((a.evolvesFrom||a.evoMethod)&&(a.evolvesFrom!==b.evolvesFrom||a.evoMethod!==b.evoMethod))out.push('Evolution changed.');
+  if(!eq(a.evoAlts||[],b.evoAlts||[]))out.push((b.evoAlts||[]).length?`Can also evolve from ${b.evoAlts.map(x=>label('pokemon',x.from)+(x.method?` (${x.method})`:'')).join(', ')}.`:'Other evolution sources removed.');
+  if((a.evoMethod2||'')!==(b.evoMethod2||''))out.push(!b.evoMethod2?'Second evolution method removed.':a.evoMethod2?`Second evolution method: ${a.evoMethod2} to ${b.evoMethod2}.`:`Adds a second evolution method: ${b.evoMethod2}.`);
   if((!blank(a.eggGroups)||a.eggCycles!=null||a.genderM!=null||a.hatchesAs)&&(!eq(a.eggGroups,b.eggGroups)||a.genderM!==b.genderM||a.eggCycles!==b.eggCycles||a.hatchesAs!==b.hatchesAs||!eq(a.hatchAlts||[],b.hatchAlts||[])))out.push('Breeding changed.');
   if(!blank(a.forms)&&!eq(a.forms,b.forms))out.push('Form changes updated.');
   if(hasVitals(a)&&(a.species!==b.species||a.height!==b.height||a.weight!==b.weight||a.growthRate!==b.growthRate))out.push('Vitals changed.');
@@ -125,6 +131,9 @@ const isForm=id=>baseOf(id)!==id;
 const formKind=(id,g)=>{const b=baseOf(id);if(b===id)return '';const n=S.pokemon[id].name.toLowerCase();return (eff(S.pokemon[b],g).forms||[]).find(x=>(x.name||'').toLowerCase()===n)?.kind||''};
 // Permanent and reversible forms are listed in the Dex; battle-only forms only when that box is ticked.
 const inDex=(p,g)=>(p.debut||1)<=g&&(!isForm(p.id)||UI.battleForms||formKind(p.id,g)!=='Battle only');
+/* Regional variants (Alolan Vulpix) are forms with a "variant" name. Unlike form changes, a variant is its own line:
+   it has its own evolution chain and is never switched to from the base Pokémon. */
+const isVariant=id=>isForm(id)&&!!S.pokemon[id]?.variant;
 const formsOf=(base,g)=>Object.keys(S.pokemon).filter(k=>k!==base&&S.pokemon[k].formOf===base&&(S.pokemon[k].debut||1)<=g).sort((a,b)=>S.pokemon[a].name.localeCompare(S.pokemon[b].name));
 function family(p,g){
   const seen=new Set();let root=p.id;
@@ -155,7 +164,7 @@ function renderChrome(){
   const cur=({p:'dex',m:'moves',t:'trainers',ty:'types'})[UI.route]||UI.route;
   $('nav').innerHTML=NAV.map(([k,l])=>`<a href="#${k}"${k===cur?' aria-current="page"':''}>${l}</a>`).join('');
   const allGens=cur==='trainers';
-  $('genpick').innerHTML=allGens?'<span>All generations</span>':'<span>Generation</span>'+GENS.map(g=>`<button type="button" class="genbtn" data-act="gen" data-v="${g}" aria-pressed="${g===UI.gen}" aria-label="Generation ${ROMAN[g]}, ${REGION[g]}">${ROMAN[g]}</button>`).join('');
+  $('genpick').innerHTML=allGens?'<span>All generations</span>':'<span>Generation</span>'+GENS.map(g=>`<button type="button" class="genbtn" data-act="gen" data-v="${g}" aria-pressed="${g===UI.gen}" aria-label="Generation ${ROMAN[g]}">${ROMAN[g]}</button>`).join('');
 }
 function render(){
   fillLists();renderChrome();bodyFn=null;
@@ -173,7 +182,7 @@ const emptyMsg=(msg,act,lab)=>`<div class="empty"><p>${msg}</p>${canEdit&&act?`<
 const loading=()=>`<div class="empty"><p>Loading your data.</p></div>`;
 function grouped(list,table){
   if(UI.view!=='gen')return table(list);
-  return GENS.filter(g=>g<=UI.gen).map(g=>{const r=list.filter(x=>(x.debut||1)===g);return r.length?`<h2 class="genhead">Gen ${ROMAN[g]} <span>${REGION[g]}</span></h2>${table(r)}`:''}).join('');
+  return GENS.filter(g=>g<=UI.gen).map(g=>{const r=list.filter(x=>(x.debut||1)===g);return r.length?`<h2 class="genhead">Gen ${ROMAN[g]}</h2>${table(r)}`:''}).join('');
 }
 const matchQ=(x)=>!UI.q.trim()||(x.name||'').toLowerCase().includes(UI.q.trim().toLowerCase());
 const editCell=(act,id)=>canEdit?`<td class="mid"><button type="button" class="btn small" data-act="${act}" data-id="${esc(id)}" aria-label="Edit">Edit</button></td>`:'';
@@ -183,7 +192,7 @@ const changedTag=(d)=>changed(d,UI.gen)?` <span class="pill">Changed in Gen ${RO
 const PAGES={
   dex(){
     bodyFn=dexBody;
-    return titleBar('National Dex',`Every Pokémon available in Gen ${ROMAN[UI.gen]} (${REGION[UI.gen]}), shown with Gen ${ROMAN[UI.gen]} data.`,addBtn('Add Pokémon','new-pokemon'))+
+    return titleBar('National Dex',`Every Pokémon available in Gen ${ROMAN[UI.gen]}, shown with Gen ${ROMAN[UI.gen]} data.`,addBtn('Add Pokémon','new-pokemon'))+
     `<div class="toolbar">${search('Search')}${typeSelect()}${UI.gen>1?`<label class="check"><input id="newOnly" type="checkbox" data-model="newOnly"${UI.newOnly?' checked':''}>New in Gen ${ROMAN[UI.gen]} only</label>`:''}<label class="check"><input id="battleForms" type="checkbox" data-model="battleForms"${UI.battleForms?' checked':''}>Show battle-only forms</label><label class="ctl push" style="flex:0 1 150px">Pokémon per page<select id="perPage" data-model="perPage">${PER_PAGE.map(([k,l])=>`<option value="${k}"${UI.perPage===k?' selected':''}>${l}</option>`).join('')}</select></label></div><div id="body"></div>`;
   },
   types(){
@@ -379,7 +388,7 @@ function mechanicsPage(){
   const dec=(n,b)=>(n>=0?(b+n)/b:b/(b-n)).toFixed(2).replace(/\.?0+$/,'');
   const stages=`<p>Moves like Swords Dance or Growl change a stat by stages, from −6 to +6. Switching out resets them.</p>
     <div class="box"><table style="min-width:420px"><thead><tr><th>Stage</th><th class="num">Attack, Defense, ${g===1?'Special':'Sp. Atk, Sp. Def'}, Speed</th><th class="num">Accuracy and evasion</th></tr></thead><tbody>${stageRows.map(n=>`<tr${n===0?' class="neutralrow"':''}><td class="mono">${n>0?'+'+n:n}</td><td class="num mono">×${dec(n,2)} <span class="muted">(${frac(n,2)})</span></td><td class="num mono">×${dec(n,g<=2?2:3)} <span class="muted">(${frac(n,g<=2?2:3)})</span></td></tr>`).join('')}</tbody></table></div>`;
-  return titleBar('Battle Mechanics',`How battles work in Gen ${ROMAN[g]} (${REGION[g]}), plus your battle and status effects.`,canEdit?`<div class="btns">${addBtn('Add battle effect','new-effect','data-v="battle"')}${addBtn('Add status effect','new-effect','data-v="status"')}</div>`:'')+
+  return titleBar('Battle Mechanics',`How battles work in Gen ${ROMAN[g]}, plus your battle and status effects.`,canEdit?`<div class="btns">${addBtn('Add battle effect','new-effect','data-v="battle"')}${addBtn('Add status effect','new-effect','data-v="status"')}</div>`:'')+
   `<nav class="mechnav" aria-label="On this page">${MECH_SECTIONS.map(([id,l])=>`<button type="button" class="btn small" data-act="jump" data-v="${id}">${l}</button>`).join('')}</nav>
   <div class="toolbar">${search('Search effects')}<label class="ctl" style="flex:0 1 200px">Group<select id="grp" data-model="group"><option value="All">All groups</option>${groups.map(c=>`<option${UI.group===c?' selected':''}>${esc(c)}</option>`).join('')}</select></label>${viewToggle('All effects')}</div>
   <div id="body" style="display:flex;flex-direction:column;gap:18px"></div>
@@ -433,17 +442,35 @@ function pokemonPage(id){
   const defs=[[4,'×4','Weak','var(--hot)','var(--on-data)'],[2,'×2','Weak','var(--hot)','var(--on-data)'],[.5,'×½','Resists','var(--cool)','var(--on-data)'],[.25,'×¼','Resists','var(--cooler)','var(--on-data)'],[0,'×0','Immune','var(--zero)','var(--on-zero)']];
   const match=defs.map(d=>{const t=ts.filter(a=>mults[a]===d[0]);return t.length?`<div class="match"><span class="mlabel" style="background:${d[3]};color:${d[4]}"><b>${d[1]}</b>${d[2]}</span><span class="chips">${t.map(chip).join('')}</span></div>`:''}).join('');
   const immune=[...new Set(slots.flat())].map(a=>({a,t:eff(S.abilities[a],g).immuneTo})).filter(x=>x.t).map(x=>`<p class="hint">With ${esc(label('abilities',x.a))}: immune to ${esc(x.t)}.</p>`).join('');
-  const base=baseOf(id),evo=family({id:base,...S.pokemon[base]},g);
-  const evoHtml=evo.length>1?`<div class="evo">${evo.map((lv,i)=>`${i?`<svg aria-hidden="true" width="34" height="14" viewBox="0 0 34 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h30M25 1l6 6-6 6"/></svg>`:''}<div class="stage">${lv.map(c=>{const m=S.pokemon[c],x=eff(m,g);return `<a class="evotile" href="#p-${esc(c)}"${c===base?' aria-current="true"':''}>${pokeTile(m,x,g,36)}<span>${esc(m.name)}${i&&x.evoMethod?`<small>${esc(x.evoMethod)}</small>`:''}</span></a>`}).join('')}</div>`).join('')}</div>`:'<p class="muted" style="margin:0">Does not evolve.</p>';
+  // A variant has its own chain; a form change shares the base Pokémon's.
+  const base=baseOf(id),chainOf=isVariant(id)?id:base,evo=family({id:chainOf,...S.pokemon[chainOf]},g);
+  /* The chain is drawn as a tree: each Pokémon sits beside its own evolutions, one arrow per branch, so Oddish → Bellossom
+     never looks like Gloom → Bellossom. A Pokémon with an extra source (Bagon → Salamence) appears under each Pokémon it can
+     evolve from, with that route's method. Tiles share the card's width (--d is the tree's depth) and long methods wrap
+     inside them. On narrow cards each evolution moves under the Pokémon it comes from. */
+  const byDex=(a,b)=>(S.pokemon[a].dex??1e9)-(S.pokemon[b].dex??1e9)||isForm(a)-isForm(b)||S.pokemon[a].name.localeCompare(S.pokemon[b].name);
+  const evoTree=(c,how,path)=>{const p2=new Set(path).add(c),kids=[];
+    for(const k of Object.keys(S.pokemon).filter(k=>!p2.has(k)&&(S.pokemon[k].debut||1)<=g).sort(byDex)){const x=eff(S.pokemon[k],g);
+      if(x.evolvesFrom===c)kids.push(evoTree(k,[x.evoMethod,x.evoMethod2&&(x.evoMethod?'or ':'')+x.evoMethod2].filter(Boolean),p2));
+      else{const alt=(x.evoAlts||[]).find(a=>a.from===c);if(alt)kids.push(evoTree(k,[alt.method].filter(Boolean),p2))}}
+    return {c,how,kids,depth:1+Math.max(0,...kids.map(k=>k.depth))}};
+  const tree=evoTree(evo[0][0],[],new Set());
+  const arrow='<svg class="evoarrow" aria-hidden="true" width="34" height="14" viewBox="0 0 34 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h30M25 1l6 6-6 6"/></svg>';
+  const evoNode=n=>{const m=S.pokemon[n.c],x=eff(m,g);
+    return `<div class="evonode"><a class="evotile" href="#p-${esc(n.c)}"${n.c===chainOf?' aria-current="true"':''}>${pokeTile(m,x,g,48)}<span>${esc(m.name)}${n.how.map(h=>`<small>${esc(h)}</small>`).join('')}</span></a>${n.kids.length?`<div class="evokids">${n.kids.map(k=>`<div class="evobranch">${arrow}${evoNode(k)}</div>`).join('')}</div>`:''}</div>`};
+  const evoHtml=tree.depth>1?`<div class="evowrap"><div class="evo d${Math.min(tree.depth,3)}" style="--d:${tree.depth}">${evoNode(tree)}</div></div>`:'<p class="muted" style="margin:0">Does not evolve.</p>';
   const t=total(e,g);
-  const breeding=g<2?'<p class="muted" style="margin:0">Breeding arrives in Gen II.</p>':(blank(e.eggGroups)&&e.eggCycles==null&&e.genderM===undefined&&!e.hatchesAs&&blank(e.hatchAlts))?'<p class="muted" style="margin:0">Not set.</p>':`<dl class="defs"><div><dt>Egg groups</dt><dd>${dash((e.eggGroups||[]).join(', '))}</dd></div><div><dt>Egg cycles</dt><dd>${dash(e.eggCycles)}</dd></div><div><dt>Hatches as</dt><dd>${hatchLink(e.hatchesAs)}</dd></div></dl>${hatchAltsHtml(e.hatchAlts)}<div style="margin-top:12px"><span class="muted" style="font-size:13px">Gender ratio</span>${e.genderM===null||e.genderM===undefined?'<div style="font-weight:600">Genderless</div>':genderBar(e.genderM)}</div>`;
+  const breeding=g<2?'<p class="muted" style="margin:0">Breeding arrives in Gen II.</p>':(blank(e.eggGroups)&&e.eggCycles==null&&e.genderM===undefined&&!e.hatchesAs&&blank(e.hatchAlts))?'<p class="muted" style="margin:0">Not set.</p>':`<dl class="defs"><div><dt>Egg groups</dt><dd>${dash((e.eggGroups||[]).join(', '))}</dd></div><div><dt>Egg cycles</dt><dd>${dash(e.eggCycles)}</dd></div><div><dt>Hatches as</dt><dd>${hatchLink(e.hatchesAs)}${hatchRest(e.hatchAlts)}</dd></div></dl>${hatchAltsHtml(e.hatchAlts)}<div style="margin-top:12px"><span class="muted" style="font-size:13px">Gender ratio</span>${e.genderM===null||e.genderM===undefined?'<div style="font-weight:600">Genderless</div>':genderBar(e.genderM)}</div>`;
   const hasAlt=slots.some(o=>o.length>1);
   const [prevP,nextP]=dexNeighbours(id,g);
   const step=(q,dir)=>q?`<a class="btn small" href="#p-${esc(q.id)}" data-nav="${dir}" aria-label="${dir==='prev'?'Previous':'Next'} Pokémon: ${esc(q.name)}"><span>${dir==='prev'?`← <span class="mono">${pad(q.dex)}</span> ${esc(q.name)}`:`${esc(q.name)} <span class="mono">${pad(q.dex)}</span> →`}</span></a>`:`<span class="btn small" aria-disabled="true">${dir==='prev'?'← First in Dex':'Last in Dex →'}</span>`;
-  const tabIds=[base,...formsOf(base,g)];
-  const tabs=tabIds.length>1?`<nav class="formtabs" aria-label="Forms">${tabIds.map(k=>`<a href="#p-${esc(k)}"${k===id?' aria-current="page"':''}>${esc(S.pokemon[k].name)}</a>`).join('')}</nav>`:'';
+  // Regional variants sit beside the base Pokémon; form changes follow under their own label.
+  const others=formsOf(base,g),variants=others.filter(isVariant),changes=others.filter(k=>!isVariant(k));
+  const tab=k=>`<a href="#p-${esc(k)}"${k===id?' aria-current="page"':''}>${esc(S.pokemon[k].name)}</a>`;
+  const tabs=others.length?`<nav class="formtabs" aria-label="Variants and forms">${[base,...variants].map(tab).join('')}${changes.length?`${variants.length?'<span class="tablabel">Forms</span>':''}${changes.map(tab).join('')}`:''}</nav>`:'';
+  const variantOf=isVariant(id)?` · ${esc(p.variant)} variant of <a href="#p-${esc(base)}">${esc(S.pokemon[base].name)}</a>`:'';
   return `<div class="pnav"><a href="#dex" style="display:flex;align-items:center;min-height:44px;font-weight:600">Back to National Dex</a><nav class="btns" aria-label="Previous and next Pokémon">${step(prevP,'prev')}${step(nextP,'next')}</nav></div>${tabs}
-  <section class="hero">${pokeTile(p,e,g,132)}<div class="grow"><span class="mono">No. ${pad(p.dex)} · Debuted in Gen ${ROMAN[p.debut||1]} (${REGION[p.debut||1]})</span><h1>${esc(p.name)}</h1>${(e.types||[]).length?chips(e.types):'<span>No type set</span>'}</div>${canEdit?`<button type="button" class="btn" data-act="edit-pokemon" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</section>
+  <section class="hero">${pokeTile(p,e,g,132)}<div class="grow"><span class="mono">No. ${pad(p.dex)}${variantOf} · Debuted in Gen ${ROMAN[p.debut||1]}</span><h1>${esc(p.name)}</h1>${(e.types||[]).length?chips(e.types):'<span>No type set</span>'}</div>${canEdit?`<button type="button" class="btn" data-act="edit-pokemon" data-id="${esc(id)}">Edit Gen ${ROMAN[g]} data</button>`:''}</section>
   <section class="note" aria-label="Changes"><strong>Gen ${ROMAN[g]}:</strong>${pokeChanges(p,g).map(c=>`<span>${esc(c)}</span>`).join('')}</section>
   <div class="cols"><div class="col">
     <section class="card"><div style="display:flex;justify-content:space-between;gap:12px"><h2>Base stats</h2><span class="mono" style="font-weight:600">${t==null?'':'Total '+t}</span></div>${st.map(s=>`<div class="stat"><span>${s[1]}</span><span class="mono" style="text-align:right">${dash(s[2])}</span><span class="bar" aria-hidden="true"><i style="width:${Math.min((s[2]||0)/STAT_MAX*100,100).toFixed(1)}%"></i></span></div>`).join('')}</section>
@@ -638,7 +665,7 @@ function confirmBox(title,msg,yes,fn){
 }
 const v=k=>($('f-'+k)?.value??'').trim();
 const n=k=>{const x=v(k);return x===''?null:Number(x)};
-const genSelect=(k,val,lab)=>`<label class="ctl">${esc(lab)}<select id="f-${k}" >${GENS.map(g=>`<option value="${g}"${g===val?' selected':''}>Gen ${ROMAN[g]} (${REGION[g]})</option>`).join('')}</select></label>`;
+const genSelect=(k,val,lab)=>`<label class="ctl">${esc(lab)}<select id="f-${k}" >${GENS.map(g=>`<option value="${g}"${g===val?' selected':''}>Gen ${ROMAN[g]}</option>`).join('')}</select></label>`;
 const input=(k,lab,val,o={})=>`<label class="ctl">${esc(lab)}<input id="f-${k}" type="${o.type||'text'}" value="${esc(val??'')}"${o.list?` list="${o.list}"`:''}${o.ph?` placeholder="${esc(o.ph)}"`:''}${o.min!=null?` min="${o.min}"`:''}${o.max!=null?` max="${o.max}"`:''}${o.step?` step="${o.step}"`:''}></label>`;
 const area=(k,lab,val,ph)=>`<label class="ctl">${esc(lab)}<textarea id="f-${k}"${ph?` placeholder="${esc(ph)}"`:''}>${esc(val??'')}</textarea></label>`;
 const select=(k,lab,val,opts,none)=>`<label class="ctl">${esc(lab)}<select id="f-${k}">${none!=null?`<option value="">${esc(none)}</option>`:''}${opts.map(o=>`<option${o===val?' selected':''}>${esc(o)}</option>`).join('')}</select></label>`;
@@ -693,12 +720,12 @@ async function saveForm(){
 function pokeDyn(g,d){
   const st=statsAt(d,g);
   return `<fieldset><legend>Base stats</legend><div class="fnarrow">${st.map(s=>input('st-'+s[0],s[1],s[2],{type:'number',min:0,max:255})).join('')}</div></fieldset>
-  ${g>=3?`<fieldset><legend>Abilities</legend><div id="slots"></div><p class="hint">Up to three slots.${g>=4?' A slot can hold a second ability that is switched outside battle.':' Shared slots start in Gen IV.'} New names are added to Abilities.</p></fieldset>`:'<p class="hint">Abilities arrive in Gen III.</p>'}
+  ${g>=3?`<fieldset><legend>Abilities</legend><div id="slots"></div><p class="hint">Up to three slots.${g>=4?` A slot can hold up to ${SLOT_OPTS} abilities that are switched outside battle.`:' Shared slots start in Gen IV.'} New names are added to Abilities.</p></fieldset>`:'<p class="hint">Abilities arrive in Gen III.</p>'}
   ${g>=2?`<fieldset><legend>Breeding</legend><div class="fgrid">${input('egg1','Egg group 1',(d.eggGroups||[])[0],{list:'dl-eggs'})}${input('egg2','Egg group 2',(d.eggGroups||[])[1],{list:'dl-eggs'})}${input('cycles','Egg cycles',d.eggCycles,{type:'number',min:0})}${input('hatch','Hatches as',d.hatchesAs,{list:'dl-pokemon'})}${input('male','Percent male',d.genderM,{type:'number',min:0,max:100,ph:'Blank = genderless'})}</div><div id="hatchalts" style="display:flex;flex-direction:column;gap:8px;margin-top:12px"></div><p class="hint">Special hatches: an egg that only becomes a different Pokémon under a condition, like Munchlax when a parent Snorlax holds Full Incense.</p></fieldset><fieldset><legend>Form changes</legend><div id="forms" style="display:flex;flex-direction:column;gap:8px"></div><p class="hint">Each form it can change into, what triggers the change, and whether it lasts.</p></fieldset>`:'<p class="hint">Breeding arrives in Gen II.</p>'}`;
 }
 function drawSlots(){
   const box=$('slots');if(!box)return;const g=F.g;
-  box.innerHTML=F.slots.map((o,i)=>`<div class="slotrow" style="margin-bottom:8px"><span style="font-size:13px;font-weight:600">${SLOT_NAMES[i]}</span><div class="slotopts">${o.map((a,j)=>`<input id="sl-${i}-${j}" list="dl-abilities" aria-label="${SLOT_NAMES[i]} option ${j+1}" value="${esc(a)}" data-slot="${i}" data-opt="${j}">`).join('')}</div><div class="btns">${g>=4&&o.length<2?`<button type="button" class="btn small" data-act="slot-alt" data-v="${i}">Share slot</button>`:''}${o.length>1?`<button type="button" class="btn small" data-act="slot-unalt" data-v="${i}">Unshare</button>`:''}<button type="button" class="btn small" data-act="slot-del" data-v="${i}" aria-label="Remove ${SLOT_NAMES[i]}">Remove</button></div></div>`).join('')+(F.slots.length<3?`<button type="button" class="btn small" data-act="slot-add">Add ability slot</button>`:'');
+  box.innerHTML=F.slots.map((o,i)=>`<div class="slotrow" style="margin-bottom:8px"><span style="font-size:13px;font-weight:600">${SLOT_NAMES[i]}</span><div class="slotopts">${o.map((a,j)=>`<input id="sl-${i}-${j}" list="dl-abilities" aria-label="${SLOT_NAMES[i]} option ${j+1}" value="${esc(a)}" data-slot="${i}" data-opt="${j}">`).join('')}</div><div class="btns">${g>=4&&o.length<SLOT_OPTS?`<button type="button" class="btn small" data-act="slot-alt" data-v="${i}">${o.length>1?'Add another':'Share slot'}</button>`:''}${o.length>1?`<button type="button" class="btn small" data-act="slot-unalt" data-v="${i}">Unshare</button>`:''}<button type="button" class="btn small" data-act="slot-del" data-v="${i}" aria-label="Remove ${SLOT_NAMES[i]}">Remove</button></div></div>`).join('')+(F.slots.length<3?`<button type="button" class="btn small" data-act="slot-add">Add ability slot</button>`:'');
 }
 /* Species names are stored as "Seed Pokémon"; the editor only asks for "Seed". */
 const speciesBase=x=>String(x||'').replace(/s*Pok[eé]mons*$/i,'').trim();
@@ -710,46 +737,63 @@ function drawForms(){
 }
 function readForms(){if(!$('forms'))return;F.forms=F.forms.map((_,i)=>({name:v(`fm${i}-name`),trigger:v(`fm${i}-trigger`),kind:v(`fm${i}-kind`)}))}
 const formsHtml=(a,g)=>g<2?'<p class="muted" style="margin:0">Form changes arrive in Gen II.</p>':blank(a)?'<p class="muted" style="margin:0">No form changes.</p>':`<dl class="defs">${a.map(x=>`<div><dt>${hatchLink(x.name)}</dt><dd>${dash(x.trigger)}${x.kind?` <span class="muted">· ${esc(x.kind)}</span>`:''}</dd></div>`).join('')}</dl>`;
+function drawEvoAlts(){
+  const box=$('evoalts');if(!box)return;
+  box.innerHTML=F.evoAlts.map((x,i)=>`<div class="msrow">${input(`ea${i}-from`,'Evolves from',x.from,{list:'dl-pokemon',ph:'Bagon'})}${input(`ea${i}-method`,'Method',x.method,{ph:'Jump from a cliff (chance equal to its level %)'})}<button type="button" class="btn small" data-act="evoalt-del" data-v="${i}" aria-label="Remove other source ${i+1}">Remove</button></div>`).join('')+'<div><button type="button" class="btn small" data-act="evoalt-add">Add another Pokémon it evolves from</button></div>';
+}
+function readEvoAlts(){if(!$('evoalts'))return;F.evoAlts=F.evoAlts.map((_,i)=>({from:v(`ea${i}-from`),method:v(`ea${i}-method`)}))}
 function drawHatch(){
   const box=$('hatchalts');if(!box)return;
-  box.innerHTML=F.hatch.map((x,i)=>`<div class="msrow">${input(`ha${i}-as`,'Hatches as',x.as,{list:'dl-pokemon',ph:'Munchlax'})}${input(`ha${i}-when`,'Only when',x.when,{ph:'A parent holds Full Incense'})}<button type="button" class="btn small" data-act="hatch-del" data-v="${i}" aria-label="Remove special hatch ${i+1}">Remove</button></div>`).join('')+'<div><button type="button" class="btn small" data-act="hatch-add">Add special hatch</button></div>';
+  box.innerHTML=F.hatch.map((x,i)=>`<div class="msrow hatchrow">${input(`ha${i}-as`,'Hatches as',x.as,{list:'dl-pokemon',ph:'Munchlax'})}${input(`ha${i}-chance`,'Chance %',x.chance,{type:'number',min:0,max:99.9,step:'any',ph:'Always'})}${input(`ha${i}-when`,'Only when',x.when,{ph:'A parent holds Full Incense'})}<button type="button" class="btn small" data-act="hatch-del" data-v="${i}" aria-label="Remove special hatch ${i+1}">Remove</button></div>`).join('')+'<p class="hint" style="margin:0">Leave Chance blank if it always happens when the condition is met. Chances must add up to less than 100%, since the rest hatch as normal.</p><div><button type="button" class="btn small" data-act="hatch-add">Add special hatch</button></div>';
 }
-function readHatch(){if(!$('hatchalts'))return;F.hatch=F.hatch.map((_,i)=>({as:v(`ha${i}-as`),when:v(`ha${i}-when`)}))}
+function readHatch(){if(!$('hatchalts'))return;F.hatch=F.hatch.map((_,i)=>({as:v(`ha${i}-as`),chance:n(`ha${i}-chance`),when:v(`ha${i}-when`)}))}
 const hatchLink=n=>{const k=n&&byName('pokemon',n);return k?`<a href="#p-${esc(k)}">${esc(S.pokemon[k].name)}</a>`:dash(n)};
-const hatchAltsHtml=a=>blank(a)?'':`<div style="margin-top:12px"><span class="muted" style="font-size:13px">Special hatches</span><ul style="margin:4px 0 0;padding-left:18px">${a.map(x=>`<li><b>${hatchLink(x.as)}</b>${x.when?` only when ${esc(x.when.charAt(0).toLowerCase()+x.when.slice(1))}`:''}</li>`).join('')}</ul></div>`;
+const pct=x=>`${+(+x).toFixed(2)}%`;
+const hatchRest=a=>{const t=(a||[]).reduce((s,x)=>s+(x.chance||0),0);return t>0?` <span class="muted">(${pct(100-t)})</span>`:''};
+const hatchAltsHtml=a=>blank(a)?'':`<div style="margin-top:12px"><span class="muted" style="font-size:13px">Special hatches</span><ul style="margin:4px 0 0;padding-left:18px">${a.map(x=>`<li><b>${hatchLink(x.as)}</b>${x.chance!=null?` <span class="muted">(${pct(x.chance)} chance)</span>`:''}${x.when?` only when ${esc(x.when.charAt(0).toLowerCase()+x.when.slice(1))}`:''}</li>`).join('')}</ul></div>`;
 function readSlots(){if(!$('slots'))return;F.slots=F.slots.map((o,i)=>o.map((_,j)=>$(`sl-${i}-${j}`)?.value??''))}
 function openPokemon(id){
   const doc=id?S.pokemon[id]:null,d=id?eff(doc,UI.gen):{},g=id?UI.gen:UI.gen;
-  F={col:'pokemon',id,g,forms:(d.forms||[]).map(x=>({...x})),hatch:(d.hatchAlts||[]).map(x=>({...x})),slots:(d.abilitySlots||[]).map(o=>o.map(a=>label('abilities',a)))};
+  F={col:'pokemon',id,g,evoAlts:(d.evoAlts||[]).map(x=>({from:label('pokemon',x.from),method:x.method||''})),forms:(d.forms||[]).map(x=>({...x})),hatch:(d.hatchAlts||[]).map(x=>({...x})),slots:(d.abilitySlots||[]).map(o=>o.map(a=>label('abilities',a)))};
   const ts=allTypes();
   modal(`${id?'Edit':'Add'} Pokémon`,`<div class="formbody">${genNote(doc,doc?.debut||1)}<div class="fgrid">${input('name','Name',doc?.name)}${input('dex','Dex number',doc?.dex??nextDex(),{type:'number',min:1})}${genSelect('debut',doc?.debut??g,'Generation introduced')}</div><p class="hint" id="dex-share"${dexShare(doc?.dex??nextDex(),id)?'':' hidden'}>${esc(dexShare(doc?.dex??nextDex(),id))}</p>
-  <div class="fgrid">${select('t1','Type 1',(d.types||[])[0],ts,'Choose')}${select('t2','Type 2',(d.types||[])[1],ts,'None')}${input('evofrom','Evolves from',d.evolvesFrom?label('pokemon',d.evolvesFrom):'',{list:'dl-pokemon'})}${input('evomethod','Evolution method',d.evoMethod,{ph:'Level 25'})}${input('formof','Form of',doc?.formOf&&S.pokemon[doc.formOf]?S.pokemon[doc.formOf].name:'',{list:'dl-pokemon',ph:'Blank unless this is an alternate form'})}</div>
+  <div class="fgrid">${select('t1','Type 1',(d.types||[])[0],ts,'Choose')}${select('t2','Type 2',(d.types||[])[1],ts,'None')}${input('evofrom','Evolves from',d.evolvesFrom?label('pokemon',d.evolvesFrom):'',{list:'dl-pokemon'})}${input('evomethod','Evolution method',d.evoMethod,{ph:'Level 25'})}${input('evomethod2','Second evolution method',d.evoMethod2,{ph:'Blank if there is only one'})}${input('formof','Form of',doc?.formOf&&S.pokemon[doc.formOf]?S.pokemon[doc.formOf].name:'',{list:'dl-pokemon',ph:'Blank unless this is an alternate form'})}${input('variant','Regional variant',doc?.variant,{ph:'Hoennian'})}</div><p class="hint">For a regional variant, set Form of to the original Pokémon and give the variant's name, like Hoennian. A variant has its own evolution chain. Leave it blank for form changes like Darmanitan's Zen Mode.</p>
+  <fieldset><legend>Also evolves from</legend><div id="evoalts" style="display:flex;flex-direction:column;gap:8px"></div><p class="hint">Another Pokémon that can evolve straight into this one, and how. Bagon can become Salamence by jumping from a cliff, skipping Shelgon.</p></fieldset>
   <fieldset><legend>Vitals</legend><div class="fgrid">${input('species','Species',speciesBase(d.species),{ph:'Seed'})}${input('height','Height (m)',d.height,{type:'number',min:0,step:'0.1',ph:'0.7'})}${input('weight','Weight (kg)',d.weight,{type:'number',min:0,step:'0.1',ph:'6.9'})}${input('growth','Growth rate',d.growthRate,{list:'dl-growth'})}</div><datalist id="dl-growth">${[...new Set([...GROWTH,...rows('pokemon').flatMap(p=>GENS.map(x=>p.gens?.[x]?.growthRate))].filter(Boolean))].map(x=>`<option value="${esc(x)}"></option>`).join('')}</datalist></fieldset>
   <div id="dyn" style="display:flex;flex-direction:column;gap:14px">${pokeDyn(g,d)}</div>
-  <div class="fgrid">${input('art','PokéAPI sprite number',doc?.art??'',{type:'number',min:0,max:493,ph:'Blank uses the Dex number'})}<label class="ctl">Your own sprite (replaces PokéAPI art)<input id="f-sprite" type="file" accept="image/png,image/jpeg,image/gif,image/webp"></label></div><p class="hint">Blank uses the Dex number, up to 493. Enter 0 for no PokéAPI art, or another number to borrow that Pokémon's sprites.</p></div>${foot(id,'del-record')}`,savePokemon);
-  drawSlots();drawHatch();drawForms();
+  <div class="fgrid">${input('art','PokéAPI sprite',doc?.art??'',{ph:'Blank uses the Dex number, or 422-east'})}<label class="ctl">Your own sprite (replaces PokéAPI art)<input id="f-sprite" type="file" accept="image/png,image/jpeg,image/gif,image/webp"></label></div><p class="hint">Blank uses the Dex number, up to 493. Enter 0 for no PokéAPI art, or another number to borrow that Pokémon's sprites.</p></div>${foot(id,'del-record')}`,savePokemon);
+  drawSlots();drawHatch();drawForms();drawEvoAlts();
 }
 async function savePokemon(){
   const {id}=F,name=v('name'),dex=n('dex'),debut=+v('debut'),g=id?UI.gen:debut;
   if(!name)return fail('Give it a name.');
   if(!dex)return fail('Give it a Dex number.');
   const dup=byName('pokemon',name);if(dup&&dup!==id)return fail(`${name} already exists.`);
+  const art=v('art').trim().toLowerCase();if(art&&!/^\d+(-[a-z0-9-]+)?$/.test(art))return fail('PokéAPI sprite must be a number, or a number and form name like 422-east.');
   readSlots();
   const stats={};statsAt({},g).forEach(s=>{stats[s[0]]=n('st-'+s[0])});
-  const patch={types:[v('t1'),v('t2')].filter(Boolean),stats:Object.values(stats).every(x=>x==null)?null:stats,evoMethod:v('evomethod'),species:speciesFull(v('species')),height:n('height'),weight:n('weight'),growthRate:v('growth')};
+  const patch={types:[v('t1'),v('t2')].filter(Boolean),stats:Object.values(stats).every(x=>x==null)?null:stats,evoMethod:v('evomethod'),evoMethod2:v('evomethod2'),species:speciesFull(v('species')),height:n('height'),weight:n('weight'),growthRate:v('growth')};
   const abPatch={},brPatch={};
   if(g>=3){const out=[];for(const o of F.slots){const ids=[];for(const a of o)if(a.trim())ids.push(await ensure('abilities',a,Math.max(g,3)));if(ids.length)out.push(ids)}abPatch.abilitySlots=out}
-  if(g>=2){brPatch.eggGroups=[v('egg1'),v('egg2')].filter(Boolean);brPatch.eggCycles=n('cycles');brPatch.hatchesAs=v('hatch');brPatch.genderM=n('male');readHatch();brPatch.hatchAlts=F.hatch.map(x=>({as:x.as.trim(),when:x.when.trim()})).filter(x=>x.as);readForms();brPatch.forms=F.forms.map(x=>({name:x.name.trim(),trigger:x.trigger.trim(),kind:x.kind})).filter(x=>x.name)}
+  if(g>=2){brPatch.eggGroups=[v('egg1'),v('egg2')].filter(Boolean);brPatch.eggCycles=n('cycles');brPatch.hatchesAs=v('hatch');brPatch.genderM=n('male');readHatch();brPatch.hatchAlts=F.hatch.map(x=>{const o={as:x.as.trim()};if(x.chance!=null)o.chance=x.chance;o.when=x.when.trim();return o}).filter(x=>x.as);
+    {const cs=brPatch.hatchAlts.map(x=>x.chance).filter(c=>c!=null);if(cs.some(c=>!(c>0&&c<100)))return fail('Each special hatch chance must be more than 0% and less than 100%.');const t=cs.reduce((a,b)=>a+b,0);if(t>=100)return fail(`Special hatch chances add up to ${pct(t)}. Keep the total under 100% so some eggs still hatch as normal.`)}readForms();brPatch.forms=F.forms.map(x=>({name:x.name.trim(),trigger:x.trigger.trim(),kind:x.kind})).filter(x=>x.name)}
   const f=$('f-sprite')?.files?.[0];
   if(f){try{patch.sprite=await uploadSprite(f)}catch(e){return fail('That image could not be saved. Use a PNG, JPG, GIF or WebP under 25 MB.')}}
   const key=id||newId('pokemon',name);
   const evo=v('evofrom'),same=evo.toLowerCase()===name.toLowerCase();
   if(evo&&!same&&!byName('pokemon',evo))patch.evolvesFrom=await ensure('pokemon',evo,g,{dex:Math.max(nextDex(),dex+1)});
   else patch.evolvesFrom=evo&&!same?byName('pokemon',evo):'';
+  readEvoAlts();patch.evoAlts=[];
+  for(const x of F.evoAlts){if(!x.from)continue;const k=byName('pokemon',x.from);
+    if(!k)return fail(`${x.from} is not in your Dex. Add it before listing it under Also evolves from.`);
+    if(k===id||x.from.toLowerCase()===name.toLowerCase())return fail('A Pokémon cannot evolve from itself.');
+    if(k===patch.evolvesFrom)return fail(`${x.from} is already its main Evolves from. Use Second evolution method for another way to evolve from it.`);
+    patch.evoAlts.push(x.method?{from:k,method:x.method}:{from:k})}
   const fo=v('formof'),foId=fo?byName('pokemon',fo):'';
   if(fo&&!foId)return fail(`${fo} is not in your Dex. Add the base Pokémon first.`);
   if(foId&&(foId===id||S.pokemon[foId].formOf))return fail('Choose the base Pokémon, not another form.');
-  const doc=id?clone(S.pokemon[id]):{gens:{}};if(foId)doc.formOf=foId;else delete doc.formOf;doc.name=name;doc.dex=dex;doc.debut=debut;{const a=n('art');if(a===null)delete doc.art;else doc.art=a}
+  const variant=v('variant');if(variant&&!foId)return fail('A regional variant needs Form of set to the original Pokémon.');
+  const doc=id?clone(S.pokemon[id]):{gens:{}};if(foId)doc.formOf=foId;else delete doc.formOf;if(variant)doc.variant=variant;else delete doc.variant;doc.name=name;doc.dex=dex;doc.debut=debut;if(!art)delete doc.art;else doc.art=/^\d+$/.test(art)?+art:art;
   const from=id?(+v('from')||g):g,alt=(abPatch.abilitySlots||[]).some(o=>o.length>1);
   applyFrom(doc,from,patch);
   if(g>=2)applyFrom(doc,Math.max(from,2),brPatch);
@@ -819,7 +863,7 @@ function abilityBlock(m,i,gen){
     return `<div class="fgrid" data-mode="dex">${slots.map((o,s)=>o.length===1
       ?`<div class="ctl"><span>${SLOT_NAMES[s]}</span><output class="abfixed">${esc(label('abilities',o[0]))}</output></div>`
       :`<label class="ctl">${SLOT_NAMES[s]}<select id="f-m${i}-ab${s}" data-slot="${s}"><option value="">Choose one</option>${o.map(a=>`<option value="${esc(a)}"${a===ab[s]?' selected':''}>${esc(label('abilities',a))}</option>`).join('')}</select></label>`).join('')}</div>
-      <p class="hint">Filled in from ${esc(sp.name)}'s Gen ${ROMAN[gen]} abilities.${shared?' Two abilities share a slot, so choose the one this trainer’s Pokémon has.':''}</p>`;
+      <p class="hint">Filled in from ${esc(sp.name)}'s Gen ${ROMAN[gen]} abilities.${shared?' Some abilities share a slot, so choose the one this trainer’s Pokémon has.':''}</p>`;
   }
   const saved=savedAbilities(m);
   return `<div class="fgrid" data-mode="manual">${[0,1,2].map(s=>input(`m${i}-ab${s}`,SLOT_NAMES[s],label('abilities',saved[s]||''),{list:'dl-abilities'})).join('')}</div>
@@ -974,6 +1018,8 @@ const ACT={
   'del-record':(d)=>{const col=F.col,name=S[col][d.id].name;confirmBox(`Delete ${name}`,`Delete ${name} from every generation?`,'Delete',async()=>{delete S[col][d.id];await remove(col+'/'+d.id);if(UI.arg===d.id)location.hash=({pokemon:'dex',moves:'moves',trainers:'trainers'})[col]||UI.route})},
   'form-add':()=>{readForms();F.forms.push({name:'',trigger:'',kind:''});drawForms();$(`f-fm${F.forms.length-1}-name`)?.focus()},
   'form-del':(d)=>{readForms();F.forms.splice(+d.v,1);drawForms()},
+  'evoalt-add':()=>{readEvoAlts();F.evoAlts.push({from:'',method:''});drawEvoAlts();$(`f-ea${F.evoAlts.length-1}-from`)?.focus()},
+  'evoalt-del':(d)=>{readEvoAlts();F.evoAlts.splice(+d.v,1);drawEvoAlts()},
   'hatch-add':()=>{readHatch();F.hatch.push({as:'',when:''});drawHatch();$(`f-ha${F.hatch.length-1}-as`)?.focus()},
   'hatch-del':(d)=>{readHatch();F.hatch.splice(+d.v,1);drawHatch()},
   'slot-add':()=>{readSlots();F.slots.push(['']);drawSlots()},

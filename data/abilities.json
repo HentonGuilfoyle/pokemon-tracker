@@ -44,6 +44,11 @@
     "debut": 4,
     "gens": {}
   },
+  "black-hole": {
+    "name": "Black Hole",
+    "debut": 3,
+    "gens": {}
+  },
   "blaze": {
     "name": "Blaze",
     "debut": 3,
@@ -68,6 +73,11 @@
     "debut": 3,
     "gens": {},
     "name": "Calming Scent"
+  },
+  "camouflage": {
+    "name": "Camouflage",
+    "debut": 3,
+    "gens": {}
   },
   "chlorophyll": {
     "name": "Chlorophyll",
@@ -134,6 +144,11 @@
     },
     "name": "Damp"
   },
+  "deep-scales": {
+    "name": "Deep Scales",
+    "debut": 3,
+    "gens": {}
+  },
   "defiant": {
     "name": "Defiant",
     "debut": 3,
@@ -147,6 +162,11 @@
   "devour": {
     "name": "Devour",
     "debut": 4,
+    "gens": {}
+  },
+  "director": {
+    "name": "Director",
+    "debut": 3,
     "gens": {}
   },
   "down-to-earth": {
@@ -166,6 +186,11 @@
   },
   "drizzle": {
     "name": "Drizzle",
+    "debut": 3,
+    "gens": {}
+  },
+  "drough": {
+    "name": "Drough",
     "debut": 3,
     "gens": {}
   },
@@ -208,6 +233,11 @@
     "debut": 3,
     "gens": {}
   },
+  "filter": {
+    "name": "Filter",
+    "debut": 4,
+    "gens": {}
+  },
   "flame-body": {
     "name": "Flame Body",
     "debut": 3,
@@ -233,8 +263,33 @@
     "debut": 3,
     "gens": {}
   },
+  "fluffy": {
+    "name": "Fluffy",
+    "debut": 3,
+    "gens": {}
+  },
+  "forecast": {
+    "name": "Forecast",
+    "debut": 3,
+    "gens": {}
+  },
+  "forewarn": {
+    "name": "Forewarn",
+    "debut": 3,
+    "gens": {}
+  },
+  "friend-guard": {
+    "name": "Friend Guard",
+    "debut": 4,
+    "gens": {}
+  },
   "frisk": {
     "name": "Frisk",
+    "debut": 4,
+    "gens": {}
+  },
+  "full-frontal": {
+    "name": "Full Frontal",
     "debut": 4,
     "gens": {}
   },
@@ -313,6 +368,11 @@
     "debut": 3,
     "gens": {}
   },
+  "icy-surge": {
+    "name": "Icy Surge",
+    "debut": 3,
+    "gens": {}
+  },
   "illuminate": {
     "name": "Illuminate",
     "debut": 3,
@@ -347,6 +407,11 @@
       }
     }
   },
+  "inner-core": {
+    "name": "Inner Core",
+    "debut": 3,
+    "gens": {}
+  },
   "inner-focus": {
     "name": "Inner Focus",
     "debut": 3,
@@ -359,6 +424,11 @@
   },
   "intimidate": {
     "name": "Intimidate",
+    "debut": 3,
+    "gens": {}
+  },
+  "iron-barbs": {
+    "name": "Iron Barbs",
     "debut": 3,
     "gens": {}
   },
@@ -430,6 +500,11 @@
       }
     }
   },
+  "marvel-scale": {
+    "name": "Marvel Scale",
+    "debut": 3,
+    "gens": {}
+  },
   "mentalize": {
     "name": "Mentalize",
     "debut": 4,
@@ -443,6 +518,11 @@
   "minus": {
     "name": "Minus",
     "debut": 4,
+    "gens": {}
+  },
+  "mold-breaker": {
+    "name": "Mold Breaker",
+    "debut": 3,
     "gens": {}
   },
   "motor-drive": {
@@ -464,6 +544,11 @@
       }
     }
   },
+  "mutation": {
+    "name": "Mutation",
+    "debut": 3,
+    "gens": {}
+  },
   "natural-cure": {
     "name": "Natural Cure",
     "debut": 3,
@@ -484,6 +569,11 @@
     "debut": 4,
     "gens": {}
   },
+  "ore-eater": {
+    "name": "Ore Eater",
+    "debut": 4,
+    "gens": {}
+  },
   "overcharge": {
     "name": "Overcharge",
     "debut": 3,
@@ -501,6 +591,16 @@
   },
   "own-tempo": {
     "name": "Own Tempo",
+    "debut": 3,
+    "gens": {}
+  },
+  "parry": {
+    "name": "Parry",
+    "debut": 4,
+    "gens": {}
+  },
+  "perfect-alloy": {
+    "name": "Perfect Alloy",
     "debut": 3,
     "gens": {}
   },
@@ -534,6 +634,11 @@
     "debut": 4,
     "gens": {}
   },
+  "poison-heal": {
+    "name": "Poison Heal",
+    "debut": 4,
+    "gens": {}
+  },
   "poison-point": {
     "name": "Poison Point",
     "debut": 3,
@@ -559,6 +664,11 @@
     "debut": 3,
     "gens": {}
   },
+  "pure-power": {
+    "name": "Pure Power",
+    "debut": 3,
+    "gens": {}
+  },
   "quick-feet": {
     "name": "Quick Feet",
     "debut": 4,
@@ -579,6 +689,11 @@
     "debut": 3,
     "gens": {}
   },
+  "reef-refuge": {
+    "name": "Reef Refuge",
+    "debut": 3,
+    "gens": {}
+  },
   "regenerator": {
     "name": "Regenerator",
     "debut": 4,
@@ -591,6 +706,11 @@
   },
   "rock-head": {
     "name": "Rock Head",
+    "debut": 3,
+    "gens": {}
+  },
+  "rocky-construct": {
+    "name": "Rocky Construct",
     "debut": 3,
     "gens": {}
   },
@@ -619,8 +739,18 @@
     "debut": 3,
     "gens": {}
   },
+  "sand-stream": {
+    "name": "Sand Stream",
+    "debut": 3,
+    "gens": {}
+  },
   "sand-veil": {
     "name": "Sand Veil",
+    "debut": 3,
+    "gens": {}
+  },
+  "sandy-surge": {
+    "name": "Sandy Surge",
     "debut": 3,
     "gens": {}
   },
@@ -662,6 +792,11 @@
   "shadow-tag": {
     "name": "Shadow Tag",
     "debut": 3,
+    "gens": {}
+  },
+  "sharp-tail": {
+    "name": "Sharp Tail",
+    "debut": 4,
     "gens": {}
   },
   "sharpness": {
@@ -707,6 +842,11 @@
   "skill-link": {
     "name": "Skill Link",
     "debut": 3,
+    "gens": {}
+  },
+  "slush-rush": {
+    "name": "Slush Rush",
+    "debut": 4,
     "gens": {}
   },
   "smog-stream": {
@@ -766,6 +906,11 @@
   },
   "steady-wings": {
     "name": "Steady Wings",
+    "debut": 3,
+    "gens": {}
+  },
+  "steelworker": {
+    "name": "Steelworker",
     "debut": 3,
     "gens": {}
   },
@@ -864,6 +1009,11 @@
     "debut": 4,
     "gens": {}
   },
+  "titan-body": {
+    "name": "Titan Body",
+    "debut": 3,
+    "gens": {}
+  },
   "torrent": {
     "name": "Torrent",
     "debut": 3,
@@ -874,6 +1024,11 @@
     "debut": 4,
     "gens": {}
   },
+  "trace": {
+    "name": "Trace",
+    "debut": 3,
+    "gens": {}
+  },
   "trickster": {
     "name": "Trickster",
     "debut": 4,
@@ -881,6 +1036,11 @@
   },
   "triple-threat": {
     "name": "Triple Threat",
+    "debut": 3,
+    "gens": {}
+  },
+  "truant": {
+    "name": "Truant",
     "debut": 3,
     "gens": {}
   },
@@ -914,6 +1074,11 @@
     "debut": 4,
     "gens": {}
   },
+  "vengeance": {
+    "name": "Vengeance",
+    "debut": 3,
+    "gens": {}
+  },
   "vital-spirit": {
     "debut": 3,
     "gens": {},
@@ -939,8 +1104,18 @@
     "debut": 3,
     "gens": {}
   },
+  "watery-surge": {
+    "name": "Watery Surge",
+    "debut": 3,
+    "gens": {}
+  },
   "weak-armor": {
     "name": "Weak Armor",
+    "debut": 3,
+    "gens": {}
+  },
+  "white-smoke": {
+    "name": "White Smoke",
     "debut": 3,
     "gens": {}
   },

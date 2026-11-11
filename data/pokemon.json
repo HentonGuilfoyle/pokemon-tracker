@@ -44,6 +44,47 @@
     "debut": 1,
     "art": 63
   },
+  "absol": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dark"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 130,
+          "def": 60,
+          "spa": 115,
+          "spd": 80,
+          "spe": 100
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Absol",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "forewarn"
+          ],
+          [
+            "anticipation"
+          ],
+          [
+            "telepathy"
+          ]
+        ],
+        "species": "Disaster Pokémon",
+        "height": 1.2,
+        "weight": 47
+      }
+    },
+    "name": "Absol",
+    "dex": 359,
+    "debut": 3,
+    "art": 359
+  },
   "aerodactyl": {
     "gens": {
       "1": {
@@ -100,6 +141,60 @@
     "dex": 143,
     "debut": 1,
     "art": 142
+  },
+  "aggron": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 120,
+          "def": 180,
+          "spa": 60,
+          "spd": 70,
+          "spe": 50
+        },
+        "evoMethod": "Level 42 & Max Defense EV",
+        "growthRate": "Slow",
+        "evolvesFrom": "lairon",
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Aron",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "rock-head"
+          ]
+        ],
+        "species": "Iron Mountain Pokémon",
+        "height": 3.1,
+        "weight": 6500
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "battle-armor",
+            "impenetrable"
+          ],
+          [
+            "rock-head"
+          ],
+          [
+            "filter"
+          ]
+        ]
+      }
+    },
+    "name": "Aggron",
+    "dex": 303,
+    "debut": 3,
+    "art": 306
   },
   "alakazam": {
     "gens": {
@@ -170,6 +265,64 @@
     "debut": 1,
     "art": 65
   },
+  "altaria": {
+    "gens": {
+      "3": {
+        "types": [
+          "Flying",
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 70,
+          "def": 80,
+          "spa": 90,
+          "spd": 105,
+          "spe": 80
+        },
+        "evoMethod": "Level 32",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "swablu",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Swablu",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "fluffy"
+          ],
+          [
+            "natural-cure"
+          ],
+          [
+            "cacophony"
+          ]
+        ],
+        "species": "Humming Pokémon",
+        "height": 1.1,
+        "weight": 8
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "fluffy"
+          ],
+          [
+            "natural-cure",
+            "cloud-nine"
+          ],
+          [
+            "cacophony"
+          ]
+        ]
+      }
+    },
+    "name": "Altaria",
+    "dex": 338,
+    "debut": 3,
+    "art": 334
+  },
   "ampharos": {
     "gens": {
       "2": {
@@ -218,13 +371,64 @@
             "plus",
             "minus"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 40 & Level up in Magnetically Charged Area"
       }
     },
     "name": "Ampharos",
     "dex": 178,
     "debut": 2,
     "art": 181
+  },
+  "anorith": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Bug"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 95,
+          "def": 60,
+          "spa": 40,
+          "spd": 50,
+          "spe": 65
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Anorith",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "swift-swim"
+          ]
+        ],
+        "species": "Old Shrimp Pokémon",
+        "height": 0.7,
+        "weight": 12.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "battle-armor",
+            "weak-armor"
+          ],
+          [
+            "swift-swim"
+          ]
+        ]
+      }
+    },
+    "name": "Anorith",
+    "dex": 375,
+    "debut": 3,
+    "art": 347
   },
   "arcanine": {
     "gens": {
@@ -269,7 +473,8 @@
           [
             "serene-grace"
           ]
-        ]
+        ],
+        "evoMethod": "Level 30 & Fire Stone"
       },
       "4": {
         "abilitySlots": [
@@ -345,6 +550,109 @@
     "dex": 171,
     "debut": 2,
     "art": 168
+  },
+  "armaldo": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Bug"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 125,
+          "def": 100,
+          "spa": 70,
+          "spd": 80,
+          "spe": 45
+        },
+        "evoMethod": "Level 35",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "anorith",
+        "eggGroups": [
+          "Crustacean"
+        ],
+        "hatchesAs": "Anorith",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "swift-swim"
+          ]
+        ],
+        "species": "Plate Pokémon",
+        "height": 1.5,
+        "weight": 100
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "battle-armor",
+            "weak-armor"
+          ],
+          [
+            "swift-swim"
+          ]
+        ]
+      }
+    },
+    "name": "Armaldo",
+    "dex": 376,
+    "debut": 3,
+    "art": 348
+  },
+  "aron": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 70,
+          "def": 100,
+          "spa": 40,
+          "spd": 40,
+          "spe": 30
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Aron",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "rock-head"
+          ]
+        ],
+        "species": "Iron Armor Pokémon",
+        "height": 0.4,
+        "weight": 60
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "rock-head"
+          ],
+          [
+            "filter"
+          ]
+        ]
+      }
+    },
+    "name": "Aron",
+    "dex": 301,
+    "debut": 3,
+    "art": 304
   },
   "articuno": {
     "gens": {
@@ -451,6 +759,172 @@
     "debut": 2,
     "art": 184
   },
+  "azumarill-dust": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 60,
+          "def": 90,
+          "spa": 50,
+          "spd": 80,
+          "spe": 50
+        },
+        "evoMethod": "Level 20",
+        "species": "Dust Rabbit Pokémon",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "marill-dust",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Marill (Dust)",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "huge-power"
+          ],
+          [
+            "sand-veil"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Ground",
+          "Fairy"
+        ]
+      }
+    },
+    "formOf": "azumarill",
+    "variant": "Dust",
+    "name": "Azumarill (Dust)",
+    "dex": 180,
+    "debut": 3,
+    "art": 0
+  },
+  "bagon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 75,
+          "def": 60,
+          "spa": 40,
+          "spd": 35,
+          "spe": 45
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Bagon",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "hustle"
+          ]
+        ],
+        "species": "Rock Head Pokémon",
+        "height": 0.6,
+        "weight": 20
+      }
+    },
+    "name": "Bagon",
+    "dex": 377,
+    "debut": 3,
+    "art": 371
+  },
+  "baltoy": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 55,
+          "spa": 40,
+          "spd": 70,
+          "spe": 80
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Baltoy",
+        "abilitySlots": [
+          [
+            "magic-guard"
+          ]
+        ],
+        "species": "Clay Toy Pokémon",
+        "height": 0.5,
+        "weight": 10
+      }
+    },
+    "name": "Baltoy",
+    "dex": 345,
+    "debut": 3,
+    "art": 343
+  },
+  "banette": {
+    "gens": {
+      "3": {
+        "stats": {
+          "hp": 74,
+          "atk": 107,
+          "def": 71,
+          "spa": 83,
+          "spd": 83,
+          "spe": 75
+        },
+        "evoMethod": "After Curse is Learned",
+        "growthRate": "Erratic",
+        "evolvesFrom": "shuppet",
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Shuppet",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "vengeance"
+          ],
+          [
+            "unnerve"
+          ]
+        ],
+        "types": [
+          "Normal",
+          "Ghost"
+        ],
+        "species": "Marionette Pokémon",
+        "height": 1.1,
+        "weight": 3
+      }
+    },
+    "name": "Banette",
+    "dex": 352,
+    "debut": 3,
+    "art": 354
+  },
   "bayleef": {
     "gens": {
       "2": {
@@ -493,6 +967,54 @@
     "dex": 153,
     "debut": 2,
     "art": 153
+  },
+  "beautifly": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 90,
+          "def": 50,
+          "spa": 70,
+          "spd": 60,
+          "spe": 70
+        },
+        "evoMethod": "Level 10",
+        "growthRate": "Fast",
+        "evolvesFrom": "silcoon",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Wurmple",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "swarm"
+          ]
+        ],
+        "species": "Charming Bug Pokémon",
+        "height": 1,
+        "weight": 3.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "swarm"
+          ],
+          [
+            "honey-gather"
+          ]
+        ]
+      }
+    },
+    "name": "Beautifly",
+    "dex": 267,
+    "debut": 3,
+    "art": 267
   },
   "beedrill": {
     "gens": {
@@ -563,6 +1085,44 @@
     "debut": 1,
     "art": 15
   },
+  "beldum": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 55,
+          "def": 80,
+          "spa": 35,
+          "spd": 60,
+          "spe": 30
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Beldum",
+        "abilitySlots": [
+          [
+            "clear-body"
+          ],
+          [
+            "levitate"
+          ]
+        ],
+        "species": "Iron Eye Pokémon",
+        "height": 0.6,
+        "weight": 95.2
+      }
+    },
+    "name": "Beldum",
+    "dex": 380,
+    "debut": 3,
+    "art": 374
+  },
   "bellossom": {
     "gens": {
       "2": {
@@ -603,7 +1163,8 @@
         "types": [
           "Grass",
           "Fairy"
-        ]
+        ],
+        "evoMethod2": "Level 40, Level up near Moss Rock, and Daytime"
       }
     },
     "name": "Bellossom",
@@ -654,6 +1215,81 @@
     "dex": 172,
     "debut": 2,
     "art": 69
+  },
+  "bibarel": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal",
+          "Water"
+        ],
+        "stats": {
+          "hp": 84,
+          "atk": 80,
+          "def": 68,
+          "spa": 60,
+          "spd": 65,
+          "spe": 53
+        },
+        "evoMethod": "Level 20",
+        "growthRate": "Slow",
+        "evolvesFrom": "bidoof",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Bidoof",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "unaware",
+            "simple"
+          ],
+          [
+            "swift-swim"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ]
+      }
+    },
+    "name": "Bibarel",
+    "dex": 402,
+    "debut": 4,
+    "art": 400
+  },
+  "bidoof": {
+    "gens": {
+      "4": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 59,
+          "atk": 55,
+          "def": 48,
+          "spa": 35,
+          "spd": 45,
+          "spe": 63
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Bidoof",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "unaware",
+            "simple"
+          ]
+        ]
+      }
+    },
+    "name": "Bidoof",
+    "dex": 401,
+    "debut": 4,
+    "art": 399
   },
   "blastoise": {
     "gens": {
@@ -724,6 +1360,165 @@
     "dex": 9,
     "debut": 1,
     "art": 9
+  },
+  "blaziken": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 110,
+          "def": 80,
+          "spa": 80,
+          "spd": 75,
+          "spe": 105
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "combusken",
+        "eggGroups": [
+          "Bird",
+          "Human-Like"
+        ],
+        "hatchesAs": "Torchic",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "blaze"
+          ],
+          [
+            "iron-legs"
+          ],
+          [
+            "defiant"
+          ]
+        ],
+        "species": "Blaze Pokémon",
+        "height": 1.9,
+        "weight": 85
+      }
+    },
+    "name": "Blaziken",
+    "dex": 257,
+    "debut": 3,
+    "art": 257
+  },
+  "breloom": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 110,
+          "def": 70,
+          "spa": 60,
+          "spd": 70,
+          "spe": 100
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "shroomish",
+        "eggGroups": [
+          "Plant",
+          "Creature"
+        ],
+        "hatchesAs": "Shroomish",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "effect-spore"
+          ],
+          [
+            "iron-fists"
+          ]
+        ],
+        "species": "Long Arm Pokémon",
+        "height": 1.2,
+        "weight": 39.2
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "effect-spore"
+          ],
+          [
+            "poison-heal"
+          ],
+          [
+            "iron-fists",
+            "technician"
+          ]
+        ]
+      }
+    },
+    "name": "Breloom",
+    "dex": 287,
+    "debut": 3,
+    "art": 286
+  },
+  "breloom-ink": {
+    "gens": {
+      "3": {
+        "types": [
+          "Poison",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 120,
+          "def": 60,
+          "spa": 100,
+          "spd": 60,
+          "spe": 75
+        },
+        "evoMethod": "Level 30",
+        "species": "Ink Cap Pokémon",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "shroomish-ink",
+        "eggGroups": [
+          "Plant",
+          "Creature"
+        ],
+        "hatchesAs": "Shroomish (Ink)",
+        "abilitySlots": [
+          [
+            "poison-touch"
+          ],
+          [
+            "iron-fists"
+          ]
+        ],
+        "genderM": 50,
+        "height": 1.4,
+        "weight": 35
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "poison-touch"
+          ],
+          [
+            "iron-fists",
+            "technician"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "formOf": "breloom",
+    "variant": "Ink",
+    "name": "Breloom (Ink)",
+    "dex": 287,
+    "debut": 3,
+    "art": 0
   },
   "bul": {
     "name": "Arbok",
@@ -895,6 +1690,106 @@
     "debut": 1,
     "art": 12
   },
+  "cacnea": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 75,
+          "def": 30,
+          "spa": 55,
+          "spd": 50,
+          "spe": 40
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Cacnea",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "sand-veil"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Cactus Pokémon",
+        "height": 0.4,
+        "weight": 8.3
+      }
+    },
+    "name": "Cacnea",
+    "dex": 335,
+    "debut": 3,
+    "art": 331
+  },
+  "cacturne": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 105,
+          "def": 70,
+          "spa": 85,
+          "spd": 80,
+          "spe": 55
+        },
+        "evoMethod": "Level 20, Nighttime, and in Desert",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "cacnea",
+        "eggGroups": [
+          "Plant",
+          "Human-Like"
+        ],
+        "hatchesAs": "Cacnea",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "sand-veil"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Scarecrow Pokémon",
+        "height": 1.3,
+        "weight": 50.4
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "sand-veil",
+            "unnerve"
+          ],
+          [
+            "water-absorb"
+          ]
+        ]
+      }
+    },
+    "name": "Cacturne",
+    "dex": 336,
+    "debut": 3,
+    "art": 332
+  },
   "calfpint-f": {
     "gens": {
       "2": {
@@ -966,6 +1861,448 @@
     "dex": 200,
     "debut": 2,
     "art": 0
+  },
+  "camerupt": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 80,
+          "def": 85,
+          "spa": 110,
+          "spd": 80,
+          "spe": 40
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "numel",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Numel",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "magma-armor"
+          ],
+          [
+            "anger-point"
+          ],
+          [
+            "sheer-force"
+          ]
+        ],
+        "species": "Eruption Pokémon",
+        "height": 1.9,
+        "weight": 600
+      }
+    },
+    "name": "Camerupt",
+    "dex": 327,
+    "debut": 3,
+    "art": 323
+  },
+  "carvanha": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 90,
+          "def": 50,
+          "spa": 55,
+          "spd": 50,
+          "spe": 75
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Carvanha",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ],
+        "species": "Savage Pokémon",
+        "height": 0.8,
+        "weight": 20.8
+      }
+    },
+    "name": "Carvanha",
+    "dex": 322,
+    "debut": 3,
+    "art": 318
+  },
+  "cascoon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 30,
+          "def": 75,
+          "spa": 25,
+          "spd": 25,
+          "spe": 15
+        },
+        "evoMethod": "Level 6 & Random",
+        "growthRate": "Fast",
+        "evolvesFrom": "wurmple",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Wurmple",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ]
+        ],
+        "species": "Husk Pokémon",
+        "height": 0.7,
+        "weight": 11.5
+      }
+    },
+    "name": "Cascoon",
+    "dex": 268,
+    "debut": 3,
+    "art": 268
+  },
+  "castform": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 70,
+          "def": 70,
+          "spa": 70,
+          "spd": 70,
+          "spe": 70
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ]
+        ],
+        "forms": [
+          {
+            "name": "Castform-Stormy",
+            "trigger": "Thunderstorm",
+            "kind": "Battle only"
+          },
+          {
+            "name": "Castform-Sunny",
+            "trigger": "Harsh Sunlight",
+            "kind": "Battle only"
+          },
+          {
+            "name": "Castform-Sandy",
+            "trigger": "Sandstorm",
+            "kind": "Battle only"
+          },
+          {
+            "name": "Castform-Snowy",
+            "trigger": "Snowstorm",
+            "kind": "Battle only"
+          },
+          {
+            "name": "Castform-Rainy",
+            "trigger": "Heavy Rain",
+            "kind": "Battle only"
+          }
+        ],
+        "species": "Weather Pokémon",
+        "height": 0.3,
+        "weight": 0.8
+      }
+    },
+    "name": "Castform",
+    "dex": 349,
+    "debut": 3,
+    "art": 351
+  },
+  "castform-rainy": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 70,
+          "def": 70,
+          "spa": 120,
+          "spd": 100,
+          "spe": 100
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ]
+        ],
+        "species": "Weather Pokémon",
+        "height": 0.3,
+        "weight": 1.2
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "formOf": "castform",
+    "name": "Castform-Rainy",
+    "dex": 349,
+    "debut": 3,
+    "art": 10014
+  },
+  "castform-sandy": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 120,
+          "def": 70,
+          "spa": 70,
+          "spd": 100,
+          "spe": 100
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ]
+        ],
+        "species": "Weather Pokémon",
+        "height": 0.3,
+        "weight": 3
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ],
+          [
+            "adaptability"
+          ]
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 70,
+          "def": 70,
+          "spa": 120,
+          "spd": 100,
+          "spe": 100
+        }
+      }
+    },
+    "formOf": "castform",
+    "name": "Castform-Sandy",
+    "dex": 349,
+    "debut": 3,
+    "art": 0
+  },
+  "castform-snowy": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 70,
+          "def": 70,
+          "spa": 120,
+          "spd": 100,
+          "spe": 100
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ]
+        ],
+        "species": "Weather Pokémon",
+        "height": 0.3,
+        "weight": 1
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "formOf": "castform",
+    "name": "Castform-Snowy",
+    "dex": 349,
+    "debut": 3,
+    "art": 10015
+  },
+  "castform-stormy": {
+    "gens": {
+      "3": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 70,
+          "def": 70,
+          "spa": 120,
+          "spd": 100,
+          "spe": 100
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ]
+        ],
+        "species": "Weather Pokémon",
+        "height": 0.3,
+        "weight": 1
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "formOf": "castform",
+    "name": "Castform-Stormy",
+    "dex": 349,
+    "debut": 3,
+    "art": 0
+  },
+  "castform-sunny": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 70,
+          "def": 70,
+          "spa": 120,
+          "spd": 100,
+          "spe": 100
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ]
+        ],
+        "species": "Weather Pokémon",
+        "height": 0.3,
+        "weight": 0.6
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "forecast"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "formOf": "castform",
+    "name": "Castform-Sunny",
+    "dex": 349,
+    "debut": 3,
+    "art": 10013
   },
   "caterpie": {
     "gens": {
@@ -1320,6 +2657,38 @@
     "debut": 2,
     "art": 152
   },
+  "chimchar": {
+    "gens": {
+      "4": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 44,
+          "atk": 58,
+          "def": 47,
+          "spa": 53,
+          "spd": 47,
+          "spe": 66
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Chimchar",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "blaze"
+          ]
+        ]
+      }
+    },
+    "name": "Chimchar",
+    "dex": 395,
+    "debut": 4,
+    "art": 390
+  },
   "chinchou": {
     "gens": {
       "2": {
@@ -1360,6 +2729,128 @@
     "dex": 204,
     "debut": 2,
     "art": 170
+  },
+  "chinchou-soul": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 56,
+          "atk": 38,
+          "def": 38,
+          "spa": 75,
+          "spd": 56,
+          "spe": 57
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Chinchou (Soul)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "illuminate"
+          ],
+          [
+            "clear-body"
+          ]
+        ],
+        "species": "Lure Pokémon",
+        "height": 1.3,
+        "weight": 12
+      }
+    },
+    "formOf": "chinchou",
+    "variant": "Soul",
+    "name": "Chinchou (Soul)",
+    "dex": 204,
+    "debut": 3,
+    "art": 0
+  },
+  "clamperl": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 35,
+          "atk": 79,
+          "def": 120,
+          "spa": 29,
+          "spd": 120,
+          "spe": 5
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Clamperl",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "shell-armor"
+          ],
+          [
+            "sturdy"
+          ]
+        ],
+        "species": "Bivalve Pokémon",
+        "height": 0.4,
+        "weight": 10
+      }
+    },
+    "name": "Clamperl",
+    "dex": 365,
+    "debut": 3,
+    "art": 366
+  },
+  "claydol": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 80,
+          "def": 85,
+          "spa": 95,
+          "spd": 120,
+          "spe": 60
+        },
+        "evoMethod": "After Cosmic Power is Learned",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "baltoy",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Baltoy",
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "magic-guard"
+          ],
+          [
+            "sandy-surge"
+          ]
+        ],
+        "species": "Clay Doll Pokémon",
+        "height": 1.5,
+        "weight": 108
+      }
+    },
+    "name": "Claydol",
+    "dex": 346,
+    "debut": 3,
+    "art": 344
   },
   "clefable": {
     "gens": {
@@ -1408,7 +2899,13 @@
             "run-away"
           ]
         ],
-        "growthRate": "Erratic"
+        "growthRate": "Erratic",
+        "hatchAlts": [
+          {
+            "as": "Cleffa",
+            "when": "A parent holds Moon Incense"
+          }
+        ]
       },
       "4": {
         "types": [
@@ -1425,7 +2922,8 @@
           [
             "run-away"
           ]
-        ]
+        ],
+        "evoMethod2": "Dance with Clefairy & Clefable on Mt. Moon"
       }
     },
     "name": "Clefable",
@@ -1478,7 +2976,15 @@
             "run-away"
           ]
         ],
-        "growthRate": "Erratic"
+        "growthRate": "Erratic",
+        "evoMethod": "High Friendship",
+        "evolvesFrom": "cleffa",
+        "hatchAlts": [
+          {
+            "as": "Cleffa",
+            "when": "A parent holds Moon Incense"
+          }
+        ]
       },
       "4": {
         "types": [
@@ -1502,6 +3008,46 @@
     "dex": 41,
     "debut": 1,
     "art": 35
+  },
+  "cleffa": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 25,
+          "def": 28,
+          "spa": 40,
+          "spd": 45,
+          "spe": 25
+        },
+        "growthRate": "Erratic",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "magic-guard"
+          ],
+          [
+            "run-away"
+          ]
+        ],
+        "genderM": 12.5,
+        "species": "Tiny Star Pokémon",
+        "height": 0.3,
+        "weight": 3
+      }
+    },
+    "name": "Cleffa",
+    "dex": 371,
+    "debut": 3,
+    "art": 173
   },
   "cloyster": {
     "gens": {
@@ -1570,6 +3116,142 @@
     "dex": 91,
     "debut": 1,
     "art": 91
+  },
+  "combusken": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 85,
+          "def": 65,
+          "spa": 65,
+          "spd": 60,
+          "spe": 75
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "torchic",
+        "eggGroups": [
+          "Bird",
+          "Human-Like"
+        ],
+        "hatchesAs": "Torchic",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "iron-legs"
+          ]
+        ],
+        "species": "Fire Fowl Pokémon",
+        "height": 0.9,
+        "weight": 19.5
+      }
+    },
+    "name": "Combusken",
+    "dex": 256,
+    "debut": 3,
+    "art": 256
+  },
+  "corsola": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Rock"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 55,
+          "def": 95,
+          "spa": 65,
+          "spd": 95,
+          "spe": 30
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Corsola",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "natural-cure"
+          ]
+        ],
+        "species": "Coral Pokémon",
+        "height": 0.6,
+        "weight": 25
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "natural-cure",
+            "hydration"
+          ],
+          [
+            "regenerator"
+          ]
+        ]
+      }
+    },
+    "name": "Corsola",
+    "dex": 324,
+    "debut": 3,
+    "art": 222
+  },
+  "cradily": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Grass"
+        ],
+        "stats": {
+          "hp": 91,
+          "atk": 81,
+          "def": 107,
+          "spa": 71,
+          "spd": 117,
+          "spe": 33
+        },
+        "evoMethod": "Level 35",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "lileep",
+        "eggGroups": [
+          "Invertebrate"
+        ],
+        "hatchesAs": "Lileep",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "suction-cups"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "height": 1.5,
+        "weight": 60.4,
+        "species": "Crinoid Pokémon"
+      }
+    },
+    "name": "Cradily",
+    "dex": 374,
+    "debut": 3,
+    "art": 346
   },
   "crobat": {
     "gens": {
@@ -1887,6 +3569,46 @@
     "debut": 2,
     "art": 554
   },
+  "delcatty": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 60,
+          "def": 60,
+          "spa": 55,
+          "spd": 55,
+          "spe": 85
+        },
+        "evoMethod": "Level 20 & Moon Stone",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "skitty",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Skitty",
+        "genderM": 12.5,
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ],
+          [
+            "own-tempo"
+          ]
+        ],
+        "species": "Prim Pokémon",
+        "height": 1.1,
+        "weight": 19.6
+      }
+    },
+    "name": "Delcatty",
+    "dex": 295,
+    "debut": 3,
+    "art": 301
+  },
   "delibird": {
     "gens": {
       "2": {
@@ -1930,6 +3652,183 @@
     "dex": 209,
     "debut": 2,
     "art": 225
+  },
+  "deoxys": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 100,
+          "def": 100,
+          "spa": 100,
+          "spd": 100,
+          "spe": 100
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "mutation"
+          ]
+        ],
+        "forms": [
+          {
+            "name": "Deoxys-Attack",
+            "trigger": "Mutation",
+            "kind": "Battle only"
+          },
+          {
+            "name": "Deoxys-Defense",
+            "trigger": "Mutation",
+            "kind": "Battle only"
+          },
+          {
+            "name": "Deoxys-Speed",
+            "trigger": "Mutation",
+            "kind": "Battle only"
+          }
+        ],
+        "species": "DNA Pokémon",
+        "height": 2,
+        "weight": 99.8
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "mutation"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Deoxys",
+    "dex": 391,
+    "debut": 3,
+    "art": 386
+  },
+  "deoxys-attack": {
+    "gens": {
+      "3": {
+        "stats": {
+          "hp": 100,
+          "atk": 150,
+          "def": 30,
+          "spa": 150,
+          "spd": 30,
+          "spe": 140
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "mutation"
+          ]
+        ],
+        "types": [
+          "Psychic"
+        ],
+        "species": "DNA Pokémon",
+        "height": 2,
+        "weight": 90
+      }
+    },
+    "formOf": "deoxys",
+    "name": "Deoxys-Attack",
+    "dex": 391,
+    "debut": 3,
+    "art": 10001
+  },
+  "deoxys-defense": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 50,
+          "def": 175,
+          "spa": 50,
+          "spd": 175,
+          "spe": 50
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "mutation"
+          ]
+        ],
+        "species": "DNA Pokémon",
+        "height": 1.9,
+        "weight": 135
+      }
+    },
+    "formOf": "deoxys",
+    "name": "Deoxys-Defense",
+    "dex": 391,
+    "debut": 3,
+    "art": 10002
+  },
+  "deoxys-speed": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 90,
+          "def": 70,
+          "spa": 90,
+          "spd": 70,
+          "spe": 180
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "mutation"
+          ]
+        ],
+        "species": "DNA Pokémon",
+        "height": 2,
+        "weight": 80
+      }
+    },
+    "formOf": "deoxys",
+    "name": "Deoxys-Speed",
+    "dex": 391,
+    "debut": 3,
+    "art": 10003
   },
   "dewgong": {
     "gens": {
@@ -1999,6 +3898,46 @@
     "dex": 108,
     "debut": 1,
     "art": 87
+  },
+  "dhelmise": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ghost",
+          "Grass"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 126,
+          "def": 103,
+          "spa": 66,
+          "spd": 90,
+          "spe": 30
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "abilitySlots": [
+          [
+            "steelworker"
+          ],
+          [
+            "sheer-force"
+          ],
+          [
+            "hyper-cutter"
+          ]
+        ],
+        "species": "Sea Creeper Pokémon",
+        "height": 3.9,
+        "weight": 1500
+      }
+    },
+    "name": "Dhelmise",
+    "dex": 370,
+    "debut": 3,
+    "art": 781
   },
   "diglett": {
     "gens": {
@@ -2177,6 +4116,63 @@
     "dex": 96,
     "debut": 1,
     "art": 85
+  },
+  "dodrio-desert": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 120,
+          "def": 75,
+          "spa": 50,
+          "spd": 60,
+          "spe": 125
+        },
+        "evoMethod": "Level 31 & Level up in Desert",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "doduo",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Doduo",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "triple-threat"
+          ],
+          [
+            "intimidate"
+          ]
+        ],
+        "species": "Roadrunner Pokémon",
+        "height": 1.9,
+        "weight": 70
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "triple-threat"
+          ],
+          [
+            "intimidate"
+          ],
+          [
+            "quick-feet",
+            "tangled-feet"
+          ]
+        ]
+      }
+    },
+    "formOf": "dodrio",
+    "variant": "Desert",
+    "name": "Dodrio (Desert)",
+    "dex": 96,
+    "debut": 3,
+    "art": 0
   },
   "doduo": {
     "gens": {
@@ -2380,6 +4376,9 @@
             "multiscale"
           ]
         ]
+      },
+      "4": {
+        "evoMethod2": "Level 50 & Level up at Dragonite Island"
       }
     },
     "name": "Dragonite",
@@ -2538,7 +4537,8 @@
           [
             "triple-threat"
           ]
-        ]
+        ],
+        "evoMethod": "3 Level 20 Diglett"
       },
       "4": {
         "abilitySlots": [
@@ -2598,6 +4598,148 @@
     "dex": 175,
     "debut": 2,
     "art": 206
+  },
+  "dusclops": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 70,
+          "def": 130,
+          "spa": 60,
+          "spd": 130,
+          "spe": 30
+        },
+        "evoMethod": "Level 40 & Level up in Spiritual Environment",
+        "growthRate": "Erratic",
+        "evolvesFrom": "duskull",
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Duskull",
+        "genderM": 62.5,
+        "abilitySlots": [
+          [
+            "black-hole"
+          ]
+        ],
+        "species": "Beckon Pokémon",
+        "height": 1.6,
+        "weight": 30.6
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "black-hole"
+          ],
+          [
+            "infiltrator"
+          ],
+          [
+            "frisk"
+          ]
+        ]
+      }
+    },
+    "name": "Dusclops",
+    "dex": 354,
+    "debut": 3,
+    "art": 356
+  },
+  "duskull": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 40,
+          "def": 90,
+          "spa": 30,
+          "spd": 90,
+          "spe": 30
+        },
+        "growthRate": "Erratic",
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Duskull",
+        "genderM": 62.5,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "unnerve"
+          ]
+        ],
+        "species": "Skull Pokémon",
+        "height": 0.8,
+        "weight": 3
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "infiltrator"
+          ],
+          [
+            "unnerve"
+          ]
+        ]
+      }
+    },
+    "name": "Duskull",
+    "dex": 353,
+    "debut": 3,
+    "art": 355
+  },
+  "dustox": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 50,
+          "def": 70,
+          "spa": 60,
+          "spd": 90,
+          "spe": 70
+        },
+        "evoMethod": "Level 10",
+        "growthRate": "Fast",
+        "evolvesFrom": "cascoon",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Wurmple",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "compound-eyes"
+          ]
+        ],
+        "species": "Dust Moth Pokémon",
+        "height": 1.2,
+        "weight": 4.6
+      }
+    },
+    "name": "Dustox",
+    "dex": 269,
+    "debut": 3,
+    "art": 269
   },
   "eevee": {
     "gens": {
@@ -2776,6 +4918,44 @@
     "debut": 1,
     "art": 125
   },
+  "electrike": {
+    "gens": {
+      "3": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 42,
+          "atk": 47,
+          "def": 40,
+          "spa": 65,
+          "spd": 50,
+          "spe": 75
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Electrike",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "speed-boost"
+          ]
+        ],
+        "species": "Lightning Pokémon",
+        "height": 0.6,
+        "weight": 15.2
+      }
+    },
+    "name": "Electrike",
+    "dex": 312,
+    "debut": 3,
+    "art": 309
+  },
   "electrode": {
     "gens": {
       "1": {
@@ -2888,6 +5068,48 @@
     "dex": 226,
     "debut": 2,
     "art": 239
+  },
+  "empoleon": {
+    "gens": {
+      "4": {
+        "types": [
+          "Water",
+          "Steel"
+        ],
+        "stats": {
+          "hp": 89,
+          "atk": 105,
+          "def": 86,
+          "spa": 101,
+          "spd": 88,
+          "spe": 60
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "prinplup",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Piplup",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "defiant",
+            "competitive"
+          ],
+          [
+            "swift-swim"
+          ]
+        ]
+      }
+    },
+    "name": "Empoleon",
+    "dex": 400,
+    "debut": 4,
+    "art": 395
   },
   "empurror": {
     "gens": {
@@ -3032,7 +5254,8 @@
           [
             "anticipation"
           ]
-        ]
+        ],
+        "evoMethod2": "Sun Stone"
       }
     },
     "name": "Espeon",
@@ -3158,13 +5381,57 @@
             "harvest",
             "seed-sower"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 40 & Level up near Moss Rock"
       }
     },
     "name": "Exeggutor",
     "dex": 120,
     "debut": 1,
     "art": 103
+  },
+  "exploud": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 104,
+          "atk": 81,
+          "def": 73,
+          "spa": 101,
+          "spd": 73,
+          "spe": 68
+        },
+        "evoMethod": "Level 34",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "loudred",
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Whismur",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "cacophony"
+          ],
+          [
+            "strong-jaw"
+          ],
+          [
+            "mold-breaker"
+          ]
+        ],
+        "species": "Deafen Pokémon",
+        "height": 1.5,
+        "weight": 124
+      }
+    },
+    "name": "Exploud",
+    "dex": 298,
+    "debut": 3,
+    "art": 295
   },
   "farfetch-d": {
     "gens": {
@@ -3255,12 +5522,72 @@
             "steady-wings"
           ]
         ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away",
+            "flock"
+          ],
+          [
+            "sniper"
+          ],
+          [
+            "steady-wings"
+          ]
+        ]
       }
     },
     "name": "Fearow",
     "dex": 26,
     "debut": 1,
     "art": 22
+  },
+  "feebas": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal",
+          "Water"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 15,
+          "def": 20,
+          "spa": 10,
+          "spd": 55,
+          "spe": 50
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Feebas",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "oblivious"
+          ]
+        ],
+        "species": "Drab Fish Pokémon",
+        "height": 0.6,
+        "weight": 3
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "oblivious"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Feebas",
+    "dex": 347,
+    "debut": 3,
+    "art": 349
   },
   "feraligator": {
     "gens": {
@@ -3429,6 +5756,103 @@
     "debut": 1,
     "art": 136
   },
+  "flygon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 100,
+          "def": 55,
+          "spa": 45,
+          "spd": 45,
+          "spe": 20
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Trapinch",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "arena-trap"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ],
+        "species": "Ant Pit Pokémon",
+        "height": 0.7,
+        "weight": 15
+      }
+    },
+    "name": "Trapinch",
+    "dex": 332,
+    "debut": 3,
+    "art": 328
+  },
+  "flygon-2": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground",
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 90,
+          "def": 80,
+          "spa": 100,
+          "spd": 80,
+          "spe": 90
+        },
+        "evoMethod": "Level 42",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "vibrava",
+        "eggGroups": [
+          "Bug",
+          "Reptile"
+        ],
+        "hatchesAs": "Trapinch",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "sand-veil"
+          ],
+          [
+            "sand-stream"
+          ]
+        ],
+        "species": "Desert Pokémon",
+        "height": 2,
+        "weight": 72
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "sand-veil",
+            "tinted-lens"
+          ],
+          [
+            "sand-stream"
+          ]
+        ]
+      }
+    },
+    "name": "Flygon",
+    "dex": 334,
+    "debut": 3,
+    "art": 330
+  },
   "forretress": {
     "gens": {
       "2": {
@@ -3534,6 +5958,117 @@
     "debut": 2,
     "art": 162
   },
+  "gallade": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 73,
+          "atk": 125,
+          "def": 115,
+          "spa": 65,
+          "spd": 65,
+          "spe": 80
+        },
+        "evoMethod": "Level 34 & Special Attack < Attack",
+        "growthRate": "Slow",
+        "evolvesFrom": "kirlia",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Ralts",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "telepathy"
+          ],
+          [
+            "sharpness"
+          ]
+        ],
+        "species": "Blade Pokémon",
+        "height": 1.7,
+        "weight": 62
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "telepathy"
+          ],
+          [
+            "sharpness"
+          ],
+          [
+            "parry"
+          ]
+        ]
+      }
+    },
+    "name": "Gallade",
+    "dex": 285,
+    "debut": 3,
+    "art": 475
+  },
+  "gardevoir": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 73,
+          "atk": 65,
+          "def": 65,
+          "spa": 125,
+          "spd": 115,
+          "spe": 80
+        },
+        "evoMethod": "Level 34 & Special Attack > Attack",
+        "growthRate": "Slow",
+        "evolvesFrom": "kirlia",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Ralts",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "telepathy"
+          ],
+          [
+            "trace"
+          ]
+        ],
+        "species": "Embrace Pokémon",
+        "height": 1.6,
+        "weight": 48.4
+      },
+      "4": {
+        "types": [
+          "Psychic",
+          "Fairy"
+        ],
+        "abilitySlots": [
+          [
+            "telepathy"
+          ],
+          [
+            "trace"
+          ],
+          [
+            "friend-guard"
+          ]
+        ]
+      }
+    },
+    "name": "Gardevoir",
+    "dex": 284,
+    "debut": 3,
+    "art": 282
+  },
   "gastly": {
     "gens": {
       "1": {
@@ -3591,6 +6126,54 @@
     "dex": 92,
     "debut": 1,
     "art": 92
+  },
+  "gastrodon-west": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 111,
+          "atk": 82,
+          "def": 97,
+          "spa": 69,
+          "spd": 83,
+          "spe": 29
+        },
+        "evoMethod": "Level 28",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "shellos-west",
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Shellos (West)",
+        "abilitySlots": [
+          [
+            "sticky-hold"
+          ],
+          [
+            "earth-eater"
+          ]
+        ],
+        "genderM": 50,
+        "hatchAlts": [
+          {
+            "as": "Shellos (East)",
+            "chance": 50,
+            "when": ""
+          }
+        ],
+        "species": "Sea Hare Pokémon",
+        "height": 1.5,
+        "weight": 60
+      }
+    },
+    "name": "Gastrodon (West)",
+    "dex": 344,
+    "debut": 3,
+    "art": 423
   },
   "gengar": {
     "gens": {
@@ -4026,6 +6609,49 @@
     "debut": 1,
     "art": 76
   },
+  "gorebyss": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 109,
+          "def": 84,
+          "spa": 95,
+          "spd": 80,
+          "spe": 62
+        },
+        "evoMethod": "Level 20 & Deep Sea Scale",
+        "growthRate": "Slow",
+        "evolvesFrom": "clamperl",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Clamperl",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "deep-scales"
+          ],
+          [
+            "swift-swim"
+          ]
+        ],
+        "species": "Sea Scale Pokémon",
+        "height": 1.8,
+        "weight": 22.6
+      },
+      "4": {
+        "evoMethod2": "Level 40, Female, and Level up in Deep Sea"
+      }
+    },
+    "name": "Gorebyss",
+    "dex": 367,
+    "debut": 3,
+    "art": 368
+  },
   "granbull": {
     "gens": {
       "2": {
@@ -4209,6 +6835,96 @@
     "debut": 1,
     "art": 88
   },
+  "grotle": {
+    "gens": {
+      "4": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 77,
+          "atk": 79,
+          "def": 93,
+          "spa": 60,
+          "spd": 65,
+          "spe": 31
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "turtwig",
+        "eggGroups": [
+          "Plant",
+          "Reptile"
+        ],
+        "hatchesAs": "Turtwig",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "shell-armor"
+          ]
+        ]
+      }
+    },
+    "name": "Grotle",
+    "dex": 393,
+    "debut": 4,
+    "art": 388
+  },
+  "grovyle": {
+    "gens": {
+      "3": {
+        "stats": {
+          "hp": 50,
+          "atk": 85,
+          "def": 55,
+          "spa": 65,
+          "spd": 55,
+          "spe": 95
+        },
+        "growthRate": "Medium Slow",
+        "hatchesAs": "Treecko",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "run-away"
+          ]
+        ],
+        "types": [
+          "Grass"
+        ],
+        "evoMethod": "Level 18",
+        "evolvesFrom": "treecko",
+        "eggGroups": [
+          "Plant",
+          "Reptile"
+        ],
+        "species": "Tree Lizard Pokémon",
+        "height": 0.9,
+        "weight": 21.6
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "run-away",
+            "infiltrator"
+          ]
+        ]
+      }
+    },
+    "name": "Grovyle",
+    "dex": 253,
+    "debut": 3,
+    "art": 253
+  },
   "growlithe": {
     "gens": {
       "1": {
@@ -4253,6 +6969,129 @@
     "dex": 86,
     "debut": 1,
     "art": 58
+  },
+  "grumpig": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 75,
+          "def": 75,
+          "spa": 90,
+          "spd": 120,
+          "spe": 60
+        },
+        "evoMethod": "Level 31",
+        "growthRate": "Fast",
+        "evolvesFrom": "spoink",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spoink",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "own-tempo"
+          ],
+          [
+            "thick-fat"
+          ]
+        ],
+        "species": "Manipulate Pokémon",
+        "height": 0.9,
+        "weight": 71.5
+      }
+    },
+    "name": "Grumpig",
+    "dex": 330,
+    "debut": 3,
+    "art": 326
+  },
+  "grumpig-orre": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dark"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 80,
+          "def": 100,
+          "spa": 85,
+          "spd": 105,
+          "spe": 40
+        },
+        "evoMethod": "Level 31",
+        "growthRate": "Fast",
+        "evolvesFrom": "spoink-orre",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spoink (Orre)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "unnerve"
+          ],
+          [
+            "thick-fat"
+          ]
+        ],
+        "species": "Control Pokémon",
+        "height": 1,
+        "weight": 130
+      }
+    },
+    "formOf": "grumpig",
+    "name": "Grumpig (Orre)",
+    "dex": 330,
+    "debut": 3,
+    "art": 0,
+    "variant": "Orre"
+  },
+  "gulpin": {
+    "gens": {
+      "3": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 43,
+          "def": 53,
+          "spa": 33,
+          "spd": 73,
+          "spe": 30
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Gulpin",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "liquid-ooze"
+          ],
+          [
+            "sticky-hold"
+          ],
+          [
+            "gluttony"
+          ]
+        ],
+        "species": "Stomach Pokémon",
+        "height": 0.4,
+        "weight": 10.3
+      }
+    },
+    "name": "Gulpin",
+    "dex": 320,
+    "debut": 3,
+    "art": 316
   },
   "gyarados": {
     "gens": {
@@ -4302,13 +7141,57 @@
           [
             "anger-point"
           ]
-        ]
+        ],
+        "evoMethod": "After Waterfall is Learned"
       }
     },
     "name": "Gyarados",
     "dex": 67,
     "debut": 1,
     "art": 130
+  },
+  "hariyama": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 144,
+          "atk": 120,
+          "def": 80,
+          "spa": 40,
+          "spd": 60,
+          "spe": 50
+        },
+        "evoMethod": "Level 35",
+        "growthRate": "Slow",
+        "evolvesFrom": "makuhita",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Makuhita",
+        "genderM": 100,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "guts"
+          ],
+          [
+            "sheer-force"
+          ]
+        ],
+        "species": "Arm Thrust Pokémon",
+        "height": 2.3,
+        "weight": 300.8
+      }
+    },
+    "name": "Hariyama",
+    "dex": 300,
+    "debut": 3,
+    "art": 297
   },
   "haunter": {
     "gens": {
@@ -4399,6 +7282,9 @@
         "abilitySlots": [
           [
             "battle-armor"
+          ],
+          [
+            "hyper-cutter"
           ]
         ]
       },
@@ -4408,6 +7294,7 @@
             "battle-armor"
           ],
           [
+            "hyper-cutter",
             "unfettered"
           ]
         ]
@@ -4846,6 +7733,49 @@
     "debut": 2,
     "art": 228
   },
+  "huntail": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 94,
+          "def": 105,
+          "spa": 75,
+          "spd": 104,
+          "spe": 52
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Clamperl",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "deep-scales"
+          ],
+          [
+            "illuminate"
+          ]
+        ],
+        "evoMethod": "Level 20 & Deep Sea Tooth",
+        "evolvesFrom": "clamperl",
+        "species": "Sea Tooth Pokémon",
+        "height": 1.7,
+        "weight": 27
+      },
+      "4": {
+        "evoMethod2": "Level 40, Male, and Level up in Deep Sea"
+      }
+    },
+    "name": "Huntail",
+    "dex": 366,
+    "debut": 3,
+    "art": 367
+  },
   "hypno": {
     "gens": {
       "1": {
@@ -4909,6 +7839,94 @@
     "dex": 75,
     "debut": 1,
     "art": 97
+  },
+  "illumise": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 37,
+          "def": 70,
+          "spa": 68,
+          "spd": 95,
+          "spe": 90
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Illumise",
+        "genderM": 0,
+        "hatchAlts": [
+          {
+            "as": "Volbeat",
+            "chance": 50,
+            "when": ""
+          }
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "director"
+          ]
+        ],
+        "species": "Director Pokémon",
+        "height": 0.6,
+        "weight": 2
+      }
+    },
+    "name": "Illumise",
+    "dex": 317,
+    "debut": 3,
+    "art": 314
+  },
+  "infernape": {
+    "gens": {
+      "4": {
+        "types": [
+          "Fire",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 74,
+          "atk": 108,
+          "def": 72,
+          "spa": 83,
+          "spd": 77,
+          "spe": 116
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "monferno",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Chimchar",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "blaze"
+          ],
+          [
+            "full-frontal",
+            "iron-fists",
+            "iron-legs"
+          ],
+          [
+            "vanguard"
+          ]
+        ]
+      }
+    },
+    "name": "Infernape",
+    "dex": 397,
+    "debut": 4,
+    "art": 392
   },
   "ivysaur": {
     "gens": {
@@ -5027,6 +8045,43 @@
     "debut": 1,
     "art": 39
   },
+  "jirachi": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 100,
+          "spa": 140,
+          "spd": 120,
+          "spe": 80
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "serene-grace"
+          ]
+        ],
+        "species": "Wish Pokémon",
+        "height": 0.3,
+        "weight": 1.1
+      }
+    },
+    "name": "Jirachi",
+    "dex": 390,
+    "debut": 3,
+    "art": 385
+  },
   "jolteon": {
     "gens": {
       "1": {
@@ -5084,7 +8139,8 @@
           [
             "static"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 20 & Level up in Magnetically Charged Area"
       }
     },
     "name": "Jolteon",
@@ -5614,6 +8670,51 @@
     "debut": 2,
     "art": 0
   },
+  "kecleon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 84,
+          "atk": 90,
+          "def": 80,
+          "spa": 60,
+          "spd": 120,
+          "spe": 40
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Kecleon",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "camouflage"
+          ]
+        ],
+        "species": "Camouflage Pokémon",
+        "height": 1,
+        "weight": 22
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "camouflage"
+          ],
+          [
+            "adaptability"
+          ]
+        ]
+      }
+    },
+    "name": "Kecleon",
+    "dex": 350,
+    "debut": 3,
+    "art": 352
+  },
   "kingdra": {
     "gens": {
       "2": {
@@ -5736,6 +8837,46 @@
     "dex": 69,
     "debut": 1,
     "art": 99
+  },
+  "kirlia": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 58,
+          "atk": 65,
+          "def": 55,
+          "spa": 65,
+          "spd": 55,
+          "spe": 60
+        },
+        "evoMethod": "Level 17",
+        "growthRate": "Slow",
+        "evolvesFrom": "ralts",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Ralts",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "telepathy"
+          ],
+          [
+            "trace"
+          ]
+        ],
+        "species": "Emotion Pokémon",
+        "height": 0.8,
+        "weight": 13.2
+      }
+    },
+    "name": "Kirlia",
+    "dex": 283,
+    "debut": 3,
+    "art": 281
   },
   "koffing": {
     "gens": {
@@ -5861,6 +9002,59 @@
     "debut": 1,
     "art": 98
   },
+  "lairon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 90,
+          "def": 140,
+          "spa": 50,
+          "spd": 50,
+          "spe": 40
+        },
+        "evoMethod": "Level 26",
+        "growthRate": "Slow",
+        "evolvesFrom": "aron",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Aron",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "rock-head"
+          ]
+        ],
+        "species": "Steel Armor Pokémon",
+        "height": 0.9,
+        "weight": 400
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "battle-armor"
+          ],
+          [
+            "rock-head"
+          ],
+          [
+            "filter"
+          ]
+        ]
+      }
+    },
+    "name": "Lairon",
+    "dex": 302,
+    "debut": 3,
+    "art": 305
+  },
   "lanturn": {
     "gens": {
       "2": {
@@ -5903,6 +9097,49 @@
     "dex": 205,
     "debut": 2,
     "art": 171
+  },
+  "lanturn-soul": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 58,
+          "def": 58,
+          "spa": 126,
+          "spd": 96,
+          "spe": 77
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "chinchou-soul",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Chinchou (Soul)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "illuminate"
+          ],
+          [
+            "clear-body"
+          ]
+        ],
+        "species": "Soul Lantern Pokémon",
+        "height": 1.3,
+        "weight": 12
+      }
+    },
+    "formOf": "lanturn",
+    "variant": "Soul",
+    "name": "Lanturn (Soul)",
+    "dex": 205,
+    "debut": 3,
+    "art": 0
   },
   "lapras": {
     "gens": {
@@ -6011,6 +9248,88 @@
     "debut": 2,
     "art": 246
   },
+  "latias": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dragon",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 110,
+          "spa": 110,
+          "spd": 130,
+          "spe": 110
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 0,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "speed-boost"
+          ],
+          [
+            "telepathy"
+          ]
+        ],
+        "species": "Red Eon Pokémon",
+        "height": 1.8,
+        "weight": 45
+      }
+    },
+    "name": "Latias",
+    "dex": 386,
+    "debut": 3,
+    "art": 380
+  },
+  "latios": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dragon",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 110,
+          "def": 80,
+          "spa": 130,
+          "spd": 110,
+          "spe": 110
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 100,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "speed-boost"
+          ],
+          [
+            "telepathy"
+          ]
+        ],
+        "species": "Blue Eon Pokémon",
+        "height": 2,
+        "weight": 60
+      }
+    },
+    "name": "Latios",
+    "dex": 387,
+    "debut": 3,
+    "art": 381
+  },
   "leafeon": {
     "gens": {
       "1": {
@@ -6068,7 +9387,8 @@
           [
             "sunbathe"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 20 & Level up near Moss Rock"
       }
     },
     "name": "Leafeon",
@@ -6170,6 +9490,259 @@
     "debut": 2,
     "art": 165
   },
+  "lileep": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Grass"
+        ],
+        "stats": {
+          "hp": 66,
+          "atk": 41,
+          "def": 77,
+          "spa": 61,
+          "spd": 87,
+          "spe": 20
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Invertebrate"
+        ],
+        "hatchesAs": "Lileep",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "suction-cups"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Sea Lily Pokémon",
+        "height": 1,
+        "weight": 23.8
+      }
+    },
+    "name": "Lileep",
+    "dex": 373,
+    "debut": 3,
+    "art": 345
+  },
+  "linoone": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 73,
+          "atk": 78,
+          "def": 61,
+          "spa": 50,
+          "spd": 61,
+          "spe": 100
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "zigzagoon",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Zigzagoon",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pickup"
+          ],
+          [
+            "hustle"
+          ]
+        ],
+        "species": "Rushing Pokémon",
+        "height": 1.2,
+        "weight": 12.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "pickup"
+          ],
+          [
+            "hustle"
+          ],
+          [
+            "quick-feet"
+          ]
+        ]
+      }
+    },
+    "name": "Linoone",
+    "dex": 264,
+    "debut": 3,
+    "art": 264
+  },
+  "lombre": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Water"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 50,
+          "def": 50,
+          "spa": 50,
+          "spd": 70,
+          "spe": 60
+        },
+        "evoMethod": "Level 13",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "lotad",
+        "eggGroups": [
+          "Amphibian",
+          "Human-Like"
+        ],
+        "hatchesAs": "Lotad",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rain-dish"
+          ]
+        ],
+        "species": "Jolly Pokémon",
+        "height": 1.2,
+        "weight": 32.5
+      }
+    },
+    "name": "Lombre",
+    "dex": 271,
+    "debut": 3,
+    "art": 271
+  },
+  "lotad": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Water"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 30,
+          "def": 30,
+          "spa": 30,
+          "spd": 50,
+          "spe": 40
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Plant",
+          "Amphibian"
+        ],
+        "hatchesAs": "Lotad",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rain-dish"
+          ]
+        ],
+        "species": "Lilypad Pokémon",
+        "height": 0.5,
+        "weight": 2.6
+      }
+    },
+    "name": "Lotad",
+    "dex": 270,
+    "debut": 3,
+    "art": 270
+  },
+  "loudred": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 84,
+          "atk": 61,
+          "def": 53,
+          "spa": 81,
+          "spd": 53,
+          "spe": 48
+        },
+        "evoMethod": "Level 16",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "whismur",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Whismur",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "cacophony"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ],
+        "species": "Loud Voice Pokémon",
+        "height": 1,
+        "weight": 40.5
+      }
+    },
+    "name": "Loudred",
+    "dex": 297,
+    "debut": 3,
+    "art": 294
+  },
+  "ludicolo": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Water"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 70,
+          "def": 80,
+          "spa": 70,
+          "spd": 100,
+          "spe": 70
+        },
+        "evoMethod": "Level 20 & Water Stone",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "lombre",
+        "eggGroups": [
+          "Amphibian",
+          "Human-Like"
+        ],
+        "hatchesAs": "Lotad",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rain-dish"
+          ],
+          [
+            "own-tempo"
+          ]
+        ],
+        "species": "Carefree Pokémon",
+        "height": 1.5,
+        "weight": 80
+      },
+      "4": {
+        "evoMethod2": "Level 40 & Level up in Aquatic Environment"
+      }
+    },
+    "name": "Ludicolo",
+    "dex": 272,
+    "debut": 3,
+    "art": 272
+  },
   "lugia": {
     "gens": {
       "2": {
@@ -6208,6 +9781,133 @@
     "dex": 250,
     "debut": 2,
     "art": 249
+  },
+  "lunatone": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 55,
+          "def": 105,
+          "spa": 75,
+          "spd": 125,
+          "spe": 40
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Lunatone",
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "inner-core"
+          ]
+        ],
+        "forms": [
+          {
+            "name": "Lunatone-Core",
+            "trigger": "Inner Core",
+            "kind": "Battle only"
+          }
+        ],
+        "species": "Moon Rock Pokémon",
+        "height": 1,
+        "weight": 400
+      }
+    },
+    "name": "Lunatone",
+    "dex": 341,
+    "debut": 3,
+    "art": 337
+  },
+  "lunatone-core": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 105,
+          "def": 55,
+          "spa": 125,
+          "spd": 75,
+          "spe": 80
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "ice-body"
+          ],
+          [
+            "snow-warning"
+          ]
+        ],
+        "species": "Frozen Core Pokémon",
+        "height": 0.7,
+        "weight": 50
+      }
+    },
+    "formOf": "lunatone",
+    "name": "Lunatone-Core",
+    "dex": 341,
+    "debut": 3,
+    "art": 0
+  },
+  "luvdisc": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 55,
+          "atk": 30,
+          "def": 43,
+          "spa": 40,
+          "spd": 65,
+          "spe": 67
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Luvdisc",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "serene-grace"
+          ],
+          [
+            "reef-refuge"
+          ]
+        ],
+        "species": "Love Pokémon",
+        "height": 0.6,
+        "weight": 2
+      }
+    },
+    "name": "Luvdisc",
+    "dex": 369,
+    "debut": 3,
+    "art": 370
   },
   "machamp": {
     "gens": {
@@ -6700,7 +10400,8 @@
           [
             "triple-threat"
           ]
-        ]
+        ],
+        "evoMethod": "3 Level 20 Magnemite"
       },
       "4": {
         "abilitySlots": [
@@ -6722,6 +10423,47 @@
     "dex": 77,
     "debut": 1,
     "art": 82
+  },
+  "makuhita": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 72,
+          "atk": 60,
+          "def": 40,
+          "spa": 20,
+          "spd": 30,
+          "spe": 25
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Makuhita",
+        "genderM": 100,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "guts"
+          ],
+          [
+            "hustle"
+          ]
+        ],
+        "species": "Guts Pokémon",
+        "height": 1,
+        "weight": 86.4
+      }
+    },
+    "name": "Makuhita",
+    "dex": 299,
+    "debut": 3,
+    "art": 296
   },
   "mallar-kee": {
     "gens": {
@@ -6765,6 +10507,49 @@
     "name": "Mallar'kee",
     "dex": 187,
     "debut": 2
+  },
+  "manectric": {
+    "gens": {
+      "3": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 67,
+          "atk": 72,
+          "def": 60,
+          "spa": 105,
+          "spd": 70,
+          "spe": 110
+        },
+        "evoMethod": "Level 26",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "electrike",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Electrike",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "static"
+          ],
+          [
+            "speed-boost"
+          ],
+          [
+            "thunder-warning"
+          ]
+        ],
+        "species": "Discharge Pokémon",
+        "height": 1.5,
+        "weight": 40.2
+      }
+    },
+    "name": "Manectric",
+    "dex": 313,
+    "debut": 3,
+    "art": 310
   },
   "mankey": {
     "name": "Mankey",
@@ -6845,6 +10630,14 @@
           [
             "swift-swim"
           ]
+        ],
+        "evoMethod": "Level 20 & Remoraid in Party",
+        "evolvesFrom": "mantyke",
+        "hatchAlts": [
+          {
+            "as": "Mantyke",
+            "when": "A parent holds Wave Incense"
+          }
         ]
       }
     },
@@ -6852,6 +10645,44 @@
     "dex": 213,
     "debut": 2,
     "art": 226
+  },
+  "mantyke": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 20,
+          "def": 50,
+          "spa": 60,
+          "spd": 100,
+          "spe": 50
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Tiny Kite Pokémon",
+        "height": 1,
+        "weight": 20
+      }
+    },
+    "name": "Mantyke",
+    "dex": 372,
+    "debut": 3,
+    "art": 458
   },
   "mareep": {
     "gens": {
@@ -6953,6 +10784,50 @@
     "debut": 2,
     "art": 183
   },
+  "marill-dust": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 30,
+          "def": 60,
+          "spa": 30,
+          "spd": 40,
+          "spe": 40
+        },
+        "species": "Dust Mouse Pokémon",
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Marill (Dust)",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "huge-power"
+          ]
+        ]
+      },
+      "4": {
+        "types": [
+          "Ground",
+          "Fairy"
+        ]
+      }
+    },
+    "formOf": "marill",
+    "variant": "Dust",
+    "name": "Marill (Dust)",
+    "dex": 179,
+    "debut": 3,
+    "art": 0
+  },
   "marowak": {
     "gens": {
       "1": {
@@ -7022,6 +10897,232 @@
     "dex": 84,
     "debut": 1,
     "art": 105
+  },
+  "marshtomp": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 84,
+          "def": 76,
+          "spa": 50,
+          "spd": 70,
+          "spe": 50
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "mudkip",
+        "eggGroups": [
+          "Amphibian"
+        ],
+        "hatchesAs": "Mudkip",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "earth-eater"
+          ]
+        ],
+        "species": "Mudskipper Pokémon",
+        "height": 0.7,
+        "weight": 28
+      }
+    },
+    "name": "Marshtomp",
+    "dex": 259,
+    "debut": 3,
+    "art": 259
+  },
+  "masquerain": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Water"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 60,
+          "def": 62,
+          "spa": 80,
+          "spd": 72,
+          "spe": 95
+        },
+        "evoMethod": "Level 20",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "surskit",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Surskit",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "intimidate"
+          ],
+          [
+            "unnerve"
+          ]
+        ],
+        "species": "Eyeball Pokémon",
+        "height": 0.8,
+        "weight": 3.6
+      }
+    },
+    "name": "Masquerain",
+    "dex": 277,
+    "debut": 3,
+    "art": 284
+  },
+  "mawile": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 105,
+          "def": 85,
+          "spa": 55,
+          "spd": 55,
+          "spe": 50
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Mawile",
+        "genderM": 12.5,
+        "abilitySlots": [
+          [
+            "strong-jaw"
+          ],
+          [
+            "hyper-cutter"
+          ]
+        ],
+        "species": "Jaw Pokémon",
+        "height": 0.6,
+        "weight": 11.5
+      },
+      "4": {
+        "types": [
+          "Steel",
+          "Fairy"
+        ],
+        "abilitySlots": [
+          [
+            "strong-jaw"
+          ],
+          [
+            "hyper-cutter"
+          ],
+          [
+            "cute-charm"
+          ]
+        ]
+      }
+    },
+    "name": "Mawile",
+    "dex": 305,
+    "debut": 3,
+    "art": 303
+  },
+  "medicham": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fighting",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 60,
+          "def": 75,
+          "spa": 60,
+          "spd": 75,
+          "spe": 80
+        },
+        "evoMethod": "Level 40",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "meditite",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Meditite",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pure-power"
+          ],
+          [
+            "anticipation"
+          ],
+          [
+            "telepathy"
+          ]
+        ],
+        "species": "Yoga Pokémon",
+        "height": 1.3,
+        "weight": 31.5
+      }
+    },
+    "name": "Medicham",
+    "dex": 356,
+    "debut": 3,
+    "art": 308
+  },
+  "meditite": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fighting",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 55,
+          "spa": 40,
+          "spd": 55,
+          "spe": 60
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Meditite",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pure-power"
+          ],
+          [
+            "anticipation"
+          ],
+          [
+            "levitate"
+          ]
+        ],
+        "species": "Meditate Pokémon",
+        "height": 0.6,
+        "weight": 11.2
+      }
+    },
+    "name": "Meditite",
+    "dex": 355,
+    "debut": 3,
+    "art": 307
   },
   "meganium": {
     "gens": {
@@ -7117,6 +11218,101 @@
     "dex": 64,
     "debut": 1,
     "art": 52
+  },
+  "metagrosss": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 135,
+          "def": 130,
+          "spa": 95,
+          "spd": 100,
+          "spe": 60
+        },
+        "evoMethod": "Level 60",
+        "growthRate": "Slow",
+        "evolvesFrom": "metang",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Beldum",
+        "abilitySlots": [
+          [
+            "clear-body"
+          ]
+        ],
+        "species": "Iron Leg Pokémon",
+        "height": 1.6,
+        "weight": 2000
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "clear-body"
+          ],
+          [
+            "tough-claws"
+          ],
+          [
+            "analytic",
+            "download"
+          ]
+        ],
+        "evoMethod2": "2 Level 40 Metang"
+      }
+    },
+    "name": "Metagrosss",
+    "dex": 382,
+    "debut": 3,
+    "art": 376
+  },
+  "metang": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 75,
+          "def": 100,
+          "spa": 55,
+          "spd": 80,
+          "spe": 50
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Slow",
+        "evolvesFrom": "beldum",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Beldum",
+        "abilitySlots": [
+          [
+            "clear-body"
+          ],
+          [
+            "levitate"
+          ]
+        ],
+        "species": "Iron Claw Pokémon",
+        "height": 1.2,
+        "weight": 400
+      },
+      "4": {
+        "evoMethod2": "2 Level 20 Beldum"
+      }
+    },
+    "name": "Metang",
+    "dex": 381,
+    "debut": 3,
+    "art": 375
   },
   "metapod": {
     "gens": {
@@ -7266,6 +11462,115 @@
     "debut": 1,
     "art": 150
   },
+  "mightyena": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dark"
+        ],
+        "stats": {
+          "hp": 73,
+          "atk": 90,
+          "def": 75,
+          "spa": 65,
+          "spd": 65,
+          "spe": 90
+        },
+        "evoMethod": "Level 25",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "poochyena",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Poochyena",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "telepathy"
+          ]
+        ],
+        "species": "Hyena Pokémon",
+        "height": 1,
+        "weight": 45
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "quick-feet"
+          ],
+          [
+            "telepathy"
+          ]
+        ],
+        "evoMethod2": "Level 15 & Level up with other Poochyena or Mightyena in Party"
+      }
+    },
+    "name": "Mightyena",
+    "dex": 262,
+    "debut": 3,
+    "art": 262
+  },
+  "milotic": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 70,
+          "def": 79,
+          "spa": 105,
+          "spd": 125,
+          "spe": 81
+        },
+        "evoMethod": "Max Beauty",
+        "growthRate": "Slow",
+        "evolvesFrom": "feebas",
+        "eggGroups": [
+          "Fish",
+          "Reptile"
+        ],
+        "hatchesAs": "Feebas",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "marvel-scale"
+          ],
+          [
+            "cute-charm"
+          ]
+        ],
+        "species": "Beauty Pokémon",
+        "height": 6.2,
+        "weight": 402
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "marvel-scale"
+          ],
+          [
+            "adaptability"
+          ],
+          [
+            "cute-charm"
+          ]
+        ],
+        "evoMethod2": "Level 30 & Marvel Scale"
+      }
+    },
+    "name": "Milotic",
+    "dex": 348,
+    "debut": 3,
+    "art": 350
+  },
   "miltank": {
     "gens": {
       "2": {
@@ -7290,7 +11595,14 @@
         "genderM": 0,
         "species": "Milk Cow Pokémon",
         "height": 1.2,
-        "weight": 200.5
+        "weight": 200.5,
+        "hatchAlts": [
+          {
+            "as": "Calfpint (M)",
+            "chance": 50,
+            "when": ""
+          }
+        ]
       },
       "3": {
         "abilitySlots": [
@@ -7369,6 +11681,51 @@
     "dex": 124,
     "debut": 1,
     "art": 122
+  },
+  "minun": {
+    "gens": {
+      "3": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 45,
+          "def": 50,
+          "spa": 80,
+          "spd": 85,
+          "spe": 95
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Minun",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "minus"
+          ],
+          [
+            "volt-absorb"
+          ]
+        ],
+        "hatchAlts": [
+          {
+            "as": "Plusle",
+            "chance": 12.5,
+            "when": ""
+          }
+        ],
+        "species": "Minus Pokémon",
+        "height": 0.4,
+        "weight": 4.2
+      }
+    },
+    "name": "Minun",
+    "dex": 315,
+    "debut": 3,
+    "art": 312
   },
   "misdreavus": {
     "gens": {
@@ -7474,6 +11831,81 @@
     "dex": 149,
     "debut": 1,
     "art": 146
+  },
+  "monferno": {
+    "gens": {
+      "4": {
+        "types": [
+          "Fire",
+          "Fighting"
+        ],
+        "stats": {
+          "hp": 64,
+          "atk": 78,
+          "def": 57,
+          "spa": 63,
+          "spd": 57,
+          "spe": 86
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "chimchar",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Chimchar",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "blaze"
+          ],
+          [
+            "full-frontal",
+            "iron-fists",
+            "iron-legs"
+          ]
+        ]
+      }
+    },
+    "name": "Monferno",
+    "dex": 396,
+    "debut": 4,
+    "art": 391
+  },
+  "mudkip": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 64,
+          "def": 56,
+          "spa": 40,
+          "spd": 50,
+          "spe": 40
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Amphibian"
+        ],
+        "hatchesAs": "Mudkip",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "torrent"
+          ]
+        ],
+        "species": "Mud Fisg Pokémon",
+        "height": 0.4,
+        "weight": 7.6
+      }
+    },
+    "name": "Mudkip",
+    "dex": 258,
+    "debut": 3,
+    "art": 258
   },
   "muk": {
     "gens": {
@@ -7660,8 +12092,8 @@
         "evoMethod": "Moon Stone",
         "evolvesFrom": "nidorino",
         "species": "Poison King Pokémon",
-        "height": 1.7,
-        "weight": 192,
+        "height": 1.9,
+        "weight": 267,
         "growthRate": "Medium Slow"
       },
       "2": {
@@ -7677,7 +12109,14 @@
           "Beast"
         ],
         "hatchesAs": "Nidoran (M)",
-        "genderM": 100
+        "genderM": 100,
+        "hatchAlts": [
+          {
+            "as": "Nidoran (F)",
+            "chance": 50,
+            "when": ""
+          }
+        ]
       },
       "3": {
         "abilitySlots": [
@@ -7726,8 +12165,8 @@
         "evoMethod": "Moon Stone",
         "evolvesFrom": "nidorina",
         "species": "Poison Queen Pokémon",
-        "height": 1.5,
-        "weight": 140,
+        "height": 1.8,
+        "weight": 240,
         "growthRate": "Medium Slow"
       },
       "2": {
@@ -7743,7 +12182,14 @@
           "Beast"
         ],
         "hatchesAs": "Nidoran (F)",
-        "genderM": 0
+        "genderM": 0,
+        "hatchAlts": [
+          {
+            "as": "Nidoran (M)",
+            "chance": 50,
+            "when": ""
+          }
+        ]
       },
       "3": {
         "abilitySlots": [
@@ -7918,7 +12364,14 @@
           "Creature"
         ],
         "hatchesAs": "Nidoran (F)",
-        "genderM": 0
+        "genderM": 0,
+        "hatchAlts": [
+          {
+            "as": "Nidoran (M)",
+            "chance": 50,
+            "when": ""
+          }
+        ]
       },
       "3": {
         "abilitySlots": [
@@ -7982,7 +12435,14 @@
           "Creature"
         ],
         "hatchesAs": "Nidoran (M)",
-        "genderM": 100
+        "genderM": 100,
+        "hatchAlts": [
+          {
+            "as": "Nidoran (F)",
+            "chance": 50,
+            "when": ""
+          }
+        ]
       },
       "3": {
         "abilitySlots": [
@@ -8012,6 +12472,42 @@
     "dex": 32,
     "debut": 1,
     "art": 33
+  },
+  "nincada": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 36,
+          "atk": 45,
+          "def": 90,
+          "spa": 30,
+          "spd": 30,
+          "spe": 40
+        },
+        "growthRate": "Erratic",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Nincada",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "compound-eyes"
+          ]
+        ],
+        "species": "Trainee Pokémon",
+        "height": 0.5,
+        "weight": 5.5
+      }
+    },
+    "name": "Nincada",
+    "dex": 291,
+    "debut": 3,
+    "art": 290
   },
   "ninetales": {
     "gens": {
@@ -8058,7 +12554,8 @@
           [
             "conniving"
           ]
-        ]
+        ],
+        "evoMethod": "High Friendship & Fire Stone"
       },
       "4": {
         "abilitySlots": [
@@ -8078,6 +12575,64 @@
     "dex": 89,
     "debut": 1,
     "art": 38
+  },
+  "ninjask": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 56,
+          "atk": 90,
+          "def": 50,
+          "spa": 50,
+          "spd": 50,
+          "spe": 160
+        },
+        "evoMethod": "Level 20",
+        "growthRate": "Erratic",
+        "evolvesFrom": "nincada",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Nincada",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "speed-boost"
+          ],
+          [
+            "run-away"
+          ],
+          [
+            "sap-sipper"
+          ]
+        ],
+        "species": "Ninja Pokémon",
+        "height": 0.8,
+        "weight": 3
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "speed-boost"
+          ],
+          [
+            "run-away",
+            "infiltrator"
+          ],
+          [
+            "sap-sipper"
+          ]
+        ]
+      }
+    },
+    "name": "Ninjask",
+    "dex": 292,
+    "debut": 3,
+    "art": 291
   },
   "noctowl": {
     "gens": {
@@ -8135,6 +12690,136 @@
     "dex": 164,
     "debut": 2,
     "art": 164
+  },
+  "nosepass": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 50,
+          "def": 135,
+          "spa": 70,
+          "spd": 90,
+          "spe": 30
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Nosepass",
+        "genderM": 75,
+        "abilitySlots": [
+          [
+            "sturdy"
+          ],
+          [
+            "magnet-pull"
+          ]
+        ],
+        "species": "Compass Pokémon",
+        "height": 1,
+        "weight": 600
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "sturdy"
+          ],
+          [
+            "magnet-pull"
+          ],
+          [
+            "plus",
+            "minus"
+          ]
+        ]
+      }
+    },
+    "name": "Nosepass",
+    "dex": 306,
+    "debut": 3,
+    "art": 299
+  },
+  "numel": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 60,
+          "def": 70,
+          "spa": 65,
+          "spd": 65,
+          "spe": 35
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Numel",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "oblivious"
+          ],
+          [
+            "gluttony"
+          ]
+        ],
+        "species": "Numb Pokémon",
+        "height": 0.7,
+        "weight": 40
+      }
+    },
+    "name": "Numel",
+    "dex": 326,
+    "debut": 3,
+    "art": 322
+  },
+  "nuzleaf": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 70,
+          "def": 50,
+          "spa": 50,
+          "spd": 50,
+          "spe": 60
+        },
+        "evoMethod": "Level 13",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "seedot",
+        "eggGroups": [
+          "Plant",
+          "Human-Like"
+        ],
+        "hatchesAs": "Seedot",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "chlorophyll"
+          ]
+        ],
+        "species": "Wily Pokémon",
+        "height": 1,
+        "weight": 28
+      }
+    },
+    "name": "Nuzleaf",
+    "dex": 274,
+    "debut": 3,
+    "art": 274
   },
   "octillery": {
     "gens": {
@@ -8413,6 +13098,54 @@
     "debut": 1,
     "art": 95
   },
+  "overqwil": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 115,
+          "def": 160,
+          "spa": 50,
+          "spd": 100,
+          "spe": 10
+        },
+        "evoMethod": "Level 30 & Level up in Deep Sea",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "qwilfish",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Qwilfish",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "iron-barbs"
+          ]
+        ],
+        "species": "Minefield Pokémon",
+        "height": 2.5,
+        "weight": 150.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "iron-barbs"
+          ],
+          [
+            "aftermath"
+          ]
+        ]
+      }
+    },
+    "name": "Overqwil",
+    "dex": 309,
+    "debut": 3,
+    "art": 0
+  },
   "paras": {
     "gens": {
       "1": {
@@ -8543,6 +13276,138 @@
     "dex": 40,
     "debut": 1,
     "art": 47
+  },
+  "pelipper": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 70,
+          "def": 95,
+          "spa": 95,
+          "spd": 70,
+          "spe": 65
+        },
+        "evoMethod": "Level 25",
+        "growthRate": "Medium Fast",
+        "evolvesFrom": "wingull",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Wingull",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rain-dish"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Pelican Pokémon",
+        "height": 1.2,
+        "weight": 10
+      }
+    },
+    "name": "Pelipper",
+    "dex": 279,
+    "debut": 3,
+    "art": 279
+  },
+  "pengpin": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice",
+          "Normal"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 45,
+          "def": 35,
+          "spa": 30,
+          "spd": 35,
+          "spe": 80
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Pengpin",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ],
+          [
+            "ice-body"
+          ]
+        ],
+        "species": "Pin Pokémon",
+        "height": 0.6,
+        "weight": 8
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "swift-swim",
+            "slush-rush"
+          ],
+          [
+            "ice-body"
+          ]
+        ]
+      }
+    },
+    "name": "Pengpin",
+    "dex": 360,
+    "debut": 3,
+    "art": 0
+  },
+  "pengpott": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice",
+          "Normal"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 110,
+          "def": 95,
+          "spa": 60,
+          "spd": 75,
+          "spe": 50
+        },
+        "evoMethod": "Level 33",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "pengpin",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Pengpin",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "strong-jaw"
+          ],
+          [
+            "ice-body"
+          ]
+        ],
+        "species": "Pinsetter Pokémon",
+        "height": 1.5,
+        "weight": 100
+      }
+    },
+    "name": "Pengpott",
+    "dex": 361,
+    "debut": 3,
+    "art": 0
   },
   "persian": {
     "gens": {
@@ -9103,6 +13968,117 @@
     "debut": 1,
     "art": 127
   },
+  "piplup": {
+    "gens": {
+      "4": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 54,
+          "atk": 61,
+          "def": 51,
+          "spa": 56,
+          "spd": 53,
+          "spe": 40
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Piplup",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "torrent"
+          ]
+        ]
+      }
+    },
+    "name": "Piplup",
+    "dex": 398,
+    "debut": 4,
+    "art": 393
+  },
+  "platiny": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 64,
+          "atk": 43,
+          "def": 53,
+          "spa": 47,
+          "spd": 57,
+          "spe": 41
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "solar-power"
+          ]
+        ],
+        "species": "Tiny Fruit Pokémon",
+        "height": 0.7,
+        "weight": 12
+      }
+    },
+    "name": "Platiny",
+    "dex": 357,
+    "debut": 3,
+    "art": 0
+  },
+  "plusle": {
+    "gens": {
+      "3": {
+        "types": [
+          "Electric"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 45,
+          "def": 50,
+          "spa": 85,
+          "spd": 80,
+          "spe": 95
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Plusle",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "plus"
+          ],
+          [
+            "lightning-rod"
+          ]
+        ],
+        "hatchAlts": [
+          {
+            "as": "Minun",
+            "chance": 12.5,
+            "when": ""
+          }
+        ],
+        "species": "Plus Pokémon",
+        "height": 0.4,
+        "weight": 4.2
+      }
+    },
+    "name": "Plusle",
+    "dex": 314,
+    "debut": 3,
+    "art": 311
+  },
   "politoed": {
     "gens": {
       "2": {
@@ -9314,6 +14290,61 @@
     "debut": 1,
     "art": 62
   },
+  "polypolony": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Rock"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 70,
+          "def": 125,
+          "spa": 80,
+          "spd": 125,
+          "spe": 20
+        },
+        "evoMethod": "2 Level 20 Corsola",
+        "growthRate": "Slow",
+        "evolvesFrom": "corsola",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Corsola",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "natural-cure"
+          ]
+        ],
+        "species": "Colony Pokémon",
+        "height": 1.4,
+        "weight": 120
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "natural-cure",
+            "hydration"
+          ],
+          [
+            "regenerator"
+          ]
+        ]
+      }
+    },
+    "name": "Polypolony",
+    "dex": 325,
+    "debut": 3,
+    "art": 0
+  },
   "ponyta": {
     "gens": {
       "1": {
@@ -9364,6 +14395,51 @@
     "dex": 97,
     "debut": 1,
     "art": 77
+  },
+  "poochyena": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dark"
+        ],
+        "stats": {
+          "hp": 38,
+          "atk": 55,
+          "def": 40,
+          "spa": 30,
+          "spd": 30,
+          "spe": 55
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Poochyena",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "run-away"
+          ]
+        ],
+        "species": "Bite Pokémon",
+        "height": 0.5,
+        "weight": 13.6
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "run-away"
+          ],
+          [
+            "quick-feet"
+          ]
+        ]
+      }
+    },
+    "name": "Poochyena",
+    "dex": 261,
+    "debut": 3,
+    "art": 261
   },
   "porygon": {
     "gens": {
@@ -9523,10 +14599,110 @@
             "vital-spirit"
           ]
         ]
+      },
+      "4": {
+        "evoMethod2": "Level 20 & Anger Point Activated"
       }
     },
     "name": "Primeape",
     "art": 57
+  },
+  "prinplup": {
+    "gens": {
+      "4": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 74,
+          "atk": 76,
+          "def": 66,
+          "spa": 71,
+          "spd": 68,
+          "spe": 50
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "piplup",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Piplup",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "defiant",
+            "competitive"
+          ]
+        ]
+      }
+    },
+    "name": "Prinplup",
+    "dex": 399,
+    "debut": 4,
+    "art": 394
+  },
+  "probopass": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Electric"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 65,
+          "def": 145,
+          "spa": 115,
+          "spd": 120,
+          "spe": 20
+        },
+        "evoMethod": "Level 25 & Thunder Stone",
+        "growthRate": "Slow",
+        "evolvesFrom": "nosepass",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Nosepass",
+        "genderM": 75,
+        "abilitySlots": [
+          [
+            "sturdy"
+          ],
+          [
+            "magnet-pull"
+          ],
+          [
+            "triple-threat"
+          ]
+        ],
+        "species": "Lodestone Pokémon",
+        "height": 1.4,
+        "weight": 1500
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "sturdy"
+          ],
+          [
+            "magnet-pull",
+            "magnet-rise"
+          ],
+          [
+            "triple-threat"
+          ]
+        ],
+        "evoMethod2": "Level 40 & Level up in Magnetically Charged Area"
+      }
+    },
+    "name": "Probopass",
+    "dex": 307,
+    "debut": 3,
+    "art": 476
   },
   "psyduck": {
     "gens": {
@@ -9731,6 +14907,52 @@
     "debut": 2,
     "art": 156
   },
+  "qwilfish": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 95,
+          "def": 140,
+          "spa": 40,
+          "spd": 90,
+          "spe": 10
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Qwilfish",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "iron-barbs"
+          ]
+        ],
+        "species": "Sea Mine Pokémon",
+        "height": 0.5,
+        "weight": 3.9
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "iron-barbs"
+          ],
+          [
+            "aftermath"
+          ]
+        ]
+      }
+    },
+    "name": "Qwilfish",
+    "dex": 308,
+    "debut": 3,
+    "art": 0
+  },
   "raichu": {
     "gens": {
       "1": {
@@ -9777,7 +14999,8 @@
           [
             "overcharge"
           ]
-        ]
+        ],
+        "evoMethod": "Level 20 & Thunder Stone"
       },
       "4": {
         "abilitySlots": [
@@ -9791,7 +15014,8 @@
             "overcharge",
             "short-circuit"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 40 & Level up in Magnetically Charged Area"
       }
     },
     "name": "Raichu",
@@ -9837,6 +15061,43 @@
     "dex": 246,
     "debut": 2,
     "art": 243
+  },
+  "ralts": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 43,
+          "atk": 45,
+          "def": 35,
+          "spa": 45,
+          "spd": 35,
+          "spe": 40
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "telepathy"
+          ],
+          [
+            "trace"
+          ]
+        ],
+        "species": "Feeilng Pokémon",
+        "height": 0.4,
+        "weight": 4.2
+      }
+    },
+    "name": "Ralts",
+    "dex": 282,
+    "debut": 3,
+    "art": 280
   },
   "rapidash": {
     "gens": {
@@ -10019,6 +15280,171 @@
     "debut": 1,
     "art": 19
   },
+  "regice": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 50,
+          "def": 100,
+          "spa": 100,
+          "spd": 200,
+          "spe": 50
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "titan-body"
+          ],
+          [
+            "icy-surge"
+          ]
+        ],
+        "species": "Ice Titan Pokémon",
+        "height": 3.6,
+        "weight": 3000
+      }
+    },
+    "name": "Regice",
+    "dex": 384,
+    "debut": 3,
+    "art": 378
+  },
+  "regirock": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 100,
+          "def": 200,
+          "spa": 50,
+          "spd": 100,
+          "spe": 50
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "titan-body"
+          ],
+          [
+            "rocky-construct"
+          ]
+        ],
+        "species": "Rock Titan Pokémon",
+        "height": 3.4,
+        "weight": 7200
+      }
+    },
+    "name": "Regirock",
+    "dex": 383,
+    "debut": 3,
+    "art": 377
+  },
+  "registeel": {
+    "gens": {
+      "3": {
+        "types": [
+          "Steel"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 75,
+          "def": 150,
+          "spa": 75,
+          "spd": 150,
+          "spe": 50
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "titan-body"
+          ],
+          [
+            "perfect-alloy"
+          ]
+        ],
+        "species": "Steel Titan Pokémon",
+        "height": 3.8,
+        "weight": 4800
+      }
+    },
+    "name": "Registeel",
+    "dex": 385,
+    "debut": 3,
+    "art": 379
+  },
+  "relicanth": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Rock"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 90,
+          "def": 135,
+          "spa": 45,
+          "spd": 75,
+          "spe": 40
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Relicanth",
+        "genderM": 87.5,
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "deep-scales"
+          ],
+          [
+            "sturdy"
+          ]
+        ],
+        "species": "Longevity Pokémon",
+        "height": 1,
+        "weight": 23.4
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "rock-head",
+            "solid-rock"
+          ],
+          [
+            "deep-scales"
+          ],
+          [
+            "sturdy",
+            "unaware"
+          ]
+        ]
+      }
+    },
+    "name": "Relicanth",
+    "dex": 368,
+    "debut": 3,
+    "art": 369
+  },
   "remoraid": {
     "gens": {
       "2": {
@@ -10193,6 +15619,254 @@
     "debut": 1,
     "art": 111
   },
+  "roselia": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 70,
+          "def": 45,
+          "spa": 80,
+          "spd": 75,
+          "spe": 65
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Roselia",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "natural-cure"
+          ],
+          [
+            "poison-point"
+          ]
+        ],
+        "species": "Thorn Pokémon",
+        "height": 0.3,
+        "weight": 2
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "natural-cure"
+          ],
+          [
+            "poison-point"
+          ],
+          [
+            "calming-scent"
+          ]
+        ]
+      }
+    },
+    "name": "Roselia",
+    "dex": 318,
+    "debut": 3,
+    "art": 315
+  },
+  "roserade": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Poison"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 90,
+          "def": 65,
+          "spa": 105,
+          "spd": 100,
+          "spe": 90
+        },
+        "evoMethod": "Level 20 & Leaf Stone",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "roselia",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Roselia",
+        "genderM": 25,
+        "abilitySlots": [
+          [
+            "natural-cure"
+          ],
+          [
+            "poison-point"
+          ]
+        ],
+        "species": "0.9 Pokémon",
+        "height": 14.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "natural-cure"
+          ],
+          [
+            "poison-point"
+          ],
+          [
+            "technician"
+          ]
+        ],
+        "evoMethod2": "Level 40 & Level up near Moss Rock"
+      }
+    },
+    "name": "Roserade",
+    "dex": 319,
+    "debut": 3,
+    "art": 407
+  },
+  "sableye": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 75,
+          "def": 70,
+          "spa": 60,
+          "spd": 85,
+          "spe": 60
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Human-Like"
+        ],
+        "hatchesAs": "Sableye",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "keen-eye"
+          ],
+          [
+            "conniving"
+          ]
+        ],
+        "species": "Gemstone Pokémon",
+        "height": 0.5,
+        "weight": 11
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "keen-eye"
+          ],
+          [
+            "conniving"
+          ],
+          [
+            "ore-eater"
+          ]
+        ]
+      }
+    },
+    "name": "Sableye",
+    "dex": 304,
+    "debut": 3,
+    "art": 302
+  },
+  "salamence": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dragon",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 95,
+          "atk": 130,
+          "def": 80,
+          "spa": 115,
+          "spd": 80,
+          "spe": 100
+        },
+        "evoMethod": "Level 60",
+        "growthRate": "Slow",
+        "evolvesFrom": "shelgon",
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Bagon",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "intimidate"
+          ],
+          [
+            "sheer-force"
+          ],
+          [
+            "steady-wings"
+          ]
+        ],
+        "height": 2,
+        "weight": 240,
+        "species": "Menace Pokémon"
+      },
+      "4": {
+        "evoMethod2": "Jump from a cliff (% chance = level)",
+        "evoAlts": [
+          {
+            "from": "bagon",
+            "method": "Jump from a cliff (% chance = level)"
+          }
+        ]
+      }
+    },
+    "name": "Salamence",
+    "dex": 379,
+    "debut": 3,
+    "art": 373
+  },
+  "sandai": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 115,
+          "def": 155,
+          "spa": 85,
+          "spd": 95,
+          "spe": 90
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Fluctuating"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "earth-eater"
+          ]
+        ],
+        "species": "Earth Beast Pokémon",
+        "height": 1.9,
+        "weight": 400
+      }
+    },
+    "name": "Sandai",
+    "dex": 389,
+    "debut": 3,
+    "art": 0
+  },
   "sandshrew": {
     "gens": {
       "1": {
@@ -10317,6 +15991,64 @@
     "dex": 44,
     "debut": 1,
     "art": 28
+  },
+  "sceptile": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 73,
+          "atk": 107,
+          "def": 75,
+          "spa": 80,
+          "spd": 75,
+          "spe": 120
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "grovyle",
+        "eggGroups": [
+          "Plant",
+          "Reptile"
+        ],
+        "hatchesAs": "Treecko",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "run-away"
+          ],
+          [
+            "sharpness"
+          ]
+        ],
+        "species": "Forest Pokémon",
+        "height": 1.7,
+        "weight": 65.2
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "run-away",
+            "infiltrator"
+          ],
+          [
+            "sharpness"
+          ]
+        ]
+      }
+    },
+    "name": "Sceptile",
+    "dex": 254,
+    "debut": 3,
+    "art": 254
   },
   "scikle": {
     "gens": {
@@ -10577,6 +16309,82 @@
     "debut": 1,
     "art": 119
   },
+  "sealeo": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice",
+          "Water"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 80,
+          "def": 70,
+          "spa": 60,
+          "spd": 80,
+          "spe": 45
+        },
+        "evoMethod": "Level 23",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "spheal",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spheal",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body"
+          ]
+        ],
+        "species": "Clap Pokémon",
+        "height": 1.1,
+        "weight": 200
+      }
+    },
+    "name": "Sealeo",
+    "dex": 363,
+    "debut": 3,
+    "art": 364
+  },
+  "seedot": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 40,
+          "def": 50,
+          "spa": 30,
+          "spd": 30,
+          "spe": 30
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Seedot",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "chlorophyll"
+          ]
+        ],
+        "species": "Acorn Pokémon",
+        "height": 0.5,
+        "weight": 8
+      }
+    },
+    "name": "Seedot",
+    "dex": 273,
+    "debut": 3,
+    "art": 273
+  },
   "seel": {
     "gens": {
       "1": {
@@ -10701,6 +16509,176 @@
     "debut": 2,
     "art": 161
   },
+  "seviper": {
+    "gens": {
+      "3": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 83,
+          "atk": 115,
+          "def": 70,
+          "spa": 60,
+          "spd": 70,
+          "spe": 100
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Seviper",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "conniving"
+          ]
+        ],
+        "species": "Fang Snake Pokémon",
+        "height": 2.7,
+        "weight": 52.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "conniving"
+          ],
+          [
+            "sharp-tail"
+          ]
+        ]
+      }
+    },
+    "name": "Seviper",
+    "dex": 340,
+    "debut": 3,
+    "art": 336
+  },
+  "sharpedo": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 105,
+          "def": 70,
+          "spa": 75,
+          "spd": 70,
+          "spe": 105
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "carvanha",
+        "eggGroups": [
+          "Fish"
+        ],
+        "hatchesAs": "Carvanha",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rough-skin"
+          ],
+          [
+            "strong-jaw"
+          ],
+          [
+            "speed-boost"
+          ]
+        ],
+        "species": "Brutal Pokémon",
+        "height": 1.8,
+        "weight": 88.8
+      }
+    },
+    "name": "Sharpedo",
+    "dex": 323,
+    "debut": 3,
+    "art": 319
+  },
+  "shedinja": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 1,
+          "atk": 30,
+          "def": 40,
+          "spa": 90,
+          "spd": 30,
+          "spe": 40
+        },
+        "evoMethod": "Evolve Nincada with Empty Spot in Party & Pokéball in Bag",
+        "growthRate": "Erratic",
+        "evolvesFrom": "nincada",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Nincada",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "shadow-tag"
+          ]
+        ],
+        "species": "Shed Pokémon",
+        "height": 0.8,
+        "weight": 1.2
+      }
+    },
+    "name": "Shedinja",
+    "dex": 293,
+    "debut": 3,
+    "art": 292
+  },
+  "shelgon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 65,
+          "atk": 95,
+          "def": 100,
+          "spa": 60,
+          "spd": 60,
+          "spe": 40
+        },
+        "evoMethod": "Level 30",
+        "growthRate": "Slow",
+        "evolvesFrom": "bagon",
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Begon",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "rock-head"
+          ],
+          [
+            "overcoat"
+          ]
+        ],
+        "species": "Endurance Pokémon",
+        "height": 1.1,
+        "weight": 110.5
+      }
+    },
+    "name": "Shelgon",
+    "dex": 378,
+    "debut": 3,
+    "art": 372
+  },
   "shellder": {
     "gens": {
       "1": {
@@ -10798,7 +16776,7 @@
             "overcoat"
           ],
           [
-            "poison-point"
+            "rough-skin"
           ]
         ]
       },
@@ -10812,7 +16790,7 @@
             "bulletproof"
           ],
           [
-            "poison-point"
+            "rough-skin"
           ]
         ]
       }
@@ -10820,6 +16798,310 @@
     "name": "Shellix",
     "dex": 235,
     "debut": 2,
+    "art": 0
+  },
+  "shellos": {
+    "name": "Gastrodon (East)",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "stats": {
+          "hp": 111,
+          "atk": 69,
+          "def": 83,
+          "spa": 82,
+          "spd": 97,
+          "spe": 29
+        },
+        "evoMethod": "Level 28",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "shellos-east",
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Shellos (East)",
+        "genderM": 50,
+        "hatchAlts": [
+          {
+            "as": "Shellos (West)",
+            "chance": 50,
+            "when": ""
+          }
+        ],
+        "abilitySlots": [
+          [
+            "sticky-hold"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "types": [
+          "Water",
+          "Ground"
+        ],
+        "species": "Sea Hare Pokémon",
+        "height": 1.5,
+        "weight": 60
+      }
+    },
+    "dex": 344,
+    "art": "423-east"
+  },
+  "shellos-east": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 76,
+          "atk": 44,
+          "def": 48,
+          "spa": 57,
+          "spd": 62,
+          "spe": 24
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Shellos (East)",
+        "genderM": 50,
+        "hatchAlts": [
+          {
+            "as": "Shellos (West)",
+            "chance": 50,
+            "when": ""
+          }
+        ],
+        "abilitySlots": [
+          [
+            "sticky-hold"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Sea Slug Pokémon",
+        "height": 0.5,
+        "weight": 3
+      }
+    },
+    "name": "Shellos (East)",
+    "dex": 343,
+    "debut": 3,
+    "art": "422-east"
+  },
+  "shellos-west": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 76,
+          "atk": 57,
+          "def": 62,
+          "spa": 44,
+          "spd": 48,
+          "spe": 24
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Mollusk"
+        ],
+        "hatchesAs": "Shellos (West)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "sticky-hold"
+          ],
+          [
+            "earth-eater"
+          ]
+        ],
+        "hatchAlts": [
+          {
+            "as": "Shellos (East)",
+            "chance": 50,
+            "when": ""
+          }
+        ],
+        "species": "Sea Slug Pokémon",
+        "height": 0.5,
+        "weight": 3
+      }
+    },
+    "name": "Shellos (West)",
+    "dex": 343,
+    "debut": 3,
+    "art": 422
+  },
+  "shiftry": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Dark"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 80,
+          "def": 70,
+          "spa": 100,
+          "spd": 70,
+          "spe": 70
+        },
+        "evoMethod": "Level 20 & Leaf Stone",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "nuzleaf",
+        "eggGroups": [
+          "Plant",
+          "Human-Like"
+        ],
+        "hatchesAs": "Seedot",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "chlorophyll"
+          ],
+          [
+            "wind-rider"
+          ]
+        ],
+        "species": "Tengu Pokémon",
+        "height": 1.3,
+        "weight": 59.6
+      },
+      "4": {
+        "evoMethod2": "Level 40 & Level up near Moss Rock"
+      }
+    },
+    "name": "Shiftry",
+    "dex": 275,
+    "debut": 3,
+    "art": 275
+  },
+  "shinno": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 95,
+          "def": 90,
+          "spa": 155,
+          "spd": 100,
+          "spe": 115
+        },
+        "growthRate": "Fluctuating",
+        "eggGroups": [
+          "Undiscovered"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pressure"
+          ],
+          [
+            "sap-sipper"
+          ]
+        ],
+        "species": "Forest Beast Pokémon",
+        "height": 2,
+        "weight": 220
+      }
+    },
+    "name": "Shinno",
+    "dex": 388,
+    "debut": 3,
+    "art": 0
+  },
+  "shroomish": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 40,
+          "def": 60,
+          "spa": 40,
+          "spd": 60,
+          "spe": 35
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Shroomish",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "effect-spore"
+          ]
+        ],
+        "species": "Mushroom Pokémon",
+        "height": 0.4,
+        "weight": 4.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "effect-spore"
+          ],
+          [
+            "poison-heal"
+          ]
+        ]
+      }
+    },
+    "name": "Shroomish",
+    "dex": 286,
+    "debut": 3,
+    "art": 285
+  },
+  "shroomish-ink": {
+    "gens": {
+      "3": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 60,
+          "def": 40,
+          "spa": 60,
+          "spd": 40,
+          "spe": 35
+        },
+        "species": "Ink Mushroom Pokémon",
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Plant"
+        ],
+        "hatchesAs": "Shroomish (Ink)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "poison-touch"
+          ]
+        ],
+        "height": 0.5,
+        "weight": 3
+      }
+    },
+    "formOf": "shroomish",
+    "variant": "Ink",
+    "name": "Shroomish (Ink)",
+    "dex": 286,
+    "debut": 3,
     "art": 0
   },
   "shuckle": {
@@ -10865,6 +17147,82 @@
     "dex": 203,
     "debut": 2,
     "art": 213
+  },
+  "shuppet": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal",
+          "Ghost"
+        ],
+        "stats": {
+          "hp": 44,
+          "atk": 77,
+          "def": 41,
+          "spa": 63,
+          "spd": 53,
+          "spe": 45
+        },
+        "growthRate": "Erratic",
+        "eggGroups": [
+          "Ghost"
+        ],
+        "hatchesAs": "Shuppet",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "vengeance"
+          ]
+        ],
+        "species": "Puppet Pokémon",
+        "height": 0.6,
+        "weight": 2.3
+      }
+    },
+    "name": "Shuppet",
+    "dex": 351,
+    "debut": 3,
+    "art": 353
+  },
+  "silcoon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 30,
+          "def": 75,
+          "spa": 25,
+          "spd": 25,
+          "spe": 15
+        },
+        "evoMethod": "Level 6 & Random",
+        "growthRate": "Fast",
+        "evolvesFrom": "wurmple",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Wurmple",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "shed-skin"
+          ]
+        ],
+        "species": "Silk Pokémon",
+        "height": 0.6,
+        "weight": 10
+      }
+    },
+    "name": "Silcoon",
+    "dex": 266,
+    "debut": 3,
+    "art": 266
   },
   "skarmory": {
     "gens": {
@@ -10979,6 +17337,132 @@
     "dex": 166,
     "debut": 2,
     "art": 188
+  },
+  "skitty": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 40,
+          "def": 40,
+          "spa": 35,
+          "spd": 35,
+          "spe": 65
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Skitty",
+        "genderM": 12.5,
+        "abilitySlots": [
+          [
+            "cute-charm"
+          ]
+        ],
+        "species": "Kitten Pokémon",
+        "height": 0.6,
+        "weight": 4
+      }
+    },
+    "name": "Skitty",
+    "dex": 294,
+    "debut": 3,
+    "art": 300
+  },
+  "slaking": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 150,
+          "atk": 150,
+          "def": 100,
+          "spa": 95,
+          "spd": 75,
+          "spe": 100
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Slow",
+        "evolvesFrom": "vigoroth",
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Slakoth",
+        "genderM": 62.5,
+        "abilitySlots": [
+          [
+            "truant"
+          ],
+          [
+            "mold-breaker"
+          ]
+        ],
+        "species": "Slaking Pokémon",
+        "height": 2.2,
+        "weight": 270.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "truant"
+          ],
+          [
+            "mold-breaker"
+          ],
+          [
+            "royal-privilege"
+          ]
+        ]
+      }
+    },
+    "name": "Slaking",
+    "dex": 290,
+    "debut": 3,
+    "art": 289
+  },
+  "slakoth": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 60,
+          "def": 60,
+          "spa": 35,
+          "spd": 35,
+          "spe": 15
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Slakoth",
+        "genderM": 62.5,
+        "abilitySlots": [
+          [
+            "truant"
+          ],
+          [
+            "oblivious"
+          ]
+        ],
+        "species": "Slacker Pokémon",
+        "height": 0.8,
+        "weight": 8
+      }
+    },
+    "name": "Slakoth",
+    "dex": 288,
+    "debut": 3,
+    "art": 287
   },
   "slowbro": {
     "gens": {
@@ -11447,6 +17931,92 @@
     "debut": 2,
     "art": 209
   },
+  "solrock": {
+    "gens": {
+      "3": {
+        "types": [
+          "Rock",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 75,
+          "def": 125,
+          "spa": 55,
+          "spd": 105,
+          "spe": 40
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Mineral"
+        ],
+        "hatchesAs": "Solrock",
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "inner-core"
+          ]
+        ],
+        "forms": [
+          {
+            "name": "Solrock-Core",
+            "trigger": "Inner Core",
+            "kind": "Battle only"
+          }
+        ],
+        "species": "Sun Rock Pokémon",
+        "height": 1.2,
+        "weight": 750
+      }
+    },
+    "name": "Solrock",
+    "dex": 342,
+    "debut": 3,
+    "art": 338
+  },
+  "solrock-core": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire",
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 90,
+          "atk": 125,
+          "def": 75,
+          "spa": 105,
+          "spd": 55,
+          "spe": 80
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "flame-body"
+          ],
+          [
+            "drough"
+          ]
+        ],
+        "species": "Molten Core Pokémon",
+        "height": 0.8,
+        "weight": 220
+      }
+    },
+    "formOf": "solrock",
+    "name": "Solrock-Core",
+    "dex": 342,
+    "debut": 3,
+    "art": 0
+  },
   "spearow": {
     "gens": {
       "1": {
@@ -11487,12 +18057,64 @@
             "hustle"
           ]
         ]
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "flock"
+          ],
+          [
+            "hustle"
+          ]
+        ]
       }
     },
     "name": "Spearow",
     "dex": 25,
     "debut": 1,
     "art": 21
+  },
+  "spheal": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice",
+          "Water"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 60,
+          "def": 50,
+          "spa": 40,
+          "spd": 60,
+          "spe": 50
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spheal",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body"
+          ],
+          [
+            "slush-rush"
+          ]
+        ],
+        "species": "Ball Roll Pokémon",
+        "height": 0.8,
+        "weight": 90
+      }
+    },
+    "name": "Spheal",
+    "dex": 362,
+    "debut": 3,
+    "art": 363
   },
   "spinarak": {
     "gens": {
@@ -11534,6 +18156,115 @@
     "dex": 170,
     "debut": 2,
     "art": 167
+  },
+  "spinda": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 60,
+          "def": 60,
+          "spa": 60,
+          "spd": 60,
+          "spe": 60
+        },
+        "growthRate": "Erratic",
+        "eggGroups": [
+          "Creature"
+        ],
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "spin-master"
+          ],
+          [
+            "own-tempo"
+          ]
+        ],
+        "species": "Spot Panda Pokémon",
+        "height": 1.1,
+        "weight": 30
+      }
+    },
+    "name": "Spinda",
+    "dex": 331,
+    "debut": 3,
+    "art": 327
+  },
+  "spoink": {
+    "gens": {
+      "3": {
+        "types": [
+          "Psychic"
+        ],
+        "stats": {
+          "hp": 30,
+          "atk": 35,
+          "def": 35,
+          "spa": 70,
+          "spd": 80,
+          "spe": 70
+        },
+        "growthRate": "Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spoink",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "own-tempo"
+          ]
+        ],
+        "species": "Bounce Pokémon",
+        "height": 0.7,
+        "weight": 14.6
+      }
+    },
+    "name": "Spoink",
+    "dex": 329,
+    "debut": 3,
+    "art": 325
+  },
+  "spoink-orre": {
+    "gens": {
+      "3": {
+        "types": [
+          "Dark"
+        ],
+        "stats": {
+          "hp": 50,
+          "atk": 50,
+          "def": 55,
+          "spa": 55,
+          "spd": 60,
+          "spe": 50
+        },
+        "growthRate": "Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spoink (Orre)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "hustle"
+          ]
+        ],
+        "species": "Eager Pokémon",
+        "height": 0.7,
+        "weight": 18
+      }
+    },
+    "name": "Spoink (Orre)",
+    "dex": 329,
+    "debut": 3,
+    "formOf": "spoink",
+    "art": 0,
+    "variant": "Orre"
   },
   "squirtle": {
     "gens": {
@@ -11995,6 +18726,237 @@
     "debut": 2,
     "art": 191
   },
+  "surskit": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug",
+          "Water"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 30,
+          "def": 32,
+          "spa": 50,
+          "spd": 42,
+          "spe": 65
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Surskit",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "swift-swim"
+          ]
+        ],
+        "species": "Pond Skater Pokémon",
+        "height": 0.5,
+        "weight": 1.7
+      }
+    },
+    "name": "Surskit",
+    "dex": 276,
+    "debut": 3,
+    "art": 283
+  },
+  "swablu": {
+    "gens": {
+      "3": {
+        "types": [
+          "Flying"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 40,
+          "def": 50,
+          "spa": 60,
+          "spd": 75,
+          "spe": 50
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Swablu",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "fluffy"
+          ],
+          [
+            "natural-cure"
+          ]
+        ],
+        "species": "Cotton Bird Pokémon",
+        "height": 0.4,
+        "weight": 1.2
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "fluffy"
+          ],
+          [
+            "natural-cure",
+            "cloud-nine"
+          ]
+        ]
+      }
+    },
+    "name": "Swablu",
+    "dex": 337,
+    "debut": 3,
+    "art": 333
+  },
+  "swalot": {
+    "gens": {
+      "3": {
+        "types": [
+          "Poison"
+        ],
+        "stats": {
+          "hp": 150,
+          "atk": 73,
+          "def": 83,
+          "spa": 63,
+          "spd": 103,
+          "spe": 30
+        },
+        "evoMethod": "Level 28",
+        "growthRate": "Slow",
+        "evolvesFrom": "gulpin",
+        "eggGroups": [
+          "Amorphous"
+        ],
+        "hatchesAs": "Gulpin",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "liquid-ooze"
+          ],
+          [
+            "sticky-hold"
+          ],
+          [
+            "gluttony"
+          ]
+        ],
+        "species": "Poison Bag Pokémon",
+        "height": 1.7,
+        "weight": 1200
+      }
+    },
+    "name": "Swalot",
+    "dex": 321,
+    "debut": 3,
+    "art": 317
+  },
+  "swampert": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 100,
+          "atk": 114,
+          "def": 96,
+          "spa": 70,
+          "spd": 90,
+          "spe": 60
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "marshtomp",
+        "eggGroups": [
+          "Amphibian",
+          "Beast"
+        ],
+        "hatchesAs": "Mudkip",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "torrent"
+          ],
+          [
+            "earth-eater"
+          ],
+          [
+            "swift-swim"
+          ]
+        ],
+        "species": "Swamp Pokémon",
+        "height": 1.5,
+        "weight": 149.9
+      }
+    },
+    "name": "Swampert",
+    "dex": 260,
+    "debut": 3,
+    "art": 260
+  },
+  "swellow": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 75,
+          "atk": 90,
+          "def": 65,
+          "spa": 60,
+          "spd": 60,
+          "spe": 115
+        },
+        "evoMethod": "Level 22",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "taillow",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Taillow",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "keen-eye"
+          ],
+          [
+            "guts"
+          ],
+          [
+            "steady-wings"
+          ]
+        ],
+        "species": "Swallow Pokémon",
+        "height": 0.7,
+        "weight": 1.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "keen-eye"
+          ],
+          [
+            "guts",
+            "scrappy"
+          ],
+          [
+            "steady-wings"
+          ]
+        ]
+      }
+    },
+    "name": "Swellow",
+    "dex": 281,
+    "debut": 3,
+    "art": 277
+  },
   "swinub": {
     "gens": {
       "2": {
@@ -12038,6 +19000,56 @@
     "dex": 207,
     "debut": 2,
     "art": 220
+  },
+  "taillow": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 55,
+          "def": 35,
+          "spa": 30,
+          "spd": 30,
+          "spe": 85
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Taillow",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "keen-eye"
+          ],
+          [
+            "guts"
+          ]
+        ],
+        "species": "Tiny Swallow Pokémon",
+        "height": 0.3,
+        "weight": 0.4
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "keen-eye"
+          ],
+          [
+            "guts",
+            "scrappy"
+          ]
+        ]
+      }
+    },
+    "name": "Taillow",
+    "dex": 280,
+    "debut": 3,
+    "art": 276
   },
   "tangela": {
     "gens": {
@@ -12155,7 +19167,8 @@
             "sunbathe",
             "regenerator"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 40 & Level up near Moss Rock"
       }
     },
     "name": "Tangrowth",
@@ -12195,7 +19208,14 @@
         "genderM": 100,
         "evoMethod": "Level 35 & Male",
         "evolvesFrom": "calfpint-m",
-        "hatchesAs": "Calfpint (M)"
+        "hatchesAs": "Calfpint (M)",
+        "hatchAlts": [
+          {
+            "as": "Calfpint (F)",
+            "chance": 50,
+            "when": ""
+          }
+        ]
       },
       "3": {
         "abilitySlots": [
@@ -12271,6 +19291,51 @@
     "dex": 45,
     "debut": 1,
     "art": 216
+  },
+  "teddiusa-sun": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal",
+          "Fire"
+        ],
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "None"
+        ],
+        "genderM": 50,
+        "stats": {
+          "hp": 55,
+          "atk": 65,
+          "def": 49,
+          "spa": 55,
+          "spd": 55,
+          "spe": 45
+        },
+        "abilitySlots": [
+          [
+            "pickup"
+          ]
+        ],
+        "species": "Sun Cub Pokémon",
+        "height": 0.5,
+        "weight": 6
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "pickup",
+            "honey-gather"
+          ]
+        ]
+      }
+    },
+    "formOf": "teddiursa",
+    "variant": "Sun",
+    "name": "Teddiusa (Sun)",
+    "dex": 45,
+    "debut": 3,
+    "art": 0
   },
   "tentacool": {
     "gens": {
@@ -12490,6 +19555,125 @@
     "debut": 2,
     "art": 176
   },
+  "torchic": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 45,
+          "atk": 55,
+          "def": 45,
+          "spa": 55,
+          "spd": 50,
+          "spe": 60
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Torchic",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "blaze"
+          ]
+        ],
+        "species": "Fire Chick Pokémon",
+        "height": 0.4,
+        "weight": 2.5
+      }
+    },
+    "name": "Torchic",
+    "dex": 255,
+    "debut": 3,
+    "art": 255
+  },
+  "torkoal": {
+    "gens": {
+      "3": {
+        "types": [
+          "Fire"
+        ],
+        "stats": {
+          "hp": 70,
+          "atk": 80,
+          "def": 140,
+          "spa": 90,
+          "spd": 70,
+          "spe": 20
+        },
+        "growthRate": "Slow",
+        "eggGroups": [
+          "Reptile"
+        ],
+        "hatchesAs": "Torkoal",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "white-smoke"
+          ],
+          [
+            "shell-armor"
+          ],
+          [
+            "drought"
+          ]
+        ],
+        "species": "Coal Pokémon",
+        "height": 0.5,
+        "weight": 80.4
+      }
+    },
+    "name": "Torkoal",
+    "dex": 328,
+    "debut": 3,
+    "art": 324
+  },
+  "torterra": {
+    "gens": {
+      "4": {
+        "types": [
+          "Grass",
+          "Ground"
+        ],
+        "stats": {
+          "hp": 112,
+          "atk": 109,
+          "def": 123,
+          "spa": 75,
+          "spd": 85,
+          "spe": 26
+        },
+        "evoMethod": "Level 36",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "grotle",
+        "eggGroups": [
+          "Plant",
+          "Beast"
+        ],
+        "hatchesAs": "Turtwig",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ],
+          [
+            "shell-armor",
+            "impenetrable"
+          ],
+          [
+            "sunbathe"
+          ]
+        ]
+      }
+    },
+    "name": "Torterra",
+    "dex": 394,
+    "debut": 4,
+    "art": 389
+  },
   "totodile": {
     "gens": {
       "2": {
@@ -12526,6 +19710,134 @@
     "dex": 158,
     "debut": 2,
     "art": 158
+  },
+  "treecko": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 65,
+          "def": 45,
+          "spa": 45,
+          "spd": 45,
+          "spe": 70
+        },
+        "hatchesAs": "Treecko",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ]
+        ],
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Plant",
+          "Reptile"
+        ],
+        "species": "Tree Gecko Pokémon",
+        "height": 0.5,
+        "weight": 5
+      }
+    },
+    "name": "Treecko",
+    "dex": 252,
+    "debut": 3,
+    "art": 252
+  },
+  "tropius": {
+    "gens": {
+      "3": {
+        "types": [
+          "Grass",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 114,
+          "atk": 73,
+          "def": 93,
+          "spa": 77,
+          "spd": 97,
+          "spe": 51
+        },
+        "evoMethod": "Eat 20 Nanab Berries",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "platiny",
+        "eggGroups": [
+          "Plant",
+          "Reptile"
+        ],
+        "hatchesAs": "Platiny",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "solar-power"
+          ],
+          [
+            "grassy-surge"
+          ],
+          [
+            "thick-fat"
+          ]
+        ],
+        "species": "Fruit Pokémon",
+        "height": 2,
+        "weight": 180
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "solar-power",
+            "harvest"
+          ],
+          [
+            "grassy-surge"
+          ],
+          [
+            "thick-fat"
+          ]
+        ]
+      }
+    },
+    "name": "Tropius",
+    "dex": 358,
+    "debut": 3,
+    "art": 357
+  },
+  "turtwig": {
+    "gens": {
+      "4": {
+        "types": [
+          "Grass"
+        ],
+        "stats": {
+          "hp": 52,
+          "atk": 64,
+          "def": 68,
+          "spa": 45,
+          "spd": 55,
+          "spe": 31
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Plant",
+          "Reptile"
+        ],
+        "hatchesAs": "Turtwig",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "overgrow"
+          ]
+        ]
+      }
+    },
+    "name": "Turtwig",
+    "dex": 392,
+    "debut": 4,
+    "art": 387
   },
   "typhlosion": {
     "gens": {
@@ -12610,8 +19922,8 @@
         "hatchesAs": "Larvitar",
         "genderM": 50,
         "species": "Tyrant Pokémon",
-        "height": 2,
-        "weight": 1200
+        "height": 3.5,
+        "weight": 6400
       },
       "3": {
         "abilitySlots": [
@@ -12620,9 +19932,6 @@
           ],
           [
             "unnerve"
-          ],
-          [
-            "solid-rock"
           ]
         ]
       },
@@ -12736,7 +20045,8 @@
           [
             "unnerve"
           ]
-        ]
+        ],
+        "evoMethod2": "Moon Stone"
       }
     },
     "name": "Umbreon",
@@ -12856,6 +20166,63 @@
     "debut": 1,
     "art": 217
   },
+  "ursaring-sun": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal",
+          "Fire"
+        ],
+        "stats": {
+          "hp": 85,
+          "atk": 115,
+          "def": 74,
+          "spa": 90,
+          "spd": 75,
+          "spe": 75
+        },
+        "evoMethod": "Level 32",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "teddiusa-sun",
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Teddiusa (Sun)",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pickup"
+          ],
+          [
+            "solar-power"
+          ]
+        ],
+        "species": "Sun Bear Pokémon",
+        "height": 1.5,
+        "weight": 65
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "pickup",
+            "honey-gather"
+          ],
+          [
+            "solar-power"
+          ],
+          [
+            "tough-claws"
+          ]
+        ]
+      }
+    },
+    "formOf": "ursaring",
+    "variant": "Sun",
+    "name": "Ursaring (Sun)",
+    "dex": 46,
+    "debut": 3,
+    "art": 0
+  },
   "vaporeon": {
     "gens": {
       "1": {
@@ -12914,7 +20281,8 @@
             "water-veil",
             "hydration"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 20 & Level up in Aquatic Environment"
       }
     },
     "name": "Vaporeon",
@@ -13091,6 +20459,47 @@
     "name": "Venusaur",
     "art": 3
   },
+  "vibrava": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ground",
+          "Dragon"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 70,
+          "def": 60,
+          "spa": 80,
+          "spd": 60,
+          "spe": 70
+        },
+        "evoMethod": "Level 21",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "flygon",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Trapinch",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "sand-veil"
+          ]
+        ],
+        "species": "Vibration Pokémon",
+        "height": 1.1,
+        "weight": 8.3
+      }
+    },
+    "name": "Vibrava",
+    "dex": 333,
+    "debut": 3,
+    "art": 329
+  },
   "victreebell": {
     "gens": {
       "2": {
@@ -13139,13 +20548,65 @@
           [
             "rain-dish"
           ]
-        ]
+        ],
+        "evoMethod2": "Level 40 & Level up near Moss Rock"
       }
     },
     "name": "Victreebell",
     "dex": 174,
     "debut": 2,
     "art": 71
+  },
+  "vigoroth": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 80,
+          "atk": 80,
+          "def": 80,
+          "spa": 55,
+          "spd": 55,
+          "spe": 90
+        },
+        "evoMethod": "Level 18",
+        "growthRate": "Slow",
+        "evolvesFrom": "slakoth",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Slakoth",
+        "genderM": 62.5,
+        "abilitySlots": [
+          [
+            "vital-spirit"
+          ],
+          [
+            "hustle"
+          ]
+        ],
+        "species": "Vigorous Pokémon",
+        "height": 1.4,
+        "weight": 46.5
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "vital-spirit"
+          ],
+          [
+            "hustle",
+            "reckless"
+          ]
+        ]
+      }
+    },
+    "name": "Vigoroth",
+    "dex": 289,
+    "debut": 3,
+    "art": 288
   },
   "vileplume": {
     "gens": {
@@ -13192,12 +20653,63 @@
             "effect-spore"
           ]
         ]
+      },
+      "4": {
+        "evoMethod2": "Level 40, Level up near Moss Rock, and Nighttime"
       }
     },
     "name": "Vileplume",
     "dex": 49,
     "debut": 1,
     "art": 45
+  },
+  "volbeat": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 60,
+          "atk": 47,
+          "def": 70,
+          "spa": 73,
+          "spd": 85,
+          "spe": 85
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Volbeat",
+        "genderM": 100,
+        "abilitySlots": [
+          [
+            "levitate"
+          ],
+          [
+            "illuminate"
+          ],
+          [
+            "swarm"
+          ]
+        ],
+        "hatchAlts": [
+          {
+            "as": "Illumise",
+            "chance": 50,
+            "when": ""
+          }
+        ],
+        "species": "Firefly Pokémon",
+        "height": 0.7,
+        "weight": 2
+      }
+    },
+    "name": "Volbeat",
+    "dex": 316,
+    "debut": 3,
+    "art": 313
   },
   "voltorb": {
     "gens": {
@@ -13304,6 +20816,131 @@
     "dex": 88,
     "debut": 1,
     "art": 37
+  },
+  "wailmer": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 130,
+          "atk": 70,
+          "def": 35,
+          "spa": 70,
+          "spd": 35,
+          "spe": 60
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Wailmer",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "oblivious"
+          ],
+          [
+            "water-absorb"
+          ]
+        ],
+        "species": "Ball Whale Pokémon",
+        "height": 2,
+        "weight": 1000
+      }
+    },
+    "name": "Wailmer",
+    "dex": 310,
+    "debut": 3,
+    "art": 320
+  },
+  "wailord": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water"
+        ],
+        "stats": {
+          "hp": 170,
+          "atk": 100,
+          "def": 60,
+          "spa": 100,
+          "spd": 60,
+          "spe": 5
+        },
+        "evoMethod": "Level 40",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "wailmer",
+        "eggGroups": [
+          "Beast"
+        ],
+        "hatchesAs": "Wailmer",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "oblivious"
+          ],
+          [
+            "water-absorb"
+          ],
+          [
+            "watery-surge"
+          ]
+        ],
+        "species": "Whale Pokémon",
+        "height": 14.5,
+        "weight": 30000
+      }
+    },
+    "name": "Wailord",
+    "dex": 311,
+    "debut": 3,
+    "art": 321
+  },
+  "walrein": {
+    "gens": {
+      "3": {
+        "types": [
+          "Ice",
+          "Water"
+        ],
+        "stats": {
+          "hp": 110,
+          "atk": 100,
+          "def": 90,
+          "spa": 80,
+          "spd": 100,
+          "spe": 40
+        },
+        "evoMethod": "Level 40",
+        "growthRate": "Medium Slow",
+        "evolvesFrom": "sealeo",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Spheal",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "thick-fat"
+          ],
+          [
+            "ice-body"
+          ],
+          [
+            "strong-jaw"
+          ]
+        ],
+        "species": "Ice Break Pokémon",
+        "height": 2.5,
+        "weight": 700
+      }
+    },
+    "name": "Walrein",
+    "dex": 364,
+    "debut": 3,
+    "art": 365
   },
   "wartortle": {
     "gens": {
@@ -13529,13 +21166,49 @@
           [
             "smog-stream"
           ]
-        ]
+        ],
+        "evoMethod2": "2 Level 10 Koffing (1% Chance)"
       }
     },
     "name": "Weezing",
     "dex": 112,
     "debut": 1,
     "art": 110
+  },
+  "whismur": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 64,
+          "atk": 41,
+          "def": 33,
+          "spa": 61,
+          "spd": 33,
+          "spe": 38
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Whismur",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "cacophony"
+          ]
+        ],
+        "species": "Whisper Pokémon",
+        "height": 0.6,
+        "weight": 16.3
+      }
+    },
+    "name": "Whismur",
+    "dex": 296,
+    "debut": 3,
+    "art": 293
   },
   "wigglytuff": {
     "gens": {
@@ -13608,6 +21281,42 @@
     "dex": 28,
     "debut": 1,
     "art": 40
+  },
+  "wingull": {
+    "gens": {
+      "3": {
+        "types": [
+          "Water",
+          "Flying"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 35,
+          "def": 35,
+          "spa": 55,
+          "spd": 35,
+          "spe": 70
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Bird"
+        ],
+        "hatchesAs": "Wingull",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "wind-rider"
+          ]
+        ],
+        "species": "Seagull Pokémon",
+        "height": 0.6,
+        "weight": 1
+      }
+    },
+    "name": "Wingull",
+    "dex": 278,
+    "debut": 3,
+    "art": 278
   },
   "wobbuffet": {
     "gens": {
@@ -13702,6 +21411,44 @@
     "debut": 2,
     "art": 194
   },
+  "wurmple": {
+    "gens": {
+      "3": {
+        "types": [
+          "Bug"
+        ],
+        "stats": {
+          "hp": 40,
+          "atk": 42,
+          "def": 40,
+          "spa": 20,
+          "spd": 20,
+          "spe": 33
+        },
+        "growthRate": "Fast",
+        "eggGroups": [
+          "Bug"
+        ],
+        "hatchesAs": "Wurmple",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "poison-point"
+          ],
+          [
+            "run-away"
+          ]
+        ],
+        "species": "Worm Pokémon",
+        "height": 0.3,
+        "weight": 3.6
+      }
+    },
+    "name": "Wurmple",
+    "dex": 265,
+    "debut": 3,
+    "art": 265
+  },
   "xatu": {
     "gens": {
       "2": {
@@ -13747,6 +21494,51 @@
     "dex": 182,
     "debut": 2,
     "art": 178
+  },
+  "zangoose": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 83,
+          "atk": 115,
+          "def": 70,
+          "spa": 60,
+          "spd": 70,
+          "spe": 100
+        },
+        "growthRate": "Medium Slow",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Zangoose",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "immunity"
+          ]
+        ],
+        "species": "Cat Ferret Pokémon",
+        "height": 1.3,
+        "weight": 30.3
+      },
+      "4": {
+        "abilitySlots": [
+          [
+            "immunity"
+          ],
+          [
+            "tough-claws"
+          ]
+        ]
+      }
+    },
+    "name": "Zangoose",
+    "dex": 339,
+    "debut": 3,
+    "art": 335
   },
   "zapdos": {
     "gens": {
@@ -13800,6 +21592,41 @@
     "dex": 148,
     "debut": 1,
     "art": 145
+  },
+  "zigzagoon": {
+    "gens": {
+      "3": {
+        "types": [
+          "Normal"
+        ],
+        "stats": {
+          "hp": 33,
+          "atk": 38,
+          "def": 41,
+          "spa": 30,
+          "spd": 41,
+          "spe": 60
+        },
+        "growthRate": "Medium Fast",
+        "eggGroups": [
+          "Creature"
+        ],
+        "hatchesAs": "Zigzagoon",
+        "genderM": 50,
+        "abilitySlots": [
+          [
+            "pickup"
+          ]
+        ],
+        "species": "Tiny Raccoon Pokémon",
+        "height": 0.4,
+        "weight": 6.5
+      }
+    },
+    "name": "Zigzagoon",
+    "dex": 263,
+    "debut": 3,
+    "art": 263
   },
   "zubat": {
     "gens": {
