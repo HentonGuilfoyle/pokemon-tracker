@@ -2929,7 +2929,17 @@
             "p": "aerodactyl",
             "how": "Level 54"
           }
-        ]
+        ],
+        "target": "single"
+      },
+      "2": {
+        "effect": "Deals damage, but the user must recharge on the next turn."
+      },
+      "3": {
+        "contact": false
+      },
+      "4": {
+        "category": "Variable"
       }
     },
     "name": "Hyper Beam",

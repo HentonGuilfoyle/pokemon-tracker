@@ -9,6 +9,15 @@
     "debut": 4,
     "gens": {}
   },
+  "ambush": {
+    "name": "Ambush",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Ambush guarantees the bearer's first attack in battle will be a critical hit if they haven't been hit before attacking."
+      }
+    }
+  },
   "analytic": {
     "name": "Analytic",
     "debut": 4,
@@ -29,6 +38,16 @@
     "debut": 3,
     "gens": {}
   },
+  "aura-sense": {
+    "name": "Aura Sense",
+    "debut": 4,
+    "gens": {}
+  },
+  "bad-dreams": {
+    "name": "Bad Dreams",
+    "debut": 4,
+    "gens": {}
+  },
   "battle-armor": {
     "name": "Battle Armor",
     "debut": 3,
@@ -41,6 +60,25 @@
   },
   "beacon": {
     "name": "Beacon",
+    "debut": 4,
+    "gens": {}
+  },
+  "bedside-manner": {
+    "name": "Bedside Manner",
+    "debut": 4,
+    "gens": {}
+  },
+  "berserk": {
+    "name": "Berserk",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Berserk raises the user's strongest attacking stat by one stage when the user is at or below 1/2 of its maximum HP."
+      }
+    }
+  },
+  "big-pecks": {
+    "name": "Big Pecks",
     "debut": 4,
     "gens": {}
   },
@@ -57,7 +95,15 @@
   "bloom": {
     "name": "Bloom",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "boostStat": "Sp. Atk",
+        "boostMult": 2,
+        "statMults": {
+          "spa": 2
+        }
+      }
+    }
   },
   "bulletproof": {
     "name": "Bulletproof",
@@ -79,10 +125,40 @@
     "debut": 3,
     "gens": {}
   },
+  "castle-wall": {
+    "name": "Castle Wall",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "statMults": {
+          "def": 2,
+          "spd": 2
+        },
+        "effect": "When two bearers of Castle Wall are allies their Defense and Special Defense are doubled"
+      }
+    }
+  },
+  "chimera": {
+    "name": "Chimera",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "The bearer of Chimera suffers no negative effects from any weather or terrain"
+      }
+    }
+  },
   "chlorophyll": {
     "name": "Chlorophyll",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "boostStat": "Speed",
+        "boostMult": 2,
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    }
   },
   "clear-body": {
     "name": "Clear Body",
@@ -97,7 +173,13 @@
   "clunky-pincer": {
     "name": "Clunky Pincer",
     "debut": 4,
-    "gens": {}
+    "gens": {
+      "4": {
+        "statMults": {
+          "atk": 1.5
+        }
+      }
+    }
   },
   "competitive": {
     "name": "Competitive",
@@ -179,6 +261,11 @@
     "debut": 4,
     "gens": {}
   },
+  "draconize": {
+    "name": "Draconize",
+    "debut": 4,
+    "gens": {}
+  },
   "dream-catcher": {
     "name": "Dream Catcher",
     "debut": 4,
@@ -189,14 +276,9 @@
     "debut": 3,
     "gens": {}
   },
-  "drough": {
-    "name": "Drough",
-    "debut": 3,
-    "gens": {}
-  },
   "drought": {
     "name": "Drought",
-    "debut": 4,
+    "debut": 3,
     "gens": {}
   },
   "dry-skin": {
@@ -226,7 +308,14 @@
   "ferry": {
     "name": "Ferry",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "effect": "Slower allies use the user's Speed in Watery Terrain. Ferry also raises the user's Speed by 50% in Watery Terrain.",
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    }
   },
   "fiery-surge": {
     "name": "Fiery Surge",
@@ -243,10 +332,19 @@
     "debut": 3,
     "gens": {}
   },
+  "flare-boost": {
+    "name": "Flare Boost",
+    "debut": 4,
+    "gens": {}
+  },
   "flash-fire": {
     "name": "Flash Fire",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "immuneTo": "Fire"
+      }
+    }
   },
   "flock": {
     "name": "Flock",
@@ -258,9 +356,26 @@
     "debut": 4,
     "gens": {}
   },
+  "flower-gift": {
+    "name": "Flower Gift",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "statMults": {
+          "atk": 1.5,
+          "spa": 1.5
+        }
+      }
+    }
+  },
   "flower-guard": {
     "name": "Flower Guard",
     "debut": 3,
+    "gens": {}
+  },
+  "flower-surge": {
+    "name": "Flower Surge",
+    "debut": 4,
     "gens": {}
   },
   "fluffy": {
@@ -293,6 +408,20 @@
     "debut": 4,
     "gens": {}
   },
+  "fur-coat": {
+    "name": "Fur Coat",
+    "debut": 4,
+    "gens": {}
+  },
+  "furnace": {
+    "name": "Furnace",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Wind moves boost the power of the next Fire-type move from the user by 50%."
+      }
+    }
+  },
   "galvanize": {
     "name": "Galvanize",
     "debut": 4,
@@ -316,7 +445,13 @@
   "guts": {
     "name": "Guts",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "atk": 1.5
+        }
+      }
+    }
   },
   "harvest": {
     "name": "Harvest",
@@ -333,6 +468,16 @@
     "debut": 3,
     "gens": {}
   },
+  "heatproof": {
+    "name": "Heatproof",
+    "debut": 4,
+    "gens": {}
+  },
+  "hibernate": {
+    "name": "Hibernate",
+    "debut": 3,
+    "gens": {}
+  },
   "honey-gather": {
     "name": "Honey Gather",
     "debut": 4,
@@ -341,12 +486,24 @@
   "huge-power": {
     "name": "Huge Power",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "atk": 2
+        }
+      }
+    }
   },
   "hustle": {
     "name": "Hustle",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "atk": 1.3
+        }
+      }
+    }
   },
   "hydration": {
     "name": "Hydration",
@@ -401,11 +558,7 @@
   "inflatable": {
     "name": "Inflatable",
     "debut": 4,
-    "gens": {
-      "4": {
-        "immuneTo": "Flying"
-      }
-    }
+    "gens": {}
   },
   "inner-core": {
     "name": "Inner Core",
@@ -442,9 +595,19 @@
     "debut": 3,
     "gens": {}
   },
+  "jetstream": {
+    "name": "Jetstream",
+    "debut": 4,
+    "gens": {}
+  },
   "keen-eye": {
     "name": "Keen Eye",
     "debut": 3,
+    "gens": {}
+  },
+  "last-respects": {
+    "name": "Last Respects",
+    "debut": 4,
     "gens": {}
   },
   "levitate": {
@@ -455,6 +618,20 @@
         "immuneTo": "Ground"
       }
     }
+  },
+  "lifeboat": {
+    "name": "Lifeboat",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Slower allies use the user's Speed in Watery Terrain."
+      }
+    }
+  },
+  "light-clay": {
+    "name": "Light Clay",
+    "debut": 4,
+    "gens": {}
   },
   "lightning-rod": {
     "name": "Lightning Rod",
@@ -513,7 +690,11 @@
   "merciless": {
     "name": "Merciless",
     "debut": 4,
-    "gens": {}
+    "gens": {
+      "4": {
+        "effect": "Merciless makes critical hits deals 2x damage instead of 1.5x"
+      }
+    }
   },
   "minus": {
     "name": "Minus",
@@ -525,8 +706,22 @@
     "debut": 3,
     "gens": {}
   },
+  "moody": {
+    "name": "Moody",
+    "debut": 4,
+    "gens": {}
+  },
   "motor-drive": {
     "name": "Motor Drive",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "immuneTo": "Electric"
+      }
+    }
+  },
+  "moxie": {
+    "name": "Moxie",
     "debut": 4,
     "gens": {}
   },
@@ -557,6 +752,11 @@
   "neuroforce": {
     "name": "Neuroforce",
     "debut": 3,
+    "gens": {}
+  },
+  "nocturnal": {
+    "name": "Nocturnal",
+    "debut": 4,
     "gens": {}
   },
   "oblivious": {
@@ -594,6 +794,20 @@
     "debut": 3,
     "gens": {}
   },
+  "pack-hunter": {
+    "name": "Pack Hunter",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Pack Hunter increases the damage of attacks from the bearer by 20% when attacking a target an ally has already attack that turn"
+      }
+    }
+  },
+  "parroting": {
+    "name": "Parroting",
+    "debut": 4,
+    "gens": {}
+  },
   "parry": {
     "name": "Parry",
     "debut": 4,
@@ -602,6 +816,11 @@
   "perfect-alloy": {
     "name": "Perfect Alloy",
     "debut": 3,
+    "gens": {}
+  },
+  "perish-body": {
+    "name": "Perish Body",
+    "debut": 4,
     "gens": {}
   },
   "phoenix-down": {
@@ -621,6 +840,16 @@
   },
   "piercing-drill": {
     "name": "Piercing Drill",
+    "debut": 4,
+    "gens": {}
+  },
+  "piercing-gaze": {
+    "name": "Piercing Gaze",
+    "debut": 4,
+    "gens": {}
+  },
+  "pixilate": {
+    "name": "Pixilate",
     "debut": 4,
     "gens": {}
   },
@@ -664,24 +893,58 @@
     "debut": 3,
     "gens": {}
   },
+  "propeller-tail": {
+    "name": "Propeller Tail",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "effect": "Propeller Tail raises the user's Speed by 50% and prevents it from being lowered in Watery Terrain.",
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    }
+  },
   "pure-power": {
     "name": "Pure Power",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "atk": 2
+        }
+      }
+    }
   },
   "quick-feet": {
     "name": "Quick Feet",
     "debut": 4,
-    "gens": {}
+    "gens": {
+      "4": {
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    }
   },
   "quick-fists": {
     "name": "Quick Fists",
     "debut": 4,
     "gens": {}
   },
+  "rain-bell": {
+    "name": "Rain Bell",
+    "debut": 4,
+    "gens": {}
+  },
   "rain-dish": {
     "name": "Rain Dish",
     "debut": 3,
+    "gens": {}
+  },
+  "rampage": {
+    "name": "Rampage",
+    "debut": 4,
     "gens": {}
   },
   "reckless": {
@@ -694,13 +957,28 @@
     "debut": 3,
     "gens": {}
   },
+  "refrigerate": {
+    "name": "Refrigerate",
+    "debut": 4,
+    "gens": {}
+  },
   "regenerator": {
     "name": "Regenerator",
     "debut": 4,
     "gens": {}
   },
+  "riffing": {
+    "name": "Riffing",
+    "debut": 4,
+    "gens": {}
+  },
   "rivalry": {
     "name": "Rivalry",
+    "debut": 4,
+    "gens": {}
+  },
+  "rks-system": {
+    "name": "RKS System",
     "debut": 4,
     "gens": {}
   },
@@ -724,6 +1002,16 @@
     "debut": 3,
     "gens": {}
   },
+  "royal-court": {
+    "name": "Royal Court",
+    "debut": 4,
+    "gens": {}
+  },
+  "royal-guard": {
+    "name": "Royal Guard",
+    "debut": 4,
+    "gens": {}
+  },
   "royal-privilege": {
     "name": "Royal Privilege",
     "debut": 4,
@@ -737,7 +1025,13 @@
   "sand-rush": {
     "name": "Sand Rush",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    }
   },
   "sand-stream": {
     "name": "Sand Stream",
@@ -757,7 +1051,11 @@
   "sap-sipper": {
     "name": "Sap Sipper",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "immuneTo": "Grass"
+      }
+    }
   },
   "scrappy": {
     "name": "Scrappy",
@@ -844,10 +1142,21 @@
     "debut": 3,
     "gens": {}
   },
-  "slush-rush": {
-    "name": "Slush Rush",
+  "slow-start": {
+    "name": "Slow Start",
     "debut": 4,
     "gens": {}
+  },
+  "slush-rush": {
+    "name": "Slush Rush",
+    "debut": 3,
+    "gens": {
+      "3": {
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    }
   },
   "smog-stream": {
     "name": "Smog Stream",
@@ -872,11 +1181,22 @@
   "solar-power": {
     "name": "Solar Power",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "spa": 1.5
+        }
+      }
+    }
   },
   "solid-rock": {
     "name": "Solid Rock",
     "debut": 4,
+    "gens": {}
+  },
+  "soul-lantern": {
+    "name": "Soul Lantern",
+    "debut": 3,
     "gens": {}
   },
   "soundproof": {
@@ -899,6 +1219,11 @@
     "debut": 3,
     "gens": {}
   },
+  "stamina": {
+    "name": "Stamina",
+    "debut": 4,
+    "gens": {}
+  },
   "static": {
     "name": "Static",
     "debut": 3,
@@ -907,6 +1232,11 @@
   "steady-wings": {
     "name": "Steady Wings",
     "debut": 3,
+    "gens": {}
+  },
+  "steam-engine": {
+    "name": "Steam Engine",
+    "debut": 4,
     "gens": {}
   },
   "steelworker": {
@@ -923,6 +1253,15 @@
     "name": "Sticky Hold",
     "debut": 4,
     "gens": {}
+  },
+  "storm-drain": {
+    "name": "Storm Drain",
+    "debut": 4,
+    "gens": {
+      "4": {
+        "immuneTo": "Water"
+      }
+    }
   },
   "strong-jaw": {
     "name": "Strong Jaw",
@@ -959,9 +1298,20 @@
     "debut": 3,
     "gens": {}
   },
+  "sweet-dreams": {
+    "name": "Sweet Dreams",
+    "debut": 4,
+    "gens": {}
+  },
   "swift-swim": {
     "debut": 3,
-    "gens": {},
+    "gens": {
+      "3": {
+        "statMults": {
+          "spe": 1.5
+        }
+      }
+    },
     "name": "Swift Swim"
   },
   "symbiosis": {
@@ -977,6 +1327,20 @@
   "tail-bundle": {
     "name": "Tail Bundle",
     "debut": 3,
+    "gens": {
+      "3": {
+        "statMults": {
+          "atk": 1.95
+        }
+      },
+      "4": {
+        "statMults": null
+      }
+    }
+  },
+  "tailwind": {
+    "name": "Tailwind",
+    "debut": 4,
     "gens": {}
   },
   "tangled-feet": {
@@ -1057,12 +1421,24 @@
   "unburden": {
     "name": "Unburden",
     "debut": 4,
-    "gens": {}
+    "gens": {
+      "4": {
+        "statMults": {
+          "spe": 2
+        }
+      }
+    }
   },
   "unfettered": {
     "name": "Unfettered",
     "debut": 4,
-    "gens": {}
+    "gens": {
+      "4": {
+        "statMults": {
+          "atk": 1.5
+        }
+      }
+    }
   },
   "unnerve": {
     "name": "Unnerve",
@@ -1087,17 +1463,39 @@
   "volt-absorb": {
     "name": "Volt Absorb",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "immuneTo": "Electric"
+      }
+    }
   },
   "vortex": {
     "name": "Vortex",
     "debut": 4,
     "gens": {}
   },
+  "wandering-spirit": {
+    "name": "Wandering Spirit",
+    "debut": 4,
+    "gens": {}
+  },
   "water-absorb": {
     "name": "Water Absorb",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "immuneTo": "Water"
+      }
+    }
+  },
+  "water-compaction": {
+    "gens": {
+      "4": {
+        "effect": "Raises the user's Defense by one stage when it is hit by a Water-type move. Reduces damage taken from Water-type moves by 50%."
+      }
+    },
+    "name": "Water Compaction",
+    "debut": 4
   },
   "water-veil": {
     "name": "Water Veil",
@@ -1122,14 +1520,25 @@
   "wicked-power": {
     "name": "Wicked Power",
     "debut": 3,
-    "gens": {}
+    "gens": {
+      "3": {
+        "statMults": {
+          "spa": 2
+        }
+      }
+    }
   },
   "wind-rider": {
     "name": "Wind Rider",
     "debut": 3,
+    "gens": {}
+  },
+  "wobble": {
+    "name": "Wobble",
+    "debut": 3,
     "gens": {
       "3": {
-        "immuneTo": "Flying"
+        "effect": "Focus Band"
       }
     }
   }
